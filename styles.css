@@ -160,6 +160,12 @@ section {
 }
 
 
+.filter-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Optional, adjusts depending on the container's height */
+}
 
 
 .filter-link {
