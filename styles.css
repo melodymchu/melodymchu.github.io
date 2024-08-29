@@ -1,9 +1,192 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
 }
+
+header {
+    background: linear-gradient(90deg, #FF69B4, #FFC0CB);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: fadeIn 2s;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+    animation: fadeIn 3s;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #FF69B4;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a:hover {
+    color: #FF1493;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #FF69B4;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    max-width: 1200px;
+}
+
+section {
+    padding: 20px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    position: relative;
+    animation: slideIn 1s;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #FF69B4;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+.experience, .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.experience-item, .project-item {
+    background: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    width: 48%;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    animation: slideIn 1s;
+}
+
+.experience-item:hover, .project-item:hover {
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+
+.experience-item::before, .project-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background: #FF69B4;
+    transition: width 0.3s ease-in-out;
+}
+
+.experience-item:hover::before, .project-item:hover::before {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #FF69B4;
+    color: #fff;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .experience-item, .project-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+}
+
+/* Project Template Styles */
+.project-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    margin: 10px 0;
+}
+
+////
 
 header {
     background-color: #333;
@@ -52,6 +235,8 @@ header {
 .project-item p {
     margin: 10px 0 0;
     font-weight: bold;
+
+
 }
 
 .project-item:hover {
