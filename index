@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody M. Chu | Design & Mechanical Engineering Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #FF69B4, #FFC0CB);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeIn 2s;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+            animation: fadeIn 3s;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #FF69B4;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #FF1493;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #FF69B4;
+            left: 0;
+            bottom: -5px;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left.
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            max-width: 1200px;
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            position: relative;
+            animation: slideIn 1s;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: #FF69B4;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+        }
+
+        .experience, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .experience-item, .project-item {
+            background: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            width: 48%;
+            box-sizing: border-box;
+            transition: box-shadow 0.3s ease;
+            position: relative;
+            animation: slideIn 1s;
+        }
+
+        .experience-item:hover, .project-item:hover {
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+
+        .experience-item::before, .project-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            background: #FF69B4;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .experience-item:hover::before, .project-item:hover::before {
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #FF69B4;
+            color: #fff;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .experience-item, .project-item {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+        }
+
+        /* Project Template Styles */
+        .project-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .project-item h3 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Melody M. Chu</h1>
+    <p>Design & Mechanical Engineering Portfolio</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            Hi, I'm Melody M. Chu, a mechanical engineering student at Carnegie Mellon University with a passion for design, robotics, and additive manufacturing. My experience ranges from redesigning battery packs to researching autonomous systems at NASA, and I'm excited to share my work and journey with you.
+        </p>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <p><strong>Carnegie Mellon University</strong>, Pittsburgh, PA</p>
+        <p>Bachelor of Science in Mechanical Engineering</p>
+        <p>Design Minor, Human-Computer Interaction Minor</p>
+        <p>Graduation: May 2025 | GPA: 3.72/4.00</p>
+        <p>Relevant Coursework: Mechanical Design, Mechanics: 3D Design, Statics: 2D Design, Visual Notation, Communication Design, Fabrication for Human-Computer Interaction, Design for AI Products, Manual Machining, Woodworking</p>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience">
+            <div class="experience-item">
+                <h3>Vehicle Mechanisms Engineering Intern - Relativity Space</h3>
+                <p><strong>Long Beach, CA | May 2024 - Aug 2024</strong></p>
+                <ul>
+                    <li>Investigated in-house manufacturability of resolver sensors via reverse engineering, literature review, calculations, data collection, and rapid parallel prototyping.</li>
+                    <li>Designed mechanism installation tool with custom clamps, supported with extensive hand-calculations, CAD, and prototyping.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Mechanical Design Intern - Bimotal, Inc.</h3>
+                <p><strong>Berkeley, CA | May 2023 - Aug 2023</strong></p>
+                <ul>
+                    <li>Led battery pack redesign exploration using UX research, hand sketches, and CAD, complying with brand/market aesthetics, frame compatibility, and battery cell specifications.</li>
+                    <li>Conceptualized, machined, and assembled NVH test rig to measure sound levels at different torques and speeds.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Student Researcher - CMU Design Research Collective</h3>
+                <p><strong>Pittsburgh, PA | Apr 2022 - Sep 2022</strong></p>
+                <ul>
+                    <li>Adapted Unity GUI for generalized RL robotic agents in simulated manufacturing environments (C#).</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Student Researcher - Center for Atmospheric Particle Studies</h3>
+                <p><strong>Pittsburgh, PA | Jun 2022 - Aug 2022</strong></p>
+                <ul>
+                    <li>Integrated motors and electronics into a novel machine for automating the dispensing and detection of carbon filters.</li>
+                    <li>Fabricated hardware using CAD, 3D-printers, laser cutters, and handheld tools.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Electromechanical Systems Engineering Intern - NASA Goddard Space Flight Center</h3>
+                <p><strong>Greenbelt, MD | Nov 2020 - Aug 2021</strong></p>
+                <ul>
+                    <li>Developed obstacle-avoidance using Q-learning in MATLAB robot simulation.</li>
+                    <li>Presented projects at NASA Intern Symposium and for high school engineering programs.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+            <div class="project-item">
+                <h3>Bicycle Crank Under Load Project</h3>
+                <p><strong>Date: Feb 2023 - Mar 2023</strong></p>
+                <p>Designed a 3.2g PLA bike crank in a team, excelling in all metrics: broke in smallest margin of target failure load (8.7±1lb), crank mass was over 4x lighter than target mass (15g), failure point located within millimeters of the center. Computed force and stress/strain by hand, compared with FEA and numerous 3D-print and laser-cut test parts.</p>
+            </div>
+            <div class="project-item">
+                <h3>Pet Simulator</h3>
+                <p><strong>Date: Apr 2022</strong></p>
+                <p>Illustrated all visual and graphical components, fully designed the user interface, and assisted with programming in a team. Presented at a showcase alongside 18 teams and over 100 participants, won 1st place in the Hack-112 Hackathon.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>Email: <a href="mailto:mmchu@andrew.cmu.edu">mmchu@andrew.cmu.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/melody-m-chu">linkedin.com/in/melody-m-chu</a></p>
+        <p>Portfolio: <a href="https://melodymchu.wixsite.com/site">melodymchu.wixsite.com/site</a></p>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Melody M. Chu. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
