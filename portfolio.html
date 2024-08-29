@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <!-- Link to your own stylesheets -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Link to your own favicon -->
-  <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>My Portfolio</h1>
-  </header>
-  <main>
-    <section>
-      <h2>Welcome to My Portfolio</h2>
-      <p>This is a description of my work.</p>
-      <!-- Replace any Wix-specific widgets or content with your own -->
+    <header>
+        <h1>My Portfolio</h1>
+        <div class="filter-buttons">
+            <button class="filter-btn" onclick="filterProjects('all')">All</button>
+            <button class="filter-btn" onclick="filterProjects('digital')">Digital</button>
+            <button class="filter-btn" onclick="filterProjects('physical')">Physical</button>
+        </div>
+    </header>
+
+    <section id="portfolio-gallery">
+        <div class="project-item digital">
+            <a href="project1.html">
+                <img src="images/project1.jpg" alt="Project 1">
+                <p>Project 1 - Digital</p>
+            </a>
+        </div>
+        <div class="project-item physical">
+            <a href="project2.html">
+                <img src="images/project2.jpg" alt="Project 2">
+                <p>Project 2 - Physical</p>
+            </a>
+        </div>
+        <!-- Add more project items as needed -->
     </section>
-  </main>
-  <footer>
-    <p>&copy; 2024 My Name. All rights reserved.</p>
-  </footer>
-  <!-- Add your own scripts here -->
-  <script src="script.js"></script>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
