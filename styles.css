@@ -35,14 +35,14 @@ nav {
 
 nav a {
     margin: 0 15px;
-    color: #FF69B4;
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: bold;
     position: relative;
 }
 
 nav a:hover {
-    color: #FF1493;
+    color: #FF69B4;
 }
 
 nav a::after {
