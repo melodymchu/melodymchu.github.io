@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: linear-gradient(#FFFFFF, #FFC0CB);
+    background: linear-gradient(90deg, #FF69B4, #FFC0CB);
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -71,11 +71,10 @@ nav a:hover::after {
 
 
 /* Hero Section */
-/* Hero Section */
 .hero {
     position: relative;
     height: 100vh;
-    background: linear-gradient(135deg, #FFD1DC, #FFC0CB);
+    background: linear-gradient(#FFD1DC, #FFFFFF);
     overflow: hidden;
     display: flex;
     align-items: center;
