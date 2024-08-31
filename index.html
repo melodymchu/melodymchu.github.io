@@ -1,24 +1,39 @@
+Here's the code with comments added to help someone who doesn't know HTML well to modify it:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- This is where you set the website icon that appears in the browser tab -->
     <link rel="icon" type="images/png" href="images/lemon-312068_1280.png">
+
+    <!-- This sets the character encoding for your webpage -->
     <meta charset="UTF-8">
+
+    <!-- This makes sure your website looks good on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- This is the title of your website that shows in the browser tab -->
     <title>Melody M. Chu | Portfolio</title>
+
+    <!-- This links to your external stylesheet where all your CSS (design) code is stored -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
-
 <body>
+    <!-- This is the top section of your webpage, usually contains the main title and a brief intro -->
     <header class="hero">
         <div class="hero-content">
-            <h1>Melody M. Chu</h1>
-            <p>Design & Mechanical Engineering</p>
+            <h1>Melody M. Chu</h1> <!-- Main title of the webpage -->
+            <p>Design & Mechanical Engineering</p> <!-- Brief description -->
+
+            <!-- These are buttons that link to different pages on your site -->
             <a href="about.html" class="button secondary-btn">About</a>
             <a href="portfolio.html" class="button primary-btn">View Portfolio</a>
         </div>
     </header>
 
+    <!-- Introduction section where you can write a brief welcome message -->
     <section class="introduction">
         <div class="container">
             <h2>Welcome to My Portfolio</h2>
@@ -28,16 +43,19 @@
         </div>
     </section>
 
-
+    <!-- Featured Projects section where you can showcase your best work -->
     <section class="featured-projects">
         <div class="container">
             <h2>Featured Projects</h2>
+
+            <!-- A grid layout to display your projects in a flower shape -->
             <div class="projects-grid">
+                <!-- Each "project-flower" div represents one project -->
                 <div class="project-flower">
                     <div class="flower">
-                        <img src="images/lemon-312068_1280.png" alt="Project 1">
+                        <img src="images/lemon-312068_1280.png" alt="Project 1"> <!-- Project image -->
                     </div>
-                    <h3>Project 1 Title</h3>
+                    <h3>Project 1 Title</h3> <!-- Project title -->
                 </div>
                 <div class="project-flower">
                     <div class="flower">
@@ -51,19 +69,26 @@
                     </div>
                     <h3>Project 3 Title</h3>
                 </div>
-                <!-- Add more project flowers as needed -->
+                <!-- You can add more project flowers by copying one of the divs above and changing the content -->
             </div>
+
+            <!-- Button to view more projects, links to your portfolio page -->
             <a href="portfolio.html" class="view-more-button">View More Projects</a>
         </div>
     </section>
     
-
-
-
+    <!-- Footer section, usually contains copyright info or contact details -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Melody M. Chu. All rights reserved.</p>
+            <p>&copy; 2024 Melody M. Chu. All rights reserved.</p> <!-- Copyright notice -->
         </div>
     </footer>
 </body>
 </html>
+```
+
+### Tips for Modifying:
+- **Titles and Text:** Modify any text inside `<h1>`, `<h2>`, `<p>`, etc., to change titles and descriptions.
+- **Images:** Replace the `src` attribute in the `<img>` tags with the file path to your own images.
+- **Links:** Update the `href` attributes in `<a>` tags to link to different pages or external websites.
+- **Adding More Content:** Copy and paste sections of code (like the project divs) and modify the content inside to add more items.
