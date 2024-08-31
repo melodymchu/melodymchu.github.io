@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 // script.js
+// script.js
 
 document.addEventListener("DOMContentLoaded", function () {
     const flowers = document.querySelectorAll('.flower');
