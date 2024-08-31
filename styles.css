@@ -119,6 +119,112 @@ nav a:hover::after {
     }
 }
 
+/* Featured Projects Section */
+.featured-projects {
+    padding: 60px 0;
+    background-color: #f7f7f7;
+    text-align: center;
+    overflow: hidden; /* To contain the animation */
+}
+
+.featured-projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.project-flower {
+    position: relative;
+    text-align: center;
+    margin-top: 200px; /* Hidden initially for the animation */
+    opacity: 0;
+    animation: springUp 1.5s forwards ease-out;
+}
+
+.project-flower h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.flower {
+    width: 100px;
+    height: 100px;
+    background-color: #FF69B4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.flower img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.flower::before, .flower::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #FF1493;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.flower::before {
+    top: -35px;
+    left: -10px;
+}
+
+.flower::after {
+    top: 15px;
+    right: -35px;
+}
+
+.project-flower:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.project-flower:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes springUp {
+    0% {
+        transform: translateY(100px) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* View More Button */
+.view-more-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #FF69B4;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+    background-color: #FF1493;
+}
 
 
 .button {

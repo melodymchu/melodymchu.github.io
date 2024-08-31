@@ -34,3 +34,18 @@ document.getElementById("backToTop").addEventListener("click", function(event) {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const projectFlowers = document.querySelectorAll('.project-flower');
+    window.addEventListener('scroll', function() {
+        projectFlowers.forEach(flower => {
+            const flowerPosition = flower.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (flowerPosition < windowHeight - 100) {
+                flower.style.marginTop = '0';
+                flower.style.opacity = '1';
+            }
+        });
+    });
+});
