@@ -12,25 +12,28 @@ document.addEventListener('DOMContentLoaded', function() {
             window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
         });
     }
+// script.js
 
-    // Select all elements with the class 'flower'
+document.addEventListener("DOMContentLoaded", function () {
     const flowers = document.querySelectorAll('.flower');
-    console.log(flowers); // Log all flower elements to console
+    const featuredSection = document.getElementById('featured-projects');
 
-    // Function to check visibility of each flower
-    function checkVisibility() {
-        flowers.forEach(flower => {
-            const rect = flower.getBoundingClientRect(); // Get the position of the flower
-            console.log(rect.top, window.innerHeight); // Log flower position and window height
+    window.addEventListener('scroll', function () {
+        const sectionTop = featuredSection.offsetTop;
+        const sectionHeight = featuredSection.offsetHeight;
+        const scrollPos = window.scrollY + window.innerHeight;
 
-            // Check if flower is within the viewport
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                flower.classList.add('visible'); // Add 'visible' class if in view
-            } else {
-                flower.classList.remove('visible'); // Remove 'visible' class if out of view
-            }
-        });
-    }
+        // Check if the user has scrolled to the Featured Projects section
+        if (scrollPos > sectionTop + sectionHeight / 4) {
+            flowers.forEach((flower, index) => {
+                setTimeout(() => {
+                    flower.classList.add('active');
+                }, index * 200); // Stagger animation for each flower
+            });
+        }
+    });
+});
+
 
     // Run checkVisibility function on page scroll
     window.addEventListener('scroll', checkVisibility);

@@ -118,151 +118,63 @@ nav a:hover::after {
     100% { transform: translateX(100vw); } /* Move clouds across screen */
 }
 
-/* Featured Projects Section */
-.featured-projects {
-    padding: 60px 0; /* Space around content */
-    background-color: #f7f7f7; /* Light gray background */
-    text-align: center; /* Center align text */
-    position: relative;
-    overflow: hidden; /* Contain content */
-}
-
-.featured-projects h3 {
-    font-size: 2.5em; /* Large heading */
-    margin-bottom: 40px; /* Space below heading */
-    color: #333; /* Dark gray text */
-}
-
-
-/* Flower Styles */
-.flower {
-    position: relative;
-    width: 150px; /* Flower size */
-    height: 250px; /* Flower size */
+#featured-projects {
+    padding: 50px 20px;
     text-align: center;
-    opacity: 0; /* Hidden initially */
-    transform: translateY(100px);
-    transition: all 1s ease-out; /* Smooth transition */
-    border: 3px solid black; /* Black outline */
-    border-radius: 50%; /* Circular shape for flower */
-    background-color: pink; /* Pink color */
-    margin: 0 20px; /* Space between flowers */
+    background-color: #ffffff;
+    position: relative;
 }
 
-/* Stem and Leaves */
-.flower .stem {
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.flower-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    height: 600px; /* Adjust based on the number of flowers and layout */
+}
+
+.flower {
+    width: 0;
+    height: 0;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    width: 8px;
-    height: 150px; /* Stem length */
-    background-color: green;
-    transform: translateX(-50%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    opacity: 0;
 }
 
-/* Petals Container */
-.flower .petals-container {
-    position: absolute;
-    top: 50%; /* Center petals vertically */
-    left: 50%; /* Center petals horizontally */
-    width: 100px; /* Container size */
-    height: 100px; /* Container size */
-    transform: translate(-50%, -50%); /* Center the container itself */
+.flower.active {
+    transform: translateY(-500px); /* Adjust to control how high the flowers spring up */
+    opacity: 1;
 }
 
-/* Petals Layout */
-.flower .petal {
-    position: absolute;
-    width: 30px; /* Petal size */
-    height: 60px; /* Petal size */
-    background-color: pink;
-    border: 2px solid black; /* Outline */
-    border-radius: 50% 50% 0 0; /* Half-circle top */
-    transform-origin: bottom center; /* Set the origin for rotation */
+/* Example styles for different flowers */
+#flower1 {
+    width: 100px;
+    height: 100px;
+    background-color: #FF69B4;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
-/* Petals arrangement around center */
-.flower .petal:nth-child(1) { transform: rotate(0deg) translateY(-30px); }
-.flower .petal:nth-child(2) { transform: rotate(72deg) translateY(-30px); }
-.flower .petal:nth-child(3) { transform: rotate(144deg) translateY(-30px); }
-.flower .petal:nth-child(4) { transform: rotate(216deg) translateY(-30px); }
-.flower .petal:nth-child(5) { transform: rotate(288deg) translateY(-30px); }
-
-/* Center of the Flower */
-.flower .center {
-    position: absolute;
-    top: 50%; /* Center aligned with petals */
-    left: 50%;
-    width: 40px; /* Center size */
-    height: 40px; /* Center size */
-    border-radius: 50%; /* Circular center */
-    overflow: hidden;
-    background-color: yellow; /* Example center color */
-    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+#flower2 {
+    width: 120px;
+    height: 120px;
+    background-color: #8A2BE2;
+    clip-path: polygon(50% 0%, 65% 20%, 98% 25%, 75% 50%, 80% 75%, 50% 60%, 20% 75%, 25% 50%, 2% 25%, 35% 20%);
 }
 
-/* Visibility animation */
-.flower.visible {
-    opacity: 1; /* Visible on animation */
-    transform: translateY(0);
+#flower3 {
+    width: 80px;
+    height: 80px;
+    background-color: #FF4500;
+    clip-path: polygon(50% 0%, 63% 25%, 95% 35%, 70% 55%, 75% 85%, 50% 65%, 25% 85%, 30% 55%, 5% 35%, 37% 25%);
 }
 
-/* Featured Projects Section */
-.featured-projects {
-    padding: 60px 0;
-    background-color: #f7f7f7;
-    text-align: center;
-    position: relative; /* Ensures flowers are positioned relative to this section */
-    overflow: hidden; /* To contain the animation */
-    margin-top: 100px; /* Adds space above the section to prevent overlapping */
-}
-
-.featured-projects h3 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #333;
-}
-
-/* Flower Row Layout */
-.flowers-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allows wrapping of flowers */
-    gap: 40px; /* Space between flowers */
-    position: relative; /* Position the row in the normal flow of the document */
-    margin-top: 20px; /* Space above the flower row to prevent overlapping with heading */
-}
-
-/* Back to Top Button */
-#backToTop {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: #FF69B4; /* Pink background */
-    color: white; /* White arrow */
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px; /* Center arrow */
-    cursor: pointer;
-    display: none; /* Hidden by default */
-    z-index: 1000; /* Above other elements */
-}
-
-
-
-/* Animation keyframes for springing up */
-@keyframes springUp {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+/* Add more flower styles as needed with unique clip-paths and colors */
 
 /* View More Button Style */
 .view-more-button {
