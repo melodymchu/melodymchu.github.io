@@ -169,65 +169,21 @@ nav a:hover::after {
     transform: translateX(-50%);
 }
 
-.flower .stem .leaf {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: green;
-    border-radius: 50%; /* Circular leaves */
-}
-
-/* Leaf positions */
-.flower .stem .leaf-1 {
-    top: 20%;
-    left: -30px;
-    transform: rotate(-45deg);
-}
-
-.flower .stem .leaf-2 {
-    top: 40%;
-    left: 30px;
-    transform: rotate(45deg);
-}
-
-.flower .stem .leaf-3 {
-    top: 60%;
-    left: -30px;
-    transform: rotate(90deg);
-}
-
-.flower .stem .leaf-4 {
-    top: 30%;
-    left: 30px;
-    transform: rotate(-90deg);
-}
-
-.flower .stem .leaf-5 {
-    top: 50%;
-    left: -30px;
-    transform: rotate(-135deg);
-}
-
-.flower .stem .leaf-6 {
-    top: 70%;
-    left: 30px;
-    transform: rotate(135deg);
-}
-
-/* Petals Layout */
+/* Petals Container */
 .flower .petals-container {
     position: absolute;
-    bottom: 150px; /* Adjust for stem */
+    top: 20px; /* Adjusted to move petals closer to the top */
     left: 50%;
     width: 120px; /* Container size */
-    height: 120px;
+    height: 120px; /* Container size */
     transform: translateX(-50%);
 }
 
+/* Petals Layout */
 .flower .petal {
     position: absolute;
     width: 30px; /* Petal size */
-    height: 60px;
+    height: 60px; /* Petal size */
     background-color: pink;
     border: 2px solid black; /* Outline */
     border-radius: 50% 50% 0 0; /* Half-circle top */
@@ -237,14 +193,17 @@ nav a:hover::after {
 /* Petals arrangement around center */
 .flower .petal:nth-child(1) { transform: rotate(0deg) translateY(-50%); }
 .flower .petal:nth-child(2) { transform: rotate(72deg) translateY(-50%); }
-/* Continue for remaining petals... */
+.flower .petal:nth-child(3) { transform: rotate(144deg) translateY(-50%); }
+.flower .petal:nth-child(4) { transform: rotate(216deg) translateY(-50%); }
+.flower .petal:nth-child(5) { transform: rotate(288deg) translateY(-50%); }
 
+/* Center of the Flower */
 .flower .center {
     position: absolute;
-    bottom: 150px; /* Adjust for stem */
+    top: 70px; /* Adjusted to move center closer to petals */
     left: 50%;
     width: 80px; /* Center size */
-    height: 80px;
+    height: 80px; /* Center size */
     border-radius: 50%; /* Circular center */
     overflow: hidden;
     transform: translateX(-50%);
@@ -256,22 +215,12 @@ nav a:hover::after {
     object-fit: cover; /* Image cover */
 }
 
-.flower p {
-    margin-top: 160px; /* Adjust for stem */
-}
-
+/* Visibility animation */
 .flower.visible {
     opacity: 1; /* Visible on animation */
     transform: translateY(0);
 }
 
-/* Staggered animation for flowers */
-.flower:nth-child(1) {
-    animation: springUp 1.5s forwards ease-out;
-    animation-delay: 0.2s; /* Delay for effect */
-}
-
-/* Repeat for other flowers... */
 
 /* Animation keyframes for springing up */
 @keyframes springUp {
