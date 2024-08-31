@@ -137,8 +137,8 @@ nav a:hover::after {
 .flower {
     position: relative;
     margin: 2em;
-    width: 150px; /* Increased size */
-    height: 250px; /* Increased size */
+    width: 200px; /* Larger size */
+    height: 300px; /* Larger size */
     text-align: center;
     opacity: 0;
     transform: translateY(100px);
@@ -149,30 +149,49 @@ nav a:hover::after {
     position: absolute;
     bottom: 0;
     left: 50%;
-    width: 4px;
-    height: 150px; /* Increased height */
+    width: 6px; /* Thicker stem */
+    height: 200px; /* Increased height */
     background-color: green;
     transform: translateX(-50%);
 }
 
 .flower .petals {
     position: absolute;
-    bottom: 150px; /* Adjusted for increased height */
+    bottom: 200px; /* Adjusted for increased height */
     left: 50%;
-    width: 100px; /* Increased size */
-    height: 100px; /* Increased size */
+    width: 150px; /* Larger size */
+    height: 150px; /* Larger size */
     border-radius: 50%;
-    border: 2px solid black;
+    border: 4px solid black; /* Black bold outline */
     background-color: pink;
     transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.flower .petal {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border-radius: 50%;
+    border: 4px solid black;
+}
+
+.flower .petal:nth-child(1) { transform: rotate(0deg); }
+.flower .petal:nth-child(2) { transform: rotate(60deg); }
+.flower .petal:nth-child(3) { transform: rotate(120deg); }
+.flower .petal:nth-child(4) { transform: rotate(180deg); }
+.flower .petal:nth-child(5) { transform: rotate(240deg); }
+.flower .petal:nth-child(6) { transform: rotate(300deg); }
 
 .flower .center {
     position: absolute;
-    bottom: 150px; /* Adjusted for increased height */
+    bottom: 200px; /* Adjusted for increased height */
     left: 50%;
-    width: 60px; /* Increased size */
-    height: 60px; /* Increased size */
+    width: 80px; /* Increased size */
+    height: 80px; /* Increased size */
     border-radius: 50%;
     overflow: hidden; /* To ensure the image fits within the circle */
     transform: translateX(-50%);
@@ -185,7 +204,7 @@ nav a:hover::after {
 }
 
 .flower p {
-    margin-top: 160px; /* Adjusted for increased height */
+    margin-top: 220px; /* Adjusted for increased height */
 }
 
 .flower.visible {
