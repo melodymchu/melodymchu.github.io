@@ -113,11 +113,14 @@ nav a:hover::after {
     0% { transform: translateX(0); }
     100% { transform: translateX(100vw); } /* Moves clouds across the viewport */
 }
+
+
 /* Featured Projects Section */
 .featured-projects {
     padding: 60px 0;
     background-color: #f7f7f7;
     text-align: center;
+    position: relative; /* Ensures flowers are positioned relative to this section */
     overflow: hidden; /* To contain the animation */
 }
 
@@ -127,17 +130,21 @@ nav a:hover::after {
     color: #333;
 }
 
-.flowers-grid {
+.flowers-row {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px; /* Space between flowers */
+    position: absolute; /* Position the row at the bottom */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .flower {
     position: relative;
-    width: 150px; /* Increased size */
-    height: 250px; /* Increased size */
+    width: 150px; /* Size of the flower */
+    height: 250px; /* Size of the flower */
     text-align: center;
     opacity: 0;
     transform: translateY(100px);
@@ -152,7 +159,7 @@ nav a:hover::after {
     bottom: 0;
     left: 50%;
     width: 8px;
-    height: 150px; /* Increased height */
+    height: 150px; /* Length of the stem */
     background-color: green;
     transform: translateX(-50%);
 }
@@ -189,12 +196,24 @@ nav a:hover::after {
     transform: rotate(-90deg);
 }
 
+.flower .stem .leaf-5 {
+    top: 50%;
+    left: -30px;
+    transform: rotate(-135deg);
+}
+
+.flower .stem .leaf-6 {
+    top: 70%;
+    left: 30px;
+    transform: rotate(135deg);
+}
+
 .flower .petals {
     position: absolute;
-    bottom: 150px; /* Adjusted for increased height */
+    bottom: 150px; /* Adjusted for stem height */
     left: 50%;
-    width: 120px; /* Increased size */
-    height: 120px; /* Increased size */
+    width: 120px; /* Size of petals */
+    height: 120px; /* Size of petals */
     border-radius: 50%;
     border: 2px solid black; /* Black outline for petals */
     background-color: pink;
@@ -203,10 +222,10 @@ nav a:hover::after {
 
 .flower .center {
     position: absolute;
-    bottom: 150px; /* Adjusted for increased height */
+    bottom: 150px; /* Adjusted for stem height */
     left: 50%;
-    width: 80px; /* Increased size */
-    height: 80px; /* Increased size */
+    width: 80px; /* Size of center */
+    height: 80px; /* Size of center */
     border-radius: 50%;
     overflow: hidden;
     transform: translateX(-50%);
@@ -219,7 +238,7 @@ nav a:hover::after {
 }
 
 .flower p {
-    margin-top: 160px; /* Adjusted for increased height */
+    margin-top: 160px; /* Adjusted for stem height */
 }
 
 .flower.visible {
