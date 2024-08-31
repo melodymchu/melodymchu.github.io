@@ -118,7 +118,7 @@ nav a:hover::after {
     }
 }
 
-}
+
 
 .button {
     border: 3px solid black;
@@ -321,8 +321,8 @@ section {
 
 
 .social-icons {
-    height: 5px,
-    width: 5px
+    height: 5px;
+    width: 5px;
 }
 
 /* Back to Top Button */
