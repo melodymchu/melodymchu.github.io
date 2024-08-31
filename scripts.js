@@ -35,22 +35,18 @@ document.getElementById("backToTop").addEventListener("click", function(event) {
     window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const projectFlowers = document.querySelectorAll('.project-flower');
-    
+document.addEventListener('DOMContentLoaded', function() {
+    const flowers = document.querySelectorAll('.flower');
+
     function checkVisibility() {
-        projectFlowers.forEach(flower => {
-            const flowerPosition = flower.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            if (flowerPosition < windowHeight - 100) {
-                flower.style.marginTop = '0';
-                flower.style.opacity = '1';
+        flowers.forEach(flower => {
+            const rect = flower.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                flower.classList.add('visible');
             }
         });
     }
 
     window.addEventListener('scroll', checkVisibility);
-
-    // Check visibility on load
-    checkVisibility();
+    checkVisibility(); // Initial check
 });
