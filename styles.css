@@ -128,11 +128,17 @@ nav a:hover::after {
     color: #333;
 }
 
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .flower {
     position: relative;
-    margin: 2em auto;
-    width: 100px;
-    height: 200px;
+    margin: 2em;
+    width: 150px; /* Increased size */
+    height: 250px; /* Increased size */
     text-align: center;
     opacity: 0;
     transform: translateY(100px);
@@ -144,17 +150,17 @@ nav a:hover::after {
     bottom: 0;
     left: 50%;
     width: 4px;
-    height: 100px;
+    height: 150px; /* Increased height */
     background-color: green;
     transform: translateX(-50%);
 }
 
 .flower .petals {
     position: absolute;
-    bottom: 100px;
+    bottom: 150px; /* Adjusted for increased height */
     left: 50%;
-    width: 60px;
-    height: 60px;
+    width: 100px; /* Increased size */
+    height: 100px; /* Increased size */
     border-radius: 50%;
     border: 2px solid black;
     background-color: pink;
@@ -163,12 +169,12 @@ nav a:hover::after {
 
 .flower .center {
     position: absolute;
-    bottom: 100px;
+    bottom: 150px; /* Adjusted for increased height */
     left: 50%;
-    width: 20px;
-    height: 20px;
+    width: 60px; /* Increased size */
+    height: 60px; /* Increased size */
     border-radius: 50%;
-    background-color: yellow;
+    overflow: hidden; /* To ensure the image fits within the circle */
     transform: translateX(-50%);
 }
 
@@ -179,7 +185,7 @@ nav a:hover::after {
 }
 
 .flower p {
-    margin-top: 120px;
+    margin-top: 160px; /* Adjusted for increased height */
 }
 
 .flower.visible {
