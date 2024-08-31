@@ -154,8 +154,8 @@ nav a:hover::after {
 }
 
 .flower {
-    width: 100px;
-    height: 100px;
+    width: 80px;  /* Adjust this value */
+    height: 80px; /* Adjust this value */
     background-color: #FF69B4;
     border-radius: 50%;
     display: flex;
@@ -165,10 +165,13 @@ nav a:hover::after {
 }
 
 .flower img {
-    width: 60px;
-    height: 60px;
+    width: 40px;  /* Reduced size */
+    height: 40px; /* Reduced size */
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 50%;
 }
+
 
 .flower::before, .flower::after {
     content: '';
