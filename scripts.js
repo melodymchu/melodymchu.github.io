@@ -34,7 +34,6 @@ document.getElementById("backToTop").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent default anchor behavior
     window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     const flowers = document.querySelectorAll('.flower');
 
