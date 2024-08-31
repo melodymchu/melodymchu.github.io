@@ -172,11 +172,14 @@ nav a:hover::after {
 /* Petals Container */
 .flower .petals-container {
     position: absolute;
-    top: 20px; /* Adjusted to move petals closer to the top */
+    top: 30%; /* Adjusted to position petals around the center */
     left: 50%;
     width: 120px; /* Container size */
     height: 120px; /* Container size */
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Petals Layout */
@@ -187,26 +190,26 @@ nav a:hover::after {
     background-color: pink;
     border: 2px solid black; /* Outline */
     border-radius: 50% 50% 0 0; /* Half-circle top */
-    transform-origin: bottom center;
+    transform-origin: bottom center; /* Set the origin for rotation */
 }
 
 /* Petals arrangement around center */
-.flower .petal:nth-child(1) { transform: rotate(0deg) translateY(-50%); }
-.flower .petal:nth-child(2) { transform: rotate(72deg) translateY(-50%); }
-.flower .petal:nth-child(3) { transform: rotate(144deg) translateY(-50%); }
-.flower .petal:nth-child(4) { transform: rotate(216deg) translateY(-50%); }
-.flower .petal:nth-child(5) { transform: rotate(288deg) translateY(-50%); }
+.flower .petal:nth-child(1) { transform: rotate(0deg) translateY(-40px); }
+.flower .petal:nth-child(2) { transform: rotate(72deg) translateY(-40px); }
+.flower .petal:nth-child(3) { transform: rotate(144deg) translateY(-40px); }
+.flower .petal:nth-child(4) { transform: rotate(216deg) translateY(-40px); }
+.flower .petal:nth-child(5) { transform: rotate(288deg) translateY(-40px); }
 
 /* Center of the Flower */
 .flower .center {
     position: absolute;
-    top: 70px; /* Adjusted to move center closer to petals */
+    top: 30%; /* Center aligned with petals */
     left: 50%;
     width: 80px; /* Center size */
     height: 80px; /* Center size */
     border-radius: 50%; /* Circular center */
     overflow: hidden;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
 }
 
 .flower .center img {
