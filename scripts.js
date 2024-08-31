@@ -35,17 +35,22 @@ document.getElementById("backToTop").addEventListener("click", function(event) {
     window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
 });
 
-// When the document is fully loaded, add scroll event listener to animate project flowers
 document.addEventListener("DOMContentLoaded", function() {
-    const projectFlowers = document.querySelectorAll('.project-flower'); // Select all project flowers
-    window.addEventListener('scroll', function() {
+    const projectFlowers = document.querySelectorAll('.project-flower');
+    
+    function checkVisibility() {
         projectFlowers.forEach(flower => {
-            const flowerPosition = flower.getBoundingClientRect().top; // Get position of the flower
-            const windowHeight = window.innerHeight; // Get window height
+            const flowerPosition = flower.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
             if (flowerPosition < windowHeight - 100) {
-                flower.style.marginTop = '0'; // Move flower up to its original position
-                flower.style.opacity = '1'; // Make flower fully visible
+                flower.style.marginTop = '0';
+                flower.style.opacity = '1';
             }
         });
-    });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+
+    // Check visibility on load
+    checkVisibility();
 });

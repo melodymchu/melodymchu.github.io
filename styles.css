@@ -117,86 +117,105 @@ nav a:hover::after {
 /* Featured Projects Section */
 .featured-projects {
     padding: 60px 0;
-    background-color: #f7f7f7; /* Light gray background */
+    background-color: #f7f7f7;
     text-align: center;
-    overflow: hidden; /* Contains animated elements */
+    overflow: hidden; /* To contain the animation */
 }
 
 .featured-projects h2 {
     font-size: 2.5em;
-    margin-bottom: 40px; /* Space below the title */
-    color: #333; /* Dark gray text color */
+    margin-bottom: 40px;
+    color: #333;
 }
 
 .projects-grid {
     display: flex;
-    justify-content: space-around; /* Space between project items */
+    justify-content: space-around;
     position: relative;
 }
 
 .project-flower {
     position: relative;
     text-align: center;
-    margin-top: 200px; /* Initially hidden for animation */
-    opacity: 0; /* Hidden at the start */
-    animation: springUp 1.5s forwards ease-out; /* Spring up animation */
+    margin-top: 200px; /* Hidden initially for the animation */
+    opacity: 0;
+    animation: springUp 1.5s forwards ease-out;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 .project-flower h3 {
     margin-top: 15px;
     font-size: 1.5em;
-    color: #333; /* Dark gray text color */
+    color: #333;
 }
 
 .flower {
-    width: 80px;
-    height: 80px;
-    background-color: #FF69B4; /* Pink color */
-    border-radius: 50%; /* Circular shape */
+    width: 100px;
+    height: 100px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
-.flower img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* Circular image */
-}
-
-.flower::before, .flower::after {
-    content: '';
+.petal {
     position: absolute;
-    width: 70px;
-    height: 70px;
-    background-color: #FF1493; /* Darker pink color */
+    width: 50px;
+    height: 50px;
+    background-color: #FF69B4;
+    border: 3px solid black; /* Bold black outline */
     border-radius: 50%;
-    z-index: -1;
 }
 
-.flower::before {
-    top: -35px;
-    left: -10px;
+.petal:nth-child(1) {
+    transform: rotate(0deg) translateX(30px);
+}
+.petal:nth-child(2) {
+    transform: rotate(60deg) translateX(30px);
+}
+.petal:nth-child(3) {
+    transform: rotate(120deg) translateX(30px);
+}
+.petal:nth-child(4) {
+    transform: rotate(180deg) translateX(30px);
+}
+.petal:nth-child(5) {
+    transform: rotate(240deg) translateX(30px);
+}
+.petal:nth-child(6) {
+    transform: rotate(300deg) translateX(30px);
 }
 
 .flower::after {
-    top: 15px;
-    right: -35px;
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background-color: green;
+    bottom: -100px; /* Stem growing from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .project-flower:nth-child(2) {
-    animation-delay: 0.5s; /* Delayed animation for the second flower */
+    animation-delay: 0.5s;
 }
 
 .project-flower:nth-child(3) {
-    animation-delay: 1s; /* Delayed animation for the third flower */
+    animation-delay: 1s;
 }
 
 @keyframes springUp {
-    0% { transform: translateY(100px) scale(0.5); opacity: 0; }
-    100% { transform: translateY(0) scale(1); opacity: 1; } /* Appears and grows */
+    0% {
+        transform: translateY(100px) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
 }
+
 
 /* View More Button */
 .view-more-button {
