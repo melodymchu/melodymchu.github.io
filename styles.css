@@ -208,17 +208,35 @@ nav a:hover::after {
     transform: rotate(135deg);
 }
 
-.flower .petals {
+.flower .petals-container {
     position: absolute;
     bottom: 150px; /* Adjusted for stem height */
     left: 50%;
-    width: 120px; /* Size of petals */
-    height: 120px; /* Size of petals */
-    border-radius: 50%;
-    border: 2px solid black; /* Black outline for petals */
-    background-color: pink;
+    width: 120px; /* Size of petals container */
+    height: 120px; /* Size of petals container */
     transform: translateX(-50%);
 }
+
+.flower .petal {
+    position: absolute;
+    width: 30px; /* Size of petals */
+    height: 60px; /* Size of petals */
+    background-color: pink;
+    border: 2px solid black; /* Black outline for petals */
+    border-radius: 50% 50% 0 0; /* Half circle for top part of petal */
+    transform-origin: bottom center;
+}
+
+.flower .petal:nth-child(1) { transform: rotate(0deg) translateY(-50%); }
+.flower .petal:nth-child(2) { transform: rotate(72deg) translateY(-50%); }
+.flower .petal:nth-child(3) { transform: rotate(144deg) translateY(-50%); }
+.flower .petal:nth-child(4) { transform: rotate(216deg) translateY(-50%); }
+.flower .petal:nth-child(5) { transform: rotate(288deg) translateY(-50%); }
+.flower .petal:nth-child(6) { transform: rotate(360deg) translateY(-50%); }
+.flower .petal:nth-child(7) { transform: rotate(432deg) translateY(-50%); }
+.flower .petal:nth-child(8) { transform: rotate(504deg) translateY(-50%); }
+.flower .petal:nth-child(9) { transform: rotate(576deg) translateY(-50%); }
+.flower .petal:nth-child(10) { transform: rotate(648deg) translateY(-50%); }
 
 .flower .center {
     position: absolute;
@@ -272,6 +290,7 @@ nav a:hover::after {
         opacity: 1;
     }
 }
+
 
 
 /* View More Button */
