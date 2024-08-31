@@ -230,6 +230,7 @@ section {
     width: 100%;
 }
 
+/*
 /* Button Styles */
 .button {
     display: inline-block;
@@ -247,6 +248,7 @@ section {
     background-color: #FF1493;
     transform: scale(1.05);
 }
+*/
 
 .project-button {
     display: inline-block;
