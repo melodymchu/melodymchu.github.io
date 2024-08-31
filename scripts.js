@@ -29,6 +29,20 @@ function scrollFunction() {
     } else {
         backToTopButton.style.display = "none"; // Hide the button
     }
+    const flowers = document.querySelectorAll('.flower');
+    flowers.forEach(flower => {
+        if (flower) { // Check if flower is not null
+            const rect = flower.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                flower.classList.add('visible');
+            }
+        }
+    });
+    
+    
+    window.addEventListener('scroll', scrollFunction);
+    scrollFunction(); // Initial check
+    
 }
 
 // Smooth scrolling behavior when "Back to Top" button is clicked
