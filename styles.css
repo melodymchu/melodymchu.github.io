@@ -133,29 +133,20 @@ nav a:hover::after {
     color: #333; /* Dark gray text */
 }
 
-/* Flower Row Layout */
-.flowers-row {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between flowers */
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 /* Flower Styles */
 .flower {
     position: relative;
     width: 150px; /* Flower size */
-    height: 250px;
+    height: 250px; /* Flower size */
     text-align: center;
     opacity: 0; /* Hidden initially */
     transform: translateY(100px);
     transition: all 1s ease-out; /* Smooth transition */
     border: 3px solid black; /* Black outline */
-    border-radius: 20% 20% 40% 40% / 30% 30% 50% 50%; /* Organic shape */
+    border-radius: 50%; /* Circular shape for flower */
     background-color: pink; /* Pink color */
+    margin: 0 20px; /* Space between flowers */
 }
 
 /* Stem and Leaves */
@@ -172,14 +163,11 @@ nav a:hover::after {
 /* Petals Container */
 .flower .petals-container {
     position: absolute;
-    top: 30%; /* Adjusted to position petals around the center */
-    left: 50%;
-    width: 120px; /* Container size */
-    height: 120px; /* Container size */
-    transform: translate(-50%, -50%); /* Center horizontally and vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 50%; /* Center petals vertically */
+    left: 50%; /* Center petals horizontally */
+    width: 100px; /* Container size */
+    height: 100px; /* Container size */
+    transform: translate(-50%, -50%); /* Center the container itself */
 }
 
 /* Petals Layout */
@@ -194,28 +182,23 @@ nav a:hover::after {
 }
 
 /* Petals arrangement around center */
-.flower .petal:nth-child(1) { transform: rotate(0deg) translateY(-40px); }
-.flower .petal:nth-child(2) { transform: rotate(72deg) translateY(-40px); }
-.flower .petal:nth-child(3) { transform: rotate(144deg) translateY(-40px); }
-.flower .petal:nth-child(4) { transform: rotate(216deg) translateY(-40px); }
-.flower .petal:nth-child(5) { transform: rotate(288deg) translateY(-40px); }
+.flower .petal:nth-child(1) { transform: rotate(0deg) translateY(-30px); }
+.flower .petal:nth-child(2) { transform: rotate(72deg) translateY(-30px); }
+.flower .petal:nth-child(3) { transform: rotate(144deg) translateY(-30px); }
+.flower .petal:nth-child(4) { transform: rotate(216deg) translateY(-30px); }
+.flower .petal:nth-child(5) { transform: rotate(288deg) translateY(-30px); }
 
 /* Center of the Flower */
 .flower .center {
     position: absolute;
-    top: 30%; /* Center aligned with petals */
+    top: 50%; /* Center aligned with petals */
     left: 50%;
-    width: 80px; /* Center size */
-    height: 80px; /* Center size */
+    width: 40px; /* Center size */
+    height: 40px; /* Center size */
     border-radius: 50%; /* Circular center */
     overflow: hidden;
+    background-color: yellow; /* Example center color */
     transform: translate(-50%, -50%); /* Center horizontally and vertically */
-}
-
-.flower .center img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Image cover */
 }
 
 /* Visibility animation */
@@ -223,6 +206,50 @@ nav a:hover::after {
     opacity: 1; /* Visible on animation */
     transform: translateY(0);
 }
+
+/* Featured Projects Section */
+.featured-projects {
+    padding: 60px 0;
+    background-color: #f7f7f7;
+    text-align: center;
+    position: relative; /* Ensures flowers are positioned relative to this section */
+    overflow: hidden; /* To contain the animation */
+    margin-top: 100px; /* Adds space above the section to prevent overlapping */
+}
+
+.featured-projects h3 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Flower Row Layout */
+.flowers-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping of flowers */
+    gap: 40px; /* Space between flowers */
+    position: relative; /* Position the row in the normal flow of the document */
+    margin-top: 20px; /* Space above the flower row to prevent overlapping with heading */
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #FF69B4; /* Pink background */
+    color: white; /* White arrow */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px; /* Center arrow */
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Above other elements */
+}
+
 
 
 /* Animation keyframes for springing up */
