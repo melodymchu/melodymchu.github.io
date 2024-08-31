@@ -122,7 +122,7 @@ nav a:hover::after {
 }
 
 .button {
-    border: 5px solid black;
+    border: 3px solid black;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 50px;
@@ -133,14 +133,14 @@ nav a:hover::after {
 
 .primary-btn {
     background-color: #FF1493;
-    border: 5px solid black;
+    border: 3px solid black;
     color: white;
 }
 
 .secondary-btn {
     background-color: white;
     color: #FF69B4;
-    border: 5px solid #FF69B4;
+    border: 3px solid #FF69B4;
 }
 
 .primary-btn:hover, .secondary-btn:hover {
@@ -263,7 +263,7 @@ section {
 /*
 /* Button Styles */
 .button {
-    border: 5px solid black;
+    border: 3px solid black;
     display: inline-block;
     padding: 10px 20px;
     margin: 10px 0;
@@ -322,8 +322,8 @@ section {
 
 
 .social-icons {
-    height: 15px,
-        width: 15px
+    height: 5px,
+    width: 5px
 }
 
 /* Back to Top Button */
