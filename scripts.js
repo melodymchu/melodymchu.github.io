@@ -1,4 +1,6 @@
 // Function to filter projects based on category
+
+
 function filterProjects(category) {
     const projects = document.querySelectorAll('.project-item'); // Select all project items
 
@@ -36,7 +38,9 @@ document.getElementById("backToTop").addEventListener("click", function(event) {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('JavaScript is running');
     const flowers = document.querySelectorAll('.flower');
+    console.log(flowers);
 
     function checkVisibility() {
         flowers.forEach(flower => {
@@ -47,9 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
 
     window.addEventListener('scroll', checkVisibility);
     checkVisibility(); // Initial check
 });
+
 
