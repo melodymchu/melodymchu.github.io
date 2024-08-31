@@ -122,9 +122,10 @@ nav a:hover::after {
 }
 
 .button {
+    border: 5px solid black;
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 50px;
     font-size: 1em;
     margin: 5px;
     transition: background 0.3s ease, color 0.3s ease;
@@ -132,13 +133,14 @@ nav a:hover::after {
 
 .primary-btn {
     background-color: #FF1493;
+    border: 5px solid black;
     color: white;
 }
 
 .secondary-btn {
     background-color: white;
     color: #FF69B4;
-    border: 2px solid #FF69B4;
+    border: 5px solid #FF69B4;
 }
 
 .primary-btn:hover, .secondary-btn:hover {
