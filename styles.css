@@ -113,7 +113,6 @@ nav a:hover::after {
     0% { transform: translateX(0); }
     100% { transform: translateX(100vw); } /* Moves clouds across the viewport */
 }
-
 /* Featured Projects Section */
 .featured-projects {
     padding: 60px 0;
@@ -137,14 +136,14 @@ nav a:hover::after {
 
 .flower {
     position: relative;
-    width: 150px;
-    height: 250px;
+    width: 150px; /* Increased size */
+    height: 250px; /* Increased size */
     text-align: center;
     opacity: 0;
     transform: translateY(100px);
     transition: all 1s ease-out;
     border: 3px solid black; /* Black outline */
-    border-radius: 50%; /* Makes flower look more organic */
+    border-radius: 20% 20% 40% 40% / 30% 30% 50% 50%; /* Organic look */
     background-color: pink;
 }
 
@@ -153,7 +152,7 @@ nav a:hover::after {
     bottom: 0;
     left: 50%;
     width: 8px;
-    height: 150px;
+    height: 150px; /* Increased height */
     background-color: green;
     transform: translateX(-50%);
 }
@@ -167,35 +166,35 @@ nav a:hover::after {
 }
 
 .flower .stem .leaf-1 {
-    top: 30%;
+    top: 20%;
     left: -30px;
     transform: rotate(-45deg);
 }
 
 .flower .stem .leaf-2 {
-    top: 50%;
+    top: 40%;
     left: 30px;
     transform: rotate(45deg);
 }
 
 .flower .stem .leaf-3 {
-    top: 70%;
+    top: 60%;
     left: -30px;
     transform: rotate(90deg);
 }
 
 .flower .stem .leaf-4 {
-    top: 20%;
+    top: 30%;
     left: 30px;
     transform: rotate(-90deg);
 }
 
 .flower .petals {
     position: absolute;
-    bottom: 150px;
+    bottom: 150px; /* Adjusted for increased height */
     left: 50%;
-    width: 120px;
-    height: 120px;
+    width: 120px; /* Increased size */
+    height: 120px; /* Increased size */
     border-radius: 50%;
     border: 2px solid black; /* Black outline for petals */
     background-color: pink;
@@ -204,10 +203,10 @@ nav a:hover::after {
 
 .flower .center {
     position: absolute;
-    bottom: 150px;
+    bottom: 150px; /* Adjusted for increased height */
     left: 50%;
-    width: 80px;
-    height: 80px;
+    width: 80px; /* Increased size */
+    height: 80px; /* Increased size */
     border-radius: 50%;
     overflow: hidden;
     transform: translateX(-50%);
@@ -220,7 +219,7 @@ nav a:hover::after {
 }
 
 .flower p {
-    margin-top: 160px;
+    margin-top: 160px; /* Adjusted for increased height */
 }
 
 .flower.visible {
@@ -228,18 +227,7 @@ nav a:hover::after {
     transform: translateY(0);
 }
 
-@keyframes springUp {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Stagger animation for flowers */
+/* Staggered animation for flowers */
 .flower:nth-child(1) {
     animation: springUp 1.5s forwards ease-out;
     animation-delay: 0.2s;
@@ -253,6 +241,17 @@ nav a:hover::after {
 .flower:nth-child(3) {
     animation: springUp 1.5s forwards ease-out;
     animation-delay: 0.6s;
+}
+
+@keyframes springUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 

@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(rect.top, window.innerHeight); // Log positions
             if (rect.top < window.innerHeight && rect.bottom >= 0) {
                 flower.classList.add('visible');
+            } else {
+                flower.classList.remove('visible'); // Ensure the class is removed when out of view
             }
         });
     }
