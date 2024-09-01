@@ -1,401 +1,510 @@
  /* General Styles */
  body {
-    font-family: 'Forum', Open Sans, Geneva, Verdana, sans-serif; /* Set default font*/
+     font-family: 'Forum', Open Sans, Geneva, Verdana, sans-serif;
+     /* Set default font*/
      margin: 0;
-    padding: 0;
-    line-height: 1.6; /* Improve text readability */
-    background-color: #fff; /* White background */
-    color: #333; /* Dark gray text color */
-}
+     padding: 0;
+     line-height: 1.6;
+     /* Improve text readability */
+     background-color: #fff;
+     /* White background */
+     color: #333;
+     /* Dark gray text color */
+ }
 
-header {
-    background: linear-gradient(90deg, #FF69B4, #FFC0CB); /* Pink gradient background */
-    color: #c20064; /* text color */
-    padding: 20px 20px; /* Space above and below */
-    text-align: center; /* Center align text */
-}
+ header {
+     background: linear-gradient(90deg, #FF69B4, #FFC0CB);
+     /* Pink gradient background */
+     color: #c20064;
+     /* text color */
+     padding: 20px 20px;
+     /* Space above and below */
+     text-align: center;
+     /* Center align text */
+ }
 
-header h1 {
-    /*margin: 34;*/
-    font-size: 3.5em; /* Large font size */
-    font-weight: bold;
-    color: #000; /* Dark gray for the header */
-    animation: fadeIn 2s; /* Fade in animation */
-}
+ header h1 {
+     /*margin: 34;*/
+     font-size: 3.5em;
+     /* Large font size */
+     font-weight: bold;
+     color: #000;
+     /* Dark gray for the header */
+     animation: fadeIn 2s;
+     /* Fade in animation */
+ }
 
-header p {
-    font-size: 1.1em; /* Smaller font size */
-    animation: fadeIn 3s; /* Fade in animation */
-    margin-bottom: 5%;
-}
+ header p {
+     font-size: 1.1em;
+     /* Smaller font size */
+     animation: fadeIn 3s;
+     /* Fade in animation */
+     margin-bottom: 5%;
+ }
 
-/* Navigation Styles */
-nav {
-    text-align: center;
-    margin: 20px 0; /* Space above and below */
-}
+ /* Navigation Styles */
+ nav {
+     text-align: center;
+     margin: 20px 0;
+     /* Space above and below */
+ }
 
-nav a {
-    margin: 0 15px; /* Space between links */
-    color: #FFC0CB; /* White text color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold;
-    position: relative;
-}
+ nav a {
+     margin: 0 15px;
+     /* Space between links */
+     color: #FFC0CB;
+     /* White text color */
+     text-decoration: none;
+     /* Remove underline */
+     font-weight: bold;
+     position: relative;
+ }
 
-nav a:hover {
-    color: #FF69B4; /* Pink color on hover */
-}
+ nav a:hover {
+     color: #FF69B4;
+     /* Pink color on hover */
+ }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #FF69B4; /* Pink underline on hover */
-    left: 0;
-    bottom: -5px;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
+ nav a::after {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 2px;
+     background-color: #FF69B4;
+     /* Pink underline on hover */
+     left: 0;
+     bottom: -5px;
+     transform: scaleX(0);
+     transform-origin: bottom right;
+     transition: transform 0.25s ease-out;
+ }
 
-nav a:hover::after {
-    transform: scaleX(1); /* Expands underline on hover */
-    transform-origin: bottom left;
-}
+ nav a:hover::after {
+     transform: scaleX(1);
+     /* Expands underline on hover */
+     transform-origin: bottom left;
+ }
 
-/* Container Style */
-.container {
-    width: 90%;
-    margin: auto; /* Center container */
-    overflow: hidden;
-    /*max-width: 1200px; /* Max width for container */
-}
+ /* Container Style */
+ .container {
+     width: 90%;
+     margin: auto;
+     /* Center container */
+     overflow: hidden;
+     /*max-width: 1200px; /* Max width for container */
+ }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 100vh; /* Full screen height */
-    width:100vw;
-    background: linear-gradient(180deg, #FF69B4, #ffe1ec); /* Light pink to white gradient */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    
-}
-/*
+ /* Hero Section */
+ .hero {
+     position: relative;
+     height: 100vh;
+     /* Full screen height */
+     width: 100vw;
+     background: linear-gradient(180deg, #FF69B4, #ffe1ec);
+     /* Light pink to white gradient */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+
+ }
+
+ /*
 .hero-content {
     position: relative;
     z-index: 2; /* Content above background }*/
 
-.hero-name{
-    width:100%;
-    font-size: 6vw;
-}
+ .hero-name {
+     width: 100%;
+     font-size: 6vw;
+ }
 
-/* Background clouds animation */
+ /* Background clouds animation */
 
-/* New cloud styles and animations */
+ /* New cloud styles and animations */
 
-.cloud {
-    opacity: 0.8; /* Slight transparency */
-}
+ .cloud {
+     opacity: 0.8;
+     /* Slight transparency */
+ }
 
-@keyframes driftRight {
-    0% {
-        left: -400px; /* Start off-screen to the left */
-        opacity: 0; /* Start invisible */
-    }
-    50% {
-        opacity: 0.8; /* Fade in during drift */
-    }
-    100% {
-        left: 50%; /* Stop at center-right */
-        opacity: 1; /* Fully visible */
-    }
-}
+ @keyframes driftRight {
+     0% {
+         left: -400px;
+         /* Start off-screen to the left */
+         opacity: 0;
+         /* Start invisible */
+     }
 
-@keyframes driftLeft {
-    0% {
-        left: 100vw; /* Start off-screen to the right */
-        opacity: 0; /* Start invisible */
-    }
-    50% {
-        opacity: 0.8; /* Fade in during drift */
-    }
-    100% {
-        left: calc(50% - 200px); /* Stop at center-left */
-        opacity: 1; /* Fully visible */
-    }
-}
+     50% {
+         opacity: 0.8;
+         /* Fade in during drift */
+     }
 
+     100% {
+         left: 50%;
+         /* Stop at center-right */
+         opacity: 1;
+         /* Fully visible */
+     }
+ }
 
+ @keyframes driftLeft {
+     0% {
+         left: 100vw;
+         /* Start off-screen to the right */
+         opacity: 0;
+         /* Start invisible */
+     }
 
+     50% {
+         opacity: 0.8;
+         /* Fade in during drift */
+     }
 
-
-
-.hero::before, .hero::after {
-    content: '';
-    position: absolute;
-    background: url('images/33c3ed0d0a6b9f660a76fef9a287c890.png') no-repeat contain;
-    animation: moveClouds 30s linear infinite; /* Cloud animation */
-}
-
-
-.hero::before {
-    width: 300px;
-    height: 150px;
-    top: 20%;
-    left: 10%;
-}
-
-.hero::after {
-    width: 400px;
-    height: 200px;
-    top: 50%;
-    left: 60%;
-    animation-duration: 60s; /* Slower cloud movement */
-}
-
-/* Cloud movement animation */
-@keyframes moveClouds {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(100vw); } /* Move clouds across screen */
-}
-.vine-divider {
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-        background: linear-gradient(180deg, #ffe1ec,#fff); /* Light pink to white gradient */
-}
-
-.vine-divider svg {
-    width: 100%;
-    max-width: 1000px; /* Max width to make sure it looks good on all screen sizes */
-    height: auto;
-}
-#featured-projects {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #ffffff;
-    position: relative;
-}
-
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-/* View More Button Style */
-.view-more-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 30px;
-    background-color: #FF69B4; /* Pink background */
-    color: #fff; /* White text */
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-.view-more-button:hover {
-    background-color: #FF1493; /* Darker pink on hover */
-}
-
-/* Button Styles */.button, .primary-btn, .secondary-btn {
-    border: 3px solid black;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-weight: 700;
-    transition: background 0.3s ease, color 0.3s ease;
-    margin: 5px;
-}
-
-.primary-btn {
-    background-color: #FF69B4;
-    color: #c20064;
-    border-color: #fff; /* border */
-}
-
-.secondary-btn {
-    background-color: white;
-    color: #FF69B4;
-    border-color: #FF69B4;
-}
-
-.primary-btn:hover, .secondary-btn:hover, .button:hover {
-    background-color: #FF69B4;
-    color: white;
-}
-
-.primary-btn:hover, .secondary-btn:hover, .button:hover {
-    background-color: #FF69B4;
-    color: white;
-}
-
-/* Introduction Section */
-.introduction {
-    padding: 50px 0;
-    background-color: white; /* White background */
-    text-align: center;
-}
-
-.introduction h2 {
-    font-size: 2.5em; /* Large heading */
-    margin-bottom: 20px; /* Space below heading */
-}
-
-.introduction p {
-    font-size: 1.2em;
-    color: #666; /* Gray text */
-}
-
-/* Footer */
-footer {
-    padding: 20px 0;
-    background-color: #FF69B4; /* Pink background */
-    color: white;
-    text-align: center;
-}
-
-/* Animations for text */
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Section Title Styling */
-.section-title {
-    text-align: center;
-    margin-bottom: 20px; /* Space below title */
-    font-size: 2em;
-    animation: slideIn 1s; /* Slide in animation */
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 2px;
-    background-color: #FF69B4; /* Pink underline */
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -10px;
-}
-
-/* Experience and Projects Layout */
-.experience, .projects {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping */
-    justify-content: space-between;
-}
-
-.experience-item, .project-item {
-    background: #fff; /* White background */
-    padding: 20px;
-    margin: 10px 0;
-    border: 1px solid #ddd; /* Light gray border */
-    width: 48%;
-    box-sizing: border-box; /* Include padding in width */
-    transition: transform 0.3s ease; /* Smooth transform */
-}
-
-.experience-item:hover, .project-item:hover {
-    transform: translateY(-10px); /* Move up on hover */
-}
-
-/* Back-to-Top Button */
-#back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: #FF69B4; /* Pink background */
-    color: white; /* White arrow */
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px; /* Center arrow */
-    cursor: pointer;
-    display: none; /* Hidden by default */
-    z-index: 1000; /* Above other elements */
-}
-
-#back-to-top:hover {
-    background-color: #FF1493; /* Darker pink on hover */
-}
-
-
-.flower-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Center items within each flower */
-    justify-content: center; /* Align the bottom part for stem */
-    gap: 100px;
-}
+     100% {
+         left: calc(50% - 200px);
+         /* Stop at center-left */
+         opacity: 1;
+         /* Fully visible */
+     }
+ }
 
 
 
-.flower {
-    position: relative;
-    width: 120px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.petal {
-    position: relative;
-    border-radius: 50%;
-}
-
-.center {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(254, 245, 124);
-    border-radius: 50%;
-    position: relative;
-    top: 0px;
-    left: 0px;
-}
-
-.stem {
-    width: 14px;
-    height: 170px;
-    background-color: rgb(115, 225, 115);
-    position: absolute;
-    top: 120px;
-}
-
-.leaf {
-    position: relative;
-    width: 40px;
-    height: 20px;
-    background-color: green;
-    border-radius: 40px;
-}
 
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .projects-grid {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center align */
-    }
+ .hero::before,
+ .hero::after {
+     content: '';
+     position: absolute;
+     background: url('images/33c3ed0d0a6b9f660a76fef9a287c890.png') no-repeat contain;
+     animation: moveClouds 30s linear infinite;
+     /* Cloud animation */
+ }
 
-    .experience-item, .project-item {
-        width: 100%; /* Full width for small screens */
-    }
-}
+
+ .hero::before {
+     width: 300px;
+     height: 150px;
+     top: 20%;
+     left: 10%;
+ }
+
+ .hero::after {
+     width: 400px;
+     height: 200px;
+     top: 50%;
+     left: 60%;
+     animation-duration: 60s;
+     /* Slower cloud movement */
+ }
+
+ /* Cloud movement animation */
+ @keyframes moveClouds {
+     0% {
+         transform: translateX(0);
+     }
+
+     100% {
+         transform: translateX(100vw);
+     }
+
+     /* Move clouds across screen */
+ }
+
+ .vine-divider {
+     margin: 0px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: linear-gradient(180deg, #ffe1ec, #fff);
+     /* Light pink to white gradient */
+ }
+
+ .vine-divider svg {
+     width: 100%;
+     max-width: 1000px;
+     /* Max width to make sure it looks good on all screen sizes */
+     height: auto;
+ }
+
+ #featured-projects {
+     padding: 50px 20px;
+     text-align: center;
+     background-color: #ffffff;
+     position: relative;
+ }
+
+ h2 {
+     font-size: 2.5em;
+     margin-bottom: 20px;
+ }
+
+ /* View More Button Style */
+ .view-more-button {
+     display: inline-block;
+     margin-top: 30px;
+     padding: 15px 30px;
+     background-color: #FF69B4;
+     /* Pink background */
+     color: #fff;
+     /* White text */
+     text-decoration: none;
+     font-size: 1.2em;
+     border-radius: 5px;
+     /* Rounded corners */
+     transition: background-color 0.3s ease;
+     /* Smooth transition */
+ }
+
+ .view-more-button:hover {
+     background-color: #FF1493;
+     /* Darker pink on hover */
+ }
+
+ /* Button Styles */
+ .button,
+ .primary-btn,
+ .secondary-btn {
+     border: 3px solid black;
+     text-decoration: none;
+     padding: 10px 20px;
+     border-radius: 50px;
+     font-weight: 700;
+     transition: background 0.3s ease, color 0.3s ease;
+     margin: 5px;
+ }
+
+ .primary-btn {
+     background-color: #FF69B4;
+     color: #c20064;
+     border-color: #fff;
+     /* border */
+ }
+
+ .secondary-btn {
+     background-color: white;
+     color: #FF69B4;
+     border-color: #FF69B4;
+ }
+
+ .primary-btn:hover,
+ .secondary-btn:hover,
+ .button:hover {
+     background-color: #FF69B4;
+     color: white;
+ }
+
+ .primary-btn:hover,
+ .secondary-btn:hover,
+ .button:hover {
+     background-color: #FF69B4;
+     color: white;
+ }
+
+ /* Introduction Section */
+ .introduction {
+     padding: 50px 0;
+     background-color: white;
+     /* White background */
+     text-align: center;
+ }
+
+ .introduction h2 {
+     font-size: 2.5em;
+     /* Large heading */
+     margin-bottom: 20px;
+     /* Space below heading */
+ }
+
+ .introduction p {
+     font-size: 1.2em;
+     color: #666;
+     /* Gray text */
+ }
+
+ /* Footer */
+ footer {
+     padding: 20px 0;
+     background-color: #FF69B4;
+     /* Pink background */
+     color: white;
+     text-align: center;
+ }
+
+ /* Animations for text */
+ @keyframes fadeInDown {
+     from {
+         opacity: 0;
+         transform: translateY(-20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ /* Section Title Styling */
+ .section-title {
+     text-align: center;
+     margin-bottom: 20px;
+     /* Space below title */
+     font-size: 2em;
+     animation: slideIn 1s;
+     /* Slide in animation */
+ }
+
+ .section-title::after {
+     content: '';
+     position: absolute;
+     width: 50px;
+     height: 2px;
+     background-color: #FF69B4;
+     /* Pink underline */
+     left: 50%;
+     transform: translateX(-50%);
+     bottom: -10px;
+ }
+
+ /* Experience and Projects Layout */
+ .experience,
+ .projects {
+     display: flex;
+     flex-wrap: wrap;
+     /* Allows wrapping */
+     justify-content: space-between;
+ }
+
+ .experience-item,
+ .project-item {
+     background: #fff;
+     /* White background */
+     padding: 20px;
+     margin: 10px 0;
+     border: 1px solid #ddd;
+     /* Light gray border */
+     width: 48%;
+     box-sizing: border-box;
+     /* Include padding in width */
+     transition: transform 0.3s ease;
+     /* Smooth transform */
+ }
+
+ .experience-item:hover,
+ .project-item:hover {
+     transform: translateY(-10px);
+     /* Move up on hover */
+ }
+
+ /* Back-to-Top Button */
+ #back-to-top {
+     position: fixed;
+     bottom: 30px;
+     right: 30px;
+     width: 50px;
+     height: 50px;
+     background-color: #FF69B4;
+     /* Pink background */
+     color: white;
+     /* White arrow */
+     border-radius: 50%;
+     text-align: center;
+     line-height: 50px;
+     /* Center arrow */
+     cursor: pointer;
+     display: none;
+     /* Hidden by default */
+     z-index: 1000;
+     /* Above other elements */
+ }
+
+ #back-to-top:hover {
+     background-color: #FF1493;
+     /* Darker pink on hover */
+ }
+
+
+ .flower-row {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     /* Center items within each flower */
+     justify-content: center;
+     /* Align the bottom part for stem */
+     gap: 100px;
+ }
+
+
+
+ .flower {
+     position: relative;
+     width: 120px;
+     height: 300px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .petal {
+     position: relative;
+     border-radius: 50%;
+ }
+
+ .center {
+     width: 100px;
+     height: 100px;
+     background-color: rgb(254, 245, 124);
+     border-radius: 50%;
+     position: relative;
+     top: 0px;
+     left: 0px;
+ }
+
+ .stem {
+     width: 14px;
+     height: 170px;
+     background-color: rgb(115, 225, 115);
+     position: absolute;
+     top: 120px;
+ }
+
+ .leaf {
+     position: relative;
+     width: 40px;
+     height: 20px;
+     background-color: green;
+     border-radius: 40px;
+ }
+
+
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+     .projects-grid {
+         flex-direction: column;
+         /* Stack items vertically */
+         align-items: center;
+         /* Center align */
+     }
+
+     .experience-item,
+     .project-item {
+         width: 100%;
+         /* Full width for small screens */
+     }
+ }
