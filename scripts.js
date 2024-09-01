@@ -1,60 +1,21 @@
-// Run the code only after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('JavaScript is running'); // Log message to confirm script is working
-
-    // Select the "Back to Top" button
     const backToTopButton = document.getElementById("backToTop");
 
-    // Check if "Back to Top" button exists before adding event listener
     if (backToTopButton) {
         backToTopButton.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent default anchor click behavior
-            window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
 
-
-    // Function to filter projects based on selected category
-    function filterProjects(category) {
-        const projects = document.querySelectorAll('.project-item'); // Select all project items
-
-        projects.forEach(project => {
-            if (category === 'all') {
-                project.style.display = 'block'; // Show all projects if 'all' is selected
-            } else {
-                // Show or hide projects based on category match
-                if (project.classList.contains(category)) {
-                    project.style.display = 'block'; // Show matching projects
-                } else {
-                    project.style.display = 'none'; // Hide non-matching projects
-                }
-            }
-        });
-    }
-
-    // Show or hide the "Back to Top" button based on scroll position
     window.onscroll = function() {
-        scrollFunction(); // Call scrollFunction whenever user scrolls
-    };
-
-    // Function to show or hide "Back to Top" button
-    function scrollFunction() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            // Show button if user scrolls down more than 100px
-            if (backToTopButton) {
-                backToTopButton.style.display = "block";
-            }
-        } else {
-            // Hide button if user scrolls up to less than 100px
-            if (backToTopButton) {
-                backToTopButton.style.display = "none";
-            }
+        if (backToTopButton) {
+            backToTopButton.style.display = window.scrollY > 100 ? "block" : "none";
         }
-    }
-})
+    };
+});
 
 window.onload = function () {
-    // Get the flower row container
     const flowerRow = document.getElementById('flowerRow');
 
     // Function to generate a random number between min and max
@@ -92,6 +53,12 @@ window.onload = function () {
             getRandomInt(40, 60),
             getRandomInt(40, 60),
         ];
+
+        // Create stem
+        const stem = document.createElement('div');
+        stem.classList.add('stem');
+        flower.appendChild(stem);
+
         // Create leaves
         for (let i = 1; i <= 2; i++) {
             const leaf = document.createElement('div');
@@ -108,11 +75,6 @@ window.onload = function () {
 
             flower.appendChild(leaf);
         }
-
-        // Create stem
-        const stem = document.createElement('div');
-        stem.classList.add('stem');
-        flower.appendChild(stem);
 
         // Create petals with variations of the base color and shape
         for (let i = 0; i < numberOfPetals; i++) {
@@ -136,21 +98,12 @@ window.onload = function () {
             // Make petals more organic-shaped using border-radius and transform
             const borderRadius = baseBorderRadius.map(val => val + getRandomInt(0, 2)); // Slight variation for each petal
             petal.style.borderRadius = `${borderRadius[0]}% ${borderRadius[1]}% ${borderRadius[2]}% ${borderRadius[3]}%`;
-            petal.style.transform = `rotate(${getRandomInt(-5, 5)}deg) scale(${getRandomInt(98, 102) / 100})`;
-
+            
             // Calculate angle for each petal to evenly distribute them around the center
             const angle = (360 / numberOfPetals) * i;
             const radius = 40; // Distance from the center of the flower to the petal
-            const x = radius * Math.cos((angle * Math.PI) / 180);
-            const y = radius * Math.sin((angle * Math.PI) / 180);
 
             // Position petals using CSS transform to rotate and translate them
-            //petal.style.position = 'absolute';
-            //petal.style.top = '18px';
-            //petal.style.left = '6px';
-            //petal.style.transform += ` translate(${x}px, ${y}px) rotate(${angle}deg)`;
-            
-            // Adjust relative positioning of petals around the center
             petal.style.position = 'absolute';
             petal.style.top = '55px';
             petal.style.transform = `rotate(${angle}deg) translate(${radius}px)`;
@@ -158,14 +111,10 @@ window.onload = function () {
             flower.appendChild(petal);
         }
 
-        // Create center
+        // Create flower center
         const center = document.createElement('div');
         center.classList.add('center');
         flower.appendChild(center);
-
-        
-
-        
 
         return flower;
     }
