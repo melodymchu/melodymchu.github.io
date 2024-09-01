@@ -70,7 +70,7 @@ nav a:hover::after {
     width: 90%;
     margin: auto; /* Center container */
     overflow: hidden;
-    max-width: 1200px; /* Max width for container */
+    /*max-width: 1200px; /* Max width for container */
 }
 
 /* Hero Section */
