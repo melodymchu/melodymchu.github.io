@@ -284,7 +284,7 @@ footer {
 
 .flower-row {
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     align-items: center; /* Center items within each flower */
     justify-content: flex-end; /* Align the bottom part for stem */
     gap: 60px;
