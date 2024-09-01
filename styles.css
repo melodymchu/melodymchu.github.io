@@ -96,6 +96,46 @@ nav a:hover::after {
 }
 
 /* Background clouds animation */
+
+/* New cloud styles and animations */
+
+.cloud {
+    opacity: 0.8; /* Slight transparency */
+}
+
+@keyframes driftRight {
+    0% {
+        left: -400px; /* Start off-screen to the left */
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        opacity: 0.8; /* Fade in during drift */
+    }
+    100% {
+        left: 50%; /* Stop at center-right */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+@keyframes driftLeft {
+    0% {
+        left: 100vw; /* Start off-screen to the right */
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        opacity: 0.8; /* Fade in during drift */
+    }
+    100% {
+        left: calc(50% - 200px); /* Stop at center-left */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+
+
+
+
+
 .hero::before, .hero::after {
     content: '';
     position: absolute;

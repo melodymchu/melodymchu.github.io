@@ -126,5 +126,50 @@ window.onload = function () {
         const flower = createFlower();
         flowerRow.appendChild(flower);
     }
-};
 
+    
+
+
+
+    // Function to create a cloud element with animation
+    function createCloud() {
+        const cloud = document.createElement('div');
+        cloud.classList.add('cloud');
+
+        // Randomize cloud size
+        const cloudWidth = getRandomInt(200, 400);
+        const cloudHeight = getRandomInt(100, 200);
+
+        // Set initial styles for the cloud
+        cloud.style.width = `${cloudWidth}px`;
+        cloud.style.height = `${cloudHeight}px`;
+        cloud.style.background = "url('images/33c3ed0d0a6b9f660a76fef9a287c890.png') no-repeat";
+        cloud.style.backgroundSize = 'contain';
+        cloud.style.position = 'absolute';
+        cloud.style.top = `${getRandomInt(10, 50)}%`;
+
+        // Determine if the cloud will come from the left or right
+        const fromLeft = Math.random() < 0.5;
+
+        if (fromLeft) {
+            cloud.style.left = `-${cloudWidth}px`; // Start off-screen to the left
+            cloud.style.animation = `driftRight ${getRandomInt(20, 30)}s linear forwards`;
+        } else {
+            cloud.style.left = '100vw'; // Start off-screen to the right
+            cloud.style.animation = `driftLeft ${getRandomInt(20, 30)}s linear forwards`;
+        }
+
+        document.body.appendChild(cloud);
+    }
+
+    // Function to generate clouds at random intervals
+    function generateClouds() {
+        const numberOfClouds = 10; // Total number of clouds to generate
+
+        for (let i = 0; i < numberOfClouds; i++) {
+            setTimeout(createCloud, getRandomInt(1000, 5000) * i); // Delay each cloud creation
+        }
+    }
+
+    generateClouds(); // Start generating clouds
+};
