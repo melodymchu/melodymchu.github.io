@@ -1,6 +1,6 @@
  /* General Styles */
  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set default font */
+    font-family: 'Forum', Open Sans, Geneva, Verdana, sans-serif; /* Set default font */
     margin: 0;
     padding: 0;
     line-height: 1.6; /* Improve text readability */
@@ -10,22 +10,23 @@
 
 header {
     background: linear-gradient(90deg, #FF69B4, #FFC0CB); /* Pink gradient background */
-    color: #c20064; /* White text color */
+    color: #c20064; /* text color */
     padding: 20px 20px; /* Space above and below */
     text-align: center; /* Center align text */
 }
 
 header h1 {
     margin: 34;
-    font-size: 2.5em; /* Large font size */
-    color: #333; /* Dark gray for the header */
+    font-size: 3.5em; /* Large font size */
+    font-weight: bold;
+    color: #000; /* Dark gray for the header */
     animation: fadeIn 2s; /* Fade in animation */
 }
 
 header p {
-    font-size: 1.2em; /* Smaller font size */
+    font-size: 1.1em; /* Smaller font size */
     animation: fadeIn 3s; /* Fade in animation */
-    margin-bottom: 7%;
+    margin-bottom: 5%;
 }
 
 /* Navigation Styles */
