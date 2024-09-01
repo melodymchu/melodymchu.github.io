@@ -96,7 +96,7 @@ nav a:hover::after {
 }
 
 /* Background clouds animation */
-/* Cloud Container Styles */
+/* Cloud Container Styles *//* Cloud Container Styles */
 .cloud-container {
     position: absolute;
     top: 0;
@@ -136,7 +136,6 @@ nav a:hover::after {
         opacity: 1; /* Fully visible */
     }
 }
-
 
 
 

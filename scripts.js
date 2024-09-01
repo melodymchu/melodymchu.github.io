@@ -153,13 +153,15 @@ window.onload = function () {
         // Determine if the cloud will come from the left or right
         const fromLeft = Math.random() < 0.5;
 
+        const animationDuration = getRandomInt(3, 5); // Faster animation between 3 and 5 seconds
+
         if (fromLeft) {
             cloud.style.left = `-${cloudWidth}px`; // Start off-screen to the left
-            cloud.style.animation = `driftRight ${getRandomInt(5, 8)}s ease-out forwards`;
+            cloud.style.animation = `driftRight ${animationDuration}s ease-out forwards`;
             console.log('Cloud created from left');
         } else {
             cloud.style.left = '100vw'; // Start off-screen to the right
-            cloud.style.animation = `driftLeft ${getRandomInt(5, 8)}s ease-out forwards`;
+            cloud.style.animation = `driftLeft ${animationDuration}s ease-out forwards`;
             console.log('Cloud created from right');
         }
 
@@ -171,7 +173,7 @@ window.onload = function () {
             const positionRatio = (positionIndex + 1) / (totalClouds + 1);
             cloud.style.left = `${positionRatio * 100}%`; // Spread out evenly
             cloud.style.animation = 'none'; // Stop animation after it ends
-        }, 200); // Duration of the longest animation
+        }, animationDuration * 1000); // Convert duration to milliseconds
     }
 
     // Function to generate clouds at random intervals
@@ -180,7 +182,7 @@ window.onload = function () {
         console.log('Generating clouds...');
 
         for (let i = 0; i < numberOfClouds; i++) {
-            setTimeout(() => createCloud(i, numberOfClouds), getRandomInt(20, 150) * i); // Delay each cloud creation
+            setTimeout(() => createCloud(i, numberOfClouds), getRandomInt(500, 1500) * i); // Delay each cloud creation
         }
     }
 
