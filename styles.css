@@ -225,7 +225,7 @@ h2 {
 
 .primary-btn {
     background-color: #FF69B4;
-    color: #c20064;
+    color: #fff;
     border-color: #fff; /* border */
 }
 
@@ -235,14 +235,13 @@ h2 {
     border-color: #FF69B4;
 }
 
-.primary-btn:hover, .secondary-btn:hover, .button:hover {
+.secondary-btn:hover, .button:hover {
     background-color: #FF69B4;
     color: white;
 }
 
-.primary-btn:hover, .secondary-btn:hover, .button:hover {
-    background-color: #FF69B4;
-    color: white;
+.primary-btn:hover {
+    color: #c20064;
 }
 
 /* Introduction Section */
