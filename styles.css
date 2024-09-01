@@ -10,22 +10,22 @@
 
 header {
     background: linear-gradient(90deg, #FF69B4, #FFC0CB); /* Pink gradient background */
-    color: #fff; /* White text color */
-    padding: 20px 0; /* Space above and below */
+    color: #c20064; /* White text color */
+    padding: 20px 20px; /* Space above and below */
     text-align: center; /* Center align text */
 }
 
 header h1 {
-    margin: 0;
+    margin: 34;
     font-size: 2.5em; /* Large font size */
     color: #333; /* Dark gray for the header */
     animation: fadeIn 2s; /* Fade in animation */
 }
 
 header p {
-    margin: 0;
     font-size: 1.2em; /* Smaller font size */
     animation: fadeIn 3s; /* Fade in animation */
+    margin-bottom: 7%;
 }
 
 /* Navigation Styles */
@@ -36,7 +36,7 @@ nav {
 
 nav a {
     margin: 0 15px; /* Space between links */
-    color: #FFFFFF; /* White text color */
+    color: #FFC0CB; /* White text color */
     text-decoration: none; /* Remove underline */
     font-weight: bold;
     position: relative;
@@ -76,16 +76,18 @@ nav a:hover::after {
 .hero {
     position: relative;
     height: 100vh; /* Full screen height */
-    background: linear-gradient(180deg, #FFE1EC, #FFFFFF); /* Light pink to white gradient */
+    background: linear-gradient(180deg, #FF69B4, #ffe1ec); /* Light pink to white gradient */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    
 }
 
 .hero-content {
     position: relative;
     z-index: 2; /* Content above background */
+
 }
 
 /* Background clouds animation */
@@ -117,7 +119,19 @@ nav a:hover::after {
     0% { transform: translateX(0); }
     100% { transform: translateX(100vw); } /* Move clouds across screen */
 }
+.vine-divider {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        background: linear-gradient(180deg, #ffe1ec,#fff); /* Light pink to white gradient */
+}
 
+.vine-divider svg {
+    width: 100%;
+    max-width: 1000px; /* Max width to make sure it looks good on all screen sizes */
+    height: auto;
+}
 #featured-projects {
     padding: 50px 20px;
     text-align: center;
@@ -154,16 +168,23 @@ h2 {
     border-radius: 50px; /* Rounded button */
     font-size: 1em;
     margin: 5px;
+
     transition: background 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
 .primary-btn {
-    background-color: #FF1493;
-    color: white;
+    background-color: #FF69B4;
+    text-decoration: none;
+    padding: 10px 20px;
+
+    color: black;
+    border: 3px solid #fff; /* border */
+
 }
 
 .secondary-btn {
     background-color: white;
+    text-decoration: none;
     color: #FF69B4;
     border: 3px solid #FF69B4; /* Pink border */
 }
@@ -270,18 +291,6 @@ footer {
     background-color: #FF1493; /* Darker pink on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .projects-grid {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center align */
-    }
-
-    .experience-item, .project-item {
-        width: 100%; /* Full width for small screens */
-    }
-}
-
 
 .flower-row {
     display: flex;
@@ -331,4 +340,18 @@ footer {
     height: 20px;
     background-color: green;
     border-radius: 40px;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align */
+    }
+
+    .experience-item, .project-item {
+        width: 100%; /* Full width for small screens */
+    }
 }
