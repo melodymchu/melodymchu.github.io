@@ -11,39 +11,39 @@ body {
 header {
     background: linear-gradient(90deg, #FF69B4, #FFC0CB); /* Pink gradient background */
     color: #fff; /* White text color */
-    padding: 20px 0; /* Space above and below header */
+    padding: 20px 0; /* Space above and below */
     text-align: center; /* Center align text */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em; /* Large font size for main heading */
+    font-size: 2.5em; /* Large font size */
     color: #333; /* Dark gray for the header */
-    animation: fadeIn 2s; /* Fade in animation for heading */
+    animation: fadeIn 2s; /* Fade in animation */
 }
 
 header p {
     margin: 0;
-    font-size: 1.2em; /* Smaller font size for subheading */
-    animation: fadeIn 3s; /* Fade in animation for subheading */
+    font-size: 1.2em; /* Smaller font size */
+    animation: fadeIn 3s; /* Fade in animation */
 }
 
 /* Navigation Styles */
 nav {
     text-align: center;
-    margin: 20px 0; /* Space above and below navigation */
+    margin: 20px 0; /* Space above and below */
 }
 
 nav a {
-    margin: 0 15px; /* Space between navigation links */
-    color: #FFFFFF; /* White text color for links */
-    text-decoration: none; /* Remove underline from links */
-    font-weight: bold; /* Bold text for navigation links */
+    margin: 0 15px; /* Space between links */
+    color: #FFFFFF; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
     position: relative;
 }
 
 nav a:hover {
-    color: #FF69B4; /* Pink color for links on hover */
+    color: #FF69B4; /* Pink color on hover */
 }
 
 nav a::after {
@@ -56,30 +56,30 @@ nav a::after {
     bottom: -5px;
     transform: scaleX(0);
     transform-origin: bottom right;
-    transition: transform 0.25s ease-out; /* Smooth underline transition */
+    transition: transform 0.25s ease-out;
 }
 
 nav a:hover::after {
-    transform: scaleX(1); /* Expand underline on hover */
+    transform: scaleX(1); /* Expands underline on hover */
     transform-origin: bottom left;
 }
 
 /* Container Style */
 .container {
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
     width: 90%;
-    margin: 0; /* Center container horizontally */
+    margin: auto; /* Center container */
     overflow: hidden;
-    max-width: 1200px; /* Maximum width for container */
+    max-width: 1200px; /* Max width for container */
 }
 
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh; /* Full viewport height */
-    background: linear-gradient(180deg, #FFE1EC, #FFFFFF); /* Light pink to white gradient background */
+    height: 100vh; /* Full screen height */
+    background: linear-gradient(180deg, #FFE1EC, #FFFFFF); /* Light pink to white gradient */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,7 +88,7 @@ nav a:hover::after {
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Ensure content is above background elements */
+    z-index: 2; /* Content above background */
 }
 
 /* Background clouds animation */
@@ -121,30 +121,27 @@ nav a:hover::after {
     100% { transform: translateX(100vw); } /* Move clouds across screen */
 }
 
-/* Featured Projects Section */
 #featured-projects {
-    padding: 50px 20px; /* Space inside the section */
-    text-align: center; /* Center align text */
-    background-color: #ffffff; /* White background */
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
     position: relative;
 }
 
 h2 {
-    font-size: 2.5em; /* Large font size for section title */
-    margin-bottom: 20px; /* Space below section title */
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-/* Flower Row Layout */
 .flower-row {
     display: flex;
-    gap: 60px; /* Space between flowers */
+    gap: 60px;
 }
 
-/* Flower Styles */
 .flower {
     position: relative;
-    width: 60px; /* Flower width */
-    height: 150px; /* Flower height */
+    width: 60px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,46 +149,47 @@ h2 {
 
 .petal {
     position: absolute;
-    border-radius: 50%; /* Circular petals */
+    border-radius: 50%;
 }
 
 .center {
-    width: 30px; /* Center width */
-    height: 30px; /* Center height */
-    background-color: rgb(254, 245, 124); /* Center color */
-    border-radius: 50%; /* Circular shape */
+    width: 30px;
+    height: 30px;
+    background-color: rgb(254, 245, 124);
+    border-radius: 50%;
     position: absolute;
     top: 25px;
     left: 15px;
 }
 
 .stem {
-    width: 7px; /* Stem width */
-    height: 85px; /* Stem height */
-    background-color: rgb(115, 225, 115); /* Stem color */
+    width: 7px;
+    height: 85px;
+    background-color: rgb(115, 225, 115);
     position: absolute;
     top: 60px;
 }
 
 .leaf {
     position: relative;
-    width: 20px; /* Leaf width */
-    height: 10px; /* Leaf height */
-    background-color: green; /* Leaf color */
-    border-radius: 20px; /* Rounded leaf shape */
+    width: 20px;
+    height: 10px;
+    background-color: green;
+    border-radius: 20px;
 }
+
 
 /* View More Button Style */
 .view-more-button {
     display: inline-block;
-    margin-top: 30px; /* Space above button */
-    padding: 15px 30px; /* Padding inside button */
+    margin-top: 30px;
+    padding: 15px 30px;
     background-color: #FF69B4; /* Pink background */
     color: #fff; /* White text */
     text-decoration: none;
-    font-size: 1.2em; /* Font size for button text */
+    font-size: 1.2em;
     border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth color transition */
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .view-more-button:hover {
@@ -200,71 +198,71 @@ h2 {
 
 /* Button Styles */
 .button {
-    border: 3px solid black; /* Black border */
-    padding: 10px 20px; /* Padding inside button */
-    border-radius: 50px; /* Rounded button shape */
-    font-size: 1em; /* Font size for button text */
-    margin: 5px; /* Margin around buttons */
+    border: 3px solid black;
+    padding: 10px 20px;
+    border-radius: 50px; /* Rounded button */
+    font-size: 1em;
+    margin: 5px;
     transition: background 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
 .primary-btn {
-    background-color: #FF1493; /* Primary button color */
-    color: white; /* Text color */
+    background-color: #FF1493;
+    color: white;
 }
 
 .secondary-btn {
-    background-color: white; /* Secondary button background */
-    color: #FF69B4; /* Secondary button text color */
+    background-color: white;
+    color: #FF69B4;
     border: 3px solid #FF69B4; /* Pink border */
 }
 
 .primary-btn:hover, .secondary-btn:hover {
-    background-color: #FF69B4; /* Background color on hover */
-    color: white; /* Text color on hover */
+    background-color: #FF69B4;
+    color: white;
 }
 
 /* Introduction Section */
 .introduction {
-    padding: 50px 0; /* Padding for the introduction section */
+    padding: 50px 0;
     background-color: white; /* White background */
-    text-align: center; /* Center align text */
+    text-align: center;
 }
 
 .introduction h2 {
-    font-size: 2.5em; /* Large font size for heading */
+    font-size: 2.5em; /* Large heading */
     margin-bottom: 20px; /* Space below heading */
 }
 
 .introduction p {
-    font-size: 1.2em; /* Font size for paragraph */
-    color: #666; /* Gray text color */
+    font-size: 1.2em;
+    color: #666; /* Gray text */
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
-    padding: 20px 0; /* Padding for footer */
+    padding: 20px 0;
     background-color: #FF69B4; /* Pink background */
-    color: white; /* White text */
-    text-align: center; /* Center align text */
+    color: white;
+    text-align: center;
 }
 
-/* Text Animations */
+/* Animations for text */
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); } /* Start state */
-    to { opacity: 1; transform: translateY(0); } /* End state */
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); } /* Start state */
-    to { opacity: 1; transform: translateY(0); } /* End state */
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Section Title Styling */
 .section-title {
-    text-align: center; /* Center align title */
+    text-align: center;
     margin-bottom: 20px; /* Space below title */
-    font-size: 2em; /* Font size for section titles */
+    font-size: 2em;
     animation: slideIn 1s; /* Slide in animation */
 }
 
@@ -275,25 +273,25 @@ footer {
     height: 2px;
     background-color: #FF69B4; /* Pink underline */
     left: 50%;
-    transform: translateX(-50%); /* Center underline */
-    bottom: -10px; /* Position below title */
+    transform: translateX(-50%);
+    bottom: -10px;
 }
 
 /* Experience and Projects Layout */
 .experience, .projects {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap */
-    justify-content: space-between; /* Space between items */
+    flex-wrap: wrap; /* Allows wrapping */
+    justify-content: space-between;
 }
 
 .experience-item, .project-item {
-    background: #fff; /* White background for items */
-    padding: 20px; /* Padding inside items */
-    margin: 10px 0; /* Space around items */
+    background: #fff; /* White background */
+    padding: 20px;
+    margin: 10px 0;
     border: 1px solid #ddd; /* Light gray border */
-    width: 48%; /* Width for items */
-    box-sizing: border-box; /* Include padding in width calculation */
-    transition: transform 0.3s ease; /* Smooth transform on hover */
+    width: 48%;
+    box-sizing: border-box; /* Include padding in width */
+    transition: transform 0.3s ease; /* Smooth transform */
 }
 
 .experience-item:hover, .project-item:hover {
@@ -302,17 +300,17 @@ footer {
 
 /* Back-to-Top Button */
 #back-to-top {
-    position: fixed; /* Fixed position on screen */
-    bottom: 30px; /* Position from bottom */
-    right: 30px; /* Position from right */
-    width: 50px; /* Button width */
-    height: 50px; /* Button height */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
     background-color: #FF69B4; /* Pink background */
     color: white; /* White arrow */
-    border-radius: 50%; /* Circular button */
-    text-align: center; /* Center align text */
-    line-height: 50px; /* Center arrow vertically */
-    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px; /* Center arrow */
+    cursor: pointer;
     display: none; /* Hidden by default */
     z-index: 1000; /* Above other elements */
 }
@@ -321,7 +319,7 @@ footer {
     background-color: #FF1493; /* Darker pink on hover */
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design */
 @media (max-width: 768px) {
     .projects-grid {
         flex-direction: column; /* Stack items vertically */
