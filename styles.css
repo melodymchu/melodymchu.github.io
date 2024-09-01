@@ -88,13 +88,10 @@ nav a:hover::after {
 
 .hero-content {
     position: relative;
-    color: #c60098;
-
-
     z-index: 2; /* Content above background */
 }
 
-.hero-content p {
+.hero-content description {
     color: #c60098;
 }
 
