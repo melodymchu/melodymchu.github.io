@@ -66,6 +66,9 @@ nav a:hover::after {
 
 /* Container Style */
 .container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
     width: 90%;
     margin: auto; /* Center container */
     overflow: hidden;
