@@ -91,7 +91,8 @@ nav a:hover::after {
     z-index: 2; /* Content above background }*/
 
 .hero-name{
-    width:100%
+    width:100%;
+    font-size: 6vw;
 }
 
 /* Background clouds animation */
