@@ -1,5 +1,5 @@
-/* General Styles */
-body {
+ /* General Styles */
+ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set default font */
     margin: 0;
     padding: 0;
@@ -70,7 +70,7 @@ nav a:hover::after {
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
     width: 90%;
-    margin: auto; /* Center container */
+    margin: 0; /* Center container */
     overflow: hidden;
     max-width: 1200px; /* Max width for container */
 }
