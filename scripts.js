@@ -171,7 +171,7 @@ window.onload = function () {
             const positionRatio = (positionIndex + 1) / (totalClouds + 1);
             cloud.style.left = `${positionRatio * 100}%`; // Spread out evenly
             cloud.style.animation = 'none'; // Stop animation after it ends
-        }, 8000); // Duration of the longest animation
+        }, 200); // Duration of the longest animation
     }
 
     // Function to generate clouds at random intervals
@@ -180,7 +180,7 @@ window.onload = function () {
         console.log('Generating clouds...');
 
         for (let i = 0; i < numberOfClouds; i++) {
-            setTimeout(() => createCloud(i, numberOfClouds), getRandomInt(500, 1500) * i); // Delay each cloud creation
+            setTimeout(() => createCloud(i, numberOfClouds), getRandomInt(20, 150) * i); // Delay each cloud creation
         }
     }
 
