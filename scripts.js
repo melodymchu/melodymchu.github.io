@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             backToTopButton.style.display = window.scrollY > 100 ? "block" : "none";
         }
     };
-});
+
 
 window.onload = function () {
     const flowerRow = document.getElementById('flowerRow');
@@ -173,3 +173,4 @@ window.onload = function () {
 
     generateClouds(); // Start generating clouds
 };
+});
