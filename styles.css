@@ -91,6 +91,10 @@ nav a:hover::after {
     z-index: 2; /* Content above background */
 }
 
+.hero-content p {
+    color: #c60098;
+}
+
 /* Background clouds animation */
 .hero::before, .hero::after {
     content: '';
