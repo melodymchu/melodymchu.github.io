@@ -1,7 +1,7 @@
  /* General Styles */
  body {
-    font-family: 'Forum', Open Sans, Geneva, Verdana, sans-serif; /* Set default font */
-    margin: 0;
+    font-family: 'Forum', Open Sans, Geneva, Verdana, sans-serif; /* Set default font*/
+     margin: 0;
     padding: 0;
     line-height: 1.6; /* Improve text readability */
     background-color: #fff; /* White background */
@@ -169,12 +169,13 @@ h2 {
 /* Button Styles */
 .button {
     border: 3px solid black;
-    background-color: #FFC0CB;
-    color:#c20064;
+    background-color: #fff;
+    color:ff69b8;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 50px; /* Rounded button */
-    font-size: 1em;
+    font-weight: 700;
+
     margin: 5px;
 
     transition: background 0.3s ease, color 0.3s ease; /* Smooth transitions */
@@ -185,7 +186,7 @@ h2 {
     text-decoration: none;
     padding: 10px 20px;
     font-weight: bold;
-    color: black;
+    color: #c20064;
     border: 3px solid #fff; /* border */
 
 }
