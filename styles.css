@@ -93,6 +93,8 @@ nav a:hover::after {
 
 .hero-content description {
     color: #c60098;
+    margin-top: 20px; /* Adds 20px of space below */
+
 }
 
 /* Background clouds animation */
