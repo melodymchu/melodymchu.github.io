@@ -16,7 +16,7 @@ header {
 }
 
 header h1 {
-    margin: 34;
+    /*margin: 34;*/
     font-size: 3.5em; /* Large font size */
     font-weight: bold;
     color: #000; /* Dark gray for the header */
@@ -77,6 +77,7 @@ nav a:hover::after {
 .hero {
     position: relative;
     height: 100vh; /* Full screen height */
+    width:100vw;
     background: linear-gradient(180deg, #FF69B4, #ffe1ec); /* Light pink to white gradient */
     display: flex;
     align-items: center;
@@ -84,11 +85,13 @@ nav a:hover::after {
     text-align: center;
     
 }
-
+/*
 .hero-content {
     position: relative;
-    z-index: 2; /* Content above background */
+    z-index: 2; /* Content above background }*/
 
+.hero-name{
+    width:100%
 }
 
 /* Background clouds animation */
