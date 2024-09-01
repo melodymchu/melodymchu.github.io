@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
             window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
         });
     }
-// script.js
-// script.js
 
 document.addEventListener("DOMContentLoaded", function () {
     const flowers = document.querySelectorAll('.flower');
