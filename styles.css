@@ -1,5 +1,5 @@
  /* General Styles */
-body {
+ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set default font */
     margin: 0;
     padding: 0;
@@ -288,47 +288,47 @@ footer {
     flex-direction: row;
     align-items: center; /* Center items within each flower */
     justify-content: center; /* Align the bottom part for stem */
-    gap: 60px;
+    gap: 100px;
 }
 
 
 
 .flower {
     position: relative;
-    width: 60px;
-    height: 150px;
+    width: 120px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .petal {
-    position: absolute;
+    position: relative;
     border-radius: 50%;
 }
 
 .center {
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
     background-color: rgb(254, 245, 124);
     border-radius: 50%;
-    position: absolute;
-    top: 25px;
-    left: 15px;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
 .stem {
-    width: 7px;
-    height: 85px;
+    width: 14px;
+    height: 170px;
     background-color: rgb(115, 225, 115);
     position: absolute;
-    top: 60px;
+    top: 120px;
 }
 
 .leaf {
     position: relative;
-    width: 20px;
-    height: 10px;
+    width: 40px;
+    height: 20px;
     background-color: green;
-    border-radius: 20px;
+    border-radius: 40px;
 }

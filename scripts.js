@@ -66,7 +66,7 @@ window.onload = function () {
     function getRandomBaseColor() {
         const hue = getRandomInt(0, 360); // Random hue
         const saturation = getRandomInt(30, 80); // Saturation %
-        const lightness = getRandomInt(40, 90); // Lightness %
+        const lightness = getRandomInt(80, 90); // Lightness %
         return { hue, saturation, lightness };
     }
 
@@ -82,8 +82,8 @@ window.onload = function () {
         const numberOfPetals = getRandomInt(5, 10);
 
         // Calculate base petal size based on the number of petals
-        const baseWidth = 60 - numberOfPetals * 2; // Smaller width for more petals
-        const baseHeight = 35 - numberOfPetals * 2; // Smaller height for more petals
+        const baseWidth = 120 - numberOfPetals * 2; // Smaller width for more petals
+        const baseHeight = 70 - numberOfPetals * 2; // Smaller height for more petals
 
         // Generate base shape for petals
         const baseBorderRadius = [
@@ -98,8 +98,8 @@ window.onload = function () {
             leaf.classList.add('leaf', `leaf${i}`);
 
             // Randomize leaf position
-            const leafTop = getRandomInt(70, 100);
-            const leafLeft = i === 1 ? -10 : 10;
+            const leafTop = getRandomInt(140, 200);
+            const leafLeft = i === 1 ? -20 : 20;
             const leafRotate = i === 1 ? 30 : -30;
 
             leaf.style.top = `${leafTop}px`;
@@ -128,8 +128,8 @@ window.onload = function () {
             petal.style.backgroundColor = `hsl(${petalHue}, ${baseColor.saturation}%, ${petalLightness}%)`;
 
             // Calculate petal size with slight variations around the base size
-            const widthVariation = getRandomInt(0, 2); // Slight random variation in width
-            const heightVariation = getRandomInt(0, 2); // Slight random variation in height
+            const widthVariation = getRandomInt(0, 4); // Slight random variation in width
+            const heightVariation = getRandomInt(0, 4); // Slight random variation in height
             petal.style.width = `${baseWidth + widthVariation}px`;
             petal.style.height = `${baseHeight + heightVariation}px`;
 
@@ -140,7 +140,7 @@ window.onload = function () {
 
             // Calculate angle for each petal to evenly distribute them around the center
             const angle = (360 / numberOfPetals) * i;
-            const radius = 20; // Distance from the center of the flower to the petal
+            const radius = 40; // Distance from the center of the flower to the petal
             const x = radius * Math.cos((angle * Math.PI) / 180);
             const y = radius * Math.sin((angle * Math.PI) / 180);
 
@@ -152,7 +152,7 @@ window.onload = function () {
             
             // Adjust relative positioning of petals around the center
             petal.style.position = 'absolute';
-            petal.style.top = '27px';
+            petal.style.top = '55px';
             petal.style.transform = `rotate(${angle}deg) translate(${radius}px)`;
 
             flower.appendChild(petal);
