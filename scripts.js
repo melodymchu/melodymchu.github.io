@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const featuredSection = document.getElementById('featured-projects');
 
     
-
-
     window.onload = function () {
         // Get the flower row container
         const flowerRow = document.getElementById('flowerRow');
@@ -147,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
             flowerRow.appendChild(flower);
         }
     };
+    
     
 
 
