@@ -36,9 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-    // Run checkVisibility function on page scroll
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility(); // Initial check to see if any flowers are already in view
 
     // Function to filter projects based on selected category
     function filterProjects(category) {
@@ -76,6 +73,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 backToTopButton.style.display = "none";
             }
         }
-        checkVisibility(); // Re-check visibility of flowers when scrolling
     }
 });
