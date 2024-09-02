@@ -25,6 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
             // Add more image paths as needed
         ];
 
+        // Array of links for each flower
+        const flowerLinks = [
+            'https://melodymchu.github.io/Murakami-Flowers.html',
+            'https://melodymchu.github.io/Murakami-Flowers.html',
+            'https://melodymchu.github.io/Murakami-Flowers.html'
+            // Add more URLs as needed
+        ];
+
         // Function to generate a random number between min and max
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -39,7 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Function to create a single flower
-        function createFlower(imageSrc) {
+        function createFlower(imageSrc, linkHref) {
+            // Create anchor element for the clickable link
+            const flowerLink = document.createElement('a');
+            flowerLink.href = linkHref;
+            flowerLink.classList.add('flower-link'); // Optional: Add a class for styling
+
             const flower = document.createElement('div');
             flower.classList.add('flower');
 
@@ -129,14 +142,17 @@ document.addEventListener('DOMContentLoaded', function () {
             image.alt = 'Flower Image';
             center.appendChild(image);
 
-            return flower;
+            // Append flower to the link
+            flowerLink.appendChild(flower);
+
+            return flowerLink;
         }
 
-        // Generate flowers with specific images
-        flowerImages.forEach((imageSrc) => {
-            const flower = createFlower(imageSrc);
+        // Generate flowers with specific images and links
+        for (let i = 0; i < flowerImages.length; i++) {
+            const flower = createFlower(flowerImages[i], flowerLinks[i]);
             flowerRow.appendChild(flower);
-        });
+        }
 
         // Additional JavaScript (cloud generation, etc.) can follow here
     };
