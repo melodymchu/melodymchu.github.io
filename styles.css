@@ -250,6 +250,7 @@ nav a:hover::after {
     background-color: #ffffff;
     position: relative;
     margin: auto;
+    align-items: center;
 }
 
 
