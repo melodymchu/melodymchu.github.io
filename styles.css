@@ -6,6 +6,7 @@
     line-height: 1.6; /* Improve text readability */
     background-color: #fff; /* White background */
     color: #333; /* Dark gray text color */
+    text-align: center;
 }
 
 header {
