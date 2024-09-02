@@ -116,6 +116,11 @@ window.onload = function () {
         center.classList.add('center');
         flower.appendChild(center);
 
+        const image = document.createElement('img');
+        image.src = 'images/lemon-312068_1280.png';
+        image.alt = 'Flower Image';
+        flower.appendChild(image);
+
         return flower;
     }
 
@@ -143,7 +148,7 @@ window.onload = function () {
             // Set initial styles for the cloud
             cloud.style.width = `${cloudWidth}px`;
             cloud.style.height = `${cloudHeight}px`;
-            cloud.style.background = "url('images/lemon-312068_1280.png') no-repeat";
+            //cloud.style.background = ('images/lemon-312068_1280.png') no-repeat";
             cloud.style.backgroundSize = 'contain';
             cloud.style.position = 'absolute';
             cloud.style.top = `${getRandomInt(10, 50)}%`;
