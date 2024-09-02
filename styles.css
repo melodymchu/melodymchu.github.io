@@ -91,6 +91,8 @@ nav a:hover::after {
     font-weight: 700;
     transition: background 0.3s ease, color 0.3s ease;
     margin: 5px;
+        background-color: #FF69B4; /* Pink background */
+        color: #fff; /* White text */
 }
 
 .btn2 {
@@ -105,7 +107,7 @@ nav a:hover::after {
     border-color: #FF69B4;
 }
 
-.btn1:hover, .button:hover {
+.btn1:hover {
     background-color: #FF69B4;
     color: white;
 }
@@ -113,6 +115,10 @@ nav a:hover::after {
 .btn2:hover {
     background-color: #ffb6ed;
     color: #c20064;
+}
+.button:hover {
+    background-color: #FF1493; /* Darker pink on hover */
+    color: white;
 }
 
 
@@ -326,30 +332,6 @@ nav a:hover::after {
     transform: scale(1.15); /* Slight zoom on hover */
 }
 
-/* View More Button Style */
-.view-more-button {
-    background-color: #FF69B4; /* Pink background */
-    color: #fff; /* White text */
-    
-    border: 3px solid black;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-weight: 700;
-    transition: background 0.3s ease, color 0.3s ease;
-    /*margin: 5px;
-    width:200;
-    padding: 15px 30px;*/
-
-
-    text-align:center;
-    margin: auto;
-
-}
-
-.view-more-button:hover {
-    background-color: #FF1493; /* Darker pink on hover */
-}
 
 
 
