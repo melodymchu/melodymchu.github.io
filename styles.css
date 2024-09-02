@@ -320,21 +320,22 @@ nav a:hover::after {
 
 }
 
+.flower:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
 
 /* View More Button Style */
 .view-more-button {
-    display: block;
-    text-align:center;
-    margin: auto;
-    width:200;
-    padding: 15px 30px;
     background-color: #FF69B4; /* Pink background */
     color: #fff; /* White text */
+    
+    border: 3px solid black;
     text-decoration: none;
-    border:3px solid black;
-    font-size: 1.2em;
-    border-radius: 50px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: 5px;
 }
 
 .view-more-button:hover {
