@@ -391,13 +391,17 @@ nav a:hover::after {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
     background: #fff; /* White background */
     padding: 20px;
-    margin: 10px 0;
-    border: 1px solid #333; /* Light gray border */
-    width: 48%;
+    margin: 10px;
+    border: 3px solid #FF69B4; /* Light gray border */
+    width: 90%;
+    height: 90vh;
     box-sizing: border-box; /* Include padding in width */
     transition: transform 0.3s ease; /* Smooth transform */
-    text-decoration: none;
-
+    text-decoration:none;
+    background-color: #ffe1ec; /* Example background color */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .experience-item:hover, .project-item:hover {
@@ -436,7 +440,7 @@ nav a:hover::after {
     align-items: center; /* Center items within each flower */
     display: grid; /* Enables grid layout */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between grid items */
+    gap: 10px; /* Space between grid items */
     padding: 50px; /* Padding around the grid */
     max-width: 1000px; /* Maximum width for the grid */
     width: 100%; /* Ensures the grid width fills available space */
@@ -473,6 +477,10 @@ nav a:hover::after {
     }
 
     .experience-item, .project-item {
-        width: 100%; /* Full width for small screens */
+        width: 100%; /* Full width for small screens*/
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 }
