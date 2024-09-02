@@ -250,6 +250,7 @@ h2 {
 /* Introduction Section */
 .introduction {
     padding: 50px 0;
+    width:90%;
     background-color: white; /* White background */
     text-align: center;
     
