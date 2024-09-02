@@ -146,10 +146,9 @@ nav a:hover::after {
     display: flex; /* Use flexbox to align the image */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    width: 200px; /* Set container width */
-    height: 200px; /* Set container height */
+    width: 10vw; /* Set container width */
+    height: 10vw; /* Set container height */
     overflow: hidden; /* Hide any overflow */
-    background-color: #f0f0f0; /* Optional: background color */
 }
 
 .centered-image {
