@@ -146,7 +146,7 @@ nav a:hover::after {
     display: flex; /* Use flexbox to align the image */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    width: 10vw; /* Set container width */
+    width: 5 vw; /* Set container width */
     height: 10vw; /* Set container height */
     overflow: hidden; /* Hide any overflow */
 }
@@ -250,7 +250,7 @@ nav a:hover::after {
     flex-direction: row;
     align-items: center; /* Center items within each flower */
     justify-content: center; /* Align the bottom part for stem */
-    gap: 30 vw;
+    gap: 50 vw;
 }
 
 
