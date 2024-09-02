@@ -239,6 +239,7 @@ nav a:hover::after {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .petal {
@@ -258,6 +259,7 @@ nav a:hover::after {
     left: 0px;
     align-items: center;
     border:3px solid #333;/*rgb(197, 164, 0);*/
+    justify-content: center; /* Align the bottom part for stem */
 
 
 }
@@ -268,6 +270,8 @@ nav a:hover::after {
     align-items: center;
     object-fit: cover;
     border-radius: 50%;
+    justify-content: center; /* Align the bottom part for stem */
+
 }
 
 .stem {
