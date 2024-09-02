@@ -250,7 +250,6 @@ nav a:hover::after {
     flex-direction: row;
     align-items: center; /* Center items within each flower */
     justify-content: center; /* Align the bottom part for stem */
-    gap: 200px;
 }
 
 
