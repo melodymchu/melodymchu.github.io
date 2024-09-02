@@ -135,6 +135,30 @@ nav a:hover::after {
     background-color: #FF1493; /* Darker pink on hover */
 }
 
+
+
+
+ /* -----------------------Images -----------------------*/
+
+
+
+.image-container {
+    display: flex; /* Use flexbox to align the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 200px; /* Set container width */
+    height: 200px; /* Set container height */
+    overflow: hidden; /* Hide any overflow */
+    background-color: #f0f0f0; /* Optional: background color */
+}
+
+.centered-image {
+    max-width: 100%; /* Shrink the image to fit container width */
+    max-height: 100%; /* Shrink the image to fit container height */
+    object-fit: contain; /* Maintain aspect ratio while fitting */
+    display: block; /* Remove any default inline spacing */
+    margin: auto; /* Center the image */
+}
  /* -----------------------Hero -----------------------*/
  .hero {
     position: relative;
