@@ -146,8 +146,8 @@ nav a:hover::after {
     display: flex; /* Use flexbox to align the image */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    width: 1 vw; /* Set container width */
-    height: 1vw; /* Set container height */
+    width: 5 vw; /* Set container width */
+    height: 5vw; /* Set container height */
     overflow: hidden; /* Hide any overflow */
 }
 
