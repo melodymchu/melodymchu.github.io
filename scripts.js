@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Array of links for each flower
         const flowerLinks = [
             'https://melodymchu.github.io/Murakami-Flowers.html',
-            'https://melodymchu.github.io/Murakami-Flowers.html',
-            'https://melodymchu.github.io/Murakami-Flowers.html'
+            'https://melodymchu.github.io/Pet-Simulator.html',
+            'https://melodymchu.github.io/Promotional-Robot.html'
             // Add more URLs as needed
         ];
 
