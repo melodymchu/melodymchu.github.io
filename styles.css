@@ -1,4 +1,4 @@
- /* General Styles */
+ /* -----------------------General Styles  -----------------------*/
  body {
     font-family: 'Forum', Open Sans, Geneva, Verdana, sans-serif; /* Set default font*/
      margin: 0;
@@ -15,6 +15,12 @@ header {
     text-align: center; /* Center align text */
 }
 
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+ /* -----------------------Header -----------------------*/
+
 header h1 {
     /*margin: 34;*/
     font-size: 3.5em; /* Large font size */
@@ -29,8 +35,8 @@ header p {
     margin-bottom: 5%;
 }
 
-/* Navigation Styles */
-nav {
+ /* -----------------------Navigation -----------------------*/
+ nav {
     text-align: center;
     margin: 20px 0; /* Space above and below */
 }
@@ -65,8 +71,8 @@ nav a:hover::after {
     transform-origin: bottom left;
 }
 
-/* Container Style */
-.container {
+ /* -----------------------Container -----------------------*/
+ .container {
     width: 90%;
     margin: auto; /* Center container */
     overflow: hidden;
@@ -74,8 +80,64 @@ nav a:hover::after {
     /*max-width: 1200px; /* Max width for container */
 }
 
-/* Hero Section */
-.hero {
+ /* -----------------------Buttons -----------------------*/
+
+/* Button Styles */.button, .btn1, .btn2 {
+    border: 3px solid black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: 5px;
+}
+
+.btn2 {
+    background-color: #FF69B4;
+    color: #fff;
+    border-color: #fff; /* border */
+}
+
+.btn1 {
+    background-color: white;
+    color: #FF69B4;
+    border-color: #FF69B4;
+}
+
+.btn1:hover, .button:hover {
+    background-color: #FF69B4;
+    color: white;
+}
+
+.btn2:hover {
+    background-color: #ffb6ed;
+    color: #c20064;
+}
+
+
+/* -----------------------Back to Top Button -----------------------*/
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #FF69B4; /* Pink background */
+    color: white; /* White arrow */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px; /* Center arrow */
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Above other elements */
+}
+
+#back-to-top:hover {
+    background-color: #FF1493; /* Darker pink on hover */
+}
+
+ /* -----------------------Hero -----------------------*/
+ .hero {
     position: relative;
     height: 100vh; /* Full screen height */
     width:100vw;
@@ -95,6 +157,7 @@ nav a:hover::after {
     width:100%;
     font-size: 6vw;
 }
+ /* -----------------------Background Clouds -----------------------*/
 
 /* Cloud Container Styles */
 .cloud-container {
@@ -132,36 +195,8 @@ nav a:hover::after {
         left: calc(50% - 200px); /* Stop near center-left */
     }
 }
+ /* -----------------------Vine Divider -----------------------*/
 
-
-
-
-
-
-
-
-.hero::before, .hero::after {
-    content: '';
-    position: absolute;
-    background: url('images/33c3ed0d0a6b9f660a76fef9a287c890.png') no-repeat contain;
-    animation: moveClouds 30s linear infinite; /* Cloud animation */
-}
-
-
-.hero::before {
-    width: 300px;
-    height: 150px;
-    top: 20%;
-    left: 10%;
-}
-
-.hero::after {
-    width: 400px;
-    height: 200px;
-    top: 50%;
-    left: 60%;
-    animation-duration: 60s; /* Slower cloud movement */
-}
 
 .vine-divider {
     margin: 0px;
@@ -176,167 +211,14 @@ nav a:hover::after {
     max-width: 1000px; /* Max width to make sure it looks good on all screen sizes */
     height: auto;
 }
+
+ /* -----------------------Featured Projects -----------------------*/
+
 #featured-projects {
     padding: 50px 20px;
     text-align: center;
     background-color: #ffffff;
     position: relative;
-}
-
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-/* View More Button Style */
-.view-more-button {
-    display: block;
-    text-align:center;
-    margin: auto;
-    width:200;
-    padding: 15px 30px;
-    background-color: #FF69B4; /* Pink background */
-    color: #fff; /* White text */
-    text-decoration: none;
-    border:3px solid black;
-    font-size: 1.2em;
-    border-radius: 50px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-.view-more-button:hover {
-    background-color: #FF1493; /* Darker pink on hover */
-}
-
-/* Button Styles */.button, .btn1, .btn2 {
-    border: 3px solid black;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-weight: 700;
-    transition: background 0.3s ease, color 0.3s ease;
-    margin: 5px;
-}
-
-.btn2 {
-    background-color: #FF69B4;
-    color: #fff;
-    border-color: #fff; /* border */
-}
-
-.btn1 {
-    background-color: white;
-    color: #FF69B4;
-    border-color: #FF69B4;
-}
-
-.btn1:hover, .button:hover {
-    background-color: #FF69B4;
-    color: white;
-}
-
-.btn2:hover {
-    background-color: #ffb6ed;
-    color: #c20064;
-}
-
-/* Introduction Section */
-.introduction {
-    align-items: center;
-    padding: 50px 0;
-    background-color: white; /* White background */
-    text-align: center;
-    
-}
-
-.introduction h2 {
-    font-size: 2.5em; /* Large heading */
-    margin-bottom: 20px; /* Space below heading */
-}
-
-.introduction p {
-    font-size: 1.2em;
-    color: #000; /* black text */
-}
-
-/* Footer */
-footer {
-    padding: 20px 0;
-    background-color: #FF69B4; /* Pink background */
-    color: white;
-    text-align: center;
-}
-
-/* Animations for text */
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Section Title Styling */
-.section-title {
-    text-align: center;
-    margin-bottom: 20px; /* Space below title */
-    font-size: 2em;
-    animation: slideIn 1s; /* Slide in animation */
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 2px;
-    background-color: #FF69B4; /* Pink underline */
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -10px;
-}
-
-/* Experience and Projects Layout */
-.experience, .projects {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping */
-    justify-content: space-between;
-}
-
-.experience-item, .project-item {
-    background: #fff; /* White background */
-    padding: 20px;
-    margin: 10px 0;
-    border: 1px solid #ddd; /* Light gray border */
-    width: 48%;
-    box-sizing: border-box; /* Include padding in width */
-    transition: transform 0.3s ease; /* Smooth transform */
-}
-
-.experience-item:hover, .project-item:hover {
-    transform: translateY(-10px); /* Move up on hover */
-}
-
-/* Back-to-Top Button */
-#back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: #FF69B4; /* Pink background */
-    color: white; /* White arrow */
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px; /* Center arrow */
-    cursor: pointer;
-    display: none; /* Hidden by default */
-    z-index: 1000; /* Above other elements */
-}
-
-#back-to-top:hover {
-    background-color: #FF1493; /* Darker pink on hover */
 }
 
 
@@ -391,9 +273,111 @@ footer {
 }
 
 
+/* View More Button Style */
+.view-more-button {
+    display: block;
+    text-align:center;
+    margin: auto;
+    width:200;
+    padding: 15px 30px;
+    background-color: #FF69B4; /* Pink background */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border:3px solid black;
+    font-size: 1.2em;
+    border-radius: 50px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
 
-/* Responsive Design */
-@media (max-width: 768px) {
+.view-more-button:hover {
+    background-color: #FF1493; /* Darker pink on hover */
+}
+
+
+
+ /* -----------------------Introduction -----------------------*/
+ .introduction {
+    align-items: center;
+    padding: 50px 0;
+    background-color: white; /* White background */
+    text-align: center;
+    
+}
+
+.introduction h2 {
+    font-size: 2.5em; /* Large heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.introduction p {
+    font-size: 1.2em;
+    color: #000; /* black text */
+}
+
+
+ /* -----------------------Section Title -----------------------*/
+ .section-title {
+    text-align: center;
+    margin-bottom: 20px; /* Space below title */
+    font-size: 2em;
+    animation: slideIn 1s; /* Slide in animation */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #FF69B4; /* Pink underline */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+ /* -----------------------Experience and Project Layouts? -----------------------*/
+ .experience, .projects {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping */
+    justify-content: space-between;
+}
+
+.experience-item, .project-item {
+    background: #fff; /* White background */
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ddd; /* Light gray border */
+    width: 48%;
+    box-sizing: border-box; /* Include padding in width */
+    transition: transform 0.3s ease; /* Smooth transform */
+}
+
+.experience-item:hover, .project-item:hover {
+    transform: translateY(-10px); /* Move up on hover */
+}
+
+ 
+
+ /* ----------------------- Footer -----------------------*/
+ footer {
+    padding: 20px 0;
+    background-color: #FF69B4; /* Pink background */
+    color: white;
+    text-align: center;
+}
+
+ /* -----------------------Text Animations -----------------------*/
+ @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+ /* ----------------------- Responsive Design -----------------------*/
+ @media (max-width: 768px) {
     .projects-grid {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center align */
