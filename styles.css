@@ -197,14 +197,17 @@ h2 {
 
 /* View More Button Style */
 .view-more-button {
-    display: inline-block;
-    margin-top: 30px;
+    display: block;
+    text-align:center;
+    margin: auto;
+    width:200;
     padding: 15px 30px;
     background-color: #FF69B4; /* Pink background */
     color: #fff; /* White text */
     text-decoration: none;
+    border:3px solid black;
     font-size: 1.2em;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 50px; /* Rounded corners */
     transition: background-color 0.3s ease; /* Smooth transition */
 }
 
