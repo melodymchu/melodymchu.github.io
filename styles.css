@@ -67,10 +67,10 @@ nav a:hover::after {
 
 /* Container Style */
 .container {
-    text-align: center;
     width: 90%;
     margin: auto; /* Center container */
     overflow: hidden;
+    text-align: center;
     /*max-width: 1200px; /* Max width for container */
 }
 
@@ -108,21 +108,24 @@ nav a:hover::after {
     z-index: -1; /* Place behind the text */
 }
 
-/* Cloud styles */
+/* New cloud styles and animations */
+
 .cloud {
     position: absolute;
     background-size: contain;
     opacity: 0.8; /* Slight transparency */
 }
 
-/* Faster and Snappier Animations */
 @keyframes driftRight {
     0% {
-        left: -200px; /* Start off-screen to the left */
+        left: -400px; /* Start off-screen to the left */
         opacity: 0; /* Start invisible */
     }
+    50% {
+        opacity: 0.8; /* Fade in during drift */
+    }
     100% {
-        left: calc(50% - 200px); /* Stop near center-right */
+        left: 50%; /* Stop at center-right */
         opacity: 1; /* Fully visible */
     }
 }
@@ -132,11 +135,15 @@ nav a:hover::after {
         left: 100vw; /* Start off-screen to the right */
         opacity: 0; /* Start invisible */
     }
+    50% {
+        opacity: 0.8; /* Fade in during drift */
+    }
     100% {
-        left: 30%; /* Stop near center-left */
+        left: calc(50% - 200px); /* Stop at center-left */
         opacity: 1; /* Fully visible */
     }
 }
+
 
 
 
@@ -166,11 +173,6 @@ nav a:hover::after {
     animation-duration: 60s; /* Slower cloud movement */
 }
 
-/* Cloud movement animation */
-@keyframes moveClouds {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(100vw); } /* Move clouds across screen */
-}
 .vine-divider {
     margin: 0px;
     display: flex;
@@ -250,12 +252,10 @@ h2 {
 
 /* Introduction Section */
 .introduction {
+    align-items: center;
     padding: 50px 0;
-    width: 50%;
     background-color: white; /* White background */
     text-align: center;
-    align-items: center;
-
     
 }
 
