@@ -336,7 +336,14 @@ nav a:hover::after {
     border-radius: 50px;
     font-weight: 700;
     transition: background 0.3s ease, color 0.3s ease;
-    margin: 5px;
+    /*margin: 5px;
+    width:200;
+    padding: 15px 30px;*/
+
+
+    text-align:center;
+    margin: auto;
+
 }
 
 .view-more-button:hover {
