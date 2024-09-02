@@ -257,8 +257,8 @@ nav a:hover::after {
 }
 
 .center img {
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     object-fit: cover;
     border-radius: 50%;
 }
