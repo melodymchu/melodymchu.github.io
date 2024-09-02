@@ -10,7 +10,7 @@
 
 header {
     background: linear-gradient(90deg, #FF69B4, #FFC0CB); /* Pink gradient background */
-    color: green; /* text color */
+    color: #c20064; /* text color */
     padding: 20px 20px; /* Space above and below */
     text-align: center; /* Center align text */
 }
@@ -215,7 +215,7 @@ h2 {
     background-color: #FF1493; /* Darker pink on hover */
 }
 
-/* Button Styles */.button, .primary-btn, .secondary-btn {
+/* Button Styles */.button, .btn1, .btn2 {
     border: 3px solid black;
     text-decoration: none;
     padding: 10px 20px;
@@ -225,24 +225,25 @@ h2 {
     margin: 5px;
 }
 
-.primary-btn {
+.btn2 {
     background-color: #FF69B4;
     color: #fff;
     border-color: #fff; /* border */
 }
 
-.secondary-btn {
+.btn1 {
     background-color: white;
     color: #FF69B4;
     border-color: #FF69B4;
 }
 
-.secondary-btn:hover, .button:hover {
+.btn1:hover, .button:hover {
     background-color: #FF69B4;
     color: white;
 }
 
-.primary-btn:hover {
+.btn2:hover {
+    background-color: #ffb6ed;
     color: #c20064;
 }
 
@@ -251,6 +252,7 @@ h2 {
     padding: 50px 0;
     background-color: white; /* White background */
     text-align: center;
+    
 }
 
 .introduction h2 {
@@ -260,7 +262,7 @@ h2 {
 
 .introduction p {
     font-size: 1.2em;
-    color: #666; /* Gray text */
+    color: #000; /* black text */
 }
 
 /* Footer */
