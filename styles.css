@@ -438,6 +438,11 @@ nav a:hover::after {
 
  /* ----------------------- Responsive Design -----------------------*/
  @media (max-width: 768px) {
+    .flower-row {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align */
+    }
+
     .projects-grid {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center align */
