@@ -378,6 +378,7 @@ nav a:hover::after {
 }
 
  /* -----------------------Experience and Project Layouts? -----------------------*/
+ 
  .experience, .projects {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping */
@@ -425,6 +426,23 @@ nav a:hover::after {
 
     
 }
+
+ /* -----------------------Portfolio Gallery -----------------------*/
+
+
+.portfolio-container {
+    width: 90%;
+    margin: auto; /* Center container */
+    overflow: hidden;
+    text-align: center;
+    /*max-width: 1200px; /* Max width for container */
+}
+
+
+
+
+
+
  /* -----------------------Text Animations -----------------------*/
  @keyframes fadeInDown {
     from { opacity: 0; transform: translateY(-20px); }
