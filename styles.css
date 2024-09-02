@@ -158,7 +158,6 @@ nav a:hover::after {
     font-size: 6vw;
 }
  /* -----------------------Background Clouds -----------------------*/
-
 /* Cloud Container Styles */
 .cloud-container {
     position: absolute;
@@ -195,6 +194,7 @@ nav a:hover::after {
         left: calc(50% - 200px); /* Stop near center-left */
     }
 }
+
  /* -----------------------Vine Divider -----------------------*/
 
 

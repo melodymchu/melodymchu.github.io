@@ -130,7 +130,6 @@ window.onload = function () {
         console.log('JavaScript is running'); // Confirm script is working
     
         const cloudContainer = document.querySelector('.cloud-container');
-
     
         // Function to create a cloud element with sliding animation
         function createCloud(positionIndex, totalClouds) {
@@ -158,11 +157,11 @@ window.onload = function () {
             if (fromLeft) {
                 cloud.style.left = `-${cloudWidth}px`; // Start off-screen to the left
                 cloud.style.animation = `slideInRight ${animationDuration}s linear forwards`;
-                console.log('Cloud created from left');
+                console.log('Cloud created from left with animation duration:', animationDuration);
             } else {
                 cloud.style.left = '100vw'; // Start off-screen to the right
                 cloud.style.animation = `slideInLeft ${animationDuration}s linear forwards`;
-                console.log('Cloud created from right');
+                console.log('Cloud created from right with animation duration:', animationDuration);
             }
     
             // Add cloud to the container
