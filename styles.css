@@ -417,7 +417,6 @@ nav a:hover::after {
 .social-icons{
     width: 1vw;
     height: 1vw;
-    border-radius: 50%;
 
     align-items: center;
     border-radius: 50%;
@@ -431,10 +430,17 @@ nav a:hover::after {
 
 
 .portfolio-container {
-    width: 90%;
     margin: auto; /* Center container */
     overflow: hidden;
     text-align: center;
+    align-items: center; /* Center items within each flower */
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 50px; /* Padding around the grid */
+    max-width: 1000px; /* Maximum width for the grid */
+    width: 100%; /* Ensures the grid width fills available space */
+    box-sizing: border-box; /* Includes padding and border in the grid width */
     /*max-width: 1200px; /* Max width for container */
 }
 
