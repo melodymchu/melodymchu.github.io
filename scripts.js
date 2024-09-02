@@ -126,17 +126,14 @@ window.onload = function () {
         const flower = createFlower();
         flowerRow.appendChild(flower);
     }
-const cloudContainer = document.querySelector('.cloud-container');
 
-
-    // Function to create a cloud element with animation
-    function createCloud(positionIndex, totalClouds) {
+     function createCloud() {
         const cloud = document.createElement('div');
         cloud.classList.add('cloud');
 
         // Randomize cloud size
-        const cloudWidth = getRandomInt(200, 300);
-        const cloudHeight = getRandomInt(100, 150);
+        const cloudWidth = getRandomInt(200, 400);
+        const cloudHeight = getRandomInt(100, 200);
 
         // Set initial styles for the cloud
         cloud.style.width = `${cloudWidth}px`;
@@ -150,27 +147,17 @@ const cloudContainer = document.querySelector('.cloud-container');
         // Determine if the cloud will come from the left or right
         const fromLeft = Math.random() < 0.5;
 
-        const animationDuration = getRandomInt(3, 5); // Faster animation between 3 and 5 seconds
-
         if (fromLeft) {
             cloud.style.left = `-${cloudWidth}px`; // Start off-screen to the left
-            cloud.style.animation = `driftRight ${animationDuration}s ease-out forwards`;
+            cloud.style.animation = `driftRight ${getRandomInt(20, 30)}s linear forwards`;
             console.log('Cloud created from left');
         } else {
-            cloud.style.left = '100vw'; // Start off-screen to the right
-            cloud.style.animation = `driftLeft ${animationDuration}s ease-out forwards`;
+            cloud.style.left = 'vw; // Start off-screen to the right
+            cloud.style.animation = `driftLeft ${getRandomInt(20, 30)}s linear forwards`;
             console.log('Cloud created from right');
         }
 
-        // Add cloud to the container
-        cloudContainer.appendChild(cloud);
-
-        // Set final position after animation stops
-        setTimeout(() => {
-            const positionRatio = (positionIndex + 1) / (totalClouds + 1);
-            cloud.style.left = `${positionRatio * 100}%`; // Spread out evenly
-            cloud.style.animation = 'none'; // Stop animation after it ends
-        }, animationDuration * 1000); // Convert duration to milliseconds
+        document.body.appendChild(cloud);
     }
 
     // Function to generate clouds at random intervals
@@ -179,7 +166,7 @@ const cloudContainer = document.querySelector('.cloud-container');
         console.log('Generating clouds...');
 
         for (let i = 0; i < numberOfClouds; i++) {
-            setTimeout(() => createCloud(i, numberOfClouds), getRandomInt(500, 1500) * i); // Delay each cloud creation
+            setTimeout(createCloud, getRandomInt(1000, 5000) * i); // Delay each cloud creation
         }
     }
 

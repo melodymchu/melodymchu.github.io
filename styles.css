@@ -108,6 +108,8 @@ nav a:hover::after {
     z-index: -1; /* Place behind the text */
 }
 
+
+
 /* Cloud Container Styles */
 .cloud-container {
     position: absolute;
@@ -140,7 +142,7 @@ nav a:hover::after {
 
 @keyframes driftLeft {
     0% {
-        left: 100vw; /* Start off-screen to the right */
+        left: vw; /* Start off-screen to the right */
         opacity: 0; /* Start invisible */
     }
     100% {
