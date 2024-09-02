@@ -10,7 +10,7 @@
 
 header {
     background: linear-gradient(90deg, #FF69B4, #FFC0CB); /* Pink gradient background */
-    color: #c20064; /* text color */
+    color: green; /* text color */
     padding: 20px 20px; /* Space above and below */
     text-align: center; /* Center align text */
 }
