@@ -127,7 +127,6 @@ nav a:hover::after {
     border-radius: 50%;
     text-align: center;
     line-height: 50px; /* Center arrow */
-    cursor: pointer;
     display: none; /* Hidden by default */
     z-index: 1000; /* Above other elements */
 }
@@ -390,6 +389,9 @@ nav a:hover::after {
 
 .social-icons{
     width: 10%;
+    border-radius: 50%;
+
+    
 }
  /* -----------------------Text Animations -----------------------*/
  @keyframes fadeInDown {
