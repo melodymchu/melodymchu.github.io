@@ -382,6 +382,8 @@ nav a:hover::after {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping */
     justify-content: space-between;
+    text-decoration: none;
+
 }
 
 .experience-item, .project-item {
