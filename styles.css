@@ -388,6 +388,9 @@ nav a:hover::after {
     text-align: center;
 }
 
+.social-icons{
+    width: 10%;
+}
  /* -----------------------Text Animations -----------------------*/
  @keyframes fadeInDown {
     from { opacity: 0; transform: translateY(-20px); }
