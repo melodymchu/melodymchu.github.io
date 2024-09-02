@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-            <!-- Set the website icon that appears in the browser tab -->
-            <link rel="icon" type="image/png" href="images/lemon-312068_1280.png">
-        
-            <!-- Set character encoding for the webpage -->
-            <meta charset="UTF-8">
-        
-            <!-- Make sure the website looks good on mobile devices -->
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-            <!-- Title of the website that shows in the browser tab -->
-            <title>Melody M. Chu | Portfolio</title>
-        
-            <!-- Link to external stylesheet where CSS (design) code is stored -->
-            <link rel="stylesheet" href="styles.css">
-        </head>
+<head>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" type="image/png" href="images/lemon-312068_1280.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody M. Chu | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
     <header>
-    <h1>Melody M. Chu</h1>
-    <p>Design & Mechanical Engineering Portfolio</p>
-</header>
+        <h1>Melody M. Chu</h1>
+        <p>Design & Mechanical Engineering Portfolio</p>
+    </header>
 
-<nav>
-    <a href="index.html">Back to Home</a>
-</nav>
+    <nav>
+        <a href="index.html">Back to Home</a>
+    </nav>
     
-        <h1>My Portfolio</h1>
-        <div class="filter-button-container">
-            <a href="#" class="filter-link" onclick="filterProjects('all')">All</a>
-            <a href="#" class="filter-link" onclick="filterProjects('digital')">Digital</a>
-            <a href="#" class="filter-link" onclick="filterProjects('physical')">Physical</a>
-        </div>
+    <h1>My Portfolio</h1>
+    <div class="filter-button-container">
+        <a href="#" class="filter-link" onclick="filterProjects('all')">All</a>
+        <a href="#" class="filter-link" onclick="filterProjects('digital')">Digital</a>
+        <a href="#" class="filter-link" onclick="filterProjects('physical')">Physical</a>
+    </div>
 
     <section id="portfolio-gallery">
         <div class="project-item digital">
@@ -43,50 +34,70 @@
         </div>
         <div class="project-item digital">
             <a href="Pragmatic-Photography.html">
-                <img src="images/Pragmatic-Photography-thumbnail.jpg" alt="Murakami.Flowers System">
+                <img src="images/Pragmatic-Photography-thumbnail.jpg" alt="Pragmatic Photography">
                 <p>Pragmatic Photography</p>
             </a>
         </div>
         <div class="project-item digital">
             <a href="Futura-Poster.html">
-                <img src="images/Futura-Poster-thumbnail.jpg" alt="Murakami.Flowers System">
+                <img src="images/Futura-Poster-thumbnail.jpg" alt="Futura: Type Specimen Poster">
                 <p>Futura: Type Specimen Poster</p>
             </a>
         </div>
         <div class="project-item digital">
             <a href="Squares-&-Ampersands.html">
-                <img src="images/Squares-&-Ampersands-thumbnail.jpg" alt="Murakami.Flowers System">
+                <img src="images/Squares-&-Ampersands-thumbnail.jpg" alt="Squares & Ampersands">
                 <p>Squares & Ampersands: Form and Composition Project</p>
             </a>
         </div>
         <div class="project-item digital">
             <a href="112-game.html">
-                <img src="images/112-game-thumbnail.jpg" alt="Murakami.Flowers System">
+                <img src="images/112-game-thumbnail.jpg" alt="112 Game">
                 <p>112 Game - 15-112 Term Project</p>
             </a>
         </div>
         <div class="project-item digital">
             <a href="pet-simulator.html">
-                <img src="images/pet-simulator.jpg" alt="Project 1">
+                <img src="images/pet-simulator.jpg" alt="Pet Simulator">
                 <p>Pet Simulator: Hack-112 Winning Project</p>
             </a>
         </div>
 
         <div class="project-item physical">
             <a href="phipps-lamp.html">
-                <img src="images/phipps-lamp.jpg" alt="Project 2">
+                <img src="images/phipps-lamp.jpg" alt="A Light from Phipps">
                 <p>A Light from Phipps</p>
             </a>
         </div>
         <div class="project-item physical">
             <a href="exploring-etextiles.html">
-                <img src="images/exploring-etextiles.jpg" alt="Project 2">
+                <img src="images/exploring-etextiles.jpg" alt="Exploring E-Textiles">
                 <p>Exploring E-Textiles</p>
             </a>
         </div>
         <!-- Add more project items as needed -->
     </section>
 
-    <script src="scripts.js"></script>
+    <!-- Include JavaScript here -->
+    <script>
+        function filterProjects(category) {
+            const items = document.querySelectorAll('.project-item'); // Select all project items
+
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block'; // Show all items
+                } else if (item.classList.contains(category)) {
+                    item.style.display = 'block'; // Show items that match the category
+                } else {
+                    item.style.display = 'none'; // Hide items that don't match
+                }
+            });
+        }
+
+        // Optionally, activate the "All" filter by default when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            filterProjects('all');
+        });
+    </script>
 </body>
 </html>
