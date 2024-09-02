@@ -119,8 +119,8 @@ window.onload = function () {
         const image = document.createElement('img');
         image.src = 'images/lemon-312068_1280.png';
         image.alt = 'Flower Image';
-        flower.appendChild(image);
-
+        center.appendChild(image);
+        flower.appendChild(center);
         return flower;
     }
 
