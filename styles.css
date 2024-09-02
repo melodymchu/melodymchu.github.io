@@ -322,7 +322,7 @@ nav a:hover::after {
 }
 
 .flower:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.15); /* Slight zoom on hover */
 }
 
 /* View More Button Style */
