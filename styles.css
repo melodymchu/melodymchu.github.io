@@ -108,38 +108,45 @@ nav a:hover::after {
     z-index: -1; /* Place behind the text */
 }
 
-/* New cloud styles and animations */
 
+
+/* Cloud Container Styles */
+.cloud-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure clouds don't overflow out of the container */
+    z-index: -1; /* Place behind the text */
+}
+
+/* Cloud styles */
 .cloud {
     position: absolute;
     background-size: contain;
     opacity: 0.8; /* Slight transparency */
 }
 
+/* Faster and Snappier Animations */
 @keyframes driftRight {
     0% {
-        left: -400px; /* Start off-screen to the left */
+        left: -200px; /* Start off-screen to the left */
         opacity: 0; /* Start invisible */
     }
-    50% {
-        opacity: 0.8; /* Fade in during drift */
-    }
     100% {
-        left: 50%; /* Stop at center-right */
+        left: calc(50% - 200px); /* Stop near center-right */
         opacity: 1; /* Fully visible */
     }
 }
 
 @keyframes driftLeft {
     0% {
-        left: 100vw; /* Start off-screen to the right */
+        left: vw; /* Start off-screen to the right */
         opacity: 0; /* Start invisible */
     }
-    50% {
-        opacity: 0.8; /* Fade in during drift */
-    }
     100% {
-        left: calc(50% - 200px); /* Stop at center-left */
+        left: 30%; /* Stop near center-left */
         opacity: 1; /* Fully visible */
     }
 }
