@@ -247,13 +247,14 @@ nav a:hover::after {
 .flower-row {
     /*padding-top: 20%;
     display: flex;
-    align-items: center; Center items within each flower 
     justify-content: center;  Align the bottom part for stem 
     gap: 20vw;;*/
     display: grid; /* Use CSS Grid */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
     gap: 15px; /* Space between grid items */
     padding: 15px; /* Padding around the gallery */
+    align-items: center; /* Center items within each flower */
+
 }
 
 
