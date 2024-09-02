@@ -67,6 +67,7 @@ nav a:hover::after {
 
 /* Container Style */
 .container {
+    text-align: center;
     width: 90%;
     margin: auto; /* Center container */
     overflow: hidden;
