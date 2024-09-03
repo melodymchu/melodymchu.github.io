@@ -1,48 +1,76 @@
-/* General Styles */
+/* -----------------------General Styles  -----------------------*/
 body {
-    font-family: 'Forum', Open Sans, Geneva, Verdana, sans-serif; /* Set default font */
+    font-family: 'Forum', Open Sans, Geneva, Verdana, sans-serif;
+    /* Set default font*/
     margin: 0;
     padding: 0;
-    line-height: 1.6; /* Improve text readability */
-    background-color: #fff; /* White background */
-    color: #333; /* Dark gray text color */
+    line-height: 1.6;
+    /* Improve text readability */
+    background-color: #fff;
+    /* White background */
+    color: #333;
+    /* Dark gray text color */
     text-align: center;
 }
 
 header {
-    background: linear-gradient(90deg, #FF69B4, #FFC0CB); /* Pink gradient background */
-    color: #c20064; /* Text color */
-    padding: 20px; /* Space above and below */
-    text-align: center; /* Center align text */
-    animation: fadeIn 2s; /* Fade in animation */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: linear-gradient(90deg, #FF69B4, #FFC0CB);
+    /* Pink gradient background */
+    color: #c20064;
+    /* text color */
+    padding: 20px 20px;
+    /* Space above and below */
+    text-align: center;
+    /* Center align text */
 }
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* -----------------------Header -----------------------*/
 
 header h1 {
-    font-size: 3.5em; /* Large font size */
+    /*margin: 34;*/
+    font-size: 3.5em;
+    /* Large font size */
     font-weight: bold;
-    color: #000; /* Dark gray for the header */
-    margin: 0;
+    color: #000;
+    /* Dark gray for the header */
+    animation: fadeIn 2s;
+    /* Fade in animation */
 }
 
+header p {
+    font-size: 1.1em;
+    /* Smaller font size */
+    animation: fadeIn 3s;
+    /* Fade in animation */
+    margin-bottom: 5%;
+}
+
+/* -----------------------Navigation -----------------------*/
 nav {
     text-align: center;
-    margin: 10px 0; /* Space above and below */
+    margin: 20px 0;
+    /* Space above and below */
 }
 
 nav a {
-    margin: 0 15px; /* Space between links */
-    color: #FFC0CB; /* White text color */
-    text-decoration: none; /* Remove underline */
+    margin: 0 15px;
+    /* Space between links */
+    color: #FFC0CB;
+    /* White text color */
+    text-decoration: none;
+    /* Remove underline */
     font-weight: bold;
     position: relative;
 }
 
 nav a:hover {
-    color: #FF69B4; /* Pink color on hover */
+    color: #FF69B4;
+    /* Pink color on hover */
 }
 
 nav a::after {
@@ -50,7 +78,8 @@ nav a::after {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #FF69B4; /* Pink underline on hover */
+    background-color: #FF69B4;
+    /* Pink underline on hover */
     left: 0;
     bottom: -5px;
     transform: scaleX(0);
@@ -59,9 +88,141 @@ nav a::after {
 }
 
 nav a:hover::after {
-    transform: scaleX(1); /* Expands underline on hover */
+    transform: scaleX(1);
+    /* Expands underline on hover */
     transform-origin: bottom left;
 }
+
+/* -----------------------Container -----------------------*/
+.container {
+    width: 90%;
+    margin: auto;
+    /* Center container */
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    /*max-width: 1200px; /* Max width for container */
+}
+
+/* -----------------------Buttons -----------------------*/
+
+/* Button Styles */
+.button,
+.btn1,
+.btn2 {
+    border: 3px solid black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: auto;
+    background-color: #FF69B4;
+    /* Pink background */
+    color: #fff;
+    display: inline-block;
+    /* White text */
+}
+
+.btn2 {
+    background-color: #FF69B4;
+    color: #fff;
+    border-color: #fff;
+    /* border */
+}
+
+.btn1 {
+    background-color: white;
+    color: #FF69B4;
+    border-color: #FF69B4;
+}
+
+.btn1:hover {
+    background-color: #FF69B4;
+    color: white;
+}
+
+.btn2:hover {
+    background-color: #ffb6ed;
+    color: #c20064;
+}
+
+.button:hover {
+    background-color: #FF1493;
+    /* Darker pink on hover */
+    color: white;
+}
+.button-container {
+   display: flex; /* Flexbox to center the button */
+   justify-content: center; /* Center horizontally */
+   align-items: center; /* Center vertically */
+   margin: 40px 0; /* Adds top and bottom margin to prevent overlap */
+   width: 100%; /* Full width to ensure spacing around */
+   padding: 20px 0; /* Additional padding for space */
+   box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+/* -----------------------Back to Top Button -----------------------*/
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #FF69B4;
+    /* Pink background */
+    color: white;
+    /* White arrow */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    /* Center arrow */
+    display: none;
+    /* Hidden by default */
+    z-index: 1000;
+    /* Above other elements */
+}
+
+#back-to-top:hover {
+    background-color: #FF1493;
+    /* Darker pink on hover */
+}
+
+
+
+
+/* -----------------------Images -----------------------*/
+
+
+
+.image-container {
+    display: flex;
+    /* Use flexbox to align the image */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    width: 5 vw;
+    /* Set container width */
+    height: 5vw;
+    /* Set container height */
+    overflow: hidden;
+    /* Hide any overflow */
+}
+
+.centered-image {
+    max-width: 100%;
+    /* Shrink the image to fit container width */
+    max-height: 100%;
+    /* Shrink the image to fit container height */
+    object-fit: contain;
+    /* Maintain aspect ratio while fitting */
+    display: block;
+    /* Remove any default inline spacing */
+    margin: auto;
+    /* Center the image */
+}
+
 
 .container {
     width: 90%;
@@ -73,6 +234,20 @@ nav a:hover::after {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for better separation */
     text-align: left; /* Align text to the left for readability */
 }
+
+.tag {
+    display: inline-block;
+    background-color: #FF69B4;
+    /* Pink background */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 5px;
+    font-size: 0.8em;
+}
+
+
+
 
 .project-intro {
     text-align: center; /* Center-align intro text */
@@ -96,33 +271,17 @@ nav a:hover::after {
     margin-bottom: 20px; /* Increased margin for better spacing */
 }
 
-.btn1, .btn2 {
-    display: inline-block;
-    border: 3px solid black;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-weight: 700;
-    transition: background 0.3s ease, color 0.3s ease;
-    background-color: #FF69B4; /* Pink background */
-    color: #fff; /* White text */
-    margin: 15px 10px; /* Margin for better button spacing */
-}
-
-.btn1:hover, .btn2:hover {
-    background-color: #FF1493; /* Darker pink on hover */
-    color: white;
-}
 
 .project-content h3 {
     font-size: 1.8em; /* Slightly larger subheading font size */
     color: #c20064;
     margin-top: 30px; /* Spacing above subheadings */
     margin-bottom: 15px; /* Spacing below subheadings */
+    text-align: center;
 }
 
 .project-content p {
-    text-align: justify;
+    text-align: center;
     margin-bottom: 20px; /* Increased spacing for paragraph separation */
 }
 
