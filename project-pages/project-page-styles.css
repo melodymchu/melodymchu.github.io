@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #FF69B4, #FFC0CB);
+    background: linear-gradient(180deg, #FF69B4, #FFC0CB);
     color: #c20064;
     padding: 20px 20px;
     text-align: center;
@@ -85,10 +85,11 @@ nav a:hover::after {
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
+    background-color: #ffe5f8;
 }
 
 .overview-image {
-    width: 100%;
+    width: 60vw;
     max-width: 100%;
     height: auto;
     border-radius: 10px;
@@ -103,18 +104,74 @@ nav a:hover::after {
 .project-overview h2 {
     font-size: 2.5em;
     color: #c20064;
-    margin-bottom: 10px;
+    margin: 20px 20px 80px 20px;
 }
 
 .project-date {
+    font-style: italic;
     font-size: 1.2em;
-    color: #777;
-    margin-bottom: 10px;
+    color: #fca1ce;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+
 }
 
-.project-description, .project-tags {
-    font-size: 1em;
+.project-description{
+    justify-content: start;
+    text-align: left;
+    font-size: .7em;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    margin-right: 20px;
+
+}
+
+.row-container{
+        display: flex; /* Changed to flex to arrange items side by side */
+    flex-direction: row; /* Side-by-side (row) layout */
+    align-items: top;
+    justify-content: space-between; /* Adds space between image and content */
+    margin-bottom: 40px;
+    background-color: #ffe5f8;
+    padding: 20px; /* Added padding for spacing */
+}
+
+
+.col-container{
+    display: flex; /* Changed to flex to arrange items side by side */
+    flex-direction: column; /* Side-by-side (row) layout */
+    align-items: top;
+    margin-bottom: 40px;
+    background-color: #ffe5f8;
+}
+
+.project-tags {
+    background-color: #fff;
+    color: #ffb6ed;
     margin-bottom: 20px;
+    margin: 10px;
+    display: inline-block;
+    padding: 4px 5px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    position: relative;
+    border: 1px solid #ffb6ed;
+    border-radius: 30px; /* Rounded corners on the left side */
+}
+
+
+.tag-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: left;
+   margin: 40px 0;
+   width: 100%;
+   padding: 20px 0;
+   box-sizing: border-box;
 }
 
 .project-content h3 {
@@ -131,11 +188,11 @@ nav a:hover::after {
 }
 
 .project-image {
-    width: 100%;
+    width: 50%;
     max-width: 100%;
-    height: auto;
+    height: 50%;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin: 20px 50vh 30px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
