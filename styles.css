@@ -470,7 +470,7 @@ nav a:hover::after {
     width: 100%;
     height: auto;
     overflow: hidden; /* Hide any overflowing content */
-
+    border: 1px solid #FF69B4; /* Light gray border */
     border-radius: 5px; /* Slightly round image corners */
     margin-bottom: 0px;
 }
