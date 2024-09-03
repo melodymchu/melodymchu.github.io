@@ -12,9 +12,13 @@ body {
 header {
     background: linear-gradient(90deg, #FF69B4, #FFC0CB); /* Pink gradient background */
     color: #c20064; /* Text color */
-    padding: 20px 20px; /* Space above and below */
+    padding: 20px; /* Space above and below */
     text-align: center; /* Center align text */
     animation: fadeIn 2s; /* Fade in animation */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
@@ -26,7 +30,7 @@ header h1 {
 
 nav {
     text-align: center;
-    margin: 20px 0; /* Space above and below */
+    margin: 10px 0; /* Space above and below */
 }
 
 nav a {
@@ -61,37 +65,48 @@ nav a:hover::after {
 
 .container {
     width: 90%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for better separation */
+    text-align: left; /* Align text to the left for readability */
+}
+
+.project-intro {
+    text-align: center; /* Center-align intro text */
+    margin-bottom: 30px; /* Space after intro section */
 }
 
 .project-intro h2 {
     font-size: 2.5em;
     color: #c20064;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.project-date, .project-description, .project-tags {
-    font-size: 1em;
+.project-date {
+    font-size: 1.2em; /* Larger date font size for emphasis */
+    color: #777; /* Softer color for date */
     margin-bottom: 10px;
+}
+
+.project-description, .project-tags {
+    font-size: 1em;
+    margin-bottom: 20px; /* Increased margin for better spacing */
 }
 
 .btn1, .btn2 {
     display: inline-block;
     border: 3px solid black;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 50px;
     font-weight: 700;
     transition: background 0.3s ease, color 0.3s ease;
     background-color: #FF69B4; /* Pink background */
     color: #fff; /* White text */
-    margin: 10px;
+    margin: 15px 10px; /* Margin for better button spacing */
 }
 
 .btn1:hover, .btn2:hover {
@@ -100,22 +115,24 @@ nav a:hover::after {
 }
 
 .project-content h3 {
-    font-size: 1.5em;
+    font-size: 1.8em; /* Slightly larger subheading font size */
     color: #c20064;
-    margin-top: 20px;
+    margin-top: 30px; /* Spacing above subheadings */
+    margin-bottom: 15px; /* Spacing below subheadings */
 }
 
 .project-content p {
-    text-align: center;
-    margin-bottom: 15px;
+    text-align: justify;
+    margin-bottom: 20px; /* Increased spacing for paragraph separation */
 }
 
 .project-image {
     width: 100%;
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px; /* Rounded corners for images */
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for image depth */
 }
 
 footer {
@@ -126,6 +143,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    margin-top: 40px; /* Space above footer */
 }
 
 footer a {
@@ -141,8 +159,8 @@ footer a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        width: 90%;
-        padding: 10px;
+        width: 95%;
+        padding: 20px;
     }
 
     header h1 {
