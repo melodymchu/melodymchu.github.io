@@ -1,64 +1,79 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: 'Forum', Open Sans, Geneva, Verdana, sans-serif; /* Set default font */
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    line-height: 1.6; /* Improve text readability */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark gray text color */
+    text-align: center;
 }
 
 header {
-    background: linear-gradient(90deg, #FF69B4, #FFC0CB);
-    color: #fff;
-    padding: 15px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: linear-gradient(90deg, #FF69B4, #FFC0CB); /* Pink gradient background */
+    color: #c20064; /* Text color */
+    padding: 20px 20px; /* Space above and below */
+    text-align: center; /* Center align text */
+    animation: fadeIn 2s; /* Fade in animation */
 }
 
 header h1 {
+    font-size: 3.5em; /* Large font size */
+    font-weight: bold;
+    color: #000; /* Dark gray for the header */
     margin: 0;
-    font-size: 2.5em;
 }
 
 nav {
-    margin-top: 10px;
+    text-align: center;
+    margin: 20px 0; /* Space above and below */
 }
 
 nav a {
-    margin: 0 15px;
-    color: #fff;
-    text-decoration: none;
+    margin: 0 15px; /* Space between links */
+    color: #FFC0CB; /* White text color */
+    text-decoration: none; /* Remove underline */
     font-weight: bold;
+    position: relative;
 }
 
 nav a:hover {
-    color: #ff1493;
+    color: #FF69B4; /* Pink color on hover */
 }
 
-/* Main Content */
-main {
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #FF69B4; /* Pink underline on hover */
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1); /* Expands underline on hover */
+    transform-origin: bottom left;
+}
+
+.container {
     width: 90%;
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background: #fff;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Project Intro Section */
-.project-intro {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .project-intro h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #c20064;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .project-date, .project-description, .project-tags {
@@ -66,35 +81,32 @@ main {
     margin-bottom: 10px;
 }
 
-.read-more-link, .documentation-link, .back-to-projects-link {
-    display: block;
-    text-align: center;
-    margin: 20px auto;
-    padding: 10px 15px;
-    background-color: #FF69B4;
-    color: white;
+.btn1, .btn2 {
+    display: inline-block;
+    border: 3px solid black;
     text-decoration: none;
-    border-radius: 5px;
-    max-width: 200px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background 0.3s ease, color 0.3s ease;
+    background-color: #FF69B4; /* Pink background */
+    color: #fff; /* White text */
+    margin: 10px;
 }
 
-.read-more-link:hover, .documentation-link:hover, .back-to-projects-link:hover {
-    background-color: #FF1493;
-}
-
-/* Project Content Section */
-.project-content {
-    margin-top: 20px;
+.btn1:hover, .btn2:hover {
+    background-color: #FF1493; /* Darker pink on hover */
+    color: white;
 }
 
 .project-content h3 {
     font-size: 1.5em;
-    margin-top: 20px;
     color: #c20064;
+    margin-top: 20px;
 }
 
 .project-content p {
-    text-align: justify;
+    text-align: center;
     margin-bottom: 15px;
 }
 
@@ -106,12 +118,11 @@ main {
     margin-bottom: 20px;
 }
 
-/* Footer Styles */
 footer {
-    background-color: #FF69B4;
+    padding: 20px 0;
+    background-color: #FF69B4; /* Pink background */
     color: white;
     text-align: center;
-    padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -125,4 +136,26 @@ footer a {
 
 footer a:hover {
     color: #ff1493;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2.5em; /* Smaller font size for smaller screens */
+    }
+
+    .project-intro h2 {
+        font-size: 2em; /* Smaller font size for smaller screens */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
