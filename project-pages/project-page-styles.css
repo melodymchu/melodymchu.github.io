@@ -1,0 +1,221 @@
+/* -----------------------General Styles  -----------------------*/
+body {
+    font-family: 'Forum', Open Sans, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(90deg, #FF69B4, #FFC0CB);
+    color: #c20064;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #000;
+    animation: fadeIn 2s;
+}
+
+header p {
+    font-size: 1.1em;
+    animation: fadeIn 3s;
+    margin-bottom: 5%;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #FFC0CB;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a:hover {
+    color: #FF69B4;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #FF69B4;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.project-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.overview-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overview-content {
+    text-align: center;
+}
+
+.project-overview h2 {
+    font-size: 2.5em;
+    color: #c20064;
+    margin-bottom: 10px;
+}
+
+.project-date {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.project-description, .project-tags {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.project-content h3 {
+    font-size: 1.8em;
+    color: #c20064;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.project-content p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 40px 0;
+   width: 100%;
+   padding: 20px 0;
+   box-sizing: border-box;
+}
+
+.btn1,
+.btn2 {
+    border: 3px solid black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: auto;
+    background-color: #FF69B4;
+    color: #fff;
+    display: inline-block;
+}
+
+.btn1 {
+    background-color: white;
+    color: #FF69B4;
+    border-color: #FF69B4;
+}
+
+.btn1:hover {
+    background-color: #FF69B4;
+    color: white;
+}
+
+.btn2:hover {
+    background-color: #ffb6ed;
+    color: #c20064;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #FF69B4;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ff1493;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .project-intro h2 {
+        font-size: 2em;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
