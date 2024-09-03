@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Array of image paths for each flower
         const flowerImages = [
             'images/33c3ed0d0a6b9f660a76fef9a287c890.png',
-            'images/lemon-312068_1280.png',
+            'images/Project-Thumbnails/pet-simulator-thumbnail.png',
             'images/simple-black-flower-outline.png'
             // Add more image paths as needed
         ];
