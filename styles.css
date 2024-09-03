@@ -337,7 +337,7 @@ nav a:hover::after {
     /* Responsive grid */
     gap: 15px;
     /* Space between grid items */
-    padding: 5%;
+    padding: 15%;
     /* Padding around the gallery */
     align-items: center;
     /* Center items within each flower */
