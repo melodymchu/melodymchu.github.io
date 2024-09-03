@@ -596,7 +596,7 @@ footer {
 }
 
 /* Style for project title */
-.project-title {
+.project-title-portfolio {
     font-weight: bold;
     /* Make text bold */
     font-size: 1em;
@@ -604,11 +604,13 @@ footer {
     margin: 10px 0;
     text-decoration: none;
     flex-grow: 1;
+    padding:10%;
     /* Allow description to take up remaining space */
 }
 
 /* Style for project descriptions */
-.project-description {
+.project-description-portfolio {
+    padding-top: 50%;
     font-size: 0.9em;
     color: #333;
     margin: 10px 0;
@@ -616,7 +618,7 @@ footer {
     /* Allow description to take up remaining space */
 }
 
-.project-tags {
+.project-tags-portfolio {
     margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
@@ -626,7 +628,7 @@ footer {
 }
 
 /* Style project names within project items */
-.project-item p {
+.project-item-portfolio p {
     font-size: 1.1em;
     /* Slightly larger font size */
     color: #333;
