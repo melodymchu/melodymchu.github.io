@@ -469,6 +469,8 @@ nav a:hover::after {
 .project-item img {
     width: 100%;
     height: 70%;
+    overflow: hidden; /* Hide any overflowing content */
+
     border-radius: 5px; /* Slightly round image corners */
     margin-bottom: 0px;
 }
