@@ -549,7 +549,7 @@ footer {
     /* Include padding in width calculations */
 }
 
-.project-item {
+.project-item-portfolio {
     grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
     /* Responsive grid */
     background: #fff;
@@ -583,7 +583,7 @@ footer {
 }
 
 /* Style the image to fit within the project item */
-.project-item img {
+.project-item-portfolio img {
     width: 100%;
     height: auto;
     overflow: hidden;
