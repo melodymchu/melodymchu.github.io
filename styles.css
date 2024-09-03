@@ -472,7 +472,15 @@ nav a:hover::after {
     border-radius: 5px; /* Slightly round image corners */
     margin-bottom: 0px;
 }
-
+/* Style for project title */
+.project-title {
+    font-weight: bold; /* Make text bold */
+    font-size: 1em;
+    color: #333;
+    margin: 10px 0;
+    text-decoration: none;
+    flex-grow: 1; /* Allow description to take up remaining space */
+}
 
 /* Style for project descriptions */
 .project-description {
@@ -493,7 +501,6 @@ nav a:hover::after {
 .project-item p {
     font-size: 1.1em; /* Slightly larger font size */
     color: #333; /* Darker text for better readability */
-    font-weight: bold; /* Make text bold */
     margin-top: 10px; /* Space between the image and the project name */
     margin-bottom: 5px; /* Space between the project name and description */
     text-align: center; /* Center-align the project names */
