@@ -1,105 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Set the website icon that appears in the browser tab -->
     <link rel="icon" type="image/png" href="images/lemon-312068_1280.png">
+
+    <!-- Set character encoding for the webpage -->
     <meta charset="UTF-8">
+
+    <!-- Make sure the website looks good on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melody M. Chu | Portfolio</title>
+
+    <!-- Title of the website that shows in the browser tab -->
+    <title>Melody M. Chu</title>
+
+    <!-- Link to external stylesheet where CSS (design) code is stored -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>Melody M. Chu</h1>
-        <p>Design & Mechanical Engineering Portfolio</p>
+    <!-- Top section of the webpage (header), contains the main title and a brief intro -->
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>MELODY M. CHU</h1> <!-- Main title -->
+            <p><i>Mechanical Engineering & Design</i></p> <!-- Brief description -->
+
+            <!-- Buttons linking to different pages -->
+            <a href="about.html" class="button btn1">About</a>
+            <a href="portfolio.html" class="button btn2">View Portfolio</a>
+        </div>
+        <div class="cloud-container"></div>
+
     </header>
 
-    <nav>
-        <a href="index.html">Back to Home</a>
-    </nav>
-    
-    <h1>My Portfolio</h1>
-    <div class="filter-button-container">
-        <a href="#" class="filter-link" onclick="filterProjects('all')">All</a>
-        <a href="#" class="filter-link" onclick="filterProjects('digital')">Digital</a>
-        <a href="#" class="filter-link" onclick="filterProjects('physical')">Physical</a>
+            <div class="vine-divider">
+        <svg width="100%" height="100" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <circle cx="30" cy="50" r="5" fill="#a4d996"/>
+            <circle cx="290" cy="40" r="8" fill="#a4d996"/>
+            <circle cx="495" cy="70" r="7" fill="#95ba8c"/>
+
+            <ellipse cx="50" cy="70" rx="8" ry="20" fill="#4CAF50" transform="rotate(-10)"/>
+            <ellipse cx="150" cy="-30" rx="10" ry="20" fill="#a4d996" transform="rotate(19)"/>
+            <ellipse cx="300" cy="125" rx="9" ry="20" fill="#8dd979" transform="rotate(-10)"/>            
+            <ellipse cx="500" cy="-135" rx="10" ry="20" fill="#599948" transform="rotate(20)"/> 
+            <ellipse cx="700" cy="290" rx="10" ry="20" fill="#599948" transform="rotate(-20)"/> 
+            <circle cx="700" cy="35" r="6" fill="#a4d996"/>
+            <ellipse cx="950" cy="-180" rx="10" ry="20" fill="#a4d996" transform="rotate(12)"/> 
+
+            <circle cx="850" cy="8" r="5" fill="#4CAF50"/>
+            <svg width="100%" height="100" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stroke-width: 6; stop-color: rgb(145, 255, 115); stop-opacity: 1" />
+                    <stop offset="50%" style="stroke-width: 3; stop-color: rgb(45, 155, 15); stop-opacity: 1" />
+                    <stop offset="100%" style="stroke-width: 1; stop-color: rgb(145, 255, 115); stop-opacity: 1" />
+                </linearGradient>
+            </defs>
+            <!-- Vine path using gradient -->
+            <path d="M0,50 C200,0 400,100 600,50 S800,0 1000,50" fill="none" stroke="url(#grad1)" stroke-width="7" />
+
+
+
+
+        </svg>
     </div>
 
-    <section id="portfolio-gallery">
-        <div class="portfolio-container">
-        <div class="project-item digital">
-            <a href="Murakami-Flowers.html">
-                <img src="images/Murakami-Flowers-thumbnail.jpg" alt="Murakami.Flowers System">
-                <p>Murakami.Flowers System</p>
-            </a>
-        </div>
-        <div class="project-item digital">
-            <a href="Pragmatic-Photography.html">
-                <img src="images/Pragmatic-Photography-thumbnail.jpg" alt="Pragmatic Photography">
-                <p>Pragmatic Photography</p>
-            </a>
-        </div>
-        <div class="project-item digital">
-            <a href="Futura-Poster.html">
-                <img src="images/Futura-Poster-thumbnail.jpg" alt="Futura: Type Specimen Poster">
-                <p>Futura: Type Specimen Poster</p>
-            </a>
-        </div>
-        <div class="project-item digital">
-            <a href="Squares-&-Ampersands.html">
-                <img src="images/Squares-&-Ampersands-thumbnail.jpg" alt="Squares & Ampersands">
-                <p>Squares & Ampersands: Form and Composition Project</p>
-            </a>
-        </div>
-        <div class="project-item digital">
-            <a href="112-game.html">
-                <img src="images/112-game-thumbnail.jpg" alt="112 Game">
-                <p>112 Game - 15-112 Term Project</p>
-            </a>
-        </div>
-        <div class="project-item digital">
-            <a href="pet-simulator.html">
-                <img src="images/pet-simulator.jpg" alt="Pet Simulator">
-                <p>Pet Simulator: Hack-112 Winning Project</p>
-            </a>
-        </div>
 
-        <div class="project-item physical">
-            <a href="phipps-lamp.html">
-                <img src="images/phipps-lamp.jpg" alt="A Light from Phipps">
-                <p>A Light from Phipps</p>
-            </a>
-        </div>
-        <div class="project-item physical">
-            <a href="exploring-etextiles.html">
-                <img src="images/exploring-etextiles.jpg" alt="Exploring E-Textiles">
-                <p>Exploring E-Textiles</p>
-            </a>
-        </div>
-        <!-- Add more project items as needed -->
+
+    <!-- Introduction section with a welcome message -->
+    <section class="introduction">
+        <div class="container">
+            <h2>Hello!👋 </h2>
+            <p>
+                My name is Melody, and I am a senior undergraduate student at Carnegie Mellon University. I'm currently majoring in Mechanical Engineering, with a minor in Design and another minor in Human-Computer Interaction. I have previous experience in robotics and mechanical design, and I'm looking for any opportunities that will give me more experience in mechanical, industrial, or product design.
+            </p>
         </div>
     </section>
 
-    <!-- Include JavaScript here -->
-    <script>
-        function filterProjects(category) {
-            const items = document.querySelectorAll('.project-item'); // Select all project items
+    <div class="image-container">
+        <img src="images/simple-black-flower-outline.png" alt="Flower Image" class="centered-image">
+    </div>
+    <!-- Featured Projects section to showcase best work -->
+    <section id="featured-projects">
+        <h2>Featured Projects</h2>
+        <div class="flower-row" id="flowerRow"></div>
+    </section>
+    <div id="container">
+    <a href="portfolio.html" class="button">See More Projects</a>
+    </div>
 
-            items.forEach(item => {
-                if (category === 'all') {
-                    item.style.display = 'block'; // Show all items
-                } else if (item.classList.contains(category)) {
-                    item.style.display = 'block'; // Show items that match the category
-                } else {
-                    item.style.display = 'none'; // Hide items that don't match
-                }
-            });
-        }
+    <!-- Back to top button -->
+    <div id="backToTop"><a href="#top"><i class="arrow up"></i></a></div>
 
-        // Optionally, activate the "All" filter by default when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            filterProjects('all');
-        });
-    </script>
+    <!-- Footer section with copyright info -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Melody M. Chu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript file link -->
+    <script src="scripts.js"></script>
 </body>
+
 </html>
