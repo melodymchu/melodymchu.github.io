@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #FF69B4, #FFC0CB);
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff1493;
+}
+
+/* Main Content */
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Intro Section */
+.project-intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-intro h2 {
+    font-size: 2em;
+    color: #c20064;
+    margin-bottom: 10px;
+}
+
+.project-date, .project-description, .project-tags {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.read-more-link, .documentation-link, .back-to-projects-link {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #FF69B4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    max-width: 200px;
+}
+
+.read-more-link:hover, .documentation-link:hover, .back-to-projects-link:hover {
+    background-color: #FF1493;
+}
+
+/* Project Content Section */
+.project-content {
+    margin-top: 20px;
+}
+
+.project-content h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #c20064;
+}
+
+.project-content p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #FF69B4;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ff1493;
+}
