@@ -710,11 +710,11 @@ footer {
 
 /* Icon Styling */
 .icon {
-    width: 30px; /* Set a small, consistent width for icons */
-    height: 30px; /* Set a small, consistent height for icons */
+    width: 50px; /* Set a small, consistent width for icons */
+    height: 50px; /* Set a small, consistent height for icons */
     border-radius: 50%; /* Make the icons circular */
     vertical-align: middle; /* Align icon vertically with the text */
-    margin-right: 10px; /* Space between icon and text */
+    margin-right: 20px; /* Space between icon and text */
     object-fit: cover; /* Ensure the icon fits within the circle without distortion */
 }
 
@@ -833,6 +833,7 @@ footer {
 }
 
 .social-icon {
+    border: 3px solid black;
     padding: 3px; /* Add padding for the white background */
     background-color: white; /* White background for the icons */
     width: 30px; /* Set a small, consistent width for icons */
