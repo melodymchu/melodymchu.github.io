@@ -202,9 +202,9 @@ nav a:hover::after {
     /* Center horizontally */
     align-items: center;
     /* Center vertically */
-    width: 2 vw;
+    width: 5 vw;
     /* Set container width */
-    height: 2vw;
+    height: 5vw;
     /* Set container height */
     overflow: hidden;
     /* Hide any overflow */
@@ -808,7 +808,7 @@ footer {
 
 /* Footer Styles */
 footer {
-    padding: 20px;
+    padding: 30px;
     background-color: #FF69B4;
     color: white;
     text-align: center; /* Center all footer text */
@@ -826,6 +826,7 @@ footer {
 }
 
 .social-icons {
+    margin-top: 50px;
     margin-bottom: 10px; /* Space below the social icons */
     display: flex; /* Display icons in a row */
     gap: 15px; /* Space between icons */
