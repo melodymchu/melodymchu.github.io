@@ -716,7 +716,7 @@ footer {
     height: 30px; /* Set a small, consistent height for icons */
     border-radius: 50%; /* Make the icons circular */
     vertical-align: middle; /* Align icon vertically with the text */
-    margin-right: 10px; /* Space between icon and text */
+    margin-right: 5vw; /* Space between icon and text */
     object-fit: cover; /* Ensure the icon fits within the circle without distortion */
 }
 
