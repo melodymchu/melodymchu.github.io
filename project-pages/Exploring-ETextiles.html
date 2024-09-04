@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring E-Textiles | Melody M. Chu</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="project-page-styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Melody M. Chu</h1>
+    <nav>
+        <!-- Customize navigation links as needed -->
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="https://www.linkedin.com/in/melodymchu" target="_blank">LinkedIn</a>
+    </nav>
+</header>
+
+<main class="container">
+    <!-- Top Overview Section -->
+    <section class="project-overview">
+        <div class="overview-content">
+            <!-- Project Title -->
+            <h2>Exploring E-Textiles</h2>
+            <div class="row-container">
+                <!-- Image on the left -->
+                <img src="images/20230204_145559.jpg" alt="Exploring E-Textiles Sample" class="overview-image">
+                
+                <!-- Text content on the right -->
+                <div class="col-container">
+                    <!-- Project Date -->
+                    <p class="project-date">February 2023</p>
+                    <!-- Project Description -->
+                    <p class="project-description">I took an introductory micro-course in E-Textiles, where I learned about soft circuits, sensors, and actuation systems, such as those used in wearable tech and electronics. Through lectures and hands-on labs, I explored various e-textile methods, from lo-fi hobbyist approaches to state-of-the-art research involving microcontrollers, electroluminescent wire, muscle wire, and electronics-embedded fabric. Below are a few of my samples from the class.</p>
+                    <!-- Tags for the project -->
+                    <div class="tag-container">
+                        <p class="project-tags">E-Textiles</p>
+                        <p class="project-tags">Sewing</p>
+                        <p class="project-tags">Circuits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content Section -->
+    <section class="project-content">
+        <!-- Exploration of Materials Section -->
+        <h3>I. Exploration of Materials</h3>
+        <p>There are many material considerations when combining electronic components with textile materials. Some materials are conductive, and some are not. Components can range from hard to soft, each with varying levels of skin-safety, washability, and cost. One major challenge is creating secure connection points between hard and soft (or stretchy and non-stretchy) materials. To resolve this, we explored mechanical connections like crimping, sewing, or bolting and using different flexibility levels in materials (e.g., fabric to foam to rigid components). We also looked into specialized e-textile materials, such as iron-on traces or conductive thread.</p>
+        <p>For our lab, we created a simple soft circuit consisting of a power source, a resistor, and an LED. I incorporated a piece of fabric with a snail pattern and used cute cut-outs of copper conductive fabric for the contacts. The LED and resistor were attached by bending the metal leads into loops and sewing them onto the fabric with conductive thread, ensuring solid contact. The components were connected using a chain stitch pattern, providing both electrical connectivity and physical security.</p>
+        <img src="images/e-textiles-materials.jpg" alt="E-Textiles Materials Exploration" class="project-image">
+
+        <!-- Microcontrollers, Sensors, and Variable Resistances Section -->
+        <h3>II. Microcontrollers, Sensors, and Variable Resistances</h3>
+        <p>We learned about variable resistances in components like piezoresistors, where fabric manipulations (bending, scrunching, squeezing, stretching) affect resistance levels and can be used as sensor inputs. We also discussed sewable microcontrollers for enhanced control.</p>
+        <p>Our task was to conceptualize a real-world application using these concepts. My group proposed a headband that would wake the wearer if they fell asleep. We created a low-fidelity prototype using a potentiometer made from Velostat (a pressure-sensitive conductive sheet), an Adafruit microcontroller, conductive thread, fabric, and a metal nut. The Velostat voltage divider's variable resistance altered sensor values as the nut moved, which was reflected by the changing LED colors on the microcontroller. In a higher-fidelity version, the nut's movement, caused by the wearer nodding off, could trigger haptic feedback or sound alerts.</p>
+        <img src="images/e-textiles-headband-prototype.jpg" alt="Headband Prototype Using Velostat" class="project-image">
+
+        <!-- Actuation/Motion Section -->
+        <h3>III. Actuation/Motion</h3>
+        <p>We explored various outputs, including muscle wire, motors, and inflatables, through videos and demos. I practiced tendon actuation by crafting a small sample with bunny ears, where strategically placed strings in flexible materials create motion when pulled.</p>
+        <img src="images/e-textiles-bunny-ears.jpg" alt="Tendon Actuation Bunny Ears Sample" class="project-image">
+
+        <!-- Reflection Section -->
+        <h3>Reflection</h3>
+        <p>This course provided an invaluable introduction to e-textiles and soft circuits, offering both theoretical knowledge and practical experience. Understanding the nuances of integrating electronic components with textile materials has broadened my perspective on wearable tech design. The hands-on labs, especially the soft circuit and headband prototype, allowed me to apply theoretical knowledge to real-world scenarios, enhancing my learning experience.</p>
+
+        <!-- External Link to Detailed Documentation -->
+        <div class="button-container">
+            <a href="https://medium.com/@mmchu/exploring-e-textiles-process" class="btn2">Read more about my design process here</a>
+        </div>
+    </section>
+
+    <!-- Button to Navigate Back to Projects -->
+    <div class="button-container">
+        <a href="https://melodymchu.github.io/portfolio.html" class="btn1 back-to-projects-link">BACK TO PROJECTS</a>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="social-icons">
+            <!-- Customize social media icons -->
+            <a href="mailto:melody.m.chu@gmail.com" target="_blank">
+                <img src="images/Email-Icon.png" alt="Email Icon" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/melodymchu" target="_blank">
+                <img src="images/Linkedin-Icon.png" alt="LinkedIn Icon" class="social-icon">
+            </a>
+        </div>
+        <p>&copy; 2023 Melody M. Chu. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Back-to-top button, scrolls the page back to the top -->
+<div id="backToTop"><a href="#top"><i class="arrow up"></i></a></div>
+
+<!-- JavaScript file for any interactivity, like the back-to-top button -->
+<script src="scripts.js"></script>
+</body>
+</html>
