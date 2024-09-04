@@ -806,6 +806,7 @@ footer {
 
 /* Resume Button Hover Effect */
 .resume-button:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
     background-color: #FF1493; /* Darker pink on hover */
     color: #fff; /* Maintain white text color on hover */
     border-color: #FF1493; /* Border matches hover background color */
