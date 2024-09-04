@@ -484,6 +484,8 @@ footer {
 }
 
 .social-icons {
+    width: 30px; /* Set a small, consistent width for icons */
+    height: 30px; /* Set a small, consistent height for icons */
     width: 1vw;
     height: 1vw;
 
@@ -819,6 +821,8 @@ footer {
 }
 
 .social-icons a {
+    width: 30px; /* Set a small, consistent width for icons */
+    height: 30px; /* Set a small, consistent height for icons */
     margin: 0 10px;
     display: inline-block;
     text-align: center; /* Center social icons */
