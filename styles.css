@@ -138,19 +138,19 @@ nav a:hover::after {
 }
 
 .btn1:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    transform: scale(1.05); /* Slightly enlarge the icon on hover */
     background-color: #FF69B4;
     color: white;
 }
 
 .btn2:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    transform: scale(1.05); /* Slightly enlarge the icon on hover */
     background-color: #ffb6ed;
     color: #c20064;
 }
 
 .button:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    transform: scale(1.05); /* Slightly enlarge the icon on hover */
     background-color: #FF1493;
     /* Darker pink on hover */
     color: white;
@@ -806,7 +806,7 @@ footer {
 
 /* Resume Button Hover Effect */
 .resume-button:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    transform: scale(1.05); /* Slightly enlarge the icon on hover */
     background-color: #FF1493; /* Darker pink on hover */
     color: #fff; /* Maintain white text color on hover */
     border-color: #FF1493; /* Border matches hover background color */
