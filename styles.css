@@ -679,6 +679,17 @@ footer {
        padding: 15px 0; /* Reduce padding on smaller screens */
    }
 }
+}
+/* Experience and Projects Container */
+.experience,
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around container */
+    justify-items: center; /* Center-align grid items */
+}
+
 /* Experience and Project Cards */
 .experience-item,
 .project-item {
@@ -695,12 +706,10 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
-/* Icon Styling */
-.icon {
-    width: 20px; /* Set a small, consistent width for icons */
-    height: 20px; /* Set a small, consistent height for icons */
-    vertical-align: middle; /* Align icon vertically with the text */
-    margin-right: 10px; /* Space between icon and text */
+.experience-item:hover,
+.project-item:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover for emphasis */
 }
 
 /* Headings inside Cards */
@@ -709,8 +718,6 @@ footer {
     font-size: 1.5em; /* Large font size for titles */
     margin-bottom: 10px; /* Space below titles */
     color: #FF69B4; /* Title color matching theme */
-    display: flex; /* Flexbox to align items */
-    align-items: center; /* Center-align items vertically */
 }
 
 /* Subheading (Location and Dates) */
@@ -720,7 +727,6 @@ footer {
     color: #555; /* Darker gray for subheadings */
     display: block; /* Block display for spacing */
     margin-bottom: 10px; /* Space below subheadings */
-    text-align: center; /* Center subheading text */
 }
 
 /* Description Lists */
@@ -728,7 +734,6 @@ footer {
 .project-item ul {
     padding-left: 20px; /* Indent list items */
     margin: 10px 0; /* Space above and below list */
-    text-align: left; /* Left-align list items for readability */
 }
 
 .experience-item li,
@@ -736,7 +741,6 @@ footer {
     font-size: 0.95em; /* Slightly smaller font size for descriptions */
     color: #333; /* Dark text color for readability */
     margin-bottom: 8px; /* Space between list items */
-    text-align: left; /* Left-align description text */
 }
 
 /* Responsive Design */
@@ -755,12 +759,8 @@ footer {
     .project-item h3 {
         font-size: 1.3em; /* Slightly smaller titles on smaller screens */
     }
-
-    .icon {
-        width: 16px; /* Smaller icons on mobile */
-        height: 16px; /* Smaller icons on mobile */
-    }
 }
+
 
 /* Resume Button Container */
 .resume-button-container {
@@ -850,5 +850,4 @@ footer {
         font-size: 0.9rem; /* Reduce font size for smaller screens */
         text-align: center; /* Center text on smaller screens */
     }
-}
 }
