@@ -704,7 +704,7 @@ footer {
     background: #ffffff; /* White background for card contrast */
     padding: 20px; /* Padding inside the card */
     margin: 10px; /* Margin around the card */
-    border: 1px solid #FF69B4; /* Border color to match theme */
+    border: 3px solid #FF69B4; /* Border color to match theme */
     border-radius: 10px; /* Rounded corners for cards */
     width: 100%; /* Full width */
     max-width: 500px; /* Maximum width to control card size */
