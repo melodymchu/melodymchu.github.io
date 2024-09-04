@@ -484,8 +484,6 @@ footer {
 }
 
 .social-icons {
-    width: 30px; /* Set a small, consistent width for icons */
-    height: 30px; /* Set a small, consistent height for icons */
     width: 1vw;
     height: 1vw;
 
@@ -716,7 +714,7 @@ footer {
     height: 30px; /* Set a small, consistent height for icons */
     border-radius: 50%; /* Make the icons circular */
     vertical-align: middle; /* Align icon vertically with the text */
-    margin-right: 5vw; /* Space between icon and text */
+    margin-right: 10px; /* Space between icon and text */
     object-fit: cover; /* Ensure the icon fits within the circle without distortion */
 }
 
@@ -808,7 +806,6 @@ footer {
     border-color: #FF1493; /* Border matches hover background color */
 }
 
-
 /* Footer Styles */
 footer {
     padding: 20px;
@@ -820,13 +817,44 @@ footer {
     bottom: 0;
 }
 
-.social-icons a {
+.footer-container {
+    max-width: 1200px; /* Limit width to keep content centered */
+    margin: auto; /* Center the content */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align items */
+}
+
+.social-icons {
+    margin-bottom: 10px; /* Space below the social icons */
+    display: flex; /* Display icons in a row */
+    gap: 15px; /* Space between icons */
+}
+
+.social-icon {
     width: 30px; /* Set a small, consistent width for icons */
     height: 30px; /* Set a small, consistent height for icons */
-    margin: 0 10px;
-    display: inline-block;
-    text-align: center; /* Center social icons */
+    border-radius: 50%; /* Make the icons circular */
+    object-fit: cover; /* Ensure the icon fits within the circle without distortion */
+    transition: transform 0.3s ease; /* Add hover effect */
 }
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 0 10px; /* Add padding for smaller screens */
+    }
+
+    .social-icon {
+        width: 25px; /* Smaller icons on mobile */
+        height: 25px; /* Smaller icons on mobile */
+    }
+}
+
 
 /* Back-to-top button */
 #backToTop {
