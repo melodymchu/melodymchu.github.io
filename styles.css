@@ -1,59 +1,683 @@
-/* General Styles */
+/* -----------------------General Styles  -----------------------*/
 body {
     font-family: 'Forum', Open Sans, Geneva, Verdana, sans-serif;
+    /* Set default font*/
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    /* Improve text readability */
     background-color: #fff;
+    /* White background */
     color: #333;
-    text-align: center; /* Center all text globally */
+    /* Dark gray text color */
+    text-align: center;
 }
 
-/* Center container text */
-.container {
-    width: 90%;
-    max-width: 1200px; /* Max width for container */
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
-    text-align: center; /* Center text inside the container */
+header {
+    background: linear-gradient(90deg, #FF69B4, #FFC0CB);
+    /* Pink gradient background */
+    color: #c20064;
+    /* text color */
+    padding: 20px 20px;
+    /* Space above and below */
+    text-align: center;
+    /* Center align text */
 }
 
-/* Adjusting section paddings and margins */
-section {
-    margin-bottom: 40px; /* Add space between sections */
-    text-align: center; /* Center text in all sections */
-}
-
-h2, h3 {
-    font-size: 2rem; /* Responsive heading sizes */
+h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
-    text-align: center; /* Center headings */
 }
 
-p, li {
-    font-size: 1rem; /* Set default paragraph font size */
-    max-width: 800px; /* Limit paragraph width */
-    margin: auto; /* Center align text */
-    text-align: center; /* Center text */
+/* -----------------------Header -----------------------*/
+
+header h1 {
+    /*margin: 34;*/
+    font-size: 3.5em;
+    /* Large font size */
+    font-weight: bold;
+    color: #000;
+    /* Dark gray for the header */
+    animation: fadeIn 2s;
+    /* Fade in animation */
 }
 
-/* Navigation Styles */
+header p {
+    font-size: 1.1em;
+    /* Smaller font size */
+    animation: fadeIn 3s;
+    /* Fade in animation */
+    margin-bottom: 5%;
+}
+
+/* -----------------------Navigation -----------------------*/
 nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow navigation to wrap */
+    text-align: center;
     margin: 20px 0;
-    text-align: center; /* Center navigation links */
+    /* Space above and below */
 }
 
 nav a {
-    margin: 10px 15px; /* Adjust spacing for smaller screens */
+    margin: 0 15px;
+    /* Space between links */
     color: #FFC0CB;
+    /* White text color */
     text-decoration: none;
+    /* Remove underline */
     font-weight: bold;
     position: relative;
-    text-align: center; /* Center navigation links */
+}
+
+nav a:hover {
+    color: #FF69B4;
+    /* Pink color on hover */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #FF69B4;
+    /* Pink underline on hover */
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    /* Expands underline on hover */
+    transform-origin: bottom left;
+}
+
+/* -----------------------Container -----------------------*/
+.container {
+    width: 90%;
+    margin: auto;
+    /* Center container */
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    /*max-width: 1200px; /* Max width for container */
+}
+
+/* -----------------------Buttons -----------------------*/
+
+/* Button Styles */
+.button,
+.btn1,
+.btn2 {
+    border: 3px solid black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: auto;
+    background-color: #FF69B4;
+    /* Pink background */
+    color: #fff;
+    display: inline-block;
+    /* White text */
+}
+
+.btn2 {
+    background-color: #FF69B4;
+    color: #fff;
+    border-color: #fff;
+    /* border */
+}
+
+.btn1 {
+    background-color: white;
+    color: #FF69B4;
+    border-color: #FF69B4;
+}
+
+.btn1:hover {
+    background-color: #FF69B4;
+    color: white;
+}
+
+.btn2:hover {
+    background-color: #ffb6ed;
+    color: #c20064;
+}
+
+.button:hover {
+    background-color: #FF1493;
+    /* Darker pink on hover */
+    color: white;
+}
+.button-container {
+   display: flex; /* Flexbox to center the button */
+   justify-content: center; /* Center horizontally */
+   align-items: center; /* Center vertically */
+   margin: 40px 0; /* Adds top and bottom margin to prevent overlap */
+   width: 100%; /* Full width to ensure spacing around */
+   padding: 20px 0; /* Additional padding for space */
+   box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+/* -----------------------Back to Top Button -----------------------*/
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #FF69B4;
+    /* Pink background */
+    color: white;
+    /* White arrow */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    /* Center arrow */
+    display: none;
+    /* Hidden by default */
+    z-index: 1000;
+    /* Above other elements */
+}
+
+#back-to-top:hover {
+    background-color: #FF1493;
+    /* Darker pink on hover */
+}
+
+
+
+
+/* -----------------------Images -----------------------*/
+
+
+
+.image-container {
+    display: flex;
+    /* Use flexbox to align the image */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    width: 5 vw;
+    /* Set container width */
+    height: 5vw;
+    /* Set container height */
+    overflow: hidden;
+    /* Hide any overflow */
+}
+
+.centered-image {
+    max-width: 100%;
+    /* Shrink the image to fit container width */
+    max-height: 100%;
+    /* Shrink the image to fit container height */
+    object-fit: contain;
+    /* Maintain aspect ratio while fitting */
+    display: block;
+    /* Remove any default inline spacing */
+    margin: auto;
+    /* Center the image */
+}
+
+/* -----------------------Hero -----------------------*/
+.hero {
+    position: relative;
+    height: 100vh;
+    /* Full screen height */
+    width: 100vw;
+    background: linear-gradient(180deg, #FF69B4, #ffe1ec);
+    /* Light pink to white gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+/*
+.hero-content {
+   position: relative;
+   z-index: 2; /* Content above background }*/
+
+.hero-name {
+    width: 100%;
+    font-size: 6vw;
+}
+
+/* -----------------------Background Clouds -----------------------*/
+/* Cloud Container Styles */
+.cloud-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Ensure clouds don't overflow out of the container */
+    z-index: -1;
+    /* Place behind the text */
+}
+
+/* Cloud styles */
+.cloud {
+    position: absolute;
+    background-size: contain;
+    opacity: 0.8;
+    /* Slight transparency */
+}
+
+/* Slide-in Animations */
+@keyframes slideInRight {
+    0% {
+        left: -200px;
+        /* Start off-screen to the left */
+    }
+
+    100% {
+        left: calc(50% - 200px);
+        /* Stop near center-right */
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: 100vw;
+        /* Start off-screen to the right */
+    }
+
+    100% {
+        left: calc(50% - 200px);
+        /* Stop near center-left */
+    }
+}
+
+/* -----------------------Vine Divider -----------------------*/
+
+
+.vine-divider {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #ffe1ec, #fff);
+    /* Light pink to white gradient */
+}
+
+.vine-divider svg {
+    width: 100%;
+    max-width: 1000px;
+    /* Max width to make sure it looks good on all screen sizes */
+    height: auto;
+}
+
+/* -----------------------Featured Projects -----------------------*/
+
+#featured-projects {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    position: relative;
+    margin: auto;
+    align-items: center;
+}
+
+
+.flower-row {
+    /*padding-top: 20%;
+   display: flex;
+   justify-content: center;  Align the bottom part for stem 
+   gap: 20vw;;*/
+    display: grid;
+    /* Use CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Responsive grid */
+    gap: 15px;
+    /* Space between grid items */
+    padding: 15%;
+    /* Padding around the gallery */
+    align-items: center;
+    /* Center items within each flower */
+
+
+}
+
+
+
+.flower {
+    position: relative;
+    width: 120%;
+    height: 300%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.petal {
+    position: relative;
+    border-radius: 50%;
+    border: 4px solid #333;
+
+}
+
+.center {
+    width: 120px;
+    height: 120px;
+    background-color: rgb(254, 245, 124);
+    border-radius: 50%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    border: 3px solid #333;
+    /*rgb(197, 164, 0);*/
+    justify-content: center;
+    /* Align the bottom part for stem */
+
+
+}
+
+.center img {
+    width: 100%;
+    height: width;
+    align-items: center;
+    object-fit: cover;
+    border-radius: 50%;
+    justify-content: center;
+    /* Align the bottom part for stem */
+
+}
+
+.stem {
+    width: 5px;
+    height: 110px;
+    background-color: rgb(115, 225, 115);
+    position: absolute;
+    top: 120px;
+    border: 2px solid green;
+
+}
+
+.leaf {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: green;
+    border-radius: 40px;
+    border: 3px solid #004600;
+
+}
+
+.flower:hover {
+    transform: scale(1.15);
+    /* Slight zoom on hover */
+}
+
+
+
+
+/* -----------------------Introduction -----------------------*/
+.introduction {
+    align-items: center;
+    padding: 50px 0;
+    background-color: white;
+    /* White background */
+    text-align: center;
+
+}
+
+.introduction h2 {
+    font-size: 2.5em;
+    /* Large heading */
+    margin-bottom: 20px;
+    /* Space below heading */
+}
+
+.introduction p {
+    font-size: 1.2em;
+    color: #000;
+    /* black text */
+}
+
+
+/* -----------------------Section Title -----------------------*/
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Space below title */
+    font-size: 2em;
+    animation: slideIn 1s;
+    /* Slide in animation */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #FF69B4;
+    /* Pink underline */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+/* -----------------------Experience and Project Layouts? -----------------------*/
+
+
+
+
+/* ----------------------- Footer -----------------------*/
+/* Footer */
+footer {
+   padding: 20px;
+   background-color: #FF69B4;
+   color: white;
+   text-align: center;
+   position: relative;
+   width: 100%;
+   bottom: 0;
+}
+
+.social-icons {
+    width: 1vw;
+    height: 1vw;
+
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    /* Align the bottom part for stem */
+
+
+
+}
+
+/* -----------------------Portfolio Gallery -----------------------*/
+
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive grid with minimum width */
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Include padding in width calculations */
+}
+
+.project-item-portfolio {
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+    /* Responsive grid */
+    background: #fff;
+    /* White background */
+    padding: 20px;
+    margin: 10px;
+    border: 3px solid #FF69B4;
+    /* Light gray border */
+    width: 100%;
+    max-height: 2*width;
+    box-sizing: border-box;
+    /* Include padding in width */
+    transition: transform 0.3s ease;
+    /* Smooth transform */
+    text-decoration: none;
+    background-color: #ffe1ec;
+    /* Example background color */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Hide any overflowing content */
+    display: flex;
+    flex-direction: column;
+    /* Align content vertically */
+    justify-content: space-between;
+    /* Space out content vertically */
+    height: 100%;
+    /* Ensure items are stretched to fill available space     height: 80vh;
+*/
+}
+
+
+
+/* Style the image to fit within the project item */
+.project-item-portfolio img {
+    width: 100%;
+    height: width;
+    overflow: hidden; /* Hide any overflowing content */
+    border: 1px solid #FF69B4; /* Light gray border */
+    border-radius: 5px; /* Slightly round image corners */
+    margin-bottom: 0px;
+}
+
+/* Style the image to fit within the project item */
+.project-item-portfolio image-portfolio {
+    display: flex;
+    /* Use flexbox to align the image */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    width: 100px;
+    /* Set container width */
+    height: 100px;
+    /* Set container height */
+    overflow: hidden;
+    /* Hide any overflow */
+}
+
+
+
+/* Style for project title */
+.project-title-portfolio {
+    font-weight: bold;
+    /* Make text bold */
+    font-size: 1em;
+    color: #333;
+    margin: 10px 0;
+    text-decoration: none;
+    flex-grow: 1;
+    padding:10%;
+    /* Allow description to take up remaining space */
+}
+
+/* Style for project descriptions */
+.project-description-portfolio {
+    padding-top: 120px;
+    font-size: 0.9em;
+    color: #333;
+    margin: 10px 0;
+    flex-grow: 1;
+    /* Allow description to take up remaining space */
+}
+
+.project-tags-portfolio {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows tags to wrap onto new lines */
+    gap: 5px;
+    /* Adds space between tags */
+}
+
+/* Style project names within project items */
+.project-item-portfolio p {
+    font-size: 1.1em;
+    /* Slightly larger font size */
+    color: #333;
+    /* Darker text for better readability */
+    margin-top: 10px;
+    /* Space between the image and the project name */
+    margin-bottom: 5px;
+    /* Space between the project name and description */
+    text-align: center;
+    /* Center-align the project names */
+}
+
+.tag {
+    display: inline-block;
+    background-color: #FF69B4;
+    /* Pink background */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 5px;
+    font-size: 0.8em;
+}
+
+
+
+
+/* -----------------------Text Animations -----------------------*/
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----------------------- Responsive Design -----------------------*/
+@media (max-width: 768px) {
+    .flower-row {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center align */
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center align */
+    }
+
+@media (max-width: 768px) {
+   .button-container {
+       margin: 20px 0; /* Adjust margins for smaller screens */
+       padding: 15px 0; /* Reduce padding on smaller screens */
+   }
 }
 /* Experience and Project Cards */
 .experience-item,
