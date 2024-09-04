@@ -792,6 +792,7 @@ footer {
 .resume-button-container {
     margin-top: 20px; /* Space above the button */
     text-align: center; /* Center-align the button */
+    padding-bottom: 50px;
 }
 
 /* Resume Button Styling */
@@ -805,7 +806,7 @@ footer {
     border-radius: 5px; /* Rounded corners */
     text-decoration: none; /* Remove underline from link */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    border: 2px solid #FF69B4; /* Border matching background color */
+    border: 3px solid #000; /* Border matching background color */
 }
 
 /* Resume Button Hover Effect */
