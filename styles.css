@@ -138,6 +138,33 @@ nav a {
     }
 }
 
+/* Resume Button Container */
+.resume-button-container {
+    margin-top: 20px; /* Space above the button */
+    text-align: center; /* Center-align the button */
+}
+
+/* Resume Button Styling */
+.resume-button {
+    display: inline-block; /* Inline-block for better styling */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #FF69B4; /* Background color matching theme */
+    color: #fff; /* White text color */
+    font-size: 1em; /* Font size for button text */
+    font-weight: bold; /* Bold text */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    border: 2px solid #FF69B4; /* Border matching background color */
+}
+
+/* Resume Button Hover Effect */
+.resume-button:hover {
+    background-color: #FF1493; /* Darker pink on hover */
+    color: #fff; /* Maintain white text color on hover */
+    border-color: #FF1493; /* Border matches hover background color */
+}
+
 
 /* Footer Styles */
 footer {
