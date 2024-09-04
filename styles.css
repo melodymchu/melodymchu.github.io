@@ -592,6 +592,8 @@ footer {
 
 /* Style for project descriptions */
 .project-description-portfolio {
+    text-decoration: none;
+
     padding-top: 120px;
     font-size: 0.9em;
     color: #333;
@@ -611,6 +613,8 @@ footer {
 
 /* Style project names within project items */
 .project-item-portfolio p {
+    text-decoration: none;
+
     font-size: 1.1em;
     /* Slightly larger font size */
     color: #333;
