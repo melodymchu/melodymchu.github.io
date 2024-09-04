@@ -138,16 +138,19 @@ nav a:hover::after {
 }
 
 .btn1:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
     background-color: #FF69B4;
     color: white;
 }
 
 .btn2:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
     background-color: #ffb6ed;
     color: #c20064;
 }
 
 .button:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
     background-color: #FF1493;
     /* Darker pink on hover */
     color: white;
@@ -184,6 +187,8 @@ nav a:hover::after {
 }
 
 #back-to-top:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+
     background-color: #FF1493;
     /* Darker pink on hover */
 }
