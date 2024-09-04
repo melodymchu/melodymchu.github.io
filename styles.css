@@ -202,9 +202,9 @@ nav a:hover::after {
     /* Center horizontally */
     align-items: center;
     /* Center vertically */
-    width: 5 vw;
+    width: 2 vw;
     /* Set container width */
-    height: 5vw;
+    height: 2vw;
     /* Set container height */
     overflow: hidden;
     /* Hide any overflow */
