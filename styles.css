@@ -471,7 +471,6 @@ nav a:hover::after {
     bottom: -10px;
 }
 
-/* -----------------------Experience and Project Layouts? -----------------------*/
 
 
 
@@ -716,7 +715,10 @@ footer {
     flex-direction: column; /* Stack elements vertically */
     align-items: flex-start; /* Align items to the start for better alignment with icons */
 }
-
+.experience-item,
+.project-item::hover{
+    transform: scale(1.1);
+}
 /* Icon Styling */
 .icon {
     width: 50px; /* Set a small, consistent width for icons */
