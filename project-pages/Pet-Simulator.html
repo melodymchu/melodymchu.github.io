@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Simulator | Melody M. Chu</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="project-page-styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Melody M. Chu</h1>
+    <nav>
+        <!-- Customize navigation links as needed -->
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="https://www.linkedin.com/in/melodymchu" target="_blank">LinkedIn</a>
+    </nav>
+</header>
+
+<main class="container">
+    <!-- Top Overview Section -->
+    <section class="project-overview">
+        <div class="overview-content">
+            <!-- Project Title -->
+            <h2>Pet Simulator: Hack112 Winning Project</h2>
+            <div class="row-container">
+                <!-- Image on the left -->
+                <img src="images/pet-simulator-main.jpg" alt="Pet Simulator Main UI" class="overview-image">
+                
+                <!-- Text content on the right -->
+                <div class="col-container">
+                    <!-- Project Date -->
+                    <p class="project-date">April 2022</p>
+                    <!-- Project Description -->
+                    <p class="project-description">For the CMU 112 Hackathon, my team created a cute pet-simulator game, incorporating sentiment analysis and web-scraping. I was responsible for designing the visual elements of the project. This project won 1st place among 18 teams, with over 100 participants.</p>
+                    <!-- Tags for the project -->
+                    <div class="tag-container">
+                        <p class="project-tags">UI/UX</p>
+                        <p class="project-tags">Python</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content Section -->
+    <section class="project-content">
+        <!-- Ideation Phase Section -->
+        <h3>Ideation Phase</h3>
+        <p>During the ideation phase, we brainstormed features for our pet-simulator while keeping the tight 19-hour deadline in mind. We aimed for a simple base idea that could be expanded with additional features depending on the available time. We decided on a pet simulator that analyzes user input text for sentiment and reacts accordingly, providing flexibility in our development process.</p>
+        <img src="images/pet-simulator-brainstorm.jpg" alt="Brainstorming Session" class="project-image">
+
+        <!-- Prototyping Section -->
+        <h3>Prototyping</h3>
+        <p>My main role was designing the UI/UX, in addition to contributing to the ideation and debugging in Python. I began by creating the main sprite, a dog, and its various emotional expressions using Adobe Fresco on an iPad. Several layout options were also designed, evolving with the addition of new features like manual sleep, feed, and play buttons.</p>
+        <p>The overall aesthetic was kept simple, cartoony, and playful, reminiscent of childhood pet games, with minimal shading and a light, colorful palette.</p>
+        <img src="images/pet-simulator-sketches.jpg" alt="UI/UX Sketches and Final Button Icons" class="project-image">
+
+        <!-- Final Result Section -->
+        <h3>Final Result</h3>
+        <p>The final pet simulator included the following features:</p>
+        <ul>
+            <li><strong>Customize Your Dog:</strong> Users can enter their name, their dog's name, and choose a color for the dog using Tkinter colors.</li>
+            <li><strong>Dog's Emotions:</strong> The dog has 7 different emotion sprites that react based on emotion levels (e.g., Super Happy, Happy, Neutral, Sad, Bored, Tired, Sleepy).</li>
+            <li><strong>Dynamic Status Bars:</strong> Display the pet's levels of happiness, hunger, entertainment, sleep, and overall emotion, all of which change based on user interactions and time.</li>
+            <li><strong>Fetch Feature:</strong> Using web scraping, the game can fetch images of items specified by the user and display them in the UI.</li>
+        </ul>
+        <img src="images/pet-simulator-ui.jpg" alt="Main UI with Dog Sprite and Controls" class="project-image">
+        <img src="images/pet-simulator-fetch.jpg" alt="Fetch Item Feature in Action" class="project-image">
+
+        <!-- User Interaction and Sentiment Analysis Section -->
+        <h3>User Interaction and Sentiment Analysis</h3>
+        <p>User inputs affect the dog's emotions through sentiment analysis. Positive text increases happiness, while negative text decreases it. The manual buttons for feeding, playing, and sleeping directly affect the corresponding status bars, encouraging continuous interaction to maintain the dog's happiness.</p>
+        <img src="images/pet-simulator-emotions.jpg" alt="Emotions and Status Bars" class="project-image">
+
+        <!-- Expo Presentation Section -->
+        <h3>Expo Presentation and Feedback</h3>
+        <p>For the final submission, we presented a video and demonstrated the game live at an expo. The interactive and easy-to-play nature of the game engaged many participants, who enjoyed experimenting with different actions to influence the dog's behavior. The quick decay of emotion levels encouraged continuous play to keep the dog happy. Our project was well-received, earning first place in the hackathon!</p>
+
+        <!-- Reflection Section -->
+        <h3>Reflection</h3>
+        <p>Despite the stressful time constraints, the hackathon was a rewarding experience. My team and I created a fun, engaging, and wholesome project that many people enjoyed. The success of our pet simulator at the hackathon reaffirmed the importance of good UI/UX design and interactive elements in making a project stand out.</p>
+
+        <!-- External Link to Submission Video -->
+        <div class="button-container">
+            <a href="https://yourvideo.com/submission-video" class="btn2">Watch Our Final Hack112 Submission Video</a>
+        </div>
+    </section>
+
+    <!-- Button to Navigate Back to Projects -->
+    <div class="button-container">
+        <a href="https://melodymchu.github.io/portfolio.html" class="btn1 back-to-projects-link">BACK TO PROJECTS</a>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="social-icons">
+            <!-- Customize social media icons -->
+            <a href="mailto:melody.m.chu@gmail.com" target="_blank">
+                <img src="images/Email-Icon.png" alt="Email Icon" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/melodymchu" target="_blank">
+                <img src="images/Linkedin-Icon.png" alt="LinkedIn Icon" class="social-icon">
+            </a>
+        </div>
+        <p>&copy; 2022 Melody M. Chu. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Back-to-top button, scrolls the page back to the top -->
+<div id="backToTop"><a href="#top"><i class="arrow up"></i></a></div>
+
+<!-- JavaScript file for any interactivity, like the back-to-top button -->
+<script src="scripts.js"></script>
+</body>
+</html>
