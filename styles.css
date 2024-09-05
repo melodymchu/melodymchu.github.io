@@ -505,7 +505,7 @@ footer {
 
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1.5fr));
     /* Responsive grid with minimum width */
     gap: 20px;
     padding: 20px;
@@ -541,6 +541,7 @@ footer {
     /* Align content vertically */
     justify-content: space-between;
     /* Space out content vertically */
+    object-fit: cover; /* Ensure the icon fits within the circle without distortion */
     height: 100%;
     /* Ensure items are stretched to fill available space     height: 80vh;
 */
@@ -585,7 +586,7 @@ footer {
     margin: 10px 0;
     text-decoration: none;
     flex-grow: 1;
-    padding:10%;
+    padding: 10%;
     /* Allow description to take up remaining space */
 }
 
@@ -625,6 +626,12 @@ footer {
     text-align: center;
     /* Center-align the project names */
 }
+
+/* Style project names within project items */
+.project-item-portfolio a {
+    text-decoration: none;
+}
+
 
 .tag {
     display: inline-block;
