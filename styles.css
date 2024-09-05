@@ -512,52 +512,64 @@ footer {
     box-sizing: border-box;
     /* Include padding in width calculations */
 }
-
+/* Style for each project card */
 .project-item-portfolio {
-    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
-    /* Responsive grid */
     background: #fff;
-    /* White background */
     padding: 20px;
     margin: 10px;
     border: 3px solid #FF69B4;
-    /* Light gray border */
-    width: 100%;
-    max-height: 2*width;
+    width: 100%; /* Full width within the grid */
+    max-width: 280px; /* Control max width */
+    height: 325px; /* Fixed height */
     box-sizing: border-box;
-    /* Include padding in width */
     transition: transform 0.3s ease;
-    /* Smooth transform */
     text-decoration: none;
     background-color: #ffe1ec;
-    /* Example background color */
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    /* Hide any overflowing content */
+    overflow: hidden; /* Prevent overflow */
     display: flex;
     flex-direction: column;
-    /* Align content vertically */
     justify-content: space-between;
-    /* Space out content vertically */
-    object-fit: cover; /* Ensure the icon fits within the circle without distortion */
-    height: 100%;
-    /* Ensure items are stretched to fill available space     height: 80vh;
-*/
+    align-items: center; /* Center content inside the card */
 }
 
-
-
-/* Style the image to fit within the project item */
+/* Style the image to fit within the square project item */
 .project-item-portfolio img {
     width: 100%;
-    height: width;
-    overflow: hidden; /* Hide any overflowing content */
-    border: 1px solid #FF69B4; /* Light gray border */
-    border-radius: 5px; /* Slightly round image corners */
-    margin-bottom: 0px;
+    height: 120px; /* Set fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
+
+/* Maintain square aspect ratio and ensure content fits within */
+.project-item-portfolio .project-title-portfolio {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Smaller font for the description */
+.project-item-portfolio .project-description-portfolio {
+    font-size: 0.75em; /* Smaller font size */
+    color: #333;
+    margin: 10px 0;
+    flex-grow: 1;
+    max-height: 80px; /* Limit the description's height */
+    overflow-y: auto; /* Add scroll if the content exceeds the height */
+    padding: 0 10px; /* Add some padding for better readability */
+    text-align: left; /* Align the text to the left */
+}
+
+/* Hover effect for scaling */
+.project-item-portfolio:hover {
+    transform: scale(1.05);
+}
+
+
 
 /* Style the image to fit within the project item */
 .project-item-portfolio image-portfolio {
@@ -581,7 +593,7 @@ footer {
 .project-title-portfolio {
     font-weight: bold;
     /* Make text bold */
-    font-size: 1em;
+    font-size: em;
     color: #333;
     margin: 10px 0;
     text-decoration: none;
