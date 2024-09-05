@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truss Structural Analysis Project | Melody M. Chu</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="project-page-styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Melody M. Chu</h1>
+    <nav>
+        <!-- Customize navigation links as needed -->
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="https://www.linkedin.com/in/melodymchu" target="_blank">LinkedIn</a>
+    </nav>
+</header>
+
+<main class="container">
+    <!-- Top Overview Section -->
+    <section class="project-overview">
+        <div class="overview-content">
+            <!-- Project Title -->
+            <h2>Truss Structural Analysis Project</h2>
+            <div class="row-container">
+                <!-- Image on the left -->
+                <img src="images/image (2).png" alt="Truss Structural Analysis Project Image" class="overview-image">
+                
+                <!-- Text content on the right -->
+                <div class="col-container">
+                    <!-- Project Date -->
+                    <p class="project-date">October 2021</p>
+                    <!-- Project Description -->
+                    <p class="project-description">In this Fundamentals of Mechanical Engineering course project, I worked with a team to apply our knowledge of statics and truss analysis in designing, analyzing, prototyping, and testing an acrylic truss structure to break at 40 lb within a margin of error of +/- 2 lbs.</p>
+                    <!-- Tags for the project -->
+                    <div class="tag-container">
+                        <p class="project-tags">Statics</p>
+                        <p class="project-tags">Stress Analysis</p>
+                        <p class="project-tags">Prototyping</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content Section -->
+    <section class="project-content">
+        <!-- Ideation and Analysis Section -->
+        <h3>Ideation and Analysis</h3>
+        <p>To design the truss initially, each team member drew the possible node configurations available and sketched various possible truss members by hand. We then used our sketches to calculate the forces and stresses in each member using the method of joints learned in class. Each person came up with various designs, and together we eliminated the ones that weren't as trustworthy or efficient. For instance, after calculating the forces on each member in the trusses, we realized one of the initial truss designs had 3 zero-force members, which could be eliminated. Some of the initial designs also broke one of the rules, which was to not have a node with over 4 layers. We decided to run with a truss design using 7 members, that also had the lowest strength-to-weight ratio.</p>
+
+        <!-- Prototyping Section -->
+        <h3>Prototyping</h3>
+        <p>After the sketches and calculations, we used SolidWorks to create a 3D CAD model of our truss design and to check our work. Doing so allowed us to easily figure out the layering at the joints in the 3D assembly, as well as double-check that it would fit on the testing rig properly.</p>
+        <p>Once we had the CAD created, we laser-cut our truss members out of acrylic sheets and assembled them with metal bolts. Our first design had a member thickness of 1/16 inch, but while setting it up to test on the rig, the 4.5-inch long member snapped with no more than 10 pounds applied on it. This proved that it would not be able to carry 40 pounds. We then proceeded to the next available thickness which was 3/32", but it broke under 32 pounds during testing -- it was too weak. Finally, we used 1/8" which failed at 37 pounds. When we upped the thickness to 5/32", the truss broke at 55lb, which is further from the margin we were aiming for (38-42lb). So, we decided to go with the ⅛" members.</p>
+
+        <!-- Testing and Results Section -->
+        <h3>Testing and Results</h3>
+        <p>During testing, we learned that manufacturing prototypes quickly was essential. Creating more variations of our truss members allowed us to test which dimensions worked best, and confirm the reliability of our final design. We also learned that our calculated dimensions overestimated the strength of our truss. Originally, we calculated that the max “D” was 0.0235”, making the closest acrylic size 1/16”, but after testing, we had to increase it to 1/8” (more than 5x the initial prediction). If we had unlimited testing, we would try “D” thicknesses in between 1/8” and 5/32” since our truss broke early at 1/8" and late at 5/32”. In the future, we may also try different sheets of acrylic, since, according to anecdotal evidence from other groups, the same design would break at different loads based on the sheets they used. Added support beams could slightly increase the load as well.</p>
+
+        <!-- Conclusion Section -->
+        <h3>Final Result</h3>
+        <p>In the end, our truss broke at 37lb, which was a little below the target weight (40lb). In our prediction, most of the force would be placed on member BD, the horizontal member at the top, at 60 lbs in compression. According to the video, the top horizontal member was the first member to fail, so the location was accurate. However, our real-life truss broke at 37 lbs instead of 40 lbs as calculated, so the weight was slightly off.  This discrepancy may have been caused by variability in the acrylic material (e.g. slightly variable thickness, cracks/damage to the material) or the method in which it was assembled (e.g. friction between members, tightness of bolts). Our calculations on paper were also simplified models of the real structure: our calculations assumed that the truss was two-dimensional and the members had no mass, but in real life, neither is true. Additionally, our calculations required the D value to be 0.0235”, but in real life, the D value was approximately 0.125”. These could all be contributing factors to why the calculation was off from the real-life result.</p>
+
+        <div class="button-container">
+            <a href="https://medium.com/@mmchu/truss-structural-analysis-project" class="btn2">Read detailed documentation of this project here</a>
+        </div>
+    </section>
+
+    <!-- Button to Navigate Back to Projects -->
+    <div class="button-container">
+        <a href="https://melodymchu.github.io/portfolio.html" class="btn1 back-to-projects-link">BACK TO PROJECTS</a>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="social-icons">
+            <!-- Customize social media icons -->
+            <a href="mailto:melody.m.chu@gmail.com" target="_blank">
+                <img src="images/Email-Icon.png" alt="Email Icon" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/melodymchu" target="_blank">
+                <img src="images/Linkedin-Icon.png" alt="LinkedIn Icon" class="social-icon">
+            </a>
+        </div>
+        <p>&copy; 2023 Melody M. Chu. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Back-to-top button, scrolls the page back to the top -->
+<div id="backToTop"><a href="#top"><i class="arrow up"></i></a></div>
+
+<!-- JavaScript file for any interactivity, like the back-to-top button -->
+<script src="scripts.js"></script>
+</body>
+</html>
