@@ -561,76 +561,69 @@ footer {
     transition: opacity 0.4s ease, height 0.4s ease; /* Smooth transition */
 }
 
-/* Show description with smooth transition on hover */
+/* Style for each project card */
+.project-item-portfolio {
+    background: #ffe1ec;
+    padding: 10px 5px;
+    margin: 10px;
+    border: 3px solid #FF69B4;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    max-height: 325px; /* Set initial max height */
+    box-sizing: border-box;
+    transition: transform 0.4s ease, max-height 0.4s ease; /* Smooth scaling and height transition */
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Show description and expand card when hovering */
 .project-item-portfolio:hover .project-description-portfolio {
     opacity: 1;
-    height: 80px; /* Adjust to your desired height */
+    height: auto; /* Allow description to expand */
 }
 
-/* Hover effect for scaling the entire project card */
+/* Hover effect for scaling and expanding the entire project card */
 .project-item-portfolio:hover {
-    transform: scale(1.05);
-    transition: transform 0.4s ease; /* Smooth scaling */
+    transform: scale(1.05); 
+    max-height: 800px; /* Adjust to allow enough space for all content */
+    transition: transform 0.4s ease, max-height 0.4s ease;
 }
 
+/* Style the image to fit within the square project item */
+.project-item-portfolio img {
+    width: 100%;
+    height: 150px; /* Set fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Maintain square aspect ratio and ensure content fits within */
+.project-item-portfolio .project-title-portfolio {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
 
 /* Smaller font for the description */
 .project-item-portfolio .project-description-portfolio {
     font-size: 0.75em; /* Smaller font size */
     color: #333;
-    margin: 10px 10px 20px 10px;
-    flex-grow: 1;
-    max-height: 80px; /* Limit the description's height */
-    overflow-y: auto; /* Add scroll if the content exceeds the height */
-    padding: 0 10px; /* Add some padding for better readability */
-    text-align: center; /* Align the text to the left */
+    margin: 10px;
+    padding: 0 10px;
+    text-align: center;
 }
 
-
-
-
-
-/* Style the image to fit within the project item */
-.project-item-portfolio image-portfolio {
-    display: flex;
-    /* Use flexbox to align the image */
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-    /* Center vertically */
-    width: 100px;
-    /* Set container width */
-    height: 100px;
-    /* Set container height */
-    overflow: hidden;
-    /* Hide any overflow */
-}
-
-
-
-/* Style for project title */
-.project-title-portfolio {
-    font-weight: bold;
-    /* Make text bold */
-    font-size: em;
-    color: #333;
-    margin: 10px 0;
-    text-decoration: none;
-    flex-grow: 1;
-    /* Allow description to take up remaining space */
-}
-
-/* Style for project descriptions */
-.project-description-portfolio {
-    text-decoration: none;
-    padding-top: 120px;
-    font-size: 0.9em;
-    color: #333;
-    margin: 10px 0;
-    flex-grow: 1;
-    /* Allow description to take up remaining space */
-}
-
+/* Style the tags */
 .project-tags-portfolio {
     margin: 10px 0;
     display: flex;
@@ -638,7 +631,6 @@ footer {
     justify-content: center; /* Center the tags horizontally */
     gap: 5px;
 }
-
 
 /* Style project names within project items */
 .project-item-portfolio p {
