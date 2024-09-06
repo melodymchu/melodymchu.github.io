@@ -552,6 +552,19 @@ footer {
     margin: 10px 0;
 }
 
+/* Hide description initially */
+.project-description-portfolio {
+    display: none;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Show description when hovering over the project card */
+.project-item-portfolio:hover .project-description-portfolio {
+    display: block;
+}
+
+
+
 /* Smaller font for the description */
 .project-item-portfolio .project-description-portfolio {
     font-size: 0.75em; /* Smaller font size */
