@@ -653,6 +653,44 @@ footer {
     text-decoration: none;
 }
 
+/* Filter Button Container */
+.filter-button-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+}
+
+/* Style for filter buttons */
+.filter-link {
+    padding: 10px 20px;
+    background-color: #c20064; /* Pink background */
+    color: #fff; /* White text */
+    border-radius: 10px 10px 0px 0px; /* Rounded corners */
+    border: 3px solid #333;
+    border-bottom: 3px solid #FF69B4;
+    font-weight: bold;
+    text-transform: uppercase; /* Make text uppercase */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for filter buttons */
+.filter-link:hover {
+    background-color: #FF1493; /* Darker pink on hover */
+    color: white; /* White text on hover */
+    border-color: #FF69B4; /* Optional border change on hover */
+}
+
+/* Active filter button style */
+.filter-link.active {
+    background-color: #FFC0CB; /* Light pink when active */
+    color: #c20064; /* Dark pink text */
+    border: 2px solid #FF69B4; /* Optional border to indicate active state */
+    transform: scale(1.1); /* Slight enlargement to indicate active state */
+}
+
+
 
 .tag {
     display: inline-block;
