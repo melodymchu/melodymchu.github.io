@@ -515,7 +515,7 @@ footer {
 /* Style for each project card */
 .project-item-portfolio {
     background: #fff;
-    padding: 20px;
+    padding: 10px 5px 10px 5px; /*top right bottom left*/
     margin: 10px;
     border: 3px solid #FF69B4;
     width: 100%; /* Full width within the grid */
@@ -538,7 +538,7 @@ footer {
 /* Style the image to fit within the square project item */
 .project-item-portfolio img {
     width: 100%;
-    height: 120px; /* Set fixed height for the image */
+    height: 150px; /* Set fixed height for the image */
     object-fit: cover; /* Ensure the image covers the entire area */
     border-radius: 5px;
     margin-bottom: 10px;
@@ -556,12 +556,12 @@ footer {
 .project-item-portfolio .project-description-portfolio {
     font-size: 0.75em; /* Smaller font size */
     color: #333;
-    margin: 10px 0;
+    margin: 10px 10px 20px 10px;
     flex-grow: 1;
     max-height: 80px; /* Limit the description's height */
     overflow-y: auto; /* Add scroll if the content exceeds the height */
     padding: 0 10px; /* Add some padding for better readability */
-    text-align: left; /* Align the text to the left */
+    text-align: center; /* Align the text to the left */
 }
 
 /* Hover effect for scaling */
@@ -598,14 +598,12 @@ footer {
     margin: 10px 0;
     text-decoration: none;
     flex-grow: 1;
-    padding: 10%;
     /* Allow description to take up remaining space */
 }
 
 /* Style for project descriptions */
 .project-description-portfolio {
     text-decoration: none;
-
     padding-top: 120px;
     font-size: 0.9em;
     color: #333;
@@ -618,10 +616,10 @@ footer {
     margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
-    /* Allows tags to wrap onto new lines */
+    justify-content: center; /* Center the tags horizontally */
     gap: 5px;
-    /* Adds space between tags */
 }
+
 
 /* Style project names within project items */
 .project-item-portfolio p {
@@ -656,7 +654,17 @@ footer {
     font-size: 0.8em;
 }
 
-
+.award {
+    display: inline-block;
+    background-color: #fff;
+    /* Pink background */
+    color: lightskyblue;
+    padding: 5px 10px;
+    border-radius: 0px;
+    margin-right: 5px;
+    font-size: 0.8em;
+    border: 3px solid lightskyblue;
+}
 
 
 /* -----------------------Text Animations -----------------------*/
