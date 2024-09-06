@@ -544,7 +544,8 @@ footer {
     object-fit: cover; /* Ensure the image covers the entire area */
     border-radius: 5px;
     margin-bottom: 10px;
-}
+    border: 1px solid #fff;
+    filter: drop-shadow(5px 5px 5px #FF69B4);}
 
 /* Maintain square aspect ratio and ensure content fits within */
 .project-item-portfolio .project-title-portfolio {
