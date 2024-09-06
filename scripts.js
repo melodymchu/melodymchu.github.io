@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const flowerRow = document.getElementById('flowerRow');
 
     const flowerImages = [
-        'images/33c3ed0d0a6b9f660a76fef9a287c890.png',
+        'images/Project-Thumbnails/Murakami-Flowers-Thumbnail.png',
         'images/Project-Thumbnails/pet-simulator-thumbnail.png',
-        'images/simple-black-flower-outline.png'
+        'images/Project-Thumbnails/a-light-from-phipps-thumbnail.PNG'
     ];
 
     const flowerLinks = [
-        'https://melodymchu.github.io/Murakami-Flowers.html',
-        'https://melodymchu.github.io/Pet-Simulator.html',
-        'https://melodymchu.github.io/Promotional-Robot.html'
+        'https://melodymchu.github.io/project-pages/Murakami-Flowers.html',
+        'https://melodymchu.github.io/project-pages/Pet-Simulator.html',
+        'https://melodymchu.github.io/project-pages/A-Light-From-Phipps.html'
     ];
 
     function getRandomInt(min, max) {
