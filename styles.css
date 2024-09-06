@@ -420,6 +420,8 @@ nav a:hover::after {
 .flower:hover {
     transform: scale(1.15);
     /* Slight zoom on hover */
+    transition: transform 0.3s ease; /* Add hover effect */
+
 }
 
 
@@ -551,18 +553,25 @@ footer {
     color: #333;
     margin: 10px 0;
 }
-
 /* Hide description initially */
 .project-description-portfolio {
-    display: none;
-    transition: all 0.3s ease; /* Smooth transition */
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, height 0.4s ease; /* Smooth transition */
 }
 
-/* Show description when hovering over the project card */
+/* Show description with smooth transition on hover */
 .project-item-portfolio:hover .project-description-portfolio {
-    display: block;
+    opacity: 1;
+    height: 80px; /* Adjust to your desired height */
 }
 
+/* Hover effect for scaling the entire project card */
+.project-item-portfolio:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease; /* Smooth scaling */
+}
 
 
 /* Smaller font for the description */
@@ -577,10 +586,7 @@ footer {
     text-align: center; /* Align the text to the left */
 }
 
-/* Hover effect for scaling */
-.project-item-portfolio:hover {
-    transform: scale(1.05);
-}
+
 
 
 
