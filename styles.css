@@ -346,7 +346,7 @@ nav a:hover::after {
     /* Padding around the gallery */
     align-items: center;
     /* Center items within each flower */
-
+    object-fit: cover;
 
 }
 
@@ -359,6 +359,7 @@ nav a:hover::after {
     display: flex;
     flex-direction: column;
     align-items: center;
+    object-fit: cover;
 
 }
 
@@ -383,6 +384,7 @@ nav a:hover::after {
     justify-content: center;
     /* Align the bottom part for stem */
 
+    object-fit: cover;
 
 }
 
@@ -394,6 +396,7 @@ nav a:hover::after {
     border-radius: 50%;
     justify-content: center;
     /* Align the bottom part for stem */
+    object-fit: cover;
 
 }
 
