@@ -132,6 +132,7 @@ nav a:hover::after {
   transition: background 0.3s ease, color 0.3s ease;
   margin: auto;
   background-color: #FF69B4;
+  gap: 50px;
   /* Pink background */
   color: #fff;
   display: inline-block;
