@@ -201,8 +201,7 @@ nav a:hover::after {
 }
 
 #back-to-top:hover {
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
-
+  transform:scale(1.1); /* Slightly enlarge the icon on hover */
   background-color: #FF1493;
   /* Darker pink on hover */
 }
