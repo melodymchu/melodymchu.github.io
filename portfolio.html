@@ -22,14 +22,15 @@
         <a href="#" class="filter-link" onclick="filterProjects('all')">All</a>
         <a href="#" class="filter-link" onclick="filterProjects('digital')">Digital</a>
         <a href="#" class="filter-link" onclick="filterProjects('physical')">Physical</a>
+        <a href="#" class="filter-link" onclick="filterProjects('experimental')">Experimental</a>
     </div>
 
     <section id="portfolio-gallery">
         <div class="portfolio-container">
             <!-- Existing Projects -->
-            
-            <!-- Digital Projects -->
-            <div class="project-item-portfolio digital">
+
+             <!-- Digital Projects -->
+             <div class="project-item-portfolio digital">
                 <a href="project-pages/Murakami-Flowers.html">
                     <div class="image-portfolio">
                         <img src="images/Project-Thumbnails/Murakami-Flowers-Thumbnail.png" alt="Murakami.Flowers System">
@@ -271,10 +272,21 @@
                 </a>
             </div>
 
+            <!-- Experimental Projects -->
+            <div class="project-item-portfolio experimental">
+                <a href="project-pages/Experimental-Project.html">
+                    <div class="image-portfolio">
+                        <img src="images/Project-Thumbnails/experimental-thumbnail.jpg" alt="Experimental Project">
+                    </div>
+                    <p class="project-title-portfolio">Experimental Project</p>
+                    <p class="project-description-portfolio">An exploration of new techniques using 3D printing and motion sensors.</p>
+                </a>
+            </div>
+
         </div>
     </section>
 
-    <!-- Include JavaScript here -->
+    <!-- JavaScript for Filtering -->
     <script>
         function filterProjects(category) {
             const items = document.querySelectorAll('.project-item-portfolio'); // Select all project items
