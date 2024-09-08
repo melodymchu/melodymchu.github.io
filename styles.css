@@ -201,7 +201,8 @@ nav a:hover::after {
 }
 
 #back-to-top:hover {
-  transform:scale(1.1); /* Slightly enlarge the icon on hover */
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+
   background-color: #FF1493;
   /* Darker pink on hover */
 }
@@ -233,7 +234,7 @@ nav a:hover::after {
   /* Shrink the image to fit container width */
   max-height: 100%;
   /* Shrink the image to fit container height */
-  object-fit: contain;
+  object-fit: cover;
   /* Maintain aspect ratio while fitting */
   display: block;
   /* Remove any default inline spacing */
@@ -350,7 +351,6 @@ nav a:hover::after {
   /*rgb(197, 164, 0);*/
   justify-content: center;
   /* Align the bottom part for stem */
-
   object-fit: cover;
 
 }
@@ -363,7 +363,6 @@ nav a:hover::after {
   border-radius: 50%;
   justify-content: center;
   /* Align the bottom part for stem */
-  object-fit: cover;
 
 }
 
