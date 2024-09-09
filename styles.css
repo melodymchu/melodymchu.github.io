@@ -336,24 +336,27 @@ nav a:hover::after {
 
 /* Center of the flower */
 .center {
-  width: 120px;
-  height: 120px;
-  background-color: rgb(254, 245, 124);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid #333;
-  position: absolute;
-  top: 0px; /* Position the center above the top of the stem */
-  overflow: hidden;
-  object-fit: contain;
-
-}
-.center img {
-    object-fit: contain;
-}
-
+    width: 120px;
+    height: 120px;
+    background-color: rgb(254, 245, 124);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #333;
+    position: absolute;
+    top: 0px; /* Position the center above the top of the stem */
+    overflow: hidden; /* Ensure that the image does not overflow the center */
+  }
+  
+  /* Style the image inside the center */
+  .center img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintain the image's aspect ratio */
+    display: block;
+  }
+  
 /* Petal styling */
 .petal {
   position: absolute;
