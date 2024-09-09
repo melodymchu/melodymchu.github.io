@@ -350,6 +350,10 @@ nav a:hover::after {
   object-fit: contain;
 
 }
+.center img {
+    object-fit: contain;
+
+}
 
 /* Petal styling */
 .petal {
