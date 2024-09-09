@@ -1,4 +1,19 @@
 /* -----------------------General Styles  -----------------------*/
+body, header, footer {
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3 {
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Dynamic scaling */
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  line-height: 1.5;
+}
+
+
 body {
   font-family: "Outfit", sans-serif;
   margin: 0;
@@ -102,6 +117,8 @@ nav a:hover::after {
 
 /* -----------------------Buttons -----------------------*/
 .button, .btn1, .btn2 {
+    max-width: 90%; /* Ensure buttons scale down */
+  width: auto;
   border: 3px solid black;
   text-decoration: none;
   padding: 10px 20px;
@@ -204,8 +221,12 @@ nav a:hover::after {
   align-items: center;
   justify-content: center;
   text-align: center;
-  
-  
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Scale based on screen size */
+  margin: 0;
 }
 
 /* -----------------------Vine Divider -----------------------*/
@@ -215,13 +236,18 @@ nav a:hover::after {
   justify-content: center;
   align-items: center;
   background: linear-gradient(180deg, #ffe1ec, #fff);
-}
+  width: 100%;
+  height: auto;
+  max-width: 100vw; /* Ensure no overflow occurs */
 
+}
 .vine-divider svg {
   width: 100%;
-  max-width: 1000px;
   height: auto;
+  max-width: 100vw; /* Ensure no overflow occurs */
 }
+
+
 
 /* -----------------------Featured Projects -----------------------*/
 #featured-projects {
@@ -234,15 +260,52 @@ nav a:hover::after {
 }
 
 
+@keyframes spinPetals {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.flower {
+  position: relative;
+  transition: transform 0.4s ease; /* Smooth scaling effect */
+}
+
+.flower:hover {
+  transform: scale(1.2); /* Scale the entire flower */
+}
+
+/* Spin only the petals on hover */
+.flower:hover .petal {
+  animation: spinPetals 1.5s ease-in-out; /* Apply spinning effect */
+  animation-iteration-count: infinite; /* Keep the petals spinning */
+}
+
+/* Ensure that the stem and leaves are not affected */
+.stem, .leaf {
+  transition: none; /* No animation or transform on stem and leaves */
+}
+
+.center {
+  transition: none; /* No animation on the center image */
+}
+
+.petal {
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid #333;
+  transition: transform 0.4s ease; /* Smooth animation for petals */
+}
+
 /* -----------------------Flower Modifications -----------------------*/
 .flower-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
   gap: 140px;
-  padding: 20px;
-  position: relative;
-  
 }
 /* Flower Styling */
 .flower {
@@ -310,6 +373,7 @@ nav a:hover::after {
   .flower-row {
     flex-direction: column;
     align-items: center;
+    gap: 100px;
   }
 }
 @media (max-width: 768px) {
@@ -360,8 +424,8 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
-  
+  width: 100%;
+  text-align: center;
 }
 
 .social-icons {
