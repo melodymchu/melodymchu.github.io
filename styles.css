@@ -298,101 +298,72 @@ nav a:hover::after {
   margin: auto;
   align-items: center;
 }
-
-
+/* Container for flowers */
 .flower-row {
-  /*padding-top: 20%;
- display: flex;
- justify-content: center;  Align the bottom part for stem 
- gap: 20vw;;*/
-  display: grid;
-  /* Use CSS Grid */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* Responsive grid */
-  gap: 15px;
-  /* Space between grid items */
-  padding: 15%;
-  /* Padding around the gallery */
-  align-items: center;
-  /* Center items within each flower */
-  object-fit: cover;
-
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align flowers at the bottom */
+  gap: 100px; /* Space between the flowers */
+  padding: 20px;
 }
 
-
-
+/* Flower styling */
 .flower {
   position: relative;
-  width: 120%;
-  height: 300%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  object-fit: cover;
-
 }
 
-.petal {
-  position: relative;
-  border-radius: 50%;
-  border: 4px solid #333;
-
-}
-
-.center {
-  width: 120px;
-  height: 120px;
-  background-color: rgb(254, 245, 124);
-  border-radius: 50%;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  align-items: center;
-  border: 3px solid #333;
-  /*rgb(197, 164, 0);*/
-  justify-content: center;
-  /* Align the bottom part for stem */
-  object-fit: cover;
-
-}
-
-.center img {
-  width: 100%;
-  height: width;
-  align-items: center;
-  object-fit: cover;
-  border-radius: 50%;
-  justify-content: center;
-  /* Align the bottom part for stem */
-
-}
-
+/* Stem styling */
 .stem {
   width: 5px;
-  height: 110px;
   background-color: rgb(115, 225, 115);
-  position: absolute;
-  top: 120px;
+  position: relative;
   border: 2px solid green;
-
+  /* Align the stem to the bottom, but it extends upwards */
 }
 
+/* Leaf styling */
 .leaf {
-  position: relative;
+  position: absolute;
   width: 40px;
   height: 20px;
   background-color: green;
   border-radius: 40px;
   border: 3px solid #004600;
-
 }
 
-.flower:hover {
-  transform: scale(1.15);
-  /* Slight zoom on hover */
-  transition: transform 0.3s ease; /* Add hover effect */
-
+/* Center of the flower */
+.center {
+  width: 120px;
+  height: 120px;
+  background-color: rgb(254, 245, 124);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #333;
+  position: absolute;
+  top: 0px; /* Position the center above the top of the stem */
 }
+
+/* Petal styling */
+.petal {
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid #333;
+  top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .flower-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 
 
@@ -714,12 +685,6 @@ footer {
 
 /* ----------------------- Responsive Design -----------------------*/
 @media (max-width: 768px) {
-  .flower-row {
-      flex-direction: column;
-      /* Stack items vertically */
-      align-items: center;
-      /* Center align */
-  }
 
   .projects-grid {
       flex-direction: column;

@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
             'images/Project-Thumbnails/futura-poster-thumbnail.png',
             'images/Project-Thumbnails/squares-&-ampersands-thumbnail.png',
             'images/Project-Thumbnails/business-card-thumbnail.jpg'
-            // Add more image paths as needed
         ];
 
         // Array of links for each flower
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return { hue, saturation, lightness };
         }
 
-        // Function to create a single flower
+        // Function to create a single flower with variable height
         function createFlower(imageSrc, linkHref) {
             // Create anchor element for the clickable link
             const flowerLink = document.createElement('a');
@@ -79,9 +78,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 getRandomInt(40, 60),
             ];
 
-            // Create stem
+
+
+            // Create stem with a random height
             const stem = document.createElement('div');
             stem.classList.add('stem');
+            const stemHeight = getRandomInt(180, 400); // Set a random height between 80px and 200px
+            stem.style.height = `${stemHeight}px`; // Apply random height to the stem
             flower.appendChild(stem);
 
             // Create leaves
@@ -91,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Randomize leaf position
                 const leafTop = getRandomInt(140, 200);
-                const leafLeft = i === 1 ? -20 : 20;
+                const leafLeft = i === 1 ? -40 : 4;
                 const leafRotate = i === 1 ? 30 : -30;
 
                 leaf.style.top = `${leafTop}px`;
@@ -130,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Position petals using CSS transform to rotate and translate them
                 petal.style.position = 'absolute';
-                petal.style.top = '80px';
                 petal.style.transform = `rotate(${angle}deg) translate(${radius}px)`;
 
                 flower.appendChild(petal);
@@ -139,7 +141,10 @@ document.addEventListener('DOMContentLoaded', function () {
             // Create flower center
             const center = document.createElement('div');
             center.classList.add('center');
+
+
             flower.appendChild(center);
+
 
             // Add the image to the center
             const image = document.createElement('img');
@@ -158,25 +163,5 @@ document.addEventListener('DOMContentLoaded', function () {
             const flower = createFlower(flowerImages[i], flowerLinks[i]);
             flowerRow.appendChild(flower);
         }
-
-        // Additional JavaScript (cloud generation, etc.) can follow here
-        function filterProjects(category) {
-            const items = document.querySelectorAll('.project-item'); // Select all project items
-
-            items.forEach(item => {
-                if (category === 'all') {
-                    item.style.display = 'block'; // Show all items
-                } else if (item.classList.contains(category)) {
-                    item.style.display = 'block'; // Show items that match the category
-                } else {
-                    item.style.display = 'none'; // Hide items that don't match
-                }
-            });
-        }
-
-        // Optionally, activate the "All" filter by default when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            filterProjects('all');
-        });
     };
 });
