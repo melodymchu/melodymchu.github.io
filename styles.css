@@ -234,7 +234,7 @@ nav a:hover::after {
   /* Shrink the image to fit container width */
   max-height: 100%;
   /* Shrink the image to fit container height */
-  object-fit: cover;
+  object-fit: contain;
   /* Maintain aspect ratio while fitting */
   display: block;
   /* Remove any default inline spacing */
@@ -347,7 +347,7 @@ nav a:hover::after {
   position: absolute;
   top: 0px; /* Position the center above the top of the stem */
   overflow: hidden;
-  object-fit: cover;
+  object-fit: contain;
 
 }
 
@@ -743,7 +743,7 @@ footer {
   border-radius: 50%; /* Make the icons circular */
   vertical-align: middle; /* Align icon vertically with the text */
   margin-right: 20px; /* Space between icon and text */
-  object-fit: cover; /* Ensure the icon fits within the circle without distortion */
+  object-fit: contain; /* Ensure the icon fits within the circle without distortion */
 }
 
 /* Headings inside Cards */
@@ -869,7 +869,7 @@ footer {
   width: 30px; /* Set a small, consistent width for icons */
   height: 30px; /* Set a small, consistent height for icons */
   border-radius: 50%; /* Make the icons circular */
-  object-fit: cover; /* Ensure the icon fits within the circle without distortion */
+  object-fit: contain; /* Ensure the icon fits within the circle without distortion */
   transition: transform 0.3s ease; /* Add hover effect */
 }
 
