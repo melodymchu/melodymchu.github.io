@@ -261,14 +261,20 @@ nav a:hover::after {
 }
 
 .flower:hover {
-  transform: scale(1.2); /* Scale the entire flower */
+  transform: scale(2.5); /* 
+  Scale the entire flower */
+translate: 0 100px;
+  z-index: 100;
 }
 
 /* Spin only the petals on hover */
-.flower:hover .petal {
-  animation: spinPetals 1.5s ease-in-out; /* Apply spinning effect */
-  animation-iteration-count: infinite; /* Keep the petals spinning */
+.flower:hover .stem {
+  opacity: 0%;
 }
+.flower:hover .leaf {
+  opacity: 0%;
+}
+
 
 /* Ensure that the stem and leaves are not affected */
 .stem, .leaf {
