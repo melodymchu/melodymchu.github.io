@@ -217,10 +217,9 @@ nav a:hover::after {
 
 .image-container {
   display: flex;
+  margin: auto;
   /* Use flexbox to align the image */
-  justify-content: center;
   /* Center horizontally */
-  align-items: center;
   /* Center vertically */
   width: 5vw;
   /* Set container width */
@@ -242,6 +241,7 @@ nav a:hover::after {
   margin: auto;
   /* Center the image */
 }
+  
 
 /* -----------------------Hero -----------------------*/
 .hero {
