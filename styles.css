@@ -1075,61 +1075,58 @@ footer {
     height: 20px;
   }
 }
-
-
-/* Cute bubble style for Skills Section */
+/* Cute Style for Skills Section */
 #skills {
   margin: 50px auto;
   padding: 30px;
   background-color: #fff0f8; /* Light pastel pink background */
-  border: 3px solid #FFB6C1;
-  border-radius: 20px;
-  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.3);
-  max-width: 900px;
+  border: 3px solid #FFB6C1; /* Soft pink border */
+  border-radius: 30px;
+  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.3); /* Soft pink shadow */
+  max-width: 1000px;
   text-align: center;
   transition: transform 0.3s ease;
 }
 
-/* Make the section title look playful */
+/* Make the section title look more playful */
 #skills .section-title {
   font-size: 2.5em;
   color: #FF69B4;
-  margin-bottom: 20px;
-  font-family: 'Outfit', cursive;
+  margin-bottom: 30px;
+  font-family: 'Outfit', cursive; /* Whimsical font */
 }
 
-/* Skills List */
+/* Skills List: Bubbles in Cloud-like Groups */
 .skills-list {
   list-style-type: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap; /* Allow bubbles to wrap to new lines */
-  justify-content: center;
-  gap: 15px; /* Space between bubbles */
+  flex-wrap: wrap; /* Allows the bubbles to wrap to the next line */
+  justify-content: center; /* Centers the bubble group */
+  gap: 15px; /* Adds space between the bubbles to form clouds */
 }
 
-/* Each skill becomes a bubble */
+/* Each skill becomes a cute bubble */
 .skills-list li {
   font-size: 1em;
-  padding: 15px 20px;
-  background-color: #FFB6C1; /* Soft pink bubble background */
+  padding: 15px 25px;
+  background-color: #FFB6C1; /* Soft pink bubble */
   color: white;
-  border-radius: 50px; /* Circular bubble shape */
-  display: inline-block;
-  border: 2px solid #FF69B4;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  white-space: nowrap; /* Prevent text from breaking inside bubbles */
+  border-radius: 50px; /* Creates bubble shape */
+  display: inline-flex;
   align-items: center;
-  display: flex;
   justify-content: center;
-  gap: 10px;
-  min-width: 220px; /* Ensure bubbles have some size */
+  border: 2px solid #FF69B4;
+  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.2); /* Soft shadow for cute effect */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  white-space: nowrap; /* Prevents text from breaking inside bubbles */
+  min-width: 220px; /* Minimum size for each bubble */
+  max-width: 300px; /* Limit the size of each bubble */
 }
 
 /* Hover effect for each bubble */
 .skills-list li:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   background-color: #FF69B4;
 }
 
@@ -1138,16 +1135,21 @@ footer {
   width: 30px;
   height: 30px;
   vertical-align: middle;
-  display: inline-block;
+  margin-right: 10px;
 }
 
-/* Strong text styling for skill categories inside bubbles */
+/* Strong text styling for skill categories */
 .skills-list li strong {
-  color: #FFF5F9; /* Lighter text for skill categories */
+  color: #FFF5F9; /* Light text for better readability */
   font-weight: bold;
 }
 
-/* Cute pastel background for the body */
+/* Add a gentle hover effect to the entire section */
+#skills:hover {
+  transform: translateY(-5px);
+}
+
+/* Cute pastel background for the page */
 body {
-  background-color: #FFF5F9;
+  background-color: #FFF5F9; /* Soft pink background */
 }
