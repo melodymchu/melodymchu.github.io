@@ -1075,22 +1075,26 @@ footer {
     height: 20px;
   }
 }
-/* Style for Skills Section */
+
+
+/* Cute Style for Skills Section */
 #skills {
   margin: 50px auto;
-  padding: 20px;
-  background-color: #ffe1ec; /* Soft pink background for consistency */
-  border: 3px solid #FF69B4;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: #fff0f8; /* Light pastel pink background */
+  border: 3px solid #FFB6C1; /* Soft pink border */
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.3); /* Soft pink shadow */
   max-width: 900px;
+  transition: transform 0.3s ease;
 }
 
-/* Section Title Styling */
+/* Make the section title look more playful */
 #skills .section-title {
-  font-size: 2em;
+  font-size: 2.5em;
   color: #FF69B4;
   margin-bottom: 20px;
+  font-family: 'Outfit', cursive; /* Whimsical font */
 }
 
 /* Skills List */
@@ -1100,19 +1104,28 @@ footer {
 }
 
 .skills-list li {
-  font-size: 1.1em;
-  margin: 10px 0;
+  font-size: 1.2em;
+  margin: 15px 0;
   color: #333;
   text-align: left;
   background-color: #fff;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 10px;
   border: 2px solid #FF69B4;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.2); /* Cute soft shadow */
   transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
 }
 
-/* Hover Effect */
+/* Add cute icons before each skill */
+.skill-icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* Hover effect for skill items */
 .skills-list li:hover {
   transform: scale(1.05);
   background-color: #FF69B4;
@@ -1121,6 +1134,11 @@ footer {
 
 /* Strong text styling for skill categories */
 .skills-list li strong {
-  color: #c20064; /* Darker pink for skill categories */
+  color: #FF1493; /* Bright pink for skill categories */
   font-weight: bold;
+}
+
+/* Add a gentle hover effect to the entire section */
+#skills:hover {
+  transform: translateY(-5px);
 }
