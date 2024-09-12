@@ -246,7 +246,7 @@ nav a:hover::after {
 
 /* -----------------------Featured Projects -----------------------*/
 #featured-projects {
-  padding: 50px 20px;
+  padding: 50px 50px;
   text-align: center;
   background-color: #ffffff;
   position: relative;
@@ -322,7 +322,7 @@ nav a:hover::after {
 .flower-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 15vw;
     position: relative;
     justify-content: center;
     align-items: flex-end;
