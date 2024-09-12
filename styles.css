@@ -437,11 +437,11 @@ footer {
 }
 
 .social-icon {
-  border: 3px solid black;
-  padding: 3px;
+  border: .1vh solid black;
+  padding: .1vh;
   background-color: white;
-  width: 30px;
-  height: 30px;
+  width: 1vh;
+  height: 1vh;
   border-radius: 50%;
   object-fit: contain;
   transition: transform 0.3s ease;
