@@ -271,9 +271,31 @@ nav a:hover::after {
 .flower:hover {
   transform: scale(2.5); /* 
   Scale the entire flower */
-translate: 0 100px;
+  translate: 0 100px;
   z-index: 100;
 }
+.flower-name {
+    position: absolute;
+    left: 50%;
+    border: 3px solid #333;
+    top: 100px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff;
+    width: 110px;
+    height: 50px;
+    padding: 5px 10px;
+    border-radius: 10%;
+    font-size: 14px;
+    text-align: center;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.flower:hover .flower-name {
+    display: block; /* Show on hover */
+}
+
 
 /* Spin only the petals on hover */
 .flower:hover .stem {
