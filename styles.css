@@ -430,18 +430,18 @@ footer {
 }
 
 .social-icons {
-  margin-top: 1.7vw;
-  margin-bottom: .33vw;
+  margin-top: 5vw;
+  margin-bottom: .5vw;
   display: flex;
-  gap: .5vw;
+  gap: 5vw;
 }
 
 .social-icon {
-  border: .15vw solid black;
-  padding: .1vw;
+  border: .25vw solid black;
+  padding: .5vw;
   background-color: white;
-  width: 1vw;
-  height: 1vw;
+  width: 5vw;
+  height: 5vw;
   border-radius: 50%;
   object-fit: contain;
   transition: transform 0.3s ease;
