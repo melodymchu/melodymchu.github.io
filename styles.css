@@ -219,6 +219,7 @@ nav a:hover::after {
 .about p {
   width: 50%;
   text-align: center;
+}
 
 /* -----------------------Vine Divider -----------------------*/
 .vine-divider {
