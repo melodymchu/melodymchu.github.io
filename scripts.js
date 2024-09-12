@@ -33,12 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
 
         const flowerNames = [
-            'Murakami Flowers',
-            'Pet Simulator',
+            'Murakami.Flowers Design System',
+            'Pet Simulator - Hack112 Winner',
             'A Light From Phipps',
-            'Futura Poster',
+            'Futura Typeface Poster',
             'Squares & Ampersands',
-            'Business Card'
+            'Laser-Cut Business Card'
         ];
 
         const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
