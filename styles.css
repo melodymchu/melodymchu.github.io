@@ -216,7 +216,7 @@ nav a:hover::after {
   margin: 0;
 }
 /* -----------------------Introduction -----------------------*/
-.introduction p {
+.about p {
   width: 50%;
   text-align: center;
 
