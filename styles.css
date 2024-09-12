@@ -215,6 +215,10 @@ nav a:hover::after {
   font-size: clamp(2rem, 5vw, 3.5rem); /* Scale based on screen size */
   margin: 0;
 }
+/* -----------------------Introduction -----------------------*/
+.introduction p {
+  width: 50%;
+  text-align: center;
 
 /* -----------------------Vine Divider -----------------------*/
 .vine-divider {
