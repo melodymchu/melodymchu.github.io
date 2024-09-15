@@ -97,6 +97,18 @@ footer {
   }
 }
 
+.column-container {
+  display: flex;
+  gap: 20px; /* Space between columns */
+  padding: 20px;
+}
+
+/* Styling for columns */
+.column {
+  flex: 1; /* This makes both columns take equal space */
+  padding: 10px;
+}
+
 /* -----------------------Buttons -----------------------*/
 .button,
 .btn1,
@@ -561,6 +573,7 @@ Scale the entire flower */
 }
 
 /* ------------------Skills-----------------------*/
+
 #skills {
   margin: 70px auto;
   padding: 0px 50px 70px 50px;
@@ -592,8 +605,8 @@ Scale the entire flower */
   padding: 5px 10px;
   border-radius: 30px;
   display: inline-block;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   border: 2px solid #FF69B4;
   box-shadow: 0 6px 12px rgba(255, 182, 193, 0.5); /* Soft shadow */
   white-space: nowrap; /* Prevent text from breaking */
