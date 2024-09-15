@@ -243,10 +243,8 @@ h2 {
 }
 .project-content li {margin: 0 auto; /* Horizontally center the container */
     width: 60vw;
-
     margin-bottom: 1rem;
     font-size: 1em;
-
 }
 .project-image {
     margin: 0 auto; /* Horizontally center the container */
