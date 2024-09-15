@@ -296,13 +296,13 @@ h2 {
     color: #c20064;
 }
 #slider {
-  width: 600px;
-  height: 400px;
-  overflow: hidden;
+  width: 70vw;
+  height: auto;
+  overflow:scroll;
 }
 .slide {
-  width: 600px;
-  height: 400px;
+  width: 70vw;
+  height: auto;
   float: left;
 }
 footer {
