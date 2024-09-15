@@ -1,6 +1,7 @@
 let currentIndex = 0;
 const slides = document.querySelectorAll('.carousel-item');
 const indicators = document.querySelector('.carousel-indicators');
+const carousel = document.getElementById('carousel');
 
 // Create indicators
 slides.forEach((_, index) => {
@@ -48,3 +49,14 @@ document.querySelector('.carousel').addEventListener('mouseover', () => clearInt
 document.querySelector('.carousel').addEventListener('mouseout', () => {
     autoSlide = setInterval(() => changeSlide(1), 5000);
 });
+
+// Toggle Fullscreen
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        carousel.requestFullscreen().catch(err => {
+            console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
+        });
+    } else {
+        document.exitFullscreen();
+    }
+}
