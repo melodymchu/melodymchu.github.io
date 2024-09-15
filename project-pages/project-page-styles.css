@@ -296,9 +296,9 @@ h2 {
 /* Carousel Container */
 .carousel {
     overflow: hidden;
-    width: 100%;
+    width: 80%;
     max-width: 100vw; /* Ensure it does not stretch out of the viewport */
-    height: 100%; /* Adjust as needed */
+    height: 80vh; /* Adjust as needed */
     position: relative;
     margin: auto;
 }
