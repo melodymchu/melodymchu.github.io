@@ -67,7 +67,7 @@ footer {
 
 /* ----------------------Container -----------------------*/
 .container {
-  width: 90%;
+  width: 90vw;
   margin: auto;
   overflow: hidden;
   text-align: center;
@@ -620,6 +620,59 @@ Scale the entire flower */
 .skills-list li:hover {
   transform: scale(1.1);
   background-color: #FF69B4;
+}
+
+/* Add icons before each skill */
+.skill-icon {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+
+/*----Coursework---*/
+#courses {
+  margin: 70px auto;
+  padding: 0px 50px 70px 50px;
+  width: 60vw;
+  text-align: center;
+}
+
+/* Skills List using Flexbox for left-aligned layout */
+.course-list {
+  list-style-type: none;
+  padding: 20px 0 0 0;
+  margin: 0;
+  display: flex;    /* Use Flexbox for layout */
+  flex-wrap: wrap;    /* Allow the items to wrap to the next line */
+  justify-content: flex-start; /* Left-align the bubbles */
+  gap: 20px 15px; /* Space between bubbles */
+  align-items: center;
+}
+
+/* Each skill as a bubble */
+.course-list li {
+  border: 3px solid #FF69B4;
+  background-color: #fff;
+  color: #FF69B4;
+  margin-right: 5px;
+  font-size: .8em;
+  padding: 5px 10px;
+  border-radius: 30px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; /* Prevent text from breaking */
+  min-width: 100px; /* Minimum width for the bubbles */
+  max-width: 250px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-weight: bold;
+}
+
+/* Hover effect for each bubble */
+.course-list li:hover {
+  transform: scale(1.1);
 }
 
 /* Add icons before each skill */
