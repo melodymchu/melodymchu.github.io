@@ -314,7 +314,6 @@ h2 {
 
 .carousel-images img {
     border: 3px solid blue;
-
     object-fit: contain; /* Ensure the entire image is shown without distortion */
 }
 
