@@ -295,8 +295,9 @@ h2 {
 }
 /* Carousel Container */
 .carousel {
+    width: 100vw; /* Full viewport width */
+    height: 60vh; /* 60% of viewport height, adjust as needed */
     position: relative;
-    height: 80vh;
     margin: auto;
     overflow: scroll; /* Hide overflowing images */
 }
@@ -308,7 +309,9 @@ h2 {
 }
 
 .carousel-images img {
-    width: 100%; /* Takes up the full width of the container */
+    width: 100%; /* Make images take the full width of the carousel */
+    height: 100%; /* Make images take the full height of the carousel */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
     flex-shrink: 0; /* Prevent images from shrinking */
 }
 
