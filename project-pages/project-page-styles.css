@@ -295,7 +295,16 @@ h2 {
     background-color: #ffb6ed;
     color: #c20064;
 }
-
+#slider {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+}
+.slide {
+  width: 600px;
+  height: 400px;
+  float: left;
+}
 footer {
     padding: 1rem 0;
     background-color: #FF69B4;
