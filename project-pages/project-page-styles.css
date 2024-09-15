@@ -310,9 +310,6 @@ h2 {
 }
 
 .carousel-images img {
-    width: 100%; /* Maintain aspect ratio */
-    height: 100%; /* Maintain aspect ratio */
-
     object-fit: contain; /* Ensure the entire image is shown without distortion */
 }
 
