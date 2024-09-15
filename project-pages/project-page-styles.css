@@ -216,10 +216,11 @@ h2 {
 .project-content h3 {
     font-size: 1.5em;
     color: #c20064;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
+    margin: 0 auto; /* Horizontally center the container */
+    margin-bottom: 1rem;
+
     text-align: center;
-        width: 80vw;
+    width: 80vw;
     max-width: 700px;
 }
 
