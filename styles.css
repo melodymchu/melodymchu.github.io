@@ -560,16 +560,14 @@ Scale the entire flower */
   bottom: -10px;
 }
 
-/* Cute Style for Skills Section */
+/* ------------------Skills-----------------------*/
 #skills {
-  margin: 50px auto;
+  margin: 70px auto;
   padding: 0px 50px 70px 50px;
   border: 3px solid #FFB6C1;
-  /* Soft pink border */
   border-radius: 30px;
   box-shadow: 0 6px 12px rgba(255, 182, 193, 0.3);
-  /* Soft pink shadow */
-  max-width: 1000px;
+  width: 60vw;
   text-align: center;
 }
 
@@ -578,16 +576,11 @@ Scale the entire flower */
   list-style-type: none;
   padding: 20px 0 0 0;
   margin: 0;
-  display: flex;
-  /* Use Flexbox for layout */
-  flex-wrap: wrap;
-  /* Allow the items to wrap to the next line */
-  justify-content: flex-start;
-  /* Left-align the bubbles */
-  gap: 20px 15px;
-  /* Space between bubbles for even dispersion */
+  display: flex;    /* Use Flexbox for layout */
+  flex-wrap: wrap;    /* Allow the items to wrap to the next line */
+  justify-content: flex-start; /* Left-align the bubbles */
+  gap: 20px 15px; /* Space between bubbles */
   align-items: center;
-  /* Vertically align the bubbles */
 }
 
 /* Each skill as a bubble */
@@ -595,21 +588,19 @@ Scale the entire flower */
   background-color: #FF69B4;
   color: white;
   margin-right: 5px;
-  font-size: 1em;
-  padding: 8px 15px;
+  font-size: .8em;
+  padding: 5px 10px;
   border-radius: 30px;
   display: inline-block;
   align-items: center;
   justify-content: center;
   border: 2px solid #FF69B4;
-  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.5);
-  /* Soft shadow */
-  white-space: nowrap;
-  /* Prevent text from breaking */
-  min-width: 100px;
-  /* Minimum width for the bubbles */
+  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.5); /* Soft shadow */
+  white-space: nowrap; /* Prevent text from breaking */
+  min-width: 100px; /* Minimum width for the bubbles */
   max-width: 250px;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  font-weight: bold;
 }
 
 /* Hover effect for each bubble */
@@ -626,12 +617,8 @@ Scale the entire flower */
   margin-right: 10px;
 }
 
-.skills-list li strong {/* Strong text styling for skill categories */
 
-  color: #FFF5F9;
-  font-weight: bold;
-}
-
+/* --------------Experience & Projects-------------------*/
 
 /* Experience and Projects Container */
 .experience,
