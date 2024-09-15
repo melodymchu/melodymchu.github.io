@@ -313,6 +313,12 @@ h2 {
     object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
+@media (max-width: 768px) {
+    .carousel {
+        height: 40vh; /* Adjust for smaller screens */
+    }
+}
+
 /* Navigation Buttons */
 .prev, .next {
     position: absolute;
