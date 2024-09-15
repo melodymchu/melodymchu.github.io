@@ -8,50 +8,53 @@ body {
     color: #333;
     text-align: center;
 }
-
+/* -----------------------Header -----------------------*/
 header {
-    background: linear-gradient(180deg, #FF69B4, #FFC0CB);
+    background: linear-gradient(90deg, #FF69B4, #FFC0CB);
     color: #c20064;
-    padding: 1rem;
+    padding: 20px;
     text-align: center;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 1rem;
-}
-
-header h1 {
-    font-size: 3rem;
+    overflow: hidden;
+    max-width: 100vw;
+    width: 100vw;
+  }
+  
+  header h1 {
+    font-size: 3.5em;
     font-weight: bold;
-    color: #000;
+    color: #ffffff;
     animation: fadeIn 2s;
-}
-
-header p {
-    font-size: 1em;
+    opacity: 100%;
+  
+    text-shadow: -1px -1px 5px #c20064, 3px 0px 2px #fff, 1px -5px 5px #FFC0CB, -15px -18px 5px #ffc7f0, 18px 18px 8px #ccffcc, -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+  }
+  
+  header p {
+    font-size: 1.1em;
     animation: fadeIn 3s;
     margin-bottom: 5%;
-}
-
-nav {
+  }
+  
+  
+  /* ---------------------Navigation -----------------------*/
+  nav {
     text-align: center;
-    margin: 1rem 0;
-}
-
-nav a {
-    margin: 0 1rem;
+    margin: 20px 0;
+  }
+  
+  nav a {
+    margin: 0 15px;
     color: #FFC0CB;
     text-decoration: none;
     font-weight: bold;
     position: relative;
-}
-
-nav a:hover {
+  }
+  
+  nav a:hover {
     color: #FF69B4;
-}
-
-nav a::after {
+  }
+  
+  nav a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -62,11 +65,16 @@ nav a::after {
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-}
-
-nav a:hover::after {
+  }
+  
+  nav a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+  
+h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
 }
 
 .container {
@@ -79,8 +87,6 @@ nav a:hover::after {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
-
-
 
 .overview-image {
     width: 100%;
@@ -218,6 +224,11 @@ nav a:hover::after {
     margin: 1rem auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.project-content img{
+    align-self: center;
+}
+
 
 .button-container {
     display: flex;
