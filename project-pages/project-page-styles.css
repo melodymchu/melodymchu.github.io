@@ -304,6 +304,7 @@ h2 {
 
 /* Images in the Carousel */
 .carousel-images {
+    overflow: hidden;
     display: flex;
     transition: transform 0.5s ease-in-out; /* Smooth transition */
 }
