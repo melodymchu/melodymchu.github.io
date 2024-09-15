@@ -108,6 +108,21 @@ footer {
   flex: 1; /* This makes both columns take equal space */
   padding: 10px;
 }
+/* Outer container to enable full viewport centering */
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Centered container */
+.centered-container {
+  width: 20vh; /* Takes up half of the screen width */
+  padding: 20px;
+}
+
 
 /* -----------------------Buttons -----------------------*/
 .button,
