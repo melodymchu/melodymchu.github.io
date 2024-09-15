@@ -8,6 +8,13 @@ body {
     color: #333;
     text-align: center;
 }
+img {
+    display: block;
+}
+h4{
+    text-align: center;
+}
+small{text-align:center;}
 /* -----------------------Header -----------------------*/
 header {
     background: linear-gradient(90deg, #FF69B4, #FFC0CB);
@@ -217,17 +224,15 @@ h2 {
 }
 
 .project-image {
+    margin: 0 auto; /* Horizontally center the container */
     width: 100%;
     max-width: 500px;
     height: auto;
+    text-align: ;
     border-radius: 10px;
-    margin: 1rem auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.project-content img{
-    align-self: center;
-}
 
 
 .button-container {
