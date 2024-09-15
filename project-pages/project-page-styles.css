@@ -17,6 +17,8 @@ img {
 }
 h4{
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 3px;
 }
 small{text-align:center;}
 /* -----------------------Header -----------------------*/
@@ -215,6 +217,8 @@ h2 {
 .project-content h3 {
     font-size: 1.5em;
     color: #c20064;
+    padding-top: 55px;
+    padding-bottom: 15px;
     margin: 0 auto; /* Horizontally center the container */
     margin-bottom: 1rem;
 
