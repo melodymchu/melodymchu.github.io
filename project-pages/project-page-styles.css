@@ -10,6 +10,7 @@ body {
 }
 img {
     display: block;
+    margin-bottom: 30px;
 }
 h4{
     text-align: center;
@@ -218,6 +219,10 @@ h2 {
 }
 
 .project-content p {
+    margin: 0 auto; /* Horizontally center the container */
+
+    padding-left: 50px;
+    padding-right: 50px;
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1em;
@@ -228,7 +233,6 @@ h2 {
     width: 100%;
     max-width: 500px;
     height: auto;
-    text-align: ;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
