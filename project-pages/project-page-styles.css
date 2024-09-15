@@ -308,7 +308,6 @@ h2 {
 }
 
 .carousel-images img {
-
     object-fit: contain; /* Maintain aspect ratio and cover the container */
 }
 
