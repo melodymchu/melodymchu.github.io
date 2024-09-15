@@ -295,6 +295,7 @@ h2 {
 }
 /* Carousel Container */
 .carousel {
+    overflow: hidden;
     width: 60vw; /* Full viewport width */
     height: 60vh; /* 60% of viewport height, adjust as needed */
     position: relative;
