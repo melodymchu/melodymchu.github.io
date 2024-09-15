@@ -298,10 +298,10 @@ h2 {
     position: relative;
     width: 100%;
     max-width: 100vw;
-    height: 60vh; /* Adjust height as needed */
+    height: 80vh; /* Adjust height as needed */
     overflow: hidden;
     margin: auto;
-    background-color: #000; /* Background color for empty spaces */
+    background-color: #ccc; /* Background color for empty spaces */
 }
 
 /* Inner Container for Carousel Items */
