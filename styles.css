@@ -680,7 +680,6 @@ Scale the entire flower */
   justify-content: center;
   white-space: nowrap; /* Prevent text from breaking */
   min-width: 100px; /* Minimum width for the bubbles */
-  max-width: 250px;
   transition: transform 0.3s ease, background-color 0.3s ease;
   font-weight: bold;
 }
