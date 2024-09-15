@@ -298,10 +298,9 @@ h2 {
 /* Carousel Container */
 .carousel {
     position: relative;
-    height:80vh;
-    width: auto;
+    width: 80vw;
     margin: auto;
-    overflow: hidden; /* Hide overflowing images */
+    overflow: scroll; /* Hide overflowing images */
 }
 
 /* Images in the Carousel */
