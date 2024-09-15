@@ -299,7 +299,6 @@ h2 {
     height: 60vh; /* 60% of viewport height, adjust as needed */
     position: relative;
     margin: auto;
-    overflow: scroll; /* Hide overflowing images */
 }
 
 /* Images in the Carousel */
@@ -312,7 +311,6 @@ h2 {
     width: 100%; /* Make images take the full width of the carousel */
     height: 100%; /* Make images take the full height of the carousel */
     object-fit: cover; /* Maintain aspect ratio and cover the container */
-    flex-shrink: 0; /* Prevent images from shrinking */
 }
 
 /* Navigation Buttons */
