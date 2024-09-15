@@ -295,7 +295,7 @@ h2 {
 }
 /* Carousel Container */
 .carousel {
-    width: 80vw; /* Full viewport width */
+    width: 60vw; /* Full viewport width */
     height: 60vh; /* 60% of viewport height, adjust as needed */
     position: relative;
     margin: auto;
