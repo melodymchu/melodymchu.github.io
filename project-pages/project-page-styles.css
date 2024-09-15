@@ -295,6 +295,7 @@ h2 {
 }
 /* Carousel Container */
 .carousel {
+    border: 3px solid black;
     overflow: hidden;
     width: 80%;
     max-width: 100vw; /* Ensure it does not stretch out of the viewport */
@@ -305,11 +306,15 @@ h2 {
 
 /* Images in the Carousel */
 .carousel-images {
+    border: 3px solid pink;
+
     display: flex;
     transition: transform 0.5s ease-in-out; /* Smooth transition */
 }
 
 .carousel-images img {
+    border: 3px solid blue;
+
     object-fit: contain; /* Ensure the entire image is shown without distortion */
 }
 
