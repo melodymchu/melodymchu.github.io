@@ -296,7 +296,7 @@ h2 {
 /* Carousel Container */
 .carousel {
     position: relative;
-    width: 80vw;
+    height: 80vh;
     margin: auto;
     overflow: scroll; /* Hide overflowing images */
 }
