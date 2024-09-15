@@ -99,7 +99,7 @@ footer {
 
 .column-container {
   display: flex;
-  gap: 20px; /* Space between columns */
+  gap: 10px; /* Space between columns */
   padding: 20px;
 }
 
