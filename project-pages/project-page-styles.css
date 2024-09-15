@@ -8,6 +8,8 @@ body {
     color: #333;
     text-align: center;
 }
+
+
 img {
     display: block;
     margin-bottom: 30px;
@@ -220,14 +222,19 @@ h2 {
 
 .project-content p {
     margin: 0 auto; /* Horizontally center the container */
+    width: 50vw;
 
-    padding-left: 50px;
-    padding-right: 50px;
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1em;
 }
+.project-content li {margin: 0 auto; /* Horizontally center the container */
+    width: 50vw;
 
+    margin-bottom: 1rem;
+    font-size: 1em;
+
+}
 .project-image {
     margin: 0 auto; /* Horizontally center the container */
     width: 100%;
