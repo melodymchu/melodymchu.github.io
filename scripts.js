@@ -75,14 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const stem = document.createElement('div');
             stem.classList.add('stem');
-            stem.style.height = `${getRandomInt(180, 400)}px`;
+            stem.style.height = `${getRandomInt(180, 300)}px`;
             flower.appendChild(stem);
 
             for (let i = 1; i <= 2; i++) {
                 const leaf = document.createElement('div');
                 leaf.classList.add('leaf', `leaf${i}`);
                 leaf.style.top = `${getRandomInt(140, 200)}px`;
-                leaf.style.left = `${i === 1 ? -40 : 4}px`;
+                leaf.style.left = `${i === 1 ? 10 : 50}px`;
                 leaf.style.transform = `rotate(${i === 1 ? 30 : -30}deg)`;
                 flower.appendChild(leaf);
             }
@@ -113,16 +113,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const center = document.createElement('div');
             center.classList.add('center');
+            const pot = document.createElement('div');
+            pot.classList.add('pot');
             const image = document.createElement('img');
             image.src = imageSrc;
             image.alt = 'Flower Image';
             center.appendChild(image);
-
             const name = document.createElement('div');
             name.classList.add('flower-name');
             name.textContent = flowerNameText;
 
             flower.appendChild(center);
+            flower.appendChild(pot);
             flower.appendChild(name);
             flowerLink.appendChild(flower);
 
