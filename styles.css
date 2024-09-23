@@ -522,7 +522,7 @@ Scale the entire flower */
 
 
 .flower-row {
-  gap: 15%;
+  gap: 5%;
   position: relative;
   align-items: flex-end;
   
