@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const getRandomBaseColor = () => ({
             hue: getRandomInt(0, 360),
             saturation: 80,
-            lightness: 80
+            lightness: 90
         });
 
         const createFlower = (imageSrc, linkHref, flowerNameText) => {
