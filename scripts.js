@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
 
         const flowerNames = [
-            'Murakami.Flowers Design System',
-            'Pet Simulator - Hack112 Winner',
+            'Murakami .Flowers System',
+            'Pet Simulator - Hack112',
             'A Light From Phipps',
-            'Futura Typeface Poster',
+            'Futura Poster',
             'Squares & Ampersands',
             'Laser-Cut Business Card'
         ];
