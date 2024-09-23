@@ -14,13 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollTimeout = setTimeout(() => {
                     backToTopButton.style.display = window.scrollY > 100 ? "block" : "none";
                     scrollTimeout = null;
-                }, 200);  // Adjust the delay based on desired performance (200ms here)
+                }, 200);
             }
         });
     }
 
-    window.onload = () => {
-        const flowerRow = document.getElementById('flowerRow');
+    // Use Intersection Observer to load the flowers when the section is in view
+    const flowerRow = document.getElementById('flowerRow');
+    
+    if (flowerRow) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    loadFlowers();
+                    observer.disconnect(); // Only load flowers once
+                }
+            });
+        });
+    
+        observer.observe(flowerRow);
+    }
+
+    function loadFlowers() {
         const flowerImages = [
             'images/Project-Thumbnails/Murakami-Flowers-Thumbnail.png',
             'images/Project-Thumbnails/pet-simulator-thumbnail.png',
@@ -63,9 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const flower = document.createElement('div');
             flower.classList.add('flower');
-        // Ensure the flower's max size is within bounds
-        flower.style.maxWidth = '20vw';
-
+            flower.style.maxWidth = '20vw';
 
             const baseColor = getRandomBaseColor();
             const numberOfPetals = getRandomInt(5, 10);
@@ -87,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 flower.appendChild(leaf);
             }
 
-            const petalsFragment = document.createDocumentFragment(); // Use fragment to minimize DOM reflows
+            const petalsFragment = document.createDocumentFragment();
             for (let i = 0; i < numberOfPetals; i++) {
                 const petal = document.createElement('div');
                 petal.classList.add('petal');
@@ -109,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 petalsFragment.appendChild(petal);
             }
 
-            flower.appendChild(petalsFragment); // Append petals in a single operation
+            flower.appendChild(petalsFragment);
 
             const center = document.createElement('div');
             center.classList.add('center');
@@ -118,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const image = document.createElement('img');
             image.src = imageSrc;
             image.alt = 'Flower Image';
+            image.loading = 'lazy';  // Add lazy loading here
             center.appendChild(image);
             const name = document.createElement('div');
             name.classList.add('flower-name');
@@ -131,11 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return flowerLink;
         };
 
-        // Append flowers in a single batch to minimize reflows
         const flowersFragment = document.createDocumentFragment();
         flowerImages.forEach((imageSrc, i) => {
             flowersFragment.appendChild(createFlower(imageSrc, flowerLinks[i], flowerNames[i]));
         });
         flowerRow.appendChild(flowersFragment);
-    };
+    }
 });
