@@ -1,17 +1,21 @@
 /* =====================General =========================*/
 
 /* ---------------------General  -----------------------*/
+* {
+  box-sizing: border-box;
+}
 
 body {
+    object-fit: contain;
   font-family: "Outfit", sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: auto;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
   text-align: center;
-  max-width: 100vw;
-  width: 100vw;
+  max-width: 100%;
+  width: 100%;
+  align-self: center;
 }
 
 
@@ -22,40 +26,41 @@ h2 {
 
 /* -----------------------Footer -----------------------*/
 footer {
-  padding: 20px;
   background-color: #FF69B4;
   color: white;
   text-align: center;
-  position: relative;
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   bottom: 0;
   z-index: 5;
   /* Footer stays in front of the stems */
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .social-icons {
-  margin-top: 5vw;
-  margin-bottom: .5vw;
+  margin-top: 5%;
+  margin-bottom: .5%;
   display: flex;
-  gap: 5vw;
+  gap: 5%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .social-icon {
-  border: .25vw solid black;
-  padding: .5vw;
+  border: 2px solid black;
+  padding: 5%;
   background-color: white;
-  width: 8vw;
-  height: 8vw;
+  width: 8%;
+  height: 8%;
   border-radius: 50%;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -67,18 +72,19 @@ footer {
 
 /* ----------------------Container -----------------------*/
 .container {
-  width: 90vw;
+  width: 70%;
   margin: auto;
   overflow: hidden;
   text-align: center;
-  padding: 20px;
+  max-width: 100%;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
       width: 100%;
-      padding: 10px;
+        max-width: 100%;
+
   }
 
   nav a {
@@ -100,13 +106,11 @@ footer {
 .column-container {
   display: flex;
   gap: 10px; /* Space between columns */
-  padding: 20px;
 }
 
 /* Styling for columns */
 .column {
   flex: 1; /* This makes both columns take equal space */
-  padding: 10px;
 }
 /* Outer container to enable full viewport centering */
 .outer-container {
@@ -120,7 +124,6 @@ footer {
 /* Centered container */
 .centered-container {
   width: 20vh; /* Takes up half of the screen width */
-  padding: 20px;
 }
 
 
@@ -211,8 +214,8 @@ footer {
 .image-container {
   display: flex;
   margin: auto;
-  width: 5vw;
-  height: 5vw;
+  width: 5%;
+  height: 5%;
   overflow: hidden;
 }
 
@@ -240,15 +243,7 @@ footer {
 
 
 /* -----------------------Header -----------------------*/
-header {
-  background: linear-gradient(90deg, #FF69B4, #FFC0CB);
-  color: #c20064;
-  padding: 20px;
-  text-align: center;
-  overflow: hidden;
-  max-width: 100vw;
-  width: 100vw;
-}
+
 
 header h1 {
   font-size: 3.5em;
@@ -258,12 +253,17 @@ header h1 {
   opacity: 100%;
 
   text-shadow: -1px -1px 5px #c20064, 3px 0px 2px #fff, 1px -5px 5px #FFC0CB, -15px -18px 5px #ffc7f0, 18px 18px 8px #ccffcc, -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 header p {
   font-size: 1.1em;
   animation: fadeIn 3s;
   margin-bottom: 5%;
+  overflow-x: hidden;
+  max-width: 100%;
+  color: #c20064;
 }
 
 
@@ -271,6 +271,8 @@ header p {
 nav {
   text-align: center;
   margin: 20px 0;
+  max-width: 100%;
+  width: 100%
 }
 
 nav a {
@@ -309,30 +311,54 @@ nav a:hover::after {
 
 /* -----------------------Hero -----------------------*/
 .hero {
+    object-fit: contain;
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
   background: linear-gradient(180deg, #FF69B4, #ffe1ec);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.hero-content{
+    max-width:100%;
+    object-fit: contain;
+    margin: auto;
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5%, 3.5rem);
   /* Scale based on screen size */
   margin: 0;
+    max-width: 100%;
+object-fit: contain;
 }
-
+.hero p{
+    max-width: 100%;
+    overflow-x: hidden;
+}
 /* ---------------------Introduction ---------------------*/
+.introduction p {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+    max-width: 100%;
+    margin: auto;
+}
 .about p {
   width: 50%;
   text-align: center;
   align-items: center;
   font-size: 8em;
-
+    max-width: 100%;
+    margin: auto;
 }
 
 /* ---------------------Vine Divider ---------------------*/
@@ -344,7 +370,7 @@ nav a:hover::after {
   background: linear-gradient(180deg, #ffe1ec, #fff);
   width: 100%;
   height: auto;
-  max-width: 100vw;
+  max-width: 100%;
   /* Ensure no overflow occurs */
 
 }
@@ -352,7 +378,7 @@ nav a:hover::after {
 .vine-divider svg {
   width: 100%;
   height: auto;
-  max-width: 100vw;
+  max-width: 100%;
   /* Ensure no overflow occurs */
 }
 
@@ -360,17 +386,23 @@ nav a:hover::after {
 
 /* ---------------------FlowerRow -----------------------*/
 #featured-projects {
-  padding: 50px 50px;
   text-align: center;
   background-color: #ffffff;
   position: relative;
   margin: auto;
   align-items: center;
-  width: 100vw;
+  width: 100%;
+  object-fit:fill;
+    padding: 50px 0px; /* Reduce padding to ensure no horizontal overflow */
+    max-width: 100%; /* Prevent overflow */
+
 }
 
 
 .flower {
+      max-width: 20vw; /* Ensure the flower does not overflow its container */
+
+
   position: relative;
   transition: transform 0.4s ease;
   /* Smooth scaling effect */
@@ -403,6 +435,7 @@ Scale the entire flower */
   /* Hidden by default */
   z-index: 1000;
   /* Ensure it's on top of other elements */
+  max-width: 100%;
 }
 
 .flower:hover .flower-name {
@@ -445,23 +478,29 @@ Scale the entire flower */
 
 
 .flower-row {
+  gap: 15%;
+  position: relative;
+  align-items: flex-end;
+  
   display: flex;
   flex-wrap: wrap;
-  gap: 15vw;
-  position: relative;
   justify-content: center;
-  align-items: flex-end;
+  max-width: 100%;
+  padding: 0 10px;
+
+  box-sizing: border-box;
 }
 
 .flower {
   position: relative;
-  flex: 1 1 100% 100%;
-  /* Adjust based on your layout needs */
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 1;
+  max-width: 20vw; /* Adjust based on your design */
+  flex: 1 1 20vw;  /* Ensure flowers scale based on viewport */
 }
+
 
 
 .flower-name {
@@ -544,6 +583,7 @@ Scale the entire flower */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
   .flower-row {
       flex-direction: column;
       align-items: center;
@@ -570,6 +610,8 @@ Scale the entire flower */
 
 /* ------------------Section Title -----------------------*/
 .section-title {
+      max-width: 100%;
+
   text-align: center;
   margin-bottom: 20px;
   font-size: 2em;
@@ -577,6 +619,8 @@ Scale the entire flower */
 }
 
 .section-title::after {
+      max-width: 100%;
+
   content: '';
   position: absolute;
   width: 50px;
@@ -590,12 +634,14 @@ Scale the entire flower */
 /* ------------------Skills-----------------------*/
 
 #skills {
+      max-width: 100%;
+
   margin: 70px auto;
   padding: 0px 50px 70px 50px;
   border: 3px solid #FFB6C1;
   border-radius: 30px;
   box-shadow: 0 6px 12px rgba(255, 182, 193, 0.3);
-  width: 80vw;
+  width: 80%;
   text-align: center;
 }
 
@@ -650,7 +696,7 @@ Scale the entire flower */
 #courses {
   margin: 70px auto;
   padding: 0px 50px 70px 50px;
-  width: 60vw;
+  width: 60%;
   text-align: center;
 }
 
@@ -781,6 +827,8 @@ Scale the entire flower */
   .experience,
   .projects {
       grid-template-columns: 1fr;
+        max-width: 100%;
+
   }
 
   .experience-item,
@@ -1072,9 +1120,13 @@ Scale the entire flower */
   .flower-row {
       flex-direction: column;/* Stack items vertically */
       align-items: center;        /* Center align */
+        max-width: 100%;
+
   }
 
   .projects-grid {
+      max-width: 100%;
+
       flex-direction: column;        /* Stack items vertically */
       align-items: center;        /* Center align */
   }
@@ -1084,6 +1136,8 @@ Scale the entire flower */
           /* Adjust margins for smaller screens */
           padding: 15px 0;
           /* Reduce padding on smaller screens */
+            max-width: 100%;
+
       }
   }
 }

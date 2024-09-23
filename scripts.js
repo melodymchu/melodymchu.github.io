@@ -63,6 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const flower = document.createElement('div');
             flower.classList.add('flower');
+        // Ensure the flower's max size is within bounds
+        flower.style.maxWidth = '20vw';
+
 
             const baseColor = getRandomBaseColor();
             const numberOfPetals = getRandomInt(5, 10);
