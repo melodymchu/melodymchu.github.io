@@ -396,6 +396,7 @@ object-fit: contain;
   object-fit:fill;
     padding: 50px 0px; /* Reduce padding to ensure no horizontal overflow */
     max-width: 100%; /* Prevent overflow */
+    padding-bottom: 10%;
 
 }
 
