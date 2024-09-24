@@ -459,8 +459,6 @@ object-fit: contain;
 }
 .flower {
       max-width: 20vw; /* Ensure the flower does not overflow its container */
-
-
   position: relative;
   transition: transform 0.4s ease;
   /* Smooth scaling effect */
@@ -499,11 +497,6 @@ Scale the entire flower */
   /* Show on hover */
 }
 
-
-
-
-
-
 /* Ensure that the stem and leaves are not affected */
 .stem,
 .leaf,.pot,.center {
@@ -531,9 +524,11 @@ Scale the entire flower */
   flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
-  padding: 0 10px;
-
+padding-top: 15%;
+padding-bottom: 10%;
   box-sizing: border-box;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .flower {
