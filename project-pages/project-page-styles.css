@@ -476,7 +476,4 @@ footer a:hover {
   .gallery-item:hover .caption {
     opacity: 1;
     transform: translateY(0);
-  }    <div class="gallery-item">
-      <img src="https://via.placeholder.com/300" alt="Image 3">
-      <div class="caption">Image 3 Description</div>
-    </div>
+  }   
