@@ -227,6 +227,16 @@ footer {
   display: block;
   margin: auto;
 }
+.centered-image:hover{
+  @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  
+}
 
 /* -----------------------Erm IDK -----------------------*/
 
