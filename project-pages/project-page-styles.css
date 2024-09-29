@@ -458,4 +458,25 @@ footer a:hover {
   .gallery-big img:hover {
     transform: scale(1.05);
   }
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
   
+  .gallery-item:hover .caption {
+    opacity: 1;
+    transform: translateY(0);
+  }    <div class="gallery-item">
+      <img src="https://via.placeholder.com/300" alt="Image 3">
+      <div class="caption">Image 3 Description</div>
+    </div>
