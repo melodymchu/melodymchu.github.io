@@ -214,8 +214,8 @@ footer {
 .image-container {
   display: flex;
   margin: auto;
-  width: 2%;
-  height: 2%;
+  width: 10%;
+  height: 10%;
   padding-top: 10%;
   overflow: hidden;
 }
