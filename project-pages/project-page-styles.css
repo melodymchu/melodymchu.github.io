@@ -476,4 +476,8 @@ footer a:hover {
   .gallery-item:hover .caption {
     opacity: 1;
     transform: translateY(0);
-  }   
+  }
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+  }
