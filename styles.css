@@ -55,6 +55,10 @@ footer {
   overflow-x: hidden;
 }
 
+.social-icons img{
+  z-index: 100;
+}
+
 .social-icon {
   border: 2px solid black;
   padding: 5%;
