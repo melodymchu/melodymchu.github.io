@@ -267,7 +267,6 @@ header h1 {
   animation: fadeIn 2s;
   opacity: 100%;
 
-  text-shadow: -1px -1px 5px #c20064, 3px 0px 2px #fff, 1px -5px 5px #FFC0CB, -15px -18px 5px #ffc7f0, 18px 18px 8px #ccffcc, -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
   max-width: 100%;
   object-fit: contain;
 }
