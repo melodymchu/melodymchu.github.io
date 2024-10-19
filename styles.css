@@ -349,7 +349,7 @@ nav a:hover::after {
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 50%, 8rem);
+  font-size: clamp(3rem, 50%, 28rem);
   /* Scale based on screen size */
   margin: 0;
     max-width: 100%;
