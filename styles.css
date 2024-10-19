@@ -338,7 +338,7 @@ nav a:hover::after {
   text-align: center;
   flex-direction: column;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 25vh;
 }
 
 .hero-content{
@@ -355,12 +355,12 @@ nav a:hover::after {
 object-fit: contain;
     padding: 0;
 line-height: .5;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
 }
 
 .hero h2 {
     padding: 0;
-  font-size: clamp(3.8em, 100%, 28rem);
+  font-size: clamp(3.9em, 100%, 28rem);
   /* Scale based on screen size */
   margin: 0;
     max-width: 100%;
@@ -368,12 +368,13 @@ object-fit: contain;
 font-variant: small-caps;
 color: #fff;
 text-align: center;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
+margin-bottom: -35px;
 }
 .hero p{
     max-width: 100%;
     overflow-x: hidden;
+padding: 10px;
 }
 /* ---------------------Introduction ---------------------*/
 .introduction p {
