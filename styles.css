@@ -262,7 +262,7 @@ footer {
 
 header h1 {
   font-size: 3.5em;
-  font-weight: bolder;
+  font-weight: max;
   color: #ffffff;
   animation: fadeIn 2s;
   opacity: 100%;
