@@ -207,7 +207,8 @@ footer {
   max-height: 100%;
   object-fit: contain;
 }
-.centered-icon{
+
+.centered-icon, .icon-container{
   width: 5%;
   height: 5%;
   padding-top: 10%;
