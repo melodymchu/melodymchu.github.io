@@ -78,6 +78,9 @@ footer {
 .column {
   flex: 1;
 }
+.column p{
+  text-align: left;
+}
 
 /* ----------------------- Responsive Design ----------------------- */
 @media (max-width: 768px) {
