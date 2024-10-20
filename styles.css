@@ -329,13 +329,7 @@ margin-bottom: -35px;
 padding: 10px;
 }
 /* ---------------------Introduction ---------------------*/
-.introduction p {
-  width: 100%;
-  text-align: center;
-  align-items: center;
-    max-width: 100%;
-    margin: auto;
-}
+
 .about p {
   width: 50%;
   text-align: center;
@@ -365,8 +359,6 @@ padding: 10px;
   max-width: 100%;
   /* Ensure no overflow occurs */
 }
-
-
 
 /* ---------------------FlowerRow -----------------------*/
 #featured-projects {
