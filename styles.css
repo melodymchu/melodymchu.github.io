@@ -12,14 +12,7 @@ body {
   color: #333;
   text-align: center;
   width: 100%;
-
-  /* 
-    max-width: 100%;
-  align-self: center;
-  object-fit: contain;
-=*/
 }
-
 
 h2 {
   font-size: 2.5em;
@@ -39,9 +32,8 @@ footer {
   align-items: center;
 }
 
-
 .social-icons {
-  margin: 5% 0 5%;
+  margin: 5% 0;
   display: flex;
   gap: 5%;
   overflow: visible;
@@ -65,21 +57,33 @@ footer {
   transform: scale(1.1);
 }
 
-/* ----------------------Container -----------------------*/
-.container {
-  width: 70%;
+/* ----------------------Containers -----------------------*/
+.container, .outer-container, .button-container {
+  width: 100%; /* Combined similar width properties */
   margin: auto;
-  overflow: hidden;
-  text-align: center;
-  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Responsive Design */
+.container {
+  overflow: hidden;
+}
+
+.column-container {
+  display: flex;
+  gap: 10px;
+}
+
+.column {
+  flex: 1;
+}
+
+/* ----------------------- Responsive Design ----------------------- */
 @media (max-width: 768px) {
   .container {
       width: 100%;
         max-width: 100%;
-
   }
 
   nav a {
@@ -98,10 +102,6 @@ footer {
   }
 }
 
-.column-container {
-  display: flex;
-  gap: 10px; /* Space between columns */
-}
 
 /* Styling for columns */
 .column {
@@ -123,62 +123,59 @@ footer {
 
 
 /* -----------------------Buttons -----------------------*/
-.button,
-.btn1,
-.btn2 {
-  /* Ensure buttons scale down */
-  text-decoration: none;
-  padding: 10px 20px;
+/* ----------------------- Buttons ----------------------- */
+.btn1, .btn2 { 
+  padding: 8px 18px;
   border-radius: 50px;
   font-weight: 700;
   transition: background 0.3s ease, color 0.3s ease;
   margin: auto;
   display: inline-block;
+  border: 3px solid #333;
+  text-decoration: none;
 }
 
 .btn1 {
   background-color: white;
   color: #FF69B4;
-  border-color: #FF69B4;
 }
 
 .btn2 {
   background-color: #FF69B4;
-  color: #fff;
-  border-color: #fff;
+  color: white;
 }
 
-.btn1:hover, .btn2:hover, .button:hover {
-  transform: scale(1.05);
+.btn1:hover, .btn2:hover { 
+  transform: scale(1.05); /* Combined hover effect for both buttons */
 }
 
-.btn1:hover{
+.btn1:hover {
   background-color: #FF69B4;
   color: white;
-  }
+}
 
 .btn2:hover {
-  background-color: #ffb6ed;
-  color: #c20064;
+  background-color: #c20064;
 }
 
-.button:hover {
-  background-color: #FF1493;
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #FF69B4;
   color: white;
+  border-radius: 50%;
+  display: none;
+  z-index: 1000;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px 0;
-  width: 100%;
-  padding: 20px 0;
-  box-sizing: border-box;
-  z-index: 10;
-  /* Ensure the button is in front */
-
+#back-to-top:hover {
+  transform: scale(1.1);
+  background-color: #FF1493;
 }
+
 
 /* -----------------------Back to Top Button -----------------------*/
 #back-to-top {
@@ -190,8 +187,6 @@ footer {
   background-color: #FF69B4;
   color: white;
   border-radius: 50%;
-  text-align: center;
-  line-height: 50px;
   display: none;
   z-index: 1000;
 }
@@ -202,78 +197,43 @@ footer {
 }
 
 /* -----------------------Images -----------------------*/
-.image-container {
+/* ----------------------- Images ----------------------- */
+.image-container, .centered-icon { 
   display: flex;
   margin: auto;
-  width: 5%;
-  height: 5%;
-  padding-top: 10%;
-  overflow: hidden;
-}
-
-.centered-image {
-  max-width: 100%;
+  max-width: 100%; /* Combined image styles */
   max-height: 100%;
   object-fit: contain;
-  display: block;
-  margin: auto;
 }
-.centered-image:hover{
-  @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-  }
-}
-
 /* -----------------------Erm IDK -----------------------*/
-
 .parent {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
 }
 
 .child {
   grid-area: 1 / 1 / 1 / 1;
 }
 
-
-/* -----------------------Header -----------------------*/
-
-
+/* ----------------------- Header ----------------------- */
 header h1 {
   font-size: 3.5em;
   font-weight: 900;
   color: #ffffff;
   animation: fadeIn 2s;
-  opacity: 100%;
-
-  max-width: 100%;
-  object-fit: contain;
 }
 
 header p {
   font-size: 1.1em;
   animation: fadeIn 3s;
-  margin-bottom: 5%;
-  overflow-x: hidden;
-  max-width: 100%;
   color: #c20064;
 }
 
-
-/* ---------------------Navigation -----------------------*/
+/* ----------------------- Navigation ----------------------- */
 nav {
   text-align: center;
   margin: 20px 0;
-  max-width: 100%;
-  width: 100%
 }
 
 nav a {
@@ -297,15 +257,12 @@ nav a::after {
   left: 0;
   bottom: -5px;
   transform: scaleX(0);
-  transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
 
 nav a:hover::after {
   transform: scaleX(1);
-  transform-origin: bottom left;
 }
-
 
 /* =====================Index =========================*/
 
