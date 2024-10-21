@@ -87,6 +87,7 @@ footer {
   display: flex;
   gap: 5%;
   overflow: visible;
+  justify-content: center;
 }
 
 
