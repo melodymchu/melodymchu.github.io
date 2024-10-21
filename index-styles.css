@@ -17,7 +17,7 @@
     text-align: center;
     flex-direction: column;
     margin: auto;
-    padding-top: 25vh;
+    padding: 5vh;
   }
   
   
@@ -52,7 +52,7 @@
   }
 
 .introduction{
-    width: 50%;
+    width: 95%;
 }
   /* ---------------------Vine Divider ---------------------*/
   .vine-divider {

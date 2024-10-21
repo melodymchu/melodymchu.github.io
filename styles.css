@@ -8,7 +8,6 @@ body {
   font-family: "Outfit", sans-serif;
   margin: auto;
   width: 100%;
-  padding: 5%;
 }
 
 p {
@@ -25,6 +24,10 @@ h2 {
 a:hover {
   transition: transform 0.3s ease;
   transform: scale(1.1);
+}
+
+.main-body{
+  padding: 5%;
 }
 
 /* -----------------------Footer -----------------------*/
@@ -58,7 +61,7 @@ footer {
 
 .column-container {
   display: flex;
-  gap: 10px;
+  gap: 50px;
   flex-direction: row;
   justify-content: flex-start;
   padding: 5%;
@@ -275,3 +278,4 @@ nav a:hover::after {
 
     }
   }
+  
