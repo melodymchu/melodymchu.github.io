@@ -56,16 +56,7 @@
     display: inline-block;
     vertical-align: middle;
   }
-  
-  .about p {
-    width: 50%;
-    text-align: center;
-    align-items: center;
-    font-size: 8em;
-    max-width: 100%;
-    margin: auto;
-  }
-  
+
   /* ---------------------Vine Divider ---------------------*/
   .vine-divider {
     margin: 0;
