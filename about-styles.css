@@ -2,34 +2,20 @@
 /* =====================About =========================*/
 
 /* ------------------Section Title -----------------------*/
+h2, p{text-align: center;}
+
 .section-title {
   padding-top: 50px;
-    max-width: 100%;
-  
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    animation: slideIn 1s;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
   }
   
-  .section-title::after {
-    max-width: 100%;
-  
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 2px;
-    background-color: #FF69B4;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -10px;
-  }
   
   /* ------------------Skills-----------------------*/
   
   #skills {
     max-width: 100%;
-  
     margin: 70px auto;
     padding: 0px 50px 70px 50px;
     border: 3px solid #FFB6C1;
@@ -92,9 +78,7 @@
     margin-right: 10px;
   }
   
-  #education{
-    text-align: center;
-  }
+  
   /*----Coursework---*/
   #courses {
     margin: 70px auto;
