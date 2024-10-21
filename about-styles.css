@@ -92,7 +92,9 @@
     margin-right: 10px;
   }
   
-  
+  #education{
+    text-align: center;
+  }
   /*----Coursework---*/
   #courses {
     margin: 70px auto;
