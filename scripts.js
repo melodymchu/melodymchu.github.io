@@ -82,20 +82,20 @@ document.addEventListener('DOMContentLoaded', () => {
             flower.style.maxWidth = '20vw';
 
             const baseColor = getRandomBaseColor();
-            const numberOfPetals = getRandomInt(5, 10);
+            const numberOfPetals = getRandomInt(5, 8);
             const baseWidth = 120 - numberOfPetals * 2;
             const baseHeight = 70 - numberOfPetals * 2;
             const baseBorderRadius = Array(4).fill(0).map(() => getRandomInt(40, 60));
 
             const stem = document.createElement('div');
             stem.classList.add('stem');
-            stem.style.height = `${getRandomInt(180, 300)}px`;
+            stem.style.height = `${getRandomInt(200, 300)}px`;
             flower.appendChild(stem);
 
             for (let i = 1; i <= 2; i++) {
                 const leaf = document.createElement('div');
                 leaf.classList.add('leaf', `leaf${i}`);
-                leaf.style.top = `${getRandomInt(140, 200)}px`;
+                leaf.style.top = `${stem.style.height-50}px`;
                 leaf.style.left = `${i === 1 ? 10 : 50}px`;
                 leaf.style.transform = `rotate(${i === 1 ? 30 : -30}deg)`;
                 flower.appendChild(leaf);
