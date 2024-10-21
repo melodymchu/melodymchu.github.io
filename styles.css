@@ -171,7 +171,7 @@ footer {
   text-align: left;
 }
 
-.social-icon-container {
+.button-row-container {
   margin: 5% 0;
   display: flex;
   gap: 5%;
@@ -343,3 +343,4 @@ footer {
     flex: 1; /* This makes both columns take equal space */
   }
   }
+  
