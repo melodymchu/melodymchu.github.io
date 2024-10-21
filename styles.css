@@ -22,7 +22,12 @@ h2 {
   vertical-align: middle;
   padding-bottom: 0%;
 }
-
+h4 {
+  font-size: 2em;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 0%;
+}
 img{
   z-index: 100;
 }
