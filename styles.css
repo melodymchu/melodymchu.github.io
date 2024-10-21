@@ -156,7 +156,7 @@ footer {
 }
 
 .button-row-container {
-  margin: 5% 0;
+  margin: auto;
   display: flex;
   gap: 5%;
   overflow: visible;
