@@ -318,10 +318,7 @@ Physical Projects -->
 
     <!------------------------------------------------------------------------>
 
-        </div>
-    </section>
 
-    
 <!-- Back to top button -->
 <div id="backToTop"><a href="#top"><i class="arrow up"></i></a></div>
 
@@ -337,32 +334,29 @@ Physical Projects -->
     </div>
     <p>&copy; 2024 Melody M. Chu. All rights reserved.</p>
 </footer>
-    <!------------------------------------------------------------------------>
-
-    <!-- JavaScript for Filtering -->
-    <script>
-        function filterProjects(category) {
-            const items = document.querySelectorAll('.project-item-portfolio'); // Select all project items
-
-            items.forEach(item => {
-                if (category === 'all') {
-                    item.style.display = 'block'; // Show all items
-                } else if (item.classList.contains(category)) {
-                    item.style.display = 'block'; // Show items that match the category
-                } else {
-                    item.style.display = 'none'; // Hide items that don't match
-                }
-            });
-        }
-
-        // Optionally, activate the "All" filter by default when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            filterProjects('all');
-        });
-    </script>
 </section>
 </body>
+<!-- JavaScript for Filtering -->
+<script>
+    function filterProjects(category) {
+        const items = document.querySelectorAll('.project-item-portfolio'); // Select all project items
 
+        items.forEach(item => {
+            if (category === 'all') {
+                item.style.display = 'block'; // Show all items
+            } else if (item.classList.contains(category)) {
+                item.style.display = 'block'; // Show items that match the category
+            } else {
+                item.style.display = 'none'; // Hide items that don't match
+            }
+        });
+    }
+
+    // Optionally, activate the "All" filter by default when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        filterProjects('all');
+    });
+</script>
 <script src="scripts.js"></script>
 
 </html>

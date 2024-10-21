@@ -40,6 +40,13 @@ a:hover {
   padding: 5%;
 }
 
+.section-title {
+  padding-top: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  }
+
 /* ----------------------- Header ----------------------- */
 header {
   top: 0;
