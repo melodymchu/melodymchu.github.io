@@ -32,6 +32,95 @@ a:hover {
   padding: 5%;
 }
 
+
+/* ----------------------- Header ----------------------- */
+.header {
+  object-fit: contain;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow:visible;
+  max-width: 100%;
+  background: linear-gradient(180deg, #FF69B4, #ffe1ec);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: auto;
+  padding: 5vh;
+}
+
+.header h1 {
+  font-size: clamp(5rem, 100%, 28rem);
+  margin: 0;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 0;
+  line-height: .5;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
+}
+
+header p {
+  font-size: 1.1em;
+  animation: fadeIn 3s;
+  color: #c20064;
+}
+
+.header h2 {
+  padding: 0;
+  font-size: clamp(3.9em, 100%, 28rem);
+  margin: 0;
+  max-width: 100%;
+  object-fit: contain;
+  font-variant: small-caps;
+  color: #fff;
+  text-align: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
+  margin-bottom: -35px;
+}
+
+.header p {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+/* ----------------------- Navigation ----------------------- */
+nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #FFC0CB;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+nav a:hover {
+  color: #FF69B4;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #FF69B4;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+
 /* -----------------------Footer -----------------------*/
 footer {
   background-color: #FF69B4;
@@ -191,93 +280,6 @@ footer {
 
 .child {
   grid-area: 1 / 1 / 1 / 1;
-}
-
-/* ----------------------- Header ----------------------- */
-.header {
-  object-fit: contain;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow:visible;
-  max-width: 100%;
-  background: linear-gradient(180deg, #FF69B4, #ffe1ec);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  margin: auto;
-  padding: 5vh;
-}
-
-.header h1 {
-  font-size: clamp(5rem, 100%, 28rem);
-  margin: 0;
-  max-width: 100%;
-  object-fit: contain;
-  padding: 0;
-  line-height: .5;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
-}
-
-header p {
-  font-size: 1.1em;
-  animation: fadeIn 3s;
-  color: #c20064;
-}
-
-.header h2 {
-  padding: 0;
-  font-size: clamp(3.9em, 100%, 28rem);
-  margin: 0;
-  max-width: 100%;
-  object-fit: contain;
-  font-variant: small-caps;
-  color: #fff;
-  text-align: center;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
-  margin-bottom: -35px;
-}
-
-.header p {
-  max-width: 100%;
-  overflow-x: hidden;
-  padding: 10px;
-}
-
-/* ----------------------- Navigation ----------------------- */
-nav {
-  text-align: center;
-  margin: 20px 0;
-}
-
-nav a {
-  margin: 0 15px;
-  color: #FFC0CB;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-}
-
-nav a:hover {
-  color: #FF69B4;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #FF69B4;
-  left: 0;
-  bottom: -5px;
-  transform: scaleX(0);
-  transition: transform 0.25s ease-out;
-}
-
-nav a:hover::after {
-  transform: scaleX(1);
 }
 
 
