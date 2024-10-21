@@ -7,19 +7,24 @@
 body {
   font-family: "Outfit", sans-serif;
   margin: auto;
-  line-height: 1.6;
-  background-color: #fff;
-  color: #333;
-  text-align: center;
   width: 100%;
 }
-.main-body{
+
+.main-body {
   padding: 5%;
+}
+
+p {
+  line-height: 1.6;
 }
 
 h2 {
   font-size: 2.5em;
-  margin-bottom: 20px;
+}
+
+a:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
 }
 
 /* -----------------------Footer -----------------------*/
@@ -27,23 +32,9 @@ footer {
   background-color: #FF69B4;
   color: white;
   text-align: center;
-  width: 100%;
-  z-index: 5;
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.social-icons {
-  margin: 5% 0;
-  display: flex;
-  gap: 5%;
-  overflow: visible;
-}
-
-.social-icon img{
-  z-index: 100;
 }
 
 .social-icon {
@@ -53,66 +44,47 @@ footer {
   height: 8%;
   background-color: white;
   border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: scale(1.1);
 }
 
 /* ----------------------Containers -----------------------*/
-.container, .outer-container, .button-container {
-  width: 100%; /* Combined similar width properties */
-  margin: auto;
+.container,
+.outer-container,
+.button-container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.container {
   overflow: hidden;
 }
 
 .column-container {
   display: flex;
   gap: 10px;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .column {
   flex: 1;
 }
-.column p{
+
+.column-title {
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+.column p {
   text-align: left;
 }
 
-/* ----------------------- Responsive Design ----------------------- */
-@media (max-width: 768px) {
-  .container {
-      width: 100%;
-        max-width: 100%;
-  }
-
-  nav a {
-      margin: 5px;
-  }
-
-  h1,
-  h2,
-  h3 {
-      font-size: 1.5rem;
-  }
-
-  p,
-  li {
-      font-size: 0.9rem;
-  }
+.social-icon-container {
+  margin: 5% 0;
+  display: flex;
+  gap: 5%;
+  overflow: visible;
 }
 
 
-/* Styling for columns */
-.column {
-  flex: 1; /* This makes both columns take equal space */
-}
+
 /* Outer container to enable full viewport centering */
 .outer-container {
   display: flex;
@@ -124,13 +96,14 @@ footer {
 
 /* Centered container */
 .centered-container {
-  width: 20vh; /* Takes up half of the screen width */
+  width: 20vh;
+  /* Takes up half of the screen width */
 }
 
 
-/* -----------------------Buttons -----------------------*/
 /* ----------------------- Buttons ----------------------- */
-.btn1, .btn2 { 
+.btn1,
+.btn2 {
   padding: 8px 18px;
   border-radius: 50px;
   font-weight: 700;
@@ -151,8 +124,10 @@ footer {
   color: white;
 }
 
-.btn1:hover, .btn2:hover { 
-  transform: scale(1.05); /* Combined hover effect for both buttons */
+.btn1:hover,
+.btn2:hover {
+  transform: scale(1.05);
+  /* Combined hover effect for both buttons */
 }
 
 .btn1:hover {
@@ -164,6 +139,10 @@ footer {
   background-color: #c20064;
 }
 
+#back-to-top:hover {
+  background-color: #FF1493;
+}
+
 #back-to-top {
   position: fixed;
   bottom: 30px;
@@ -177,45 +156,25 @@ footer {
   z-index: 1000;
 }
 
-#back-to-top:hover {
-  transform: scale(1.1);
-  background-color: #FF1493;
-}
-
-
-/* -----------------------Back to Top Button -----------------------*/
-#back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background-color: #FF69B4;
-  color: white;
-  border-radius: 50%;
-  display: none;
-  z-index: 1000;
-}
-
-#back-to-top:hover {
-  transform: scale(1.1);
-  background-color: #FF1493;
-}
 
 /* -----------------------Images -----------------------*/
-.image-container, .centered-icon { 
+.image-container,
+.centered-icon {
   display: flex;
   margin: auto;
-  max-width: 100%; /* Combined image styles */
+  max-width: 100%;
+  /* Combined image styles */
   max-height: 100%;
   object-fit: contain;
 }
 
-.centered-icon, .icon-container{
+.centered-icon,
+.icon-container {
   width: 5%;
   height: 5%;
   padding-top: 10%;
 }
+
 /* -----------------------Erm IDK -----------------------*/
 .parent {
   display: grid;
@@ -275,361 +234,12 @@ nav a:hover::after {
   transform: scaleX(1);
 }
 
-/* =====================Index =========================*/
-
-
-/* -----------------------Hero -----------------------*/
-.hero {
-  object-fit: contain;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-  max-width: 100%;
-  background: linear-gradient(180deg, #FF69B4, #ffe1ec);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  margin: auto;
-  padding-top: 25vh;
-}
-
-
-.hero h1 {
-  font-size: clamp(5rem, 100%, 28rem);
-  margin: 0;
-  max-width: 100%;
-  object-fit: contain;
-  padding: 0;
-  line-height: .5;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
-}
-
-.hero h2 {
-  padding: 0;
-  font-size: clamp(3.9em, 100%, 28rem);
-  /* Scale based on screen size */
-  margin: 0;
-  max-width: 100%;
-  object-fit: contain;
-  font-variant: small-caps;
-  color: #fff;
-  text-align: center;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
-  margin-bottom: -35px;
-}
-.hero p{
-    max-width: 100%;
-    overflow-x: hidden;
-  padding: 10px;
-}
-/* ---------------------Introduction ---------------------*/
-.introduction h2 {
-    display: inline-block;
-  vertical-align: middle;
-  }
-.about p {
-  width: 50%;
-  text-align: center;
-  align-items: center;
-  font-size: 8em;
-    max-width: 100%;
-    margin: auto;
-}
-
-/* ---------------------Vine Divider ---------------------*/
-.vine-divider {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(180deg, #ffe1ec, #fff);
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  /* Ensure no overflow occurs */
-
-}
-
-.vine-divider svg {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  /* Ensure no overflow occurs */
-}
-
-/* ---------------------FlowerRow -----------------------*/
-#featured-projects {
-  text-align: center;
-  background-color: #ffffff;
-  position: relative;
-  margin: auto;
-  align-items: center;
-  width: 100%;
-  object-fit:fill;
-    padding: 50px 0px; /* Reduce padding to ensure no horizontal overflow */
-    max-width: 100%; /* Prevent overflow */
-    padding-bottom: 10%;
-
-}
-
-.pot {
-    width: 100px;
-    height: 60px;
-    background-color: #be522b; 
-    border-radius: 0 0 20px 20px;
-    
-    border: 3px solid #333;
-    
-  position: relative;
-    top: 0px;
-  z-index: 1;
-  margin: auto;
-  /* Keep stems behind other content */
-  
-}
-
-/* Adding rim details using ::before pseudo-element */
-.pot::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -5px;
-    width: 100px;
-    height: 10px;
-    background-color: #5d4037;
-    border-radius: 5px;
-    border: 2px solid #333;
-    z-index: 100;
-}
-
-/* Adding vertical line details to the pot using ::after pseudo-element */
-.pot::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 40px;
-    background-color: #c38975;
-    top: 10px; 
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 5px;
-    border: 2px solid #5d4037;
-}
-
-/* Adding small horizontal bands on the pot */
-.pot .band {
-    width: 80px;
-    height: 5px;
-    background-color: #6d4c41;
-    margin: 2px 0;
-    border-radius: 3px;
-}
-
-/* Adding bands inside the pot for extra details */
-.pot .band:first-child {
-    background-color: #5d4037;
-}
-.flower {
-      max-width: 20vw; /* Ensure the flower does not overflow its container */
-  position: relative;
-  transition: transform 0.4s ease;
-  /* Smooth scaling effect */
-}
-
-.flower:hover {
-  /* 
-  transform: scale(1.3);
-Scale the entire flower */
-  z-index: 100;
-}
-
-.flower-name {
-  position: absolute;
-  left: 50%;
-  border: 3px solid #a35e55;
-  top: 100px;
-  transform: translate(-50%, -50%);
-  background: #cbb9aa;
-  color: #a35e55;
-  width: 110px;
-  height: 50px;
-  padding: 5px 10px;
-  border-radius: 10%;
-  font-size: 10px;
-  text-align: center;
-  display: none;
-  /* Hidden by default */
-  z-index: 1000;
-  /* Ensure it's on top of other elements */
-  max-width: 100%;
-}
-
-.flower:hover .flower-name {
-  display: block;
-  /* Show on hover */
-}
-
-/* Ensure that the stem and leaves are not affected */
-.stem,
-.leaf,.pot,.center {
-  transition: none;
-  /* No animation or transform on stem and leaves */
-}
-
-.petal {
-  position: absolute;
-  border-radius: 50%;
-  border: 4px solid #333;
-  transition: transform 0.4s ease;
-  /* Smooth animation for petals */
-}
-
-/* -----------------------Flower Modifications -----------------------*/
-
-
-.flower-row {
-  gap: 5%;
-  position: relative;
-  align-items: flex-end;
-  
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 100%;
-padding-top: 15%;
-padding-bottom: 10%;
-  box-sizing: border-box;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.flower {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-  max-width: 20vw; /* Adjust based on your design */
-  flex: 1 1 20vw;  /* Ensure flowers scale based on viewport */
-}
-
-
-
-.flower-name {
-  position: absolute;
-  left: 50%;
-  top: 70%;
-    border: 3px solid #a35e55;
-  transform: translate(-50%, -50%);
-  background: #cbb9aa;
-  color: #a35e55;
-  width: 90px;
-  height: 50px;
-  padding: 5px 10px;
-  border-radius: 10%;
-  font-size: 10px;
-  text-align: center;
-  display: none;
-  /* Hidden by default */
-  max-width: 100%;
-  z-index: 1;
-}
-
-.flower:hover .flower-name {
-  display: block;
-  /* Show on hover of flower or flower-row */
-}
-
-.stem {
-  width: 10px;
-  background-color: rgb(115, 225, 115);
-  border: 2px solid green;
-  position: relative;
-  /* Maintain relative positioning */
-  z-index: -1;
-  /* Keep stems behind other content */
-}
-
-.leaf {
-  position: absolute;
-  width: 40px;
-  height: 20px;
-  background-color: green;
-  border-radius: 40px;
-  border: 3px solid #004600;
-}
-
-/* Responsive Adjustments (Hide stems/leaves on mobile) */
-@media (max-width: 768px) {
-
-  .stem,
-  .leaf,.pot {
-      display: none;
-      /* Hide stems and leaves on mobile */
-  }
-}
-
-
-.center {
-  width: 120px;
-  height: 120px;
-  background-color: rgb(254, 245, 124);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid #333;
-  position: absolute;
-  top: 0px;
-  overflow: hidden;
-}
-
-.center img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.petal {
-  position: absolute;
-  border-radius: 50%;
-  border: 4px solid #333;
-  top: 30px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-
-  .flower-row {
-      flex-direction: column;
-      align-items: center;
-      gap: 100px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .stem,
-  .leaf {
-      display: none;
-      /* Hide stems and leaves on mobile */
-  }
-
-  .flower-row {
-      flex-direction: column;
-      align-items: center;
-      gap: 250px;
-  }
-}
 
 /* =====================About =========================*/
 
 /* ------------------Section Title -----------------------*/
 .section-title {
-      max-width: 100%;
+  max-width: 100%;
 
   text-align: center;
   margin-bottom: 20px;
@@ -638,7 +248,7 @@ padding-bottom: 10%;
 }
 
 .section-title::after {
-      max-width: 100%;
+  max-width: 100%;
 
   content: '';
   position: absolute;
@@ -653,7 +263,7 @@ padding-bottom: 10%;
 /* ------------------Skills-----------------------*/
 
 #skills {
-      max-width: 100%;
+  max-width: 100%;
 
   margin: 70px auto;
   padding: 0px 50px 70px 50px;
@@ -669,10 +279,14 @@ padding-bottom: 10%;
   list-style-type: none;
   padding: 20px 0 0 0;
   margin: 0;
-  display: flex;    /* Use Flexbox for layout */
-  flex-wrap: wrap;    /* Allow the items to wrap to the next line */
-  justify-content: flex-start; /* Left-align the bubbles */
-  gap: 20px 15px; /* Space between bubbles */
+  display: flex;
+  /* Use Flexbox for layout */
+  flex-wrap: wrap;
+  /* Allow the items to wrap to the next line */
+  justify-content: flex-start;
+  /* Left-align the bubbles */
+  gap: 20px 15px;
+  /* Space between bubbles */
   align-items: center;
 }
 
@@ -688,9 +302,12 @@ padding-bottom: 10%;
   align-items: left;
   justify-content: left;
   border: 2px solid #FF69B4;
-  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.5); /* Soft shadow */
-  white-space: nowrap; /* Prevent text from breaking */
-  min-width: 100px; /* Minimum width for the bubbles */
+  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.5);
+  /* Soft shadow */
+  white-space: nowrap;
+  /* Prevent text from breaking */
+  min-width: 100px;
+  /* Minimum width for the bubbles */
   max-width: 250px;
   transition: transform 0.3s ease, background-color 0.3s ease;
   font-weight: bold;
@@ -724,10 +341,14 @@ padding-bottom: 10%;
   list-style-type: none;
   padding: 20px 0 0 0;
   margin: 0;
-  display: flex;    /* Use Flexbox for layout */
-  flex-wrap: wrap;    /* Allow the items to wrap to the next line */
-  justify-content: flex-start; /* Left-align the bubbles */
-  gap: 20px 15px; /* Space between bubbles */
+  display: flex;
+  /* Use Flexbox for layout */
+  flex-wrap: wrap;
+  /* Allow the items to wrap to the next line */
+  justify-content: flex-start;
+  /* Left-align the bubbles */
+  gap: 20px 15px;
+  /* Space between bubbles */
   align-items: center;
 }
 
@@ -743,8 +364,10 @@ padding-bottom: 10%;
   display: inline-block;
   align-items: center;
   justify-content: center;
-  white-space: nowrap; /* Prevent text from breaking */
-  min-width: 100px; /* Minimum width for the bubbles */
+  white-space: nowrap;
+  /* Prevent text from breaking */
+  min-width: 100px;
+  /* Minimum width for the bubbles */
   transition: transform 0.3s ease, background-color 0.3s ease;
   font-weight: bold;
 }
@@ -845,26 +468,27 @@ padding-bottom: 10%;
 
   .experience,
   .projects {
-      grid-template-columns: 1fr;
-        max-width: 100%;
+    grid-template-columns: 1fr;
+    max-width: 100%;
 
   }
 
   .experience-item,
   .project-item {
-      max-width: 100%;
+    max-width: 100%;
   }
 
   .experience-item h3,
   .project-item h3 {
-      font-size: 1.3em;
+    font-size: 1.3em;
   }
 
   .icon {
-      width: 20px;
-      height: 20px;
+    width: 20px;
+    height: 20px;
   }
 }
+
 /* =====================Portfolio ========================*/
 
 /* ------------------Portfolio Gallery ------------------*/
@@ -1113,23 +737,25 @@ padding-bottom: 10%;
 /* -------------------Text Animations -------------------*/
 @keyframes fadeInDown {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
+
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
+
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -1137,26 +763,31 @@ padding-bottom: 10%;
 
 @media (max-width: 768px) {
   .flower-row {
-      flex-direction: column;/* Stack items vertically */
-      align-items: center;        /* Center align */
-        max-width: 100%;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align */
+    max-width: 100%;
 
   }
 
   .projects-grid {
+    max-width: 100%;
+
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align */
+  }
+
+  @media (max-width: 768px) {
+    .button-container {
+      margin: 20px 0;
+      /* Adjust margins for smaller screens */
+      padding: 15px 0;
+      /* Reduce padding on smaller screens */
       max-width: 100%;
 
-      flex-direction: column;        /* Stack items vertically */
-      align-items: center;        /* Center align */
-  }
-  @media (max-width: 768px) {
-      .button-container {
-          margin: 20px 0;
-          /* Adjust margins for smaller screens */
-          padding: 15px 0;
-          /* Reduce padding on smaller screens */
-            max-width: 100%;
-
-      }
+    }
   }
 }
