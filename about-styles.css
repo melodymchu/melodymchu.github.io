@@ -26,7 +26,7 @@ h2, p{text-align: center;}
   }
   
   /* Skills List using Flexbox for left-aligned layout */
-  .skills-list {
+  .skills-list-right,.skills-list-left{
     list-style-type: none;
     padding: 10px 0 0 0;
     margin: 0;
@@ -34,15 +34,20 @@ h2, p{text-align: center;}
     /* Use Flexbox for layout */
     flex-wrap: wrap;
     /* Allow the items to wrap to the next line */
-    justify-content: flex-start;
     /* Left-align the bubbles */
     gap: 10px 0px;
     /* Space between bubbles */
-    align-items: center;
   }
-  
+
+  .skills-list-left {
+    justify-content: right;
+  }
+    .skills-list-right {
+      justify-content: left;
+
+    }
   /* Each skill as a bubble */
-  .skills-list li {
+  .skills-list-left li,.skills-list-right li {
     background-color: #FF69B4;
     color: white;
     margin-right: 5px;
@@ -95,7 +100,7 @@ h2, p{text-align: center;}
     /* Use Flexbox for layout */
     flex-wrap: wrap;
     /* Allow the items to wrap to the next line */
-    justify-content: flex-start;
+    justify-content: center;
     /* Left-align the bubbles */
     gap: 10px 5px;
     /* Space between bubbles */
