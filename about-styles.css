@@ -1,5 +1,4 @@
 
-  
 /* =====================About =========================*/
 
 /* ------------------Section Title -----------------------*/
@@ -125,7 +124,7 @@ h2, p{text-align: center;}
   
   /* Hover effect for each bubble */
   .course-list li:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   
   /* Add icons before each skill */
@@ -170,7 +169,7 @@ h2, p{text-align: center;}
   
   .experience-item:hover,
   .project-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
   }
   
   .icon {
