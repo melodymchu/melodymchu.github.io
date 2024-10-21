@@ -34,7 +34,7 @@ a:hover {
 
 
 /* ----------------------- Header ----------------------- */
-.header {
+header {
   object-fit: contain;
   position: relative;
   height: 100vh;
@@ -52,7 +52,7 @@ a:hover {
   color: #fff;
 }
 
-.header h1 {
+header h1 {
   font-size: clamp(5rem, 100%, 28rem);
   margin: 0;
   max-width: 100%;
@@ -68,7 +68,7 @@ header p {
   color: #c20064;
 }
 
-.header h2 {
+header h2 {
   padding: 0;
   font-size: clamp(3.9em, 100%, 28rem);
   margin: 0;
@@ -80,7 +80,7 @@ header p {
   margin-bottom: -35px;
 }
 
-.header p {
+header p {
   max-width: 100%;
   overflow-x: hidden;
   padding: 10px;
