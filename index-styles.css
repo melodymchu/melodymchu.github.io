@@ -51,7 +51,9 @@
     padding: 10px;
   }
 
-
+.introduction{
+    width: 50%;
+}
   /* ---------------------Vine Divider ---------------------*/
   .vine-divider {
     margin: 0;
