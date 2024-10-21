@@ -50,12 +50,7 @@
     overflow-x: hidden;
     padding: 10px;
   }
-  
-  /* ---------------------Introduction ---------------------*/
-  .introduction h2 {
-    display: inline-block;
-    vertical-align: middle;
-  }
+
 
   /* ---------------------Vine Divider ---------------------*/
   .vine-divider {

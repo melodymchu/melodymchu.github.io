@@ -17,6 +17,9 @@ p {
 
 h2 {
   font-size: 2.5em;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 0%;
 }
 
 a:hover {
