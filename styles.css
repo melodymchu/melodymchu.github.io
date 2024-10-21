@@ -40,7 +40,7 @@ a:hover {
 header {
   object-fit: contain;
   position: relative;
-  height: 50vh;
+  height: 20vh;
   width: 100vw;
   overflow:visible;
   max-width: 100%;
@@ -62,7 +62,7 @@ header h1 {
   object-fit: contain;
   padding: 0;
   line-height: .5;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000;
 }
 
 header p {
@@ -82,7 +82,7 @@ header h2 {
   object-fit: contain;
   font-variant: small-caps;
   text-align: center;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000;
   margin-bottom: -35px;
 }
 
@@ -94,14 +94,14 @@ nav {
 
 nav a {
   margin: 0 15px;
-  color: #FFC0CB;
+  color: #FF69B4;
   text-decoration: none;
   font-weight: bold;
   position: relative;
 }
 
 nav a:hover {
-  color: #FF69B4;
+  color: #c20064;
 }
 
 nav a::after {
