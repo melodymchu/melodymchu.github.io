@@ -28,6 +28,7 @@
     object-fit: contain;
     padding: 0;
     line-height: .5;
+    color: #fff;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
   }
   
