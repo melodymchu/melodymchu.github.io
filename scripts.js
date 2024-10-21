@@ -7,19 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
-        // Throttle the scroll event to improve performance
-        let scrollTimeout;
+        // Use requestAnimationFrame for smooth and efficient scroll handling
+        let scrollScheduled = false;
         window.addEventListener('scroll', () => {
-            if (!scrollTimeout) {
-                scrollTimeout = setTimeout(() => {
+            if (!scrollScheduled) {
+                scrollScheduled = true;
+                requestAnimationFrame(() => {
                     backToTopButton.style.display = window.scrollY > 100 ? "block" : "none";
-                    scrollTimeout = null;
-                }, 200);
+                    scrollScheduled = false;
+                });
             }
         });
     }
 
-    // Use Intersection Observer to load the flowers when the section is in view
+    // Use Intersection Observer to load flowers when in view, with rootMargin for better performance
     const flowerRow = document.getElementById('flowerRow');
     
     if (flowerRow) {
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     observer.disconnect(); // Only load flowers once
                 }
             });
-        });
+        }, { rootMargin: "100px" }); // Load flowers just before they come into view
     
         observer.observe(flowerRow);
     }
@@ -131,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const image = document.createElement('img');
             image.src = imageSrc;
             image.alt = 'Flower Image';
-            image.loading = 'lazy';  // Add lazy loading here
+            image.loading = 'lazy';  // Lazy loading optimization
             center.appendChild(image);
             const name = document.createElement('div');
             name.classList.add('flower-name');
