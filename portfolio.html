@@ -11,15 +11,19 @@
 
 </head>
 <body>
+
     <header>
-        <h1>Melody M. Chu</h1>
+        <h1>MELODY </h1>
+        <h2>M. CHU</h2>
     </header>
 
     <nav>
         <a href="melodymchu.github.io">Back to Home</a>
         <a href="about.html">About</a>
     </nav>
-    
+
+    <section class="main-body">
+
     <h1>My Portfolio</h1>
     <div class="filter-button-container">
         <a href="#" class="filter-link" onclick="filterProjects('all')">All</a>
@@ -313,6 +317,23 @@ Physical Projects -->
         </div>
     </section>
 
+    
+<!-- Back to top button -->
+<div id="backToTop"><a href="#top"><i class="arrow up"></i></a></div>
+
+<!-- Footer -->
+<footer>
+    <div class="button-row-container">
+        <a href="mailto:mmchu@andrew.cmu.edu" target="_blank">
+            <img src="images/Email-Icon.png" alt="Email Icon" class="social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/melody-m-chu" target="_blank">
+            <img src="images/Linkedin-Icon.png" alt="LinkedIn Icon" class="social-icon">
+        </a>
+    </div>
+    <p>&copy; 2024 Melody M. Chu. All rights reserved.</p>
+</footer>
+
     <!-- JavaScript for Filtering -->
     <script>
         function filterProjects(category) {
@@ -334,5 +355,9 @@ Physical Projects -->
             filterProjects('all');
         });
     </script>
+</section>
 </body>
+
+<script src="scripts.js"></script>
+
 </html>
