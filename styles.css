@@ -61,6 +61,7 @@ footer {
   gap: 10px;
   flex-direction: row;
   justify-content: flex-start;
+  padding: 5%;
 }
 
 .column {
