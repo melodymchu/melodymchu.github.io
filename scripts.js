@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 1; i <= 2; i++) {
                 const leaf = document.createElement('div');
                 leaf.classList.add('leaf', `leaf${i}`);
-                leaf.style.top = `${stem.style.height-50}px`;
+                leaf.style.top = `${stem.style.height-20}px`;
                 leaf.style.left = `${i === 1 ? 10 : 50}px`;
                 leaf.style.transform = `rotate(${i === 1 ? 30 : -30}deg)`;
                 flower.appendChild(leaf);
