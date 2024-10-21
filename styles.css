@@ -316,5 +316,28 @@ nav a:hover::after {
       max-width: 100%;
 
     }
-  }
+    .container {
+      width: 100%;
+      max-width: 100%;
+    }
   
+    nav a {
+      margin: 5px;
+    }
+  
+    h1, h2, h3 {font-size: 1.5rem;}
+  
+    p, li {
+      font-size: 0.9rem;
+    }
+  
+  
+  
+  /* Styling for columns */
+  .column-container{
+    flex-direction: row;
+  }
+  .column {
+    flex: 1; /* This makes both columns take equal space */
+  }
+  }
