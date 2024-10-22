@@ -191,11 +191,10 @@ h2 {
 
 
 /* Carousel Container */
-.carousel {
+.carousel,iframe {
     position: relative;
     width: 100%;
-    max-width: 90%;
-    height: 80vh; /* Adjust height as needed */
+    height: auto;
     overflow: hidden;
     margin: auto;
     background-color: #ccc; /* Background color for empty spaces */

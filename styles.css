@@ -37,7 +37,7 @@ a:hover {
 }
 
 .main-body{
-  padding: 5%;
+  padding: 15% 5% 5%;
 }
 
 .section-title {
@@ -66,6 +66,7 @@ header {
   padding-top: 5%;
   color: #fff;
   position: fixed;   /* Fixes the navbar at the top */
+  z-index: 1000000;
 }
 
 header h1 {

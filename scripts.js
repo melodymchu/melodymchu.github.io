@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const flowerLink = document.createElement('a');
             flowerLink.href = linkHref;
             flowerLink.classList.add('flower-link');
-
             const flower = document.createElement('div');
             flower.classList.add('flower');
             flower.style.maxWidth = '20vw';
@@ -142,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
             flower.appendChild(pot);
             flower.appendChild(name);
             flowerLink.appendChild(flower);
-
             return flowerLink;
         };
 
