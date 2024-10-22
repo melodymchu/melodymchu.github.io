@@ -1,10 +1,10 @@
 
   /* =====================Project-Page-Styles =========================*/
 
-  img {
+  .project-container img {
     display: block;
     margin-bottom: 30px;
-}
+    }
 h4{
     text-align: center;
     padding-top: 20px;
@@ -177,16 +177,6 @@ h2 {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
-    width: 100%;
 }
 
 
