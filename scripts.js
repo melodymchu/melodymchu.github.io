@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const stem = document.createElement('div');
             stem.classList.add('stem');
-            stem.style.height = `${getRandomInt(200, 300)}px`;
+            stem.style.height = `${getRandomInt(300, 400)}px`;
             flower.appendChild(stem);
 
             for (let i = 1; i <= 2; i++) {
