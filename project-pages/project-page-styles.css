@@ -5,20 +5,20 @@
     display: block;
     margin-bottom: 30px;
     }
-h4{
+    .project-container h4{
     text-align: center;
     padding-top: 20px;
     padding-bottom: 3px;
     text-decoration: underline;
     font-size: 1.2em;
 }
-small{
+.project-container small{
     text-align:center;
     max-width: 500px;
 }
   
   
-h2 {
+.project-container h2 {
     font-size: 2em;
     margin-bottom: 1rem;
 }
