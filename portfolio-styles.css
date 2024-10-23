@@ -1,257 +1,130 @@
-
 /* =====================Portfolio ========================*/
-h2, p{text-align: center;}
+/* ===================== Portfolio Styles ===================== */
 
 
-
-/* ------------------Portfolio Gallery ------------------*/
+/* ------------------ Portfolio Gallery ------------------ */
 
 .portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1.5fr));
-    /* Responsive grid with minimum width */
-    gap: 20px;
-    padding: 20px 50px 20px 50px;
-    box-sizing: border-box;
-    /* Include padding in width calculations */
-  }
-  
-  /* Style for each project card */
-  .project-item-portfolio {
-    background: #fff;
-    padding: 10px 5px 10px 5px;
-    /*top right bottom left*/
-    margin: 10px;
-    border: 3px solid #FF69B4;
-    width: 100%;
-    /* Full width within the grid */
-    max-width: 280px;
-    /* Control max width */
-    height: 505px;
-    /* Fixed height */
-    box-sizing: border-box;
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    background-color: #ffe1ec;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    /* Prevent overflow */
-    display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1.5fr));
+  gap: 20px;
+  padding: 20px 50px;
+  box-sizing: border-box;
+}
+
+.project-item-portfolio {
+  background: #ffe1ec;
+  padding: 10px 5px;
+  margin: 10px;
+  border: 3px solid #FF69B4;
+  width: 100%;
+  max-width: 280px;
+  box-sizing: border-box;
+  transition: transform 0.4s ease, max-height 0.4s ease;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.project-item-portfolio img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+.project-tags-portfolio {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.project-item-portfolio p{
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, height 0.4s ease;
+}
+.project-item-portfolio p, .project-item-portfolio a {
+  text-decoration: none;
+  font-size: .8em;
+  width: 80%;
+  margin: auto;
+  color: #333;
+}
+.project-item-portfolio:hover, .project-item-portfolio p:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  height: auto;
+}
+
+/* Filter Button Styles */
+.filter-button-container {
+  margin: 100px 20px 20px 60px;
+  display: flex;
+  justify-content: left;
+  gap: 13px;
+}
+
+.filter-link {
+  padding: 10px 20px;
+  background-color: #c20064;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  border: 3px solid #333;
+  border-bottom: 3px solid #FF69B4;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.filter-link:hover {
+  background-color: #FF1493;
+  border-color: #FF69B4;
+}
+
+.filter-link.active {
+  background-color: #FFC0CB;
+  color: #c20064;
+  border: 2px solid #FF69B4;
+  transform: scale(1.1);
+}
+
+/* Tag Styles */
+.tag, .award {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-size: 0.8em;
+  border-radius: 15px;
+}
+
+.tag {
+  background-color: #FF69B4;
+  color: white;
+}
+
+.award {
+  background-color: #fff;
+  color: lightskyblue;
+  border: 3px solid lightskyblue;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .projects-grid {
+    max-width: 100%;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    /* Center content inside the card */
   }
-  
-  /* Style th image to fit within the square project item */
-  .project-ite-portfolio img {
-    width: 90%;
-    height: 200px;
-    /* Set fixed height for the image */
-    object-fit: cover;
-    /* Ensure the image covers the entire area */
-    border-radius: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #fff;
-    filter: drop-shadow(5px 5px 5px #FF69B4);
-  }
-  
-  /* Maintain square aspect ratio and ensure content fits within */
-  
-  .project-item-portfolio .project-title-portfolio {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #333;
-    margin: 10px 0;
-  }
-  
-  /* Hide description initially */
-  .project-description-portfolio {
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-    transition: opacity 0.4s ease, height 0.4s ease;
-    /* Smooth transition */
-  }
-  
-  /* Style for each project card */
-  .project-item-portfolio {
-    background: #ffe1ec;
-    padding: 10px 5px;
-    margin: 10px;
-    border: 3px solid #FF69B4;
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    max-height: 325px;
-    /* Set initial max height */
-    box-sizing: border-box;
-    transition: transform 0.4s ease, max-height 0.4s ease;
-    /* Smooth scaling and height transition */
-    text-decoration: none;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  /* Show description and expand card when hovering */
-  .project-item-portfolio:hover .project-description-portfolio {
-    opacity: 1;
-    height: auto;
-    /* Allow description to expand */
-  }
-  
-  /* Hover effect for scaling and expanding the entire project card */
-  .project-item-portfolio:hover {
-    transform: scale(1.05);
-    max-height: 800px;
-    /* Adjust to allow enough space for all content */
-    transition: transform 0.4s ease, max-height 0.4s ease;
-  }
-  
-  /* Style the image to fit within the square project item */
-  .project-item-portfolio img {
-    width: 100%;
-    height: 150px;
-    /* Set fixed height for the image */
-    object-fit: cover;
-    /* Ensure the image covers the entire area */
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  /* Maintain square aspect ratio and ensure content fits within */
-  .project-item-portfolio .project-title-portfolio {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #333;
-    margin: 10px 0;
-  }
-  
-  /* Smaller font for the description */
-  .project-item-portfolio .project-description-portfolio {
-    font-size: 0.75em;
-    /* Smaller font size */
-    color: #333;
-    margin: 10px;
-    padding: 0 10px;
-    text-align: center;
-  }
-  
-  /* Style the tags */
-  .project-tags-portfolio {
-    margin: 10px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* Center the tags horizontally */
-    gap: 5px;
-  }
-  
-  /* Style project names within project items */
-  .project-item-portfolio p {
-    text-decoration: none;
-    font-size: 1.1em;
-    /* Slightly larger font size */
-    color: #333;
-    /* Darker text for better readability */
-    margin-top: 10px;
-    /* Space between the image and the project name */
-    margin-bottom: 5px;
-    /* Space between the project name and description */
-    text-align: center;
-    /* Center-align the project names */
-  }
-  
-  /* Style project names within project items */
-  .project-item-portfolio a {
-    text-decoration: none;
-  }
-  
-  /* Filter Button Container */
-  .filter-button-container {
-    margin: 100px 20px 20px 60px;
-    display: flex;
-    justify-content: left;
-    gap: 13px;
-    /* Space between buttons */
-  }
-  
-  /* Style for filter buttons */
-  .filter-link {
-    padding: 10px 20px;
-    background-color: #c20064;
-    /* Pink background */
-    color: #fff;
-    /* White text */
-    border-radius: 10px 10px 0px 0px;
-    /* Rounded corners */
-    border: 3px solid #333;
-    border-bottom: 3px solid #FF69B4;
-    font-weight: bold;
-    text-transform: uppercase;
-    /* Make text uppercase */
-    text-decoration: none;
-    /* Remove underline */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Hover effect for filter buttons */
-  .filter-link:hover {
-    background-color: #FF1493;
-    /* Darker pink on hover */
-    color: white;
-    /* White text on hover */
-    border-color: #FF69B4;
-    /* Optional border change on hover */
-  }
-  
-  /* Active filter button style */
-  .filter-link.active {
-    background-color: #FFC0CB;
-    /* Light pink when active */
-    color: #c20064;
-    /* Dark pink text */
-    border: 2px solid #FF69B4;
-    /* Optional border to indicate active state */
-    transform: scale(1.1);
-    /* Slight enlargement to indicate active state */
-  }
-  
-  .tag {
-    display: inline-block;
-    background-color: #FF69B4;
-    /* Pink background */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 15px;
-    margin-right: 5px;
-    font-size: 0.8em;
-  }
-  
-  .award {
-    display: inline-block;
-    background-color: #fff;
-    color: lightskyblue;
-    padding: 5px 10px;
-    border-radius: 0px;
-    margin-right: 5px;
-    font-size: 0.8em;
-    border: 3px solid lightskyblue;
-  }
-  
-  @media (max-width: 768px) {
-    .projects-grid {
-      max-width: 100%;
-      flex-direction: column;
-      /* Stack items vertically */
-      align-items: center;
-      /* Center align */
-    }}
+}

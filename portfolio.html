@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="icon" type="image/png" href="images/Pink-Flower-Icon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Melody M. Chu</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="portfolio-styles.css">
-
+    <!-- Minimize external CSS files and combine them if possible -->
+    <link rel="stylesheet" href="styles.min.css"> <!-- Assuming styles and portfolio-styles are combined and minified -->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'"/> <!-- Load animate.css after critical rendering -->
 </head>
 <body>
-<!-- Header section with your name and a brief description -->
 <header>
-    <h1>MELODY </h1>
+    <h1>MELODY</h1>
     <h2>M. CHU</h2>
-    <a href="https://melodymchu.github.io">HOME</a>
-    <a href="https://melodymchu.github.io/about.html">ABOUT</a>
+    <nav>
+        <a href="https://melodymchu.github.io">HOME</a>
+        <a href="https://melodymchu.github.io/about.html">ABOUT</a>
+    </nav>
 </header>
 
-<!-- Navigation menu with links to different sections of the page -->
-
-
 <section class="main-body">
-
-
-    <!------------------------------------------------------------------------>
     <div class="section-title">
-        <h2 >My Portfolio</h2>
+        <h2>My Portfolio</h2>
     </div>
     <div class="filter-button-container">
         <a href="#" class="filter-link" onclick="filterProjects('all')">All</a>
@@ -38,16 +32,33 @@
 
     <section id="portfolio-gallery">
         <div class="portfolio-container">
-            <!-- Existing Projects -->
+            <!-- Example Project -->
+            <div class="project-item-portfolio digital">
+                <a href="project-pages/Murakami-Flowers.html">
+                    <div class="image-portfolio">
+                        <img loading="lazy" src="images/Project-Thumbnails/Murakami-Flowers-Thumbnail.png" alt="Murakami.Flowers System">
+                    </div>
+                    <h4>Murakami.Flowers System</h4>
+                    <p>In my Communication Design class, I developed a visual communication design system for Murakami.Flowers, an NFT collection using Takashi Murakami's iconic flower motif.</p>
+                    <div class="project-tags-portfolio">
+                        <span class="tag">Digital Art</span>
+                        <span class="tag">Generative Design</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </a>
+            </div>
+            <!-- More projects here... -->
 
-             <!-- Digital Projects -->
+
+
+               <!-- Digital Projects -->
              <div class="project-item-portfolio digital">
                 <a href="project-pages/Murakami-Flowers.html">
                     <div class="image-portfolio">
                         <img src="images/Project-Thumbnails/Murakami-Flowers-Thumbnail.png" alt="Murakami.Flowers System">
                     </div>
-                    <p class="project-title-portfolio">Murakami.Flowers System</p>
-                <p class="project-description-portfolio">In my Communication Design class, I developed a visual communication design system for Murakami.Flowers, an NFT collection using Takashi Murakami's iconic flower motif.</p>
+                    <h4>Murakami.Flowers System</h4>
+                <p>In my Communication Design class, I developed a visual communication design system for Murakami.Flowers, an NFT collection using Takashi Murakami's iconic flower motif.</p>
                 <div class="project-tags-portfolio">
                     <span class="tag">Digital Art</span>
                     <span class="tag">Generative Design</span>
@@ -67,7 +78,7 @@
                         <img src="images/Project-Thumbnails/Pragmatic-Photography-Thumbnail.JPG" alt="Pragmatic Photography">
                     </div>
                     <p class="project-title-portfolio">Pragmatic Photography</p>
-                <p class="project-description-portfolio">A collection of photographs capturing the essence of daily life and candid moments, focusing on composition and natural lighting.</p>
+                <p >A collection of photographs capturing the essence of daily life and candid moments, focusing on composition and natural lighting.</p>
                 <div class="project-tags-portfolio">
                     <span class="tag">Photography</span>
                     <span class="tag">Composition</span>
@@ -87,9 +98,9 @@ Write your comments here -->
                     <div class="image-portfolio">
                         <img src="images/Project-Thumbnails/squares-&-ampersands-thumbnail.png" alt="Squares & Ampersands">
                     </div>
-                    <p class="project-title-portfolio">Squares & Ampersands</p>
+                    <h4>Squares & Ampersands</h4>
                 
-                <p class="project-description-portfolio">An exploration of form and composition using squares and ampersands to create visually balanced designs.</p>
+                <p >An exploration of form and composition using squares and ampersands to create visually balanced designs.</p>
                 <div class="project-tags-portfolio">
                     <span class="tag">Composition</span>
                     <span class="tag">Graphic Design</span>
@@ -105,9 +116,9 @@ Write your comments here -->
                     <div class="image-portfolio">
                         <img src="images/Project-Thumbnails/pet-simulator-thumbnail.png" alt="Pet Simulator">
                     </div>
-                    <p class="project-title-portfolio">Pet Simulator</p>
+                    <h4>Pet Simulator</h4>
                 
-                <p class="project-description-portfolio">My team created a cute pet-simulator game, incorporating sentiment analysis and web-scraping. This project won 1st place among 18 teams.</p>
+                <p >My team created a cute pet-simulator game, incorporating sentiment analysis and web-scraping. This project won 1st place among 18 teams.</p>
                 <div class="project-tags-portfolio">
                     <span class="tag">Game Development</span>
                     <span class="tag">Python</span>
@@ -123,8 +134,8 @@ Write your comments here -->
                     <div class="image-portfolio">
                         <img src="images/Project-Thumbnails/futura-poster-thumbnail.png" alt="Futura: Type Specimen Poster">
                     </div>
-                    <p class="project-title-portfolio">Futura: Type Specimen Poster</p>
-                <p class="project-description-portfolio">A poster design showcasing the Futura typeface, highlighting its geometric forms and modernist aesthetics.</p>
+                    <h4>Futura: Type Specimen Poster</h4>
+                <p >A poster design showcasing the Futura typeface, highlighting its geometric forms and modernist aesthetics.</p>
                 <div class="project-tags-portfolio">
                     <span class="tag">Typography</span>
                     <span class="tag">Graphic Design</span>
@@ -142,7 +153,7 @@ Write your comments here -->
                     </div>
                     <p class="project-title-portfolio">Pedal-Powered Water Retrieval Device</p>
                 
-                <p class="project-description-portfolio">Research and conceptual design of a pedal-powered water retrieval device, including CAD modeling and stress analysis.</p>
+                <p >Research and conceptual design of a pedal-powered water retrieval device, including CAD modeling and stress analysis.</p>
                 <div class="project-tags-portfolio">
                     <span class="tag">Research</span>
                     <span class="tag">Conceptual Design</span>
@@ -159,9 +170,9 @@ Write your comments here -->
                     <div class="image-portfolio">
                         <img src="images/Project-Thumbnails/business-card-thumbnail.jpg" alt="Custom Laser-Cut Business Card">
                     </div>
-                    <p class="project-title-portfolio">Custom Laser-Cut Business Card</p>
+                    <h4>Custom Laser-Cut Business Card</h4>
                 
-                <p class="project-description-portfolio">In the Fabrication for Human-Computer Interaction class, my first project was to design and laser-cut a custom business card.</p>
+                <p >In the Fabrication for Human-Computer Interaction class, my first project was to design and laser-cut a custom business card.</p>
                 <div class="project-tags-portfolio">
                     <span class="tag">Digital Design</span>
                     <span class="tag">Laser Cutting</span>
@@ -175,9 +186,9 @@ Write your comments here -->
                     <div class="image-portfolio">
                         <img src="images/Project-Thumbnails/a-light-from-phipps-thumbnail.PNG" alt="A Light from Phipps">
                     </div>
-                    <p class="project-title-portfolio">A Light from Phipps</p>
+                    <h4>A Light from Phipps</h4>
                 
-                <p class="project-description-portfolio">A handcrafted lamp inspired by the botanical gardens at Phipps, combining natural aesthetics with functional design.</p>
+                <p >A handcrafted lamp inspired by the botanical gardens at Phipps, combining natural aesthetics with functional design.</p>
                 <div class="project-tags-portfolio">
                     <span class="tag">Product Design</span>
                     <span class="tag">Craftsmanship</span>
@@ -198,7 +209,7 @@ Write your comments here -->
                     </div>
                     <p class="project-title-portfolio">Acrylic Truss</p>
                 
-                <p class="project-description-portfolio">Structural analysis and prototype testing of an acrylic truss, involving stress analysis, laser-cutting, and performance evaluation.</p>
+                <p >Structural analysis and prototype testing of an acrylic truss, involving stress analysis, laser-cutting, and performance evaluation.</p>
                 <div class="project-tags-portfolio">
                     <span class="tag">Stress Analysis</span>
                     <span class="tag">Prototyping</span>
@@ -220,7 +231,7 @@ Write your comments here -->
                     </div>
                     <p class="project-title-portfolio">Kryptos - FTC Robot</p>
                 
-                <p class="project-description-portfolio">Design and development of an FTC robot, incorporating CAD modeling, 3D printing, and mechanical design principles.</p>
+                <p >Design and development of an FTC robot, incorporating CAD modeling, 3D printing, and mechanical design principles.</p>
                 <div class="project-tags-portfolio">
                     <span class="tag">CAD</span>
                     <span class="tag">3D Printing</span>
@@ -236,7 +247,7 @@ Write your comments here -->
                     </div>
                     <p class="project-title-portfolio">Promotional Robot</p>
                 
-                <p class="project-description-portfolio">A robot designed for promotional purposes, showcasing CAD, 3D printing, and product design skills.</p>
+                <p >A robot designed for promotional purposes, showcasing CAD, 3D printing, and product design skills.</p>
                 <div class="project-tags-portfolio">
                     <span class="tag">CAD</span>
                     <span class="tag">3D Printing</span>
@@ -260,7 +271,7 @@ Physical Projects -->
             <img src="images/112-game-thumbnail.jpg" alt="112 Game">
         </div>
         <p class="project-title-portfolio">112 Game - 15-112 Term Project</p>
-        <p class="project-description-portfolio">A Python-based game developed as a term project for the 15-112 course, featuring interactive gameplay and user interface design.</p>
+        <p >A Python-based game developed as a term project for the 15-112 course, featuring interactive gameplay and user interface design.</p>
         <div class="project-tags-portfolio">
             <span class="tag">Game Development</span>
             <span class="tag">Python</span>
@@ -275,7 +286,7 @@ Physical Projects -->
             <img src="images/Project-Thumbnails/exploring-etextiles-thumbnail.jpg" alt="Exploring E-Textiles">
         </div>
         <p class="project-title-portfolio">Exploring E-Textiles</p>
-        <p class="project-description-portfolio">A project exploring the integration of electronic components into textiles, creating interactive and innovative fabric designs.</p>
+        <p >A project exploring the integration of electronic components into textiles, creating interactive and innovative fabric designs.</p>
         <div class="project-tags-portfolio">
             <span class="tag">E-Textiles</span>
             <span class="tag">Interactive Design</span>
@@ -290,7 +301,7 @@ Physical Projects -->
             <img src="images/Project-Thumbnails/backup-camera-mount-thumbnail.jpg" alt="Car Backup Camera Mount">
         </div>
         <p class="project-title-portfolio">Car Backup Camera Mount</p>
-        <p class="project-description-portfolio">Development of a custom backup camera mount for cars, involving CAD modeling and 3D printing techniques.</p>
+        <p >Development of a custom backup camera mount for cars, involving CAD modeling and 3D printing techniques.</p>
         <div class="project-tags-portfolio">
             <span class="tag">CAD</span>
             <span class="tag">3D Printing</span>
@@ -305,7 +316,7 @@ Physical Projects -->
             <img src="images/Project-Thumbnails/aluminum-phone-stand-thumbnail.jpg" alt="Aluminum Phone Stand">
         </div>
         <p class="project-title-portfolio">Aluminum Phone Stand</p>
-        <p class="project-description-portfolio">Designed and manufactured an aluminum phone stand using manual milling, lathe work, and drill press techniques.</p>
+        <p >Designed and manufactured an aluminum phone stand using manual milling, lathe work, and drill press techniques.</p>
         <div class="project-tags-portfolio">
             <span class="tag">Manual Mill</span>
             <span class="tag">Lathe</span>
@@ -317,19 +328,12 @@ Physical Projects -->
 
 
 -->
-
-
-
-
-    <!------------------------------------------------------------------------>
-
+        </div>
+    </section>
 </section>
 
-
-<!-- Back to top button -->
 <div id="backToTop"><a href="#top"><i class="arrow up"></i></a></div>
 
-<!-- Footer -->
 <footer>
     <div class="button-row-container">
         <a href="mailto:mmchu@andrew.cmu.edu" target="_blank">
@@ -341,28 +345,7 @@ Physical Projects -->
     </div>
     <p>&copy; 2024 Melody M. Chu. All rights reserved.</p>
 </footer>
+<!-- Load script at the end to avoid render-blocking -->
+<script src="scripts.min.js" defer></script>
 </body>
-<!-- JavaScript for Filtering -->
-<script>
-    function filterProjects(category) {
-        const items = document.querySelectorAll('.project-item-portfolio'); // Select all project items
-
-        items.forEach(item => {
-            if (category === 'all') {
-                item.style.display = 'block'; // Show all items
-            } else if (item.classList.contains(category)) {
-                item.style.display = 'block'; // Show items that match the category
-            } else {
-                item.style.display = 'none'; // Hide items that don't match
-            }
-        });
-    }
-
-    // Optionally, activate the "All" filter by default when the page loads
-    document.addEventListener('DOMContentLoaded', function() {
-        filterProjects('all');
-    });
-</script>
-<script src="scripts.js"></script>
-
 </html>
