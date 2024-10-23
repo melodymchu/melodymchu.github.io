@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const flowerImages = [
             'images/Project-Thumbnails/Murakami-Flowers-Thumbnail.png',
             'images/Project-Thumbnails/pet-simulator-thumbnail.png',
-            'images/Project-Thumbnails/a-light-from-phipps-thumbnail.PNG',
+            'images/Project-Thumbnails/a-light-from-phipps-thumbnail.png',
             'images/Project-Thumbnails/futura-poster-thumbnail.png',
             'images/Project-Thumbnails/squares-&-ampersands-thumbnail.png',
             'images/Project-Thumbnails/business-card-thumbnail.jpg'
