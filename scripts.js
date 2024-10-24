@@ -88,14 +88,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const stem = document.createElement('div');
             stem.classList.add('stem');
-            stem.style.height = `${getRandomInt(300, 400)}px`;
+            stem.style.height = `${getRandomInt(150, 280)}px`;
+            stem.style.transform = 'translateY(50px)'; // Move 50px to the right
+
             flower.appendChild(stem);
 
             for (let i = 1; i <= 2; i++) {
                 const leaf = document.createElement('div');
                 leaf.classList.add('leaf', `leaf${i}`);
-                leaf.style.top = `${stem.style.height-20}px`;
-                leaf.style.left = `${i === 1 ? 10 : 50}px`;
+                leaf.style.top = `${getRandomInt(-180, -90)}px`;
+                leaf.style.left = `${i === 1 ? -20 : 20}px`;
                 leaf.style.transform = `rotate(${i === 1 ? 30 : -30}deg)`;
                 flower.appendChild(leaf);
             }
@@ -136,9 +138,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.createElement('div');
             name.classList.add('flower-name');
             name.textContent = flowerNameText;
-
+            const nameContainer = document.createElement('div');
+            nameContainer.classList.add('flower-name-container');
+            
             flower.appendChild(center);
             flower.appendChild(pot);
+            flower.appendChild(nameContainer);
             flower.appendChild(name);
             flowerLink.appendChild(flower);
             return flowerLink;
