@@ -129,7 +129,10 @@ footer {
   background-color: white;
   border-radius: 50%;
 }
-.social-icon img{  z-index: 1000000;}
+.social-icon img{
+  z-index: 1000000;
+  object-fit: cover;
+}
 
 /* ----------------------Containers -----------------------*/
 .container,
