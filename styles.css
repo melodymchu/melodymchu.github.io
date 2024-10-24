@@ -123,6 +123,7 @@ footer {
 }
 
 .social-icon {
+  display: flex;
   border: 2px solid black;
   padding: 5%;
   width: 8%;
@@ -170,7 +171,7 @@ footer {
 
 .button-row-container {
   margin: auto;
-  display: flex;
+  display: flexbox;
   gap: 5%;
   overflow: visible;
   justify-content: center;
