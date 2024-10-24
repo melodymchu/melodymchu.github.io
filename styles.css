@@ -129,7 +129,7 @@ footer {
   background-color: white;
   border-radius: 50%;
 }
-.social-icon img{
+.social-icon{
   z-index: 1000000;
   object-fit: cover;
 }
