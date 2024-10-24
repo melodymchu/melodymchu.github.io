@@ -1,10 +1,13 @@
-
   /* =====================Project-Page-Styles =========================*/
 
-  .project-container img {
-    display: block;
-    margin-bottom: 30px;
-    }
+.project-container img {
+        display: block;
+        margin-bottom: 30px;
+}
+h2 {
+        font-size: 2em;
+        margin-bottom: 1rem;
+}
 h4{
     text-align: center;
     padding-top: 20px;
@@ -15,12 +18,6 @@ h4{
 small{
     text-align:center;
     max-width: 500px;
-}
-  
-  
-h2 {
-    font-size: 2em;
-    margin-bottom: 1rem;
 }
 
 .project-container {
@@ -33,7 +30,6 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
-
 
 .overview-image {
     width: 50%;
