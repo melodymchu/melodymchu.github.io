@@ -34,11 +34,13 @@ h2 {
     text-align: left;
 }
 
+
 .overview-image {
     width: 50%;
-    max-width: 50vw;
-    height: auto;
+    max-width: 100%;
     border-radius: 10px;
+    margin-right: 1rem; /* Space between image and text content */
+
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -111,10 +113,6 @@ h2 {
         background-color: #ffe5f8;
         padding: 1rem;
         box-sizing: border-box; /* Ensure padding is included in width */
-    }
-    .overview-image {
-        width: 100%;
-        margin-bottom: 1rem; /* Space below image */
     }
 
     .col-container {
