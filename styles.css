@@ -132,7 +132,7 @@ footer {
 }
 .social-icon img{
   z-index: 1000000;
-  object-fit: cover;
+  object-fit:contain;
 }
 
 /* ----------------------Containers -----------------------*/
