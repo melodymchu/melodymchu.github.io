@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
-        // Use requestAnimationFrame for smooth and efficient scroll handling
+        // Efficient scroll event handling with requestAnimationFrame
         let scrollScheduled = false;
         window.addEventListener('scroll', () => {
             if (!scrollScheduled) {
@@ -20,19 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Use Intersection Observer to load flowers when in view, with rootMargin for better performance
+    // Load flowers when the container is in view using Intersection Observer
     const flowerRow = document.getElementById('flowerRow');
-    
+
     if (flowerRow) {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     loadFlowers();
-                    observer.disconnect(); // Only load flowers once
+                    observer.disconnect(); // Stop observing once flowers are loaded
                 }
             });
-        }, { rootMargin: "100px" }); // Load flowers just before they come into view
-    
+        }, { rootMargin: "100px" }); // Preload flowers just before they appear
+
         observer.observe(flowerRow);
     }
 
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
 
         const flowerNames = [
-            'Murakami .Flowers System',
+            'Murakami.Flowers System',
             'Pet Simulator - Hack112',
             'A Light From Phipps',
             'Futura Poster',
@@ -76,9 +76,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const flowerLink = document.createElement('a');
             flowerLink.href = linkHref;
             flowerLink.classList.add('flower-link');
+
             const flower = document.createElement('div');
             flower.classList.add('flower');
             flower.style.maxWidth = '20vw';
+
+            const nameContainer = document.createElement('div');
+            nameContainer.classList.add('flower-name-container');
+
+            const name = document.createElement('div');
+            name.classList.add('flower-name');
+            name.textContent = flowerNameText;
+
+            // Append name and container
+            flower.appendChild(nameContainer);
+            flower.appendChild(name);
+
+            // Resize text to fit within two lines
+            resizeText(nameContainer, name, 2);
+
+            // Add the rest of the flower structure (petals, stem, etc.)
+            // Your existing code for petals, stem, and other elements goes here...
+
 
             const baseColor = getRandomBaseColor();
             const numberOfPetals = getRandomInt(5, 8);
@@ -135,12 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             image.alt = 'Flower Image';
             image.loading = 'lazy';  // Lazy loading optimization
             center.appendChild(image);
-            const name = document.createElement('div');
-            name.classList.add('flower-name');
-            name.textContent = flowerNameText;
-            const nameContainer = document.createElement('div');
-            nameContainer.classList.add('flower-name-container');
-            
+
             flower.appendChild(center);
             flower.appendChild(pot);
             flower.appendChild(nameContainer);
@@ -156,3 +170,31 @@ document.addEventListener('DOMContentLoaded', () => {
         flowerRow.appendChild(flowersFragment);
     }
 });
+function resizeText(container, textElement, maxLines) {
+    // Make elements temporarily visible to calculate dimensions if hidden
+    const initialDisplay = container.style.display;
+    container.style.display = "block";
+    textElement.style.display = "block";
+
+    let fontSize = parseFloat(window.getComputedStyle(textElement).fontSize);
+    let lineHeight = parseFloat(window.getComputedStyle(textElement).lineHeight);
+    if (isNaN(lineHeight)) {
+        lineHeight = fontSize * 1.2;
+    }
+
+    const maxHeight = lineHeight * maxLines;
+    const containerWidth = parseFloat(window.getComputedStyle(container).width);
+
+    // Reduce font size until the text fits within the height and width constraints
+    while ((textElement.scrollHeight > maxHeight || textElement.scrollWidth > containerWidth) && fontSize > 1) {
+        fontSize -= 0.5;
+        textElement.style.fontSize = `${fontSize}px`;
+
+        // Recalculate line height in case it scales with font size
+        lineHeight = parseFloat(window.getComputedStyle(textElement).lineHeight) || fontSize * 1.2;
+    }
+
+    // Revert the display style if it was initially hidden
+    container.style.display = initialDisplay;
+    textElement.style.display = initialDisplay;
+}
