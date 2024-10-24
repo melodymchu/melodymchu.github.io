@@ -1,4 +1,5 @@
-  /* =====================Project-Page-Styles =========================*/
+
+}  /* =====================Project-Page-Styles =========================*/
 
 .project-container img {
         display: block;
@@ -12,7 +13,6 @@ h3,h4{
     text-align: center;
     padding-top: 20px;
     padding-bottom: 3px;
-    text-decoration: underline;
 }
 h4{
     font-size: 1.2em;
@@ -149,33 +149,48 @@ header a{
     align-items: center;
     margin: 1rem 0;
 }
-
+.project-content{
+  text-align: center;
+}
 .project-content h3 {
-    font-size: 1.8em;
     color: #c20064;
     padding-top: 55px;
     padding-bottom: 10px;
     margin: 0 auto; /* Horizontally center the container */
     margin-bottom: 1rem;
-
     text-align: center;
     width: 80%;
     max-width: 700px;
+}
+
+.project-content h4{
+  text-align: center;
+  margin: auto;
+  padding-bottom: 3%;
+}
+
+.project-content a{
+  color: #c20064;
 }
 
 .project-content p {
     margin: 0 auto; /* Horizontally center the container */
     width: 80%;
     max-width: 700px;
-
     text-align: center;
     margin-bottom: 1rem;
     font-size: 1em;
 }
-.project-content li {margin: 0 auto; /* Horizontally center the container */
-    width: 60vw;
+.project-content ul {
+    text-align: center;
+    font-size: 1em;
+}
+.project-content li {
+  margin: 0 auto; /* Horizontally center the container */
+    width: 70%;
     margin-bottom: 1rem;
     font-size: 1em;
+    text-align: left;
 }
 .project-image {
     margin: 0 auto; /* Horizontally center the container */
