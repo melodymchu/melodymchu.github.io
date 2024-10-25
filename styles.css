@@ -344,8 +344,8 @@ footer {
     display: flex;
     align-items: flex-start; /* Align text to the left */
     padding: 1rem;
+    max-width: 100%;
     box-sizing: border-box; /* Ensure padding is included in width */
-    max-width: 80%;
   }
   .column {
     flex: 1; /* This makes both columns take equal space */
