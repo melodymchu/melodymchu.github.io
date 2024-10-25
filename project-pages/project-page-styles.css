@@ -1,12 +1,11 @@
 /* =====================Project-Page-Styles =========================*/
-
 .project-container img {
         display: block;
         margin-bottom: 30px;
 }
 h2 {
-        font-size: 2em;
-        margin-bottom: 1rem;
+    font-size: 2em;
+    margin-bottom: 1rem;
 }
 h3,h4{
     text-align: center;
@@ -40,7 +39,6 @@ header a{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
-
 .overview-image {
     width: 50%;
     max-width: 100%;
@@ -50,30 +48,25 @@ header a{
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .overview-content {
     text-align: center;
 }
-
 .project-overview h2 {
     font-size: 2em;
     color: #c20064;
     margin: 1rem;
 }
-
 .project-date {
     font-style: italic;
     font-size: 1em;
     color: #fca1ce;
     margin: 0.5rem 0;
 }
-
 .project-description {
     text-align: left;
     font-size: 0.9em;
     margin: 0.5rem 0;
 }
-
 /* Project Overview Section Styles */
 .project-overview {
     display: flex;
@@ -83,7 +76,6 @@ header a{
     background-color: #ffe5f8;
     padding: 1rem;
 }
-
 /* Row container with flex to align image and text side-by-side */
 .row-container {
     display: flex;
@@ -96,7 +88,6 @@ header a{
     width: 100%;
     overflow: hidden;
     max-width: 100%; /* Prevent overflow */
-
 }
 .results-preview{
     margin: auto;
@@ -115,7 +106,6 @@ header a{
         align-items: flex-start; /* Align items to the start for better alignment */
         justify-content: space-between; /* Space between image and text */
     }
-
     .overview-image {
         width: 45%; /* Adjust width for side-by-side layout */
         max-width: 100%;
