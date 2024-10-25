@@ -196,6 +196,7 @@ header a{
     text-align: left;
 }
 .project-image {
+    align-content: center;
     margin: 0 auto; /* Horizontally center the container */
     width: 100%;
     max-width: 500px;
