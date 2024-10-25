@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const carousels = document.querySelectorAll(".carousel"); // Get all carousels
+
+    carousels.forEach((carousel) => {
     let currentIndex = 0; // Track the current slide index
     const slides = document.querySelectorAll(".carousel-item"); // Get all slides
     const totalSlides = slides.length; // Count of total slides
@@ -78,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize the carousel on page load
     initializeCarousel();
     updateActiveSlide();
+    });
 });
 /*
 
