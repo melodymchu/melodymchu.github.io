@@ -99,9 +99,13 @@ header a{
 
 }
 .results-preview{
-    background-color: #ffe5f8;
+    background-color: #eee;
+    width: 90%;
     border-block-end-style: dotted;
     padding-bottom: 10%;
+}
+.results-preview .carousel{
+    width: 90%;
 }
 /* Media query for larger screens to align image and text side-by-side */
 @media (min-width: 768px) {
