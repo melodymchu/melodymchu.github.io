@@ -322,7 +322,8 @@ header a{
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    padding: 10px;
+    gap: 10px; /* Adds 20px gap between both rows and columns */
+
   }
   
   .gallery img {
