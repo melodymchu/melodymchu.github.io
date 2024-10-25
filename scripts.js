@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const flowerNames = [
             'Murakami System',
-            'Pet Simulator: Hack112 Winner',
+            'Pet Simulator (Hack112)',
             'A Light From Phipps',
             'Futura Poster',
             'Squares & Ampersands',
