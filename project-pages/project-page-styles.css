@@ -89,11 +89,7 @@ header a{
 }
 /* Media query for larger screens to align image and text side-by-side */
 @media (min-width: 768px) {
-    .row-container {
-        flex-direction: row; /* Change to row for side-by-side layout */
-        align-items: flex-start; /* Align items to the start for better alignment */
-        justify-content: space-between; /* Space between image and text */
-    }
+
     .overview-image {
         width: 45%; /* Adjust width for side-by-side layout */
         max-width: 100%;
