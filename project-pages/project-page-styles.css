@@ -98,7 +98,11 @@ header a{
     max-width: 100%; /* Prevent overflow */
 
 }
-
+.results-preview{
+    background-color: #ffe5f8;
+    border-block-end-style: dotted;
+    padding-bottom: 10%;
+}
 /* Media query for larger screens to align image and text side-by-side */
 @media (min-width: 768px) {
     .row-container {
