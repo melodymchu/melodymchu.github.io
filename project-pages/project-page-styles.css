@@ -101,7 +101,7 @@ header a{
 .results-preview{
     background-color: #eee;
     width: 90%;
-    border-block-end-style: dotted;
+    border-block-end: solid #333 3px;
     padding-bottom: 10%;
 }
 .results-preview .carousel{
