@@ -80,12 +80,9 @@ header a{
     border: 3px solid #FF69B4;
     width: 100%;
     box-sizing: border-box;
-    transition: transform 0.4s ease, max-height 0.4s ease;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    justify-content: space-between;
-    overflow: hidden;
 }
 
 .results-preview{
