@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const flower = document.createElement('div');
             flower.classList.add('flower');
             flower.style.maxWidth = '20vw';
-
             const nameContainer = document.createElement('div');
             nameContainer.classList.add('flower-name-container');
 
