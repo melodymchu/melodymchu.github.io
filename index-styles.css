@@ -233,6 +233,12 @@
 display: block;
 /* Show on hover */
 }
+
+.flower:hover .flower-center{
+  transform: scale(1.5);
+  /* Show on hover */
+  }
+
 .stem {
   width: 10px;
   background-color: rgb(115, 225, 115);
