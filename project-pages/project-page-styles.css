@@ -322,7 +322,6 @@ header a{
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 10px;
     padding: 10px;
   }
   
@@ -332,6 +331,7 @@ header a{
     display: block;
     border-radius: 5px;
     transition: transform 0.3s ease;
+    padding: 5%;
   }
   
   .gallery img:hover {
