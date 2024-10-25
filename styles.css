@@ -163,11 +163,9 @@ footer {
   text-align: right;
   font-size: 1.5rem;
 }
-
 .column p {
   text-align: left;
 }
-
 .button-row-container {
   margin: auto;
   display: flexbox;
@@ -187,7 +185,6 @@ footer {
   overflow: hidden;
   max-width: 100%; /* Prevent overflow */
 }
-
 
 /* Outer container to enable full viewport centering */
 .outer-container {
