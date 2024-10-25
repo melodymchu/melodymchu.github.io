@@ -212,12 +212,13 @@ header a{
 
 /* Carousel Container */
 .carousel,iframe {
+    border-radius: 10px;
     position: relative;
     width: 100%;
     height: 80vh;
     overflow: hidden;
     margin: auto;
-    background-color: #ccc; /* Background color for empty spaces */
+    background-color: #eee; /* Background color for empty spaces */
 }
 
 /* Inner Container for Carousel Items */
