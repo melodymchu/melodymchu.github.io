@@ -99,6 +99,7 @@ header a{
 
 }
 .results-preview{
+    margin: auto;
     background-color: #eee;
     width: 90%;
     border-block-end: solid #333 3px;
