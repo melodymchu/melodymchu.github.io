@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'images/Project-Thumbnails/Murakami-Flowers-Thumbnail.png',
             'images/Project-Thumbnails/pet-simulator-thumbnail.png',
             'images/Project-Thumbnails/a-light-from-phipps-thumbnail.png',
-            'images/Project-Thumbnails/futura-poster-thumbnail.png',
             'images/Project-Thumbnails/squares-&-ampersands-thumbnail.png',
             'images/Project-Thumbnails/business-card-thumbnail.jpg'
         ];
@@ -50,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'https://melodymchu.github.io/project-pages/Murakami-Flowers.html',
             'https://melodymchu.github.io/project-pages/Pet-Simulator.html',
             'https://melodymchu.github.io/project-pages/A-Light-From-Phipps.html',
-            'https://melodymchu.github.io/project-pages/Futura-Poster.html',
             'https://melodymchu.github.io/project-pages/Squares-&-Ampersands.html',
             'https://melodymchu.github.io/project-pages/business-card.html'
         ];
@@ -59,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'Murakami System',
             'Pet Simulator',
             'A Light From Phipps',
-            'Futura Poster',
             'Squares & Ampersands',
             'Laser-Cut Business Card'
         ];
