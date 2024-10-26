@@ -200,7 +200,7 @@
   position: absolute;
   align-self: center;
   border: 3px solid #333;
-  background: #a35e55;
+  background: #8C625E;
   width: 90px;
   height: 50px;
   bottom: 70px;
@@ -217,7 +217,7 @@
   height: 40px;
   bottom: 70px;
   position: absolute;
-  color: #ffddaa;
+  color: #fedc9d;
   text-align: center;
   z-index: 2;
   display: none;
@@ -241,7 +241,7 @@ display: block;
 
 .stem {
   width: 10px;
-  background-color: rgb(115, 225, 115);
+  background-color: #9ff596;
   border: 2px solid green;
   position: relative;
   /* Maintain relative positioning */
@@ -253,7 +253,7 @@ display: block;
   position: relative;
   width: 40px;
   height: 20px;
-  background-color: green;
+  background-color: #6ce69b;
   border-radius: 40px;
   border: 3px solid #004600;
 }
@@ -261,7 +261,7 @@ display: block;
 .center {
   width: 120px;
   height: 120px;
-  background-color: rgb(254, 245, 124);
+  background-color: #f4d041;
   border-radius: 50%;
   display: flex;
   align-items: center;
