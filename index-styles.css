@@ -158,10 +158,7 @@
   /* Smooth scaling effect */
 }
 
-.flower:hover {
-  transform: scale(1.1);
-  z-index: 1000000000;
-}
+
 
 .petal {
   position: absolute;
@@ -232,6 +229,10 @@
 .flower:hover .flower-name, .flower:hover .flower-name-container {
 display: block;
 /* Show on hover */
+}
+.flower:hover .flower {
+  transform: scale(1.1);
+  z-index: 1000000000;
 }
 
 .flower:hover .flower-center{
