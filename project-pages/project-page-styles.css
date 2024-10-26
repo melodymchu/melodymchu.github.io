@@ -186,6 +186,7 @@ header a{
 
 /* Inner Container for Carousel Items */
 .carousel-inner {
+    border-radius: 10px;
     display: flex;
     width: 100%;
     height: 100%;
@@ -194,6 +195,7 @@ header a{
 
 /* Individual Carousel Item */
 .carousel-item {
+    border-radius: 10px;
     flex: 0 0 100%; /* Each item takes full width of the container */
     height: 100%;
 }
