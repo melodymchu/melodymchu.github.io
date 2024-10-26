@@ -116,7 +116,7 @@
   left: -5px;
   width: 100px;
   height: 10px;
-  background-color: #5d4037;
+  background-color: #8C625E;
   border-radius: 5px;
   border: 2px solid #333;
   z-index: 100;
@@ -128,7 +128,7 @@
   position: absolute;
   width: 10px;
   height: 40px;
-  background-color: #c38975;
+  background-color: #A4776F;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
