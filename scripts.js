@@ -68,8 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
             saturation: 80,
             lightness: 90
         });
-
-        const createFlower = (imageSrc, linkHref, flowerNameText) => {
+        const flowerTags = [
+            ['Interaction Design', 'System Design'],
+            ['Game Development', 'Simulation'],
+            ['Light Installation', 'Art'],
+            ['Typography', 'Layout Design'],
+            ['Product Design', 'Laser Cutting']
+        ];
+        const createFlower = (imageSrc, linkHref, flowerNameText, tags) => {
             const flowerLink = document.createElement('a');
             flowerLink.href = linkHref;
             flowerLink.classList.add('flower-link');
@@ -107,15 +113,21 @@ document.addEventListener('DOMContentLoaded', () => {
             stem.style.transform = 'translateY(50px)'; // Move 50px to the right
 
             flower.appendChild(stem);
+    tags.forEach((tag, index) => {
+        const leaf = document.createElement('div');
+        leaf.classList.add('leaf', `leaf${index + 1}`);
+        leaf.style.top = `${getRandomInt(-60, 0)}px`;
+        leaf.style.left = `${index === 0 ? -20 : 20}px`;
+        leaf.style.transform = `rotate(${index === 0 ? 30 : -30}deg)`;
 
-            for (let i = 1; i <= 2; i++) {
-                const leaf = document.createElement('div');
-                leaf.classList.add('leaf', `leaf${i}`);
-                leaf.style.top = `${getRandomInt(-60, 0)}px`;
-                leaf.style.left = `${i === 1 ? -20 : 20}px`;
-                leaf.style.transform = `rotate(${i === 1 ? 30 : -30}deg)`;
-                flower.appendChild(leaf);
-            }
+        const leafTag = document.createElement('div');
+        leafTag.style.transform = `rotate(${index === 0 ? -30 : 30}deg)`;
+        leafTag.classList.add('leaf-tag');
+        leafTag.textContent = tag;
+        leaf.appendChild(leafTag);
+
+        flower.appendChild(leaf);
+    });
 
             const petalsFragment = document.createDocumentFragment();
             for (let i = 0; i < numberOfPetals; i++) {
@@ -161,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const flowersFragment = document.createDocumentFragment();
         flowerImages.forEach((imageSrc, i) => {
-            flowersFragment.appendChild(createFlower(imageSrc, flowerLinks[i], flowerNames[i]));
+            flowersFragment.appendChild(createFlower(imageSrc, flowerLinks[i], flowerNames[i], flowerTags[i]));
         });
         flowerRow.appendChild(flowersFragment);
     }

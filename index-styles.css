@@ -1,5 +1,4 @@
 
-
 /* =====================Index =========================*/
 
 
@@ -226,7 +225,7 @@
   vertical-align: middle;
   overflow: hidden;
 }
-.flower:hover .flower-name, .flower:hover .flower-name-container {
+.flower:hover .flower-name, .flower:hover .flower-name-container{
 display: block;
 /* Show on hover */
 }
@@ -235,9 +234,17 @@ display: block;
   z-index: 1000000000;
 }
 
+.flower:hover .leaf-tag {
+transform:scale(3);
+  z-index: 100000000000;
+  display: block;
+}
 .flower:hover .flower-center{
   transform: scale(1.5);
   /* Show on hover */
+  }
+  .flower:hover .leaf{
+display:none;  /* Show on hover */
   }
 
 .stem {
@@ -251,12 +258,27 @@ display: block;
 }
 
 .leaf {
+  display: block;
   position: relative;
   width: 40px;
   height: 20px;
   background-color: #6ce69b;
   border-radius: 40px;
   border: 3px solid #004600;
+}
+
+ .leaf-tag {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #6ce69b;
+  border-radius: 40px;
+  border: 3px solid #004600;
+  display: none;
+  color: #004600;
+  font-size: 10px;
+  text-align: center;
+  padding: 2px 4px;
 }
 
 .center {
