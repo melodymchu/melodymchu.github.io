@@ -116,7 +116,7 @@
   left: -5px;
   width: 100px;
   height: 10px;
-  background-color: #8C625E;
+  background-color: #84391e;
   border-radius: 5px;
   border: 2px solid #333;
   z-index: 100;
@@ -140,14 +140,14 @@
 .pot .band {
   width: 80px;
   height: 5px;
-  background-color: #6d4c41;
+  background-color: #b63a20;
   margin: 2px 0;
   border-radius: 3px;
 }
 
 /* Adding bands inside the pot for extra details */
 .pot .band:first-child {
-  background-color: #5d4037;
+  background-color: #b63a20;
 }
 
 .flower {
