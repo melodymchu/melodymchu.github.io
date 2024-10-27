@@ -305,7 +305,7 @@
   overflow: hidden;
 }
 .flower:hover .flower{
-  z-index: 100000000;
+  z-index: 0;
 }
 
 .flower:hover .flower-name,
