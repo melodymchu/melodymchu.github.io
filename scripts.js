@@ -89,17 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.createElement('div');
             name.classList.add('flower-name');
             name.textContent = flowerNameText;
+            nameContainer.appendChild(name);
 
             // Append name and container
             flower.appendChild(nameContainer);
-            flower.appendChild(name);
-
-            // Resize text to fit within two lines
-            resizeText(nameContainer, name, 2);
-
-            // Add the rest of the flower structure (petals, stem, etc.)
-            // Your existing code for petals, stem, and other elements goes here...
-
 
             const baseColor = getRandomBaseColor();
             const numberOfPetals = getRandomInt(5, 8);
@@ -109,25 +102,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const stem = document.createElement('div');
             stem.classList.add('stem');
-            stem.style.height = `${getRandomInt(150, 280)}px`;
+            stem.style.height = `${getRandomInt(150, 300)}px`;
             stem.style.transform = 'translateY(50px)'; // Move 50px to the right
 
             flower.appendChild(stem);
-    tags.forEach((tag, index) => {
-        const leaf = document.createElement('div');
-        leaf.classList.add('leaf', `leaf${index + 1}`);
-        leaf.style.top = `${getRandomInt(-60, 0)}px`;
-        leaf.style.left = `${index === 0 ? -20 : 20}px`;
-        leaf.style.transform = `rotate(${index === 0 ? 30 : -30}deg)`;
+            tags.forEach((tag, index) => {
+                const leaf = document.createElement('div');
+                leaf.classList.add('leaf', `leaf${index + 1}`);
+                leaf.style.top = `${getRandomInt(-100, -60)}px`;
+                leaf.style.left = `${index === 0 ? -20 : 20}px`;
+                leaf.style.transform = `rotate(${index === 0 ? 30 : -30}deg)`;
 
-        const leafTag = document.createElement('div');
-        leafTag.style.transform = `rotate(${index === 0 ? -30 : 30}deg)`;
-        leafTag.classList.add('leaf-tag');
-        leafTag.textContent = tag;
-        leaf.appendChild(leafTag);
+                const leafTag = document.createElement('div');
+                leafTag.classList.add('leaf-tag');
+                leafTag.style.top = (parseInt(leaf.style.top, 10)-20)+'px';
+                leafTag.style.left = `${index === 0 ? -48 : 48}px`;
+                leafTag.textContent = tag;
+                leafTag.style.textDecoration = 'none';
 
-        flower.appendChild(leaf);
-    });
+                const leafContainer = document.createElement('div');
+                leafContainer.classList.add('leaf-container');
+                leafContainer.appendChild(leaf);
+                leafContainer.appendChild(leafTag);
+
+                flower.appendChild(leafContainer);
+            });
 
             const petalsFragment = document.createDocumentFragment();
             for (let i = 0; i < numberOfPetals; i++) {
@@ -166,7 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
             flower.appendChild(center);
             flower.appendChild(pot);
             flower.appendChild(nameContainer);
-            flower.appendChild(name);
             flowerLink.appendChild(flower);
             return flowerLink;
         };
@@ -178,31 +176,3 @@ document.addEventListener('DOMContentLoaded', () => {
         flowerRow.appendChild(flowersFragment);
     }
 });
-function resizeText(container, textElement, maxLines) {
-    // Make elements temporarily visible to calculate dimensions if hidden
-    const initialDisplay = container.style.display;
-    container.style.display = "block";
-    textElement.style.display = "block";
-
-    let fontSize = parseFloat(window.getComputedStyle(textElement).fontSize);
-    let lineHeight = parseFloat(window.getComputedStyle(textElement).lineHeight);
-    if (isNaN(lineHeight)) {
-        lineHeight = fontSize * 1.2;
-    }
-
-    const maxHeight = lineHeight * maxLines;
-    const containerWidth = parseFloat(window.getComputedStyle(container).width);
-
-    // Reduce font size until the text fits within the height and width constraints
-    while ((textElement.scrollHeight > maxHeight || textElement.scrollWidth > containerWidth) && fontSize > 1) {
-        fontSize -= 0.5;
-        textElement.style.fontSize = `${fontSize}px`;
-
-        // Recalculate line height in case it scales with font size
-        lineHeight = parseFloat(window.getComputedStyle(textElement).lineHeight) || fontSize * 1.2;
-    }
-
-    // Revert the display style if it was initially hidden
-    container.style.display = initialDisplay;
-    textElement.style.display = initialDisplay;
-}
