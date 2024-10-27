@@ -1,4 +1,3 @@
-
 /* =================================Index =================================*/
 
 
@@ -88,72 +87,8 @@
   width: 100%;
   object-fit: fill;
   padding: 50px 0px;
-  /* Reduce padding to ensure no horizontal overflow */
   max-width: 100%;
-  /* Prevent overflow */
   padding-bottom: 10%;
-
-}
-
-.pot {
-  width: 100px;
-  height: 60px;
-  background-color: #be522b;
-  border-radius: 0 0 20px 20px;
-  border: 3px solid #333;
-  position: relative;
-  top: 0px;
-  z-index: 1;
-  margin: auto;
-}
-
-.pot::before { /* pot rim*/
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -5px;
-  width: 100px;
-  height: 10px;
-  background-color: #521a0e;
-  border-radius: 5px;
-  border: 2px solid #000;
-  z-index: 100;
-}
-
-.pot::after {/* pot vertical line*/
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 40px;
-  background-color: #ae4b27;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 5px;
-  border: 2px solid #84391e;
-}
-
-.pot .band { /* pot small horizontal bands */
-  width: 80px;
-  height: 5px;
-  background-color: #b63a20;
-  margin: 2px 0;
-  border-radius: 3px;
-}
-
-.pot .band:first-child { /* Adding bands inside the pot for extra details */
-  background-color: #b63a20;
-}
-
-.flower {
-  max-width: 20vw;
-  position: relative;
-}
-
-.petal {
-  position: absolute;
-  border-radius: 50%;
-  border: 4px solid #333;
 }
 
 .flower-row {
@@ -177,6 +112,106 @@
   z-index: 1;
   max-width: 20vw;
   flex: 1 1 20vw;
+}
+
+.pot {
+  width: 100px;
+  height: 60px;
+  background-color: #be522b;
+  border-radius: 0 0 20px 20px;
+  border: 3px solid #333;
+  position: relative;
+  top: 0px;
+  z-index: 1;
+  margin: auto;
+}
+
+.pot::before {
+  /* pot rim*/
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  width: 100px;
+  height: 10px;
+  background-color: #521a0e;
+  border-radius: 5px;
+  border: 2px solid #000;
+  z-index: 100;
+}
+
+.pot::after {
+  /* pot vertical line*/
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background-color: #ae4b27;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  border: 2px solid #84391e;
+}
+
+.pot .band {
+  /* pot small horizontal bands */
+  width: 80px;
+  height: 5px;
+  background-color: #b63a20;
+  margin: 2px 0;
+  border-radius: 3px;
+}
+
+.pot .band:first-child {
+  /* Adding bands inside the pot for extra details */
+  background-color: #b63a20;
+}
+
+.flower {
+  max-width: 20vw;
+  position: relative;
+}
+
+.petal {
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid #333;
+}
+
+.stem {
+  width: 10px;
+  background-color: #9ff596;
+  border: 2px solid green;
+  position: relative;
+  z-index: -1;
+}
+
+.center {
+  width: 120px;
+  height: 120px;
+  background-color: #ffff99;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #333;
+  position: absolute;
+  top: -30px;
+  overflow: hidden;
+}
+
+.center img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.petal {
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid #333;
+  top: 0px;
 }
 
 .flower-name-container {
@@ -268,21 +303,12 @@
   text-decoration: none;
 }
 
-.stem {
-  width: 10px;
-  background-color: #9ff596;
-  border: 2px solid green;
-  position: relative;
-  z-index: -1;
-}
-
 .leaf-tag {
   text-decoration: none;
   position: relative;
   display: none;
   width: 40px;
   font-style: italic;
-
   height: 20px;
   background-color: #6ce69b;
   border-radius: 40px;
@@ -309,33 +335,6 @@
   background-color: #6ce69b;
   border-radius: 40px;
   border: 3px solid #004600;
-}
-
-.center {
-  width: 120px;
-  height: 120px;
-  background-color: #ffff99;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid #333;
-  position: absolute;
-  top: -30px;
-  overflow: hidden;
-}
-
-.center img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.petal {
-  position: absolute;
-  border-radius: 50%;
-  border: 4px solid #333;
-  top: 0px;
 }
 
 /* Responsive adjustments */
