@@ -1,3 +1,22 @@
+function filterProjects(category) {
+            event.preventDefault(); // Prevent the default behavior of the <a> tag
+            const items = document.querySelectorAll('.project-item'); // Select all project items
+
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block'; // Show all items
+                } else if (item.classList.contains(category)) {
+                    item.style.display = 'block'; // Show items that match the category
+                } else {
+                    item.style.display = 'none'; // Hide items that don't match
+                }
+            });
+        }
+
+        // Optionally, activate the "All" filter by default when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            filterProjects('all');
+        });
 document.addEventListener('DOMContentLoaded', () => {
     const backToTopButton = document.getElementById("backToTop");
 

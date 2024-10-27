@@ -324,46 +324,18 @@ Physical Projects -->
 
 
 
--->
-        </div>
+        <!------------------------------------------------------------------------>
+        <!-- Back to top button -->
+        <div id="backToTop"><a href="#top"><i class="arrow up"></i></a></div>
     </section>
-
-    <div id="backToTop"><a href="#top"><i class="arrow up"></i></a></div>
-
-    <footer>
-        <div class="button-row-container">
-            <a href="mailto:mmchu@andrew.cmu.edu" target="_blank">
-                <img src="images/Email-Icon.png" alt="Email Icon" class="social-icon">
-            </a>
-            <a href="https://www.linkedin.com/in/melody-m-chu" target="_blank">
-                <img src="images/Linkedin-Icon.png" alt="LinkedIn Icon" class="social-icon">
-            </a>
-        </div>
-        <p>&copy; 2024 Melody M. Chu. All rights reserved.</p>
-    </footer>
-    <script src="scripts.js" defer></script>
 </body>
-<!-- JavaScript for Filtering -->
-    <script>
-        function filterProjects(category) {
-            event.preventDefault(); // Prevent the default behavior of the <a> tag
-            const items = document.querySelectorAll('.project-item'); // Select all project items
+<footer>
+    <div class="col-container">
+        <a href="mailto:mmchu@andrew.cmu.edu" class="btn1">Email</a>
+        <a href="https://www.linkedin.com/in/melody-m-chu" class="btn1">LinkedIn</a>
+    </div>
+    <p>&copy; 2024 Melody M. Chu. All rights reserved.</p>
+</footer>
+<script src="scripts.js"></script>
 
-            items.forEach(item => {
-                if (category === 'all') {
-                    item.style.display = 'block'; // Show all items
-                } else if (item.classList.contains(category)) {
-                    item.style.display = 'block'; // Show items that match the category
-                } else {
-                    item.style.display = 'none'; // Hide items that don't match
-                }
-            });
-        }
-
-        // Optionally, activate the "All" filter by default when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            filterProjects('all');
-        });
-        
-    </script>
 </html>
