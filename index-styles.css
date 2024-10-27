@@ -231,7 +231,7 @@
   /* Align horizontal */
   align-items: center;
   /* Align vertical */
-  left: 2%;
+  left: 2px;
 }
 
 .flower-name-container::before {
