@@ -1,6 +1,5 @@
 
-
-/* =====================Index =========================*/
+/* =================================Index ====================================*/
 
 
 /* -----------------------Hero -----------------------*/
@@ -194,7 +193,7 @@
   align-self: center;
   border: 3px solid #333;
   background: #8C625E;
-  width: 90px;
+  width: 95px;
   height: 50px;
   bottom: 75px;
   padding: 5px 10px;
@@ -269,7 +268,7 @@
 
 .flower:hover .leaf-tag {
   display: flex;
-  transform: scale(2);
+  transform: scale(1.8);
   border: 1.5px solid #004600;
   text-decoration: none;
 }
@@ -287,7 +286,7 @@
   position: relative;
   display: none;
   width: 40px;
-    font-style: italic;
+  font-style: italic;
 
   height: 20px;
   background-color: #6ce69b;
