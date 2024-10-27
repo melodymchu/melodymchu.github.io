@@ -346,6 +346,7 @@ Physical Projects -->
 <!-- JavaScript for Filtering -->
     <script>
         function filterProjects(category) {
+            event.preventDefault(); // Prevent the default behavior of the <a> tag
             const items = document.querySelectorAll('.project-item'); // Select all project items
 
             items.forEach(item => {
