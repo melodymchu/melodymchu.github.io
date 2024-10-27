@@ -304,6 +304,9 @@
   vertical-align: middle;
   overflow: hidden;
 }
+.flower:hover .flower{
+  z-index: 100000000;
+}
 
 .flower:hover .flower-name,
 .flower:hover .flower-name-container {
