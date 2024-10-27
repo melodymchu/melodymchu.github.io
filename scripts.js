@@ -88,10 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
             lightness: 90
         });
         const flowerTags = [
-            ['Interaction Design', 'System Design'],
-            ['Game Development', 'Simulation'],
-            ['Light Installation', 'Art'],
-            ['Typography', 'Layout Design'],
+            ['Graphic Design', 'Design System'],
+            ['Game UI', 'Illustration'],
+            ['Product Design', 'CAD Modeling'],
+            ['Composition', 'Graphic Design'],
             ['Product Design', 'Laser Cutting']
         ];
         const createFlower = (imageSrc, linkHref, flowerNameText, tags) => {
