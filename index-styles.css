@@ -1,8 +1,8 @@
 
-/* =================================Index ====================================*/
+/* =================================Index =================================*/
 
 
-/* -----------------------Hero -----------------------*/
+/* --------------Hero ---------------*/
 .hero {
   object-fit: contain;
   position: relative;
@@ -57,7 +57,7 @@
   width: 95%;
 }
 
-/* ---------------------Vine Divider ---------------------*/
+/* ------------Vine Divider -----------*/
 .vine-divider {
   margin: 0;
   display: flex;
@@ -78,7 +78,7 @@
   /* Ensure no overflow occurs */
 }
 
-/* ---------------------FlowerRow -----------------------*/
+/* ---------------FlowerRow ------------*/
 #featured-projects {
   text-align: center;
   background-color: #ffffff;
@@ -105,12 +105,9 @@
   top: 0px;
   z-index: 1;
   margin: auto;
-  /* Keep stems behind other content */
-
 }
 
-/* Adding rim details using ::before pseudo-element */
-.pot::before {
+.pot::before { /* pot rim*/
   content: '';
   position: absolute;
   top: -10px;
@@ -123,8 +120,7 @@
   z-index: 100;
 }
 
-/* Adding vertical line to the pot*/
-.pot::after {
+.pot::after {/* pot vertical line*/
   content: '';
   position: absolute;
   width: 10px;
@@ -137,8 +133,7 @@
   border: 2px solid #84391e;
 }
 
-/* Adding small horizontal bands on the pot */
-.pot .band {
+.pot .band { /* pot small horizontal bands */
   width: 80px;
   height: 5px;
   background-color: #b63a20;
@@ -146,8 +141,7 @@
   border-radius: 3px;
 }
 
-/* Adding bands inside the pot for extra details */
-.pot .band:first-child {
+.pot .band:first-child { /* Adding bands inside the pot for extra details */
   background-color: #b63a20;
 }
 
@@ -162,7 +156,6 @@
   border: 4px solid #333;
 }
 
-/* -----------------------Flower Modifications -----------------------*/
 .flower-row {
   z-index: 1;
   gap: 5%;
@@ -203,8 +196,9 @@
   /* Align horizontal */
   align-items: center;
   /* Align vertical */
-    left: 2%;
+  left: 2%;
 }
+
 .flower-name-container::before {
   content: "";
   width: 8px;
@@ -218,6 +212,7 @@
   border: 2px solid #333;
   border-radius: 3px;
 }
+
 .flower-name-container::after {
   content: "";
   width: 8px;
@@ -294,7 +289,7 @@
   border: 3px solid #004600;
   color: #004600;
   font-size: 6px;
-  line-height: 80%; 
+  line-height: 80%;
   padding: 2px 4px;
   z-index: 100000;
   text-align: center;

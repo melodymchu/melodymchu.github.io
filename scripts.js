@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const leafTag = document.createElement('div');
                 leafTag.classList.add('leaf-tag');
-                leafTag.style.top = (parseInt(leaf.style.top, 10)-20)+'px';
+                leafTag.style.top = (parseInt(leaf.style.top, 10) - 20) + 'px';
                 leafTag.style.left = `${index === 0 ? -48 : 48}px`;
                 leafTag.textContent = tag;
                 leafTag.style.textDecoration = 'none';
