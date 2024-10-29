@@ -44,9 +44,9 @@ header a{
     max-width: 100%;
     border-radius: 10px;
     margin-right: 1rem; /* Space between image and text content */
-
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 .overview-content {
     text-align: center;
