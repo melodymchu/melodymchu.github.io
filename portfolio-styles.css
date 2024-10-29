@@ -1,7 +1,9 @@
 /* =====================Portfolio ========================*/
 
 /* ------------------ Portfolio Gallery ------------------ */
-
+h2{
+  text-align: center;
+}
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1.5fr));
