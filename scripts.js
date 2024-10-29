@@ -1,4 +1,5 @@
 function filterProjects(category, element) {
+    event.preventDefault();
     // Remove "active" class from all filter links
     const filterLinks = document.querySelectorAll('#filterContainer .filter-link');
     filterLinks.forEach(link => link.classList.remove('active'));
