@@ -99,8 +99,8 @@
 }
 
 .filter-link.active {
-  background-color: #FFC0CB;
-  color: #c20064;
+  background-color: #ffe1ec;
+  color: #FF1493;
   border: 3px solid #333;
   border-bottom: 3px solid #FF69B4;
   transform: scale(1.1);
