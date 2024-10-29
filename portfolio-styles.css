@@ -1,9 +1,6 @@
 /* =====================Portfolio ========================*/
 
 /* ------------------ Portfolio Gallery ------------------ */
-h2{
-  text-align: center;
-}
 #featured-projects {
     overflow: hidden;
     max-width: 80%;
