@@ -1,22 +1,26 @@
-function filterProjects(category) {
-            event.preventDefault(); // Prevent the default behavior of the <a> tag
-            const items = document.querySelectorAll('.project-item'); // Select all project items
+function filterProjects(category, element) {
+    // Remove "active" class from all filter links
+    const filterLinks = document.querySelectorAll('#filterContainer .filter-link');
+    filterLinks.forEach(link => link.classList.remove('active'));
 
-            items.forEach(item => {
-                if (category === 'all') {
-                    item.style.display = 'block'; // Show all items
-                } else if (item.classList.contains(category)) {
-                    item.style.display = 'block'; // Show items that match the category
-                } else {
-                    item.style.display = 'none'; // Hide items that don't match
-                }
-            });
+    // Add "active" class to the clicked filter link
+    element.classList.add('active');
+
+    // Rest of the filter logic
+    const items = document.querySelectorAll('.project-item'); // Select all project items
+
+    items.forEach(item => {
+        if (category === 'all') {
+            item.style.display = 'block'; // Show all items
+        } else if (item.classList.contains(category)) {
+            item.style.display = 'block'; // Show items that match the category
+        } else {
+            item.style.display = 'none'; // Hide items that don't match
         }
+    });
+}
 
-        // Optionally, activate the "All" filter by default when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            filterProjects('all');
-        });
+
 document.addEventListener('DOMContentLoaded', () => {
     const backToTopButton = document.getElementById("backToTop");
 

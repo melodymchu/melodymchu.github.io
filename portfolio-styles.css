@@ -98,6 +98,19 @@
   border-color: #FF69B4;
 }
 
+.filter-link {
+    color: #333; /* Default color */
+    text-decoration: none;
+    padding: 10px;
+}
+
+.filter-link.active {
+    color: #fff; /* Active text color */
+    background-color: #333; /* Active background color */
+    border-radius: 5px;
+}
+
+
 .filter-link.active {
   background-color: #FFC0CB;
   color: #c20064;

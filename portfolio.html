@@ -41,12 +41,13 @@
         <br><br>
             <div id="flowerRow" class="flower-row"> </div>
         </section>
-        <div class="filter-button-container">
-            <a href="#" class="filter-link" onclick="filterProjects('all')">ALL</a>
-            <a href="#" class="filter-link" onclick="filterProjects('digital')">DIGITAL</a>
-            <a href="#" class="filter-link" onclick="filterProjects('physical')">PHYSICAL</a>
-            <a href="#" class="filter-link" onclick="filterProjects('mini')">MINI</a>
+        <div class="filter-button-container" id="filterContainer">
+            <a href="#" class="filter-link" onclick="filterProjects('all', this)">ALL</a>
+            <a href="#" class="filter-link" onclick="filterProjects('digital', this)">DIGITAL</a>
+            <a href="#" class="filter-link" onclick="filterProjects('physical', this)">PHYSICAL</a>
+            <a href="#" class="filter-link" onclick="filterProjects('mini', this)">MINI</a>
         </div>
+        
 
         <section id="portfolio-gallery">
             <div class="portfolio-container">
