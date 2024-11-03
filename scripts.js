@@ -1,5 +1,6 @@
 function filterProjects(category, element) {
     event.preventDefault();
+
     // Remove "active" class from all filter links
     const filterLinks = document.querySelectorAll('#filterContainer .filter-link');
     filterLinks.forEach(link => link.classList.remove('active'));
@@ -9,6 +10,7 @@ function filterProjects(category, element) {
 
     // Rest of the filter logic
     const items = document.querySelectorAll('.project-item'); // Select all project items
+    const flowerRow = document.getElementById('flowerRow'); // Select the flowerRow
 
     items.forEach(item => {
         if (category === 'all') {
@@ -19,7 +21,15 @@ function filterProjects(category, element) {
             item.style.display = 'none'; // Hide items that don't match
         }
     });
+
+    // Show flowerRow only if "Featured" tab is selected
+    if (category === 'featured') {
+        flowerRow.style.display = 'block'; // Show flowerRow
+    } else {
+        flowerRow.style.display = 'none'; // Hide flowerRow
+    }
 }
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
