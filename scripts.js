@@ -34,6 +34,7 @@ function filterProjects(category, element) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const backToTopButton = document.getElementById("backToTop");
+    
 
     if (backToTopButton) {
         backToTopButton.addEventListener("click", (event) => {
@@ -53,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // Set "Featured" tab as the default selected tab
+    const featuredTab = document.querySelector('#filterContainer .filter-link[onclick*="featured"]');
+    filterProjects('featured', featuredTab); // Call filterProjects with "featured" as the default
 
     // Load flowers when the container is in view using Intersection Observer
     const flowerRow = document.getElementById('flowerRow');
