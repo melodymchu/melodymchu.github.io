@@ -37,17 +37,13 @@
   align-items: center;
   overflow: hidden;
 }
-#featured-projects {
-  text-align: center;
-  background-color: #ffffff;
-  position: relative;
-  margin: auto;
-  align-items: center;
-  width: 100%;
-  object-fit: fill;
-  padding: 50px 0px;
-  max-width: 100%;
-  padding-bottom: 10%;
+#flowerRow {
+  grid-column: 1 / -1; /* Spans from the first to the last column */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the flower items within the row */
+  gap: 20px; /* Add some space between flower items */
+  margin-bottom: 40px; /* Add spacing at the bottom */
 }
 
 .project-item img {
