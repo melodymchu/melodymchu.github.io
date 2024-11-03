@@ -37,7 +37,7 @@
   align-items: center;
   overflow: hidden;
 }
-#flowerRow {
+.flower-row {
   grid-column: 1 / -1; /* Spans from the first to the last column */
   display: flex;
   flex-wrap: wrap;
