@@ -1,4 +1,4 @@
-function filterProjects(category, element, event) {
+function filterProjects(category, element, event) { 
     if (event) event.preventDefault(); // Prevent default if event is provided
 
     // Remove "active" class from all filter links
@@ -13,10 +13,10 @@ function filterProjects(category, element, event) {
     // Check for 'featured' category default tab activation
     if (!element && category === 'featured') {
         const featuredTab = document.querySelector('#filterContainer .filter-link[onclick*="featured"]');
-        if (featuredTab) {
+        if (featuredTab && !featuredTab.classList.contains('active')) {  // Prevent infinite loop
             console.log("Defaulting to featured tab");
             featuredTab.classList.add('active');
-            filterProjects('featured', featuredTab, null);
+            filterProjects('featured', featuredTab, null); // Only call once
             return;
         }
     }
@@ -236,6 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, { rootMargin: "100px" });
 
-        observer.observe(flowerRow);
+        // Delay observer to ensure flowerRow is ready in DOM
+        setTimeout(() => observer.observe(flowerRow), 100);
     }
 });
