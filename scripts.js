@@ -5,22 +5,23 @@ function filterProjects(category, element, event) {
     const filterLinks = document.querySelectorAll('#filterContainer .filter-link');
     filterLinks.forEach(link => link.classList.remove('active'));
 
-    // Add "active" class to the clicked filter link if element is not null
+    // Add "active" class to the clicked filter link
     if (element) {
         element.classList.add('active');
     }
 
-    // If element is null and category is "featured", try setting the default featured tab
+    // Check for 'featured' category default tab activation
     if (!element && category === 'featured') {
         const featuredTab = document.querySelector('#filterContainer .filter-link[onclick*="featured"]');
         if (featuredTab) {
+            console.log("Defaulting to featured tab");
             featuredTab.classList.add('active');
             filterProjects('featured', featuredTab, null);
             return;
         }
     }
 
-    // Rest of the filter logic
+    // Filter the project items based on category
     const items = document.querySelectorAll('.project-item'); // Select all project items
     const flowerRow = document.getElementById('flowerRow'); // Select the flowerRow
 
@@ -43,6 +44,7 @@ function filterProjects(category, element, event) {
     flowerRow.style.display = category === 'featured' ? 'block' : 'none';
 }
 
+// Load flowers function remains the same as before
 function loadFlowers() {
     const flowerRow = document.getElementById('flowerRow');
     if (!flowerRow) {
