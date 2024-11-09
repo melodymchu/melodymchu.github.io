@@ -5,24 +5,25 @@ function filterProjects(category, element, event) {
     const filterLinks = document.querySelectorAll('#filterContainer .filter-link');
     filterLinks.forEach(link => link.classList.remove('active'));
 
-    // Get featuredTab only once in this function to avoid repeated queries
-    const featuredTab = document.querySelector('#filterContainer .filter-link[onclick*="featured"]');
-
-    // Add "active" class to the clicked filter link only if element is not null
+    // Add "active" class to the clicked filter link if element is not null
     if (element) {
         element.classList.add('active');
-    } else if (featuredTab) {
-        // Check if featuredTab is found before calling recursively
-        filterProjects('featured', featuredTab, null);
-    } else {
-        console.warn("featuredTab not found");
+    }
+
+    // If element is null and category is "featured", try setting the default featured tab
+    if (!element && category === 'featured') {
+        const featuredTab = document.querySelector('#filterContainer .filter-link[onclick*="featured"]');
+        if (featuredTab) {
+            featuredTab.classList.add('active');
+            filterProjects('featured', featuredTab, null);
+            return;
+        }
     }
 
     // Rest of the filter logic
     const items = document.querySelectorAll('.project-item'); // Select all project items
     const flowerRow = document.getElementById('flowerRow'); // Select the flowerRow
 
-    // Check if flowerRow exists
     if (!flowerRow) {
         console.warn("flowerRow element not found");
         return;
