@@ -31,15 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Attempt to load the "Featured" tab by default on load
-    const featuredTab = document.querySelector('#filterContainer .filter-link[data-category="featured"]');
-    if (featuredTab) {
-        setTimeout(() => filterProjects('featured', featuredTab, null), 0); // Delay slightly to ensure flowerRow is available
+    // Ensure `flowerRow` exists before calling `filterProjects` for the first time
+    const featuredTab = document.querySelector('#filterContainer .filter-link[onclick*="featured"]');
+    const flowerRow = document.getElementById('flowerRow');
+
+    if (featuredTab && flowerRow) {
+        // Call `filterProjects` for "featured" only if `flowerRow` is available
+        filterProjects('featured', featuredTab, null);
+    } else if (!flowerRow) {
+        console.warn("flowerRow element not found in DOM at load time");
     } else {
         console.warn("featuredTab not found in DOM");
     }
 
-    const flowerRow = document.getElementById('flowerRow');
     if (flowerRow) {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -52,29 +56,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { rootMargin: "100px" });
 
         setTimeout(() => observer.observe(flowerRow), 100); // Delay observer to ensure flowerRow is ready in DOM
-    } else {
-        console.warn("flowerRow element not found in DOM at load time");
     }
 });
 
-// Updated filterProjects function to include a fallback if flowerRow is not found
+// Updated filterProjects function with additional `flowerRow` check
 function filterProjects(category, element, event) { 
     if (event) event.preventDefault();
 
-    const filterLinks = document.querySelectorAll('#filterContainer .filter-link');
-    filterLinks.forEach(link => link.classList.remove('active'));
-
-    if (element) {
-        element.classList.add('active');
-    }
-
-    const items = document.querySelectorAll('.project-item');
+    // Ensure flowerRow exists before proceeding
     const flowerRow = document.getElementById('flowerRow');
-
     if (!flowerRow) {
         console.warn("flowerRow element not found when filtering projects");
         return;
     }
+
+    // Remove "active" class from all filter links
+    const filterLinks = document.querySelectorAll('#filterContainer .filter-link');
+    filterLinks.forEach(link => link.classList.remove('active'));
+
+    // Add "active" class to the clicked filter link
+    if (element) {
+        element.classList.add('active');
+    }
+
+    // Filter the project items based on category
+    const items = document.querySelectorAll('.project-item');
 
     items.forEach(item => {
         if (category === 'all') {
@@ -86,5 +92,6 @@ function filterProjects(category, element, event) {
         }
     });
 
+    // Show flowerRow only if "Featured" tab is selected
     flowerRow.style.display = category === 'featured' ? 'block' : 'none';
 }
