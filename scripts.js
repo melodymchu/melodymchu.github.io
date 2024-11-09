@@ -225,8 +225,6 @@
 //         }
 //     });
 // }, { rootMargin: "100px" });
-
-
 function filterProjects(category, element, event) {
     if (event) event.preventDefault(); // Prevent default if event is provided
 
@@ -234,8 +232,10 @@ function filterProjects(category, element, event) {
     const filterLinks = document.querySelectorAll('#filterContainer .filter-link');
     filterLinks.forEach(link => link.classList.remove('active'));
 
-    // Add "active" class to the clicked filter link
-    element.classList.add('active');
+    // Add "active" class to the clicked filter link only if element is not null
+    if (element) {
+        element.classList.add('active');
+    }
 
     // Rest of the filter logic
     const items = document.querySelectorAll('.project-item'); // Select all project items
