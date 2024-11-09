@@ -19,29 +19,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Event delegation for filter links to avoid directly using `onclick` in HTML
     const filterContainer = document.getElementById('filterContainer');
-    if (filterContainer) {
+    const flowerRow = document.getElementById('flowerRow');
+
+    if (filterContainer && flowerRow) {
+        // This code only runs on the portfolio page where filterContainer exists
         filterContainer.addEventListener('click', (event) => {
             const target = event.target;
             if (target.classList.contains('filter-link')) {
-                const category = target.getAttribute('data-category'); // Assumes `data-category` contains the category
+                const category = target.getAttribute('data-category');
                 filterProjects(category, target, event);
             }
         });
-    }
 
-    // Ensure `flowerRow` exists before calling `filterProjects` for the first time
-    const featuredTab = document.querySelector('#filterContainer .filter-link[onclick*="featured"]');
-    const flowerRow = document.getElementById('flowerRow');
-
-    if (featuredTab && flowerRow) {
-        // Call `filterProjects` for "featured" only if `flowerRow` is available
-        filterProjects('featured', featuredTab, null);
-    } else if (!flowerRow) {
-        console.warn("flowerRow element not found in DOM at load time");
-    } else {
-        console.warn("featuredTab not found in DOM");
+        // Activate the "featured" filter by default on the portfolio page
+        const featuredTab = document.querySelector('#filterContainer .filter-link[onclick*="featured"]');
+        if (featuredTab) {
+            filterProjects('featured', featuredTab, null);
+        } else {
+            console.warn("featuredTab not found in DOM");
+        }
+    } else if (flowerRow) {
+        // This code runs on the index page, where `flowerRow` should display by default
+        flowerRow.style.display = 'block';
     }
 
     if (flowerRow) {
@@ -59,11 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Updated filterProjects function with additional `flowerRow` check
+// Updated filterProjects function to check for flowerRow before filtering
 function filterProjects(category, element, event) { 
     if (event) event.preventDefault();
 
-    // Ensure flowerRow exists before proceeding
     const flowerRow = document.getElementById('flowerRow');
     if (!flowerRow) {
         console.warn("flowerRow element not found when filtering projects");
