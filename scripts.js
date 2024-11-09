@@ -11,7 +11,8 @@ function filterProjects(category, element) {
     // Rest of the filter logic
     const items = document.querySelectorAll('.project-item'); // Select all project items
     const flowerRow = document.getElementById('flowerRow'); // Select the flowerRow
-
+    console.log("flowerRow element:", flowerRow);  // Debugging
+    
     items.forEach(item => {
         if (category === 'all') {
             item.style.display = 'block'; // Show all items
@@ -214,3 +215,13 @@ document.addEventListener('DOMContentLoaded', () => {
         flowerRow.appendChild(flowersFragment);
     }
 });
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            console.log("flowerRow is in view");  // Debugging
+            loadFlowers();
+            observer.disconnect(); // Stop observing after loading flowers
+        }
+    });
+}, { rootMargin: "100px" });
