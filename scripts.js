@@ -235,7 +235,10 @@ function filterProjects(category, element, event) {
     // Add "active" class to the clicked filter link only if element is not null
     if (element) {
         element.classList.add('active');
+    } else{
+        featuredTab.classList.add('active');
     }
+
 
     // Rest of the filter logic
     const items = document.querySelectorAll('.project-item'); // Select all project items
