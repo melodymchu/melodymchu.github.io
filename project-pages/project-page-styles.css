@@ -46,7 +46,7 @@ header a{
     margin-right: 1rem; /* Space between image and text content */
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
+    object-fit:contain;
 }
 .overview-content {
     text-align: center;
