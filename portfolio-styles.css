@@ -37,8 +37,9 @@ justify-content: space-between;
 align-items: center;
 overflow: hidden;
 }
+
 .flower-row {
-  margin: auto;
+margin: auto;
 grid-column: 1 / -1; /* Spans from the first to the last column */
 display: flex;
 flex-wrap: wrap;
