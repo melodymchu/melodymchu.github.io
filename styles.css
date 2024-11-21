@@ -210,6 +210,8 @@ footer {
   justify-content: center;
   align-items: center; 
   text-align: center;
+  flex-direction: column;
+
 }
 
 .column-big {
@@ -228,6 +230,11 @@ footer {
 
 .column img{
      margin: auto;
+     object-fit: fill;
+       max-height: 100%; /* Ensure the image height adjusts dynamically */
+  max-width: 100%; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image fills the space proportionally */
+  align-self: center; /* Centers the image within its column */
 }
 .button-row-container {
   margin: auto;
@@ -681,13 +688,13 @@ footer {
   .column-container {
     flex-direction: column;
     display: flex;
-    align-items: flex-start;
     /* Align text to the left */
     padding: 1rem;
     max-width: 100%;
     box-sizing: border-box;
-    /* Ensure padding is included in width */
-  }
+  align-items: stretch; 
+  gap: 5%;
+     }
 
   .column {
     flex: 1;
