@@ -3,8 +3,6 @@
 
 * {
   box-sizing: border-box;
-  animation: fadeIn 1s;
-
 }
 
 body {
@@ -37,13 +35,17 @@ h4 {
 img {
   z-index: 100;
 }
+.introduction img{
+     max-height: 30vh;
+     margin: auto;
+}
+
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   /* Adds 20px gap between both rows and columns */
-
 }
 
 .gallery img {
@@ -52,7 +54,6 @@ img {
   display: block;
   border-radius: 5px;
   transition: transform 0.3s ease;
-  padding: 5%;
 }
 
 .gallery img:hover {
@@ -102,7 +103,7 @@ header {
   width: 100vw;
   overflow: visible;
   max-width: 100%;
-  background: linear-gradient(180deg, #FF69B4, #ffe1ec);
+  background: linear-gradient(180deg, #ff69b4, #ffe1ec);
   display: flex;
   justify-content: center;
   text-align: left;
@@ -122,12 +123,11 @@ header h1 {
   max-width: 100%;
   object-fit: contain;
   padding: 0;
-  line-height: .5;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000;
+  line-height: 0.5;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    2px 2px 0 #000;
   text-align: left;
-
 }
-
 
 header h2 {
   text-align: left;
@@ -137,7 +137,8 @@ header h2 {
   max-width: 100%;
   object-fit: contain;
   font-variant: small-caps;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    2px 2px 0 #000;
   margin-bottom: -35px;
 }
 
@@ -160,7 +161,7 @@ header a:hover {
 /* -----------------------Footer -----------------------*/
 footer {
   padding-top: 50px;
-  background-color: #FF69B4;
+  background-color: #ff69b4;
   color: white;
   text-align: center;
   display: flex;
@@ -194,17 +195,21 @@ footer {
 }
 
 .column-container {
+  justify-content: center; 
+  align-items: center; 
   width: 100%;
   display: flex;
   gap: 5%;
   flex-direction: row;
-  justify-content: flex-start;
-  padding: 5%;
 }
 
 .column {
   flex: 1;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
 }
 
 .column-big {
@@ -221,6 +226,9 @@ footer {
   text-align: left;
 }
 
+.column img{
+     margin: auto;
+}
 .button-row-container {
   margin: auto;
   display: flexbox;
@@ -252,7 +260,6 @@ footer {
   /* Takes up half of the screen width */
 }
 
-
 /* ----------------------- Buttons ----------------------- */
 .btn1,
 .btn2 {
@@ -268,11 +275,11 @@ footer {
 
 .btn1 {
   background-color: white;
-  color: #FF69B4;
+  color: #ff69b4;
 }
 
 .btn2 {
-  background-color: #FF69B4;
+  background-color: #ff69b4;
   color: white;
 }
 
@@ -283,7 +290,7 @@ footer {
 }
 
 .btn1:hover {
-  background-color: #FF69B4;
+  background-color: #ff69b4;
   color: white;
 }
 
@@ -292,7 +299,7 @@ footer {
 }
 
 #back-to-top:hover {
-  background-color: #FF1493;
+  background-color: #ff1493;
 }
 
 #back-to-top {
@@ -301,13 +308,12 @@ footer {
   right: 30px;
   width: 50px;
   height: 50px;
-  background-color: #FF69B4;
+  background-color: #ff69b4;
   color: white;
   border-radius: 50%;
   display: none;
   z-index: 1000;
 }
-
 
 /* -----------------------Images -----------------------*/
 .image-container,
@@ -368,7 +374,7 @@ footer {
 
 .flower {
   position: relative;
-  display:inline-block;
+  display: inline-block;
   flex-direction: column;
   align-items: center;
   z-index: 1;
@@ -391,7 +397,7 @@ footer {
 
 .pot::before {
   /* pot rim*/
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -5px;
@@ -405,7 +411,7 @@ footer {
 
 .pot::after {
   /* pot vertical line*/
-  content: '';
+  content: "";
   position: absolute;
   width: 10px;
   height: 40px;
@@ -429,17 +435,6 @@ footer {
 .pot .band:first-child {
   /* Adding bands inside the pot for extra details */
   background-color: #b63a20;
-}
-
-.flower {
-  max-width: 20vw;
-  position: relative;
-}
-
-.petal {
-  position: absolute;
-  border-radius: 50%;
-  border: 4px solid #333;
 }
 
 .stem {
@@ -479,12 +474,11 @@ footer {
 }
 
 .flower-name-container {
-  display: none;
   vertical-align: middle;
   position: absolute;
   align-self: center;
   border: 3px solid #333;
-  background: #8C625E;
+  background: #8c625e;
   width: 95px;
   height: 50px;
   bottom: 75px;
@@ -492,9 +486,7 @@ footer {
   border-radius: 10%;
   z-index: 1;
   justify-content: center;
-  /* Align horizontal */
   align-items: center;
-  /* Align vertical */
   left: 2px;
 }
 
@@ -502,7 +494,7 @@ footer {
   content: "";
   width: 8px;
   height: 3px;
-  background-color: #ECCDB9;
+  background-color: #eccdb9;
   position: absolute;
   bottom: 45px;
   left: 50%;
@@ -516,7 +508,7 @@ footer {
   content: "";
   width: 8px;
   height: 8.5px;
-  background-color: #ECCDB9;
+  background-color: #eccdb9;
   position: absolute;
   bottom: -11px;
   left: 50%;
@@ -532,19 +524,14 @@ footer {
   color: #f6e9cb;
   text-align: center;
   z-index: 2;
-  display: none;
   margin: auto;
   vertical-align: middle;
   overflow: hidden;
-}
-.flower:hover .flower{
-  z-index: 0;
-}
+  transform: translateX(-5%);
 
-.flower:hover .flower-name,
-.flower:hover .flower-name-container {
-  display: flex;
-  /* Show on hover */
+}
+.flower:hover .flower {
+  z-index: 0;
 }
 
 .flower:hover .leaf {
@@ -560,7 +547,7 @@ footer {
 }
 
 .flower:hover .leaf-container {
-  opacity: .75;
+  opacity: 0.75;
   z-index: 1000000;
 }
 
@@ -593,7 +580,6 @@ footer {
   vertical-align: middle;
 }
 
-
 .leaf {
   z-index: 0;
   display: block;
@@ -608,11 +594,18 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-
+     .hero h1 {
+          font-size: 15vw;
+     }
+     .hero h2{
+          font-size: 12vw;
+     }
+     
   .flower-row {
     flex-direction: column;
     align-items: center;
-    gap: 100px;
+    gap: 250px;
+    max-width: 100%;
   }
 
   .stem,
@@ -620,13 +613,6 @@ footer {
   .pot {
     display: none;
     /* Hide stems and leaves on mobile */
-  }
-
-  .flower-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 250px;
-    max-width: 100%;
   }
 }
 
@@ -673,14 +659,12 @@ footer {
     padding: 15px 0;
     /* Reduce padding on smaller screens */
     max-width: 100%;
-
   }
 
   .container {
     width: 100%;
     max-width: 100%;
   }
-
 
   h1,
   h2,
@@ -693,11 +677,9 @@ footer {
     font-size: 0.9rem;
   }
 
-
-
   /* Styling for columns */
   .column-container {
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
     align-items: flex-start;
     /* Align text to the left */

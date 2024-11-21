@@ -1,6 +1,4 @@
-
 /* =================================Index =================================*/
-
 
 /* --------------Hero ---------------*/
 .hero {
@@ -10,7 +8,7 @@
   width: 100vw;
   overflow: visible;
   max-width: 100%;
-  background: linear-gradient(180deg, #FF69B4, #ffe1ec);
+  background: linear-gradient(180deg, #ff69b4, #ffe1ec);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,15 +19,16 @@
 }
 
 .hero h1 {
-  font-size: 8rem;
+  font-size: 8vw;
   margin: 0;
   margin-top: 25vh;
   max-width: 100%;
   object-fit: contain;
   padding: 0;
-  line-height: .8;
+  line-height: 0.8;
   color: #fff;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    3px 3px 0 #000;
 }
 
 .hero h2 {
@@ -41,13 +40,14 @@
   font-variant: small-caps;
   color: #fff;
   text-align: center;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    3px 3px 0 #000;
   margin-bottom: -35px;
 }
 
 .hero p {
   max-width: 100%;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   overflow: visible;
   padding: 10px;
   color: #c20064;
@@ -61,7 +61,6 @@
   text-align: center;
   margin-top: 20px;
   /* Adjust the value as needed */
-
 }
 
 .size-6 {
@@ -76,7 +75,6 @@
 }
 
 @keyframes gentle-float {
-
   0%,
   100% {
     transform: translateY(0);
@@ -99,7 +97,6 @@
   height: auto;
   max-width: 100%;
   /* Ensure no overflow occurs */
-
 }
 
 .vine-divider svg {
