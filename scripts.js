@@ -58,33 +58,25 @@ function loadFlowers() {
     const flowerImages = [
         'images/Project-Thumbnails/Murakami-Flowers-Thumbnail.png',
         'images/Project-Thumbnails/pet-simulator-thumbnail.png',
-        'images/Project-Thumbnails/a-light-from-phipps-thumbnail.png',
-        'images/Project-Thumbnails/squares-&-ampersands-thumbnail.png',
-        'images/Project-Thumbnails/business-card-thumbnail.jpg'
+        'images/Project-Thumbnails/a-light-from-phipps-thumbnail.png'
     ];
 
     const flowerLinks = [
         'https://melodymchu.github.io/project-pages/Murakami-Flowers.html',
         'https://melodymchu.github.io/project-pages/Pet-Simulator.html',
         'https://melodymchu.github.io/project-pages/A-Light-From-Phipps.html',
-        'https://melodymchu.github.io/project-pages/Squares-&-Ampersands.html',
-        'https://melodymchu.github.io/project-pages/business-card.html'
     ];
 
     const flowerNames = [
         'Murakami System',
         'Pet Simulator',
         'A Light From Phipps',
-        'Squares & Ampersands',
-        'Laser-Cut Business Card'
     ];
 
     const flowerTags = [
         ['Graphic Design', 'Design System'],
         ['Game UI', 'Illustration'],
         ['Product Design', 'CAD Modeling'],
-        ['Composition', 'Graphic Design'],
-        ['Product Design', 'Laser Cutting']
     ];
 
     const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
