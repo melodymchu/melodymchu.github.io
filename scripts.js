@@ -58,25 +58,33 @@ function loadFlowers() {
     const flowerImages = [
         'images/Project-Thumbnails/Murakami-Flowers-Thumbnail.png',
         'images/Project-Thumbnails/pet-simulator-thumbnail.png',
-        'images/Project-Thumbnails/a-light-from-phipps-thumbnail.png'
+        'images/Project-Thumbnails/a-light-from-phipps-thumbnail.png',
+        'images/Project-Thumbnails/squares-&-ampersands-thumbnail.png',
+        'images/Project-Thumbnails/business-card-thumbnail.jpg'
     ];
 
     const flowerLinks = [
         'https://melodymchu.github.io/project-pages/Murakami-Flowers.html',
         'https://melodymchu.github.io/project-pages/Pet-Simulator.html',
         'https://melodymchu.github.io/project-pages/A-Light-From-Phipps.html',
+        'https://melodymchu.github.io/project-pages/Squares-&-Ampersands.html',
+        'https://melodymchu.github.io/project-pages/business-card.html'
     ];
 
     const flowerNames = [
         'Murakami System',
-        'Pet Simulator',
+        'Hack112 Pet Simulator',
         'A Light From Phipps',
+        'Squares & Ampersands',
+        'Laser-Cut Business Card'
     ];
 
     const flowerTags = [
         ['Graphic Design', 'Design System'],
         ['Game UI', 'Illustration'],
         ['Product Design', 'CAD Modeling'],
+        ['Composition', 'Graphic Design'],
+        ['Product Design', 'Laser Cutting']
     ];
 
     const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -107,20 +115,18 @@ function loadFlowers() {
 
         const baseColor = getRandomBaseColor();
         const numberOfPetals = getRandomInt(5, 8);
-        const baseWidth = 120 - numberOfPetals * 2;
-        const baseHeight = 70 - numberOfPetals * 2;
         const baseBorderRadius = Array(4).fill(0).map(() => getRandomInt(40, 60));
 
         const stem = document.createElement('div');
         stem.classList.add('stem');
-        stem.style.height = `${getRandomInt(150, 300)}px`;
+        stem.style.height = `150px`;
         stem.style.transform = 'translateY(50px)';
 
         flower.appendChild(stem);
         tags.forEach((tag, index) => {
             const leaf = document.createElement('div');
             leaf.classList.add('leaf', `leaf${index + 1}`);
-            leaf.style.top = `${getRandomInt(-100, -60)}px`;
+            leaf.style.top = `-40px`;
             leaf.style.left = `${index === 0 ? -20 : 20}px`;
             leaf.style.transform = `rotate(${index === 0 ? 30 : -30}deg)`;
 
@@ -148,8 +154,8 @@ function loadFlowers() {
             const petalLightness = Math.max(0, Math.min(100, baseColor.lightness + getRandomInt(-5, 5)));
 
             petal.style.backgroundColor = `hsl(${petalHue}, ${baseColor.saturation}%, ${petalLightness}%)`;
-            petal.style.width = `${baseWidth + getRandomInt(0, 4)}px`;
-            petal.style.height = `${baseHeight + getRandomInt(0, 4)}px`;
+            petal.style.width = '110px';
+            petal.style.height = `60px`;
 
             const borderRadius = baseBorderRadius.map(val => val + getRandomInt(0, 2));
             petal.style.borderRadius = `${borderRadius.join('% ')}%`;
