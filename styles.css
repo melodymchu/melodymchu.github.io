@@ -440,7 +440,7 @@ footer {
 }
 
 .pot .band:first-child {
-  /* Adding bands inside the pot for extra details */
+
   background-color: #b63a20;
 }
 
@@ -484,45 +484,13 @@ footer {
   vertical-align: middle;
   position: absolute;
   align-self: center;
-  border: 3px solid #333;
-  background: #8c625e;
-  width: 95px;
+  width: 100px;
   height: 50px;
-  bottom: 75px;
-  padding: 5px 10px;
-  border-radius: 10%;
+  bottom: 3px;
+  margin: auto;
   z-index: 1;
   justify-content: center;
   align-items: center;
-  left: 2px;
-}
-
-.flower-name-container::before {
-  content: "";
-  width: 8px;
-  height: 3px;
-  background-color: #eccdb9;
-  position: absolute;
-  bottom: 45px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -10;
-  border: 2px solid #333;
-  border-radius: 3px;
-}
-
-.flower-name-container::after {
-  content: "";
-  width: 8px;
-  height: 8.5px;
-  background-color: #eccdb9;
-  position: absolute;
-  bottom: -11px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -10;
-  border-right: 2px solid #333;
-  border-left: 2px solid #333;
 }
 
 .flower-name {
@@ -534,7 +502,6 @@ footer {
   margin: auto;
   vertical-align: middle;
   overflow: hidden;
-  transform: translateX(-5%);
 
 }
 .flower:hover .flower {
