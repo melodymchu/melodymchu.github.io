@@ -159,6 +159,8 @@ header a{
     text-align: left;
     margin-bottom: 1rem;
     font-size: 1em;
+    text-indent: 50px;
+
 }
 
 .project-content ul {
