@@ -50,12 +50,17 @@ img {
 
 .gallery img {
   height: 100%;
-  height: auto;
   display: block;
   border-radius: 5px;
   transition: transform 0.3s ease;
 }
 
+.gallery video {
+  height: 100%;
+  display: block;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
 .gallery img:hover {
   transform: scale(1.05);
 }
