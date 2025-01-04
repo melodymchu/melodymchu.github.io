@@ -125,7 +125,7 @@
                     <img src="https://melodymchu.github.io/images/Junk-Jenius/linkage-mechanism.jpg" alt="Prototype Image 2" class="project-image">
                     <img src="https://melodymchu.github.io/images/Junk-Jenius/linkage-cad.png" alt="Prototype Image 2" class="project-image"></div>
 
-                <p>So, we switched to an off-the-shelf linear actuator borrowed from the school. This was much more compact, with an appropriate range of motion for crushing a single bottle. It would also allow the user to easily control its motion via a 3-way switch by reversing the direction of the current. I hooked up the actuator to a makeshift breadboard 3-way switch and tested it with water bottles, an old PVC pipe, and very rudimentary mounting. It was janky, but it worked!
+                <p>So, we switched to an off-the-shelf linear actuator borrowed from the school. This was much more compact, with an appropriate range of motion for crushing a single bottle. It would also allow the user to easily control its motion via a 3-way switch by reversing the direction of the current. I hooked up the actuator to a makeshift breadboard 3-way switch and tested it with water bottles, an old PVC pipe, and very rudimentary mounting (aka duct tape). It was a little scrappy, but it worked!
                 </p>
                 <div class="column-container">
                     <div class="column">
@@ -144,34 +144,32 @@
             </div>
             </div>
                 <h3>Prototyping and Learnings</h3>
-                <p>I built the rest of the prototype primarily using manual machining and woodshop tools, using scrap materials (e.g. scrap wood, pipes) for further sustainability while prototyping.
+                <p>I built the rest of the prototype by manually machining scrap material in the woodshop/machine shop.
                     <br><br>
 
                     <u><b>Bottle Processing Procedure:</b></u>
-                    An early discussion we had was how we would process the bottle before and after we crushed it. Specifically, were we mounting the crushing mechanism horizontally or vertically? 
+                    Next, my team debated: how are we incorporating the crushing mechanism? How are we mounting it? <br>
                     
-                    If mounted vertically, it would save countertop or floor space, gravity would be on our side with the crushing mechanism and drainage, and it could provide a more interesting interactive experience. There would also be an added level of safety from the separation of user-facing components and internal crushing components. I created the sketches, CAD, and lo-fi prototype from found materials in my room to demonstrate the idea to my team.
+                    I was a proponent for mounting it vertically; it would save countertop/floor space, gravity would help with crushing and drainage, and there would also be an added level of safety from the separation between the user and the internal crushing components. To demonstrate and communicate my idea to the rest of my team, I created some rough sketches, quick CAD, and created a super lo-fi prototype.
                 </p>
                 <div class="gallery">
-                    <img src="https://melodymchu.github.io/images/Junk-Jenius/linkage-mechanism.jpg" alt="Prototype Image 2" class="project-image">
                     <img src="https://melodymchu.github.io/images/Junk-Jenius/vertical-1.jpg" alt="Prototype Image 2" class="project-image">
-                    <img src="https://melodymchu.github.io/images/Junk-Jenius/vertical-disproven-2.bmp" alt="Prototype Image 2" class="project-image">
-                    <img src="https://melodymchu.github.io/images/Junk-Jenius/vertical-disproven.jpg" alt="Prototype Image 2" class="project-image">
                     <video width="360" height="640" controls loop muted autoplay>
                         <source src="https://melodymchu.github.io/images/Junk-Jenius/vertical-lofi.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-    
-                    </div>
                 </div>
-                <p>
-    However, lo-fi prototyping also demonstrated that we would need additional components to control the individual rotation of the platforms, and the platforms rotating in and out would still take up space as well.
+                <p>However, lo-fi prototyping also demonstrated an issue: we would need additional components to control the individual rotation of the platforms, and the platforms rotating in and out would still take up space as well.</p>
 
-    So, we went with a horizontal mount, but we modified it so that the entire thing will be on a slant (aiding drainage), and we will create a ramp that will create the safety separation between the user's hand and the crushing component.</p>
+    <div class="gallery">
+        <img src="https://melodymchu.github.io/images/Junk-Jenius/vertical-disproven-2.bmp" alt="Prototype Image 2" class="project-image">
+        <img src="https://melodymchu.github.io/images/Junk-Jenius/vertical-disproven.jpg" alt="Prototype Image 2" class="project-image">
+        </div>
+
+    <p> So, we went with a horizontal mount, but made sure to include a slanted ramp to aid drainage, and a safety separation between the user's hand and the crushing component.</p>
     
-    <img src="https://melodymchu.github.io/images/Junk-Jenius/vertical-disproven.jpg" alt="Prototype Image 2" class="project-image">
 
-                <p>Another issue we tackled was <b>prototype durability</b>. The linear actuator we were using was rated for 200lbf, and we found it took ~50lbf to crush a water bottle (factor of safety = 4). The next weak point was the pipe with the cutouts. Although the cutouts were a little suspicious, we did hand calcs and FEA to ensure it would hold. And finally, the linear actuator mount went through several iterations, changing the shape to be thicker, have a wider footprint, and finally changing the material to counteract the torsional stress caused by the position and forces the mount would experience.
+                <p><br><br>Another issue we tackled was <b>prototype durability</b>. The linear actuator we were using was rated for 200lbf, and we found it took ~50lbf to crush a water bottle (factor of safety = 4). The next weak point was the pipe with the cutouts. Although the cutouts were a little suspicious, we did hand calcs and FEA to ensure it would hold. And finally, the linear actuator mount went through several iterations, changing the shape to be thicker, have a wider footprint, and finally changing the material to counteract the torsional stress caused by the position and forces the mount would experience.
                 </p>
                 <div class="gallery">
                     <img src="https://melodymchu.github.io/images/Junk-Jenius/pipe-cutout-closeup.jpg" alt="Prototype Image 2" class="project-image">
@@ -188,9 +186,9 @@
                 <p>
                     And finally, for the draining portion, my team went through several iterations of the blades as well. I contributed by testing different locations in CAD and seeing what would be feasible to machine in our shop, and also providing suggestions on what would effectively puncture the plastic. The blade was then created out of scrap metal pipe that was then manually milled and sharpened on a grinder. Through testing, we modified it so that the curve of the points would allow the blade to pierce the bottle without getting stuck on it when it retracts.
 
-                    In addition, I constructed a hollow ramp to help drained liquids to flow out of the machine, which also houses the bulk of the electronic components for a cleaner look. The chute is long enough to hold multiple bottles, enabling rapid-fire crushing.
+                    I constructed the hollow ramp to help drained liquids to flow out of the machine, which also houses the bulk of the electronic components for a cleaner look. The chute is long enough to hold multiple bottles, enabling rapid-fire crushing.
 <br>
-Safety measures: by default, the machine is "off" and only operates as long as the user holds the switch down. Also, the only user-facing components are the bottle insertion chute, the operation switch, and the hold that the crushed bottle drops out of. Everything else (moving components, blades, crushing chamber) is covered. So, we knew it was safe to allow anyone to use. 
+                    Safety measures: by default, the machine is "off" and only operates as long as the user holds the switch down. Also, the only user-facing components are the bottle insertion chute, the operation switch, and the hold that the crushed bottle drops out of. Everything else (moving components, blades, crushing chamber) is covered. So, we knew it was safe to allow anyone to use. 
                 </p>
 
                 <div class="gallery">
