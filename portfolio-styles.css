@@ -23,7 +23,7 @@ box-sizing: border-box;
     background: #ffe1ec; /* Light pink background */
     border: 2px solid #FF69B4; /* Slightly thicker border */
     width: 100%; /* Keep full width of the parent container */
-    height: 450px; /* Add a fixed height for consistency */
+    height: 400px; /* Add a fixed height for consistency */
     box-sizing: border-box; /* Include padding and border in width/height calculations */
     text-align: center; /* Center the text horizontally */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly larger shadow for more emphasis */
