@@ -129,6 +129,7 @@ header .logo:hover {
 }
 
 header .page-title{
+  color: #fff;
   flex: 1;
   text-align: center;
   font-variant: small-caps; /* Use small caps for styling */
