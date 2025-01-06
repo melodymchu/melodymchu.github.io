@@ -114,10 +114,8 @@ header {
   overflow: visible;
   max-width: 100%;
   background: linear-gradient(180deg, #ff69b4, #ffe1ec);
-  display: flex;
-  justify-content: center;
-  text-align: left;
-  flex-direction: column;
+  /* text-align: left;
+  flex-direction: column; */
   margin: auto;
   padding: 5vh;
   padding-top: 5%;
@@ -125,8 +123,25 @@ header {
   position: fixed;
   /* Fixes the navbar at the top */
   z-index: 1000000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo{
+  flex: 1;
+  text-align: left;
 }
 
+header .page-title{
+  flex: 1;
+  text-align: center;
+}
+header nav{
+  flex: 1;
+  text-align: right;
+}
+/* 
 header h1 {
   font-size: clamp(5rem, 100%, 14);
   margin: 0;
@@ -178,7 +193,7 @@ header a {
 header a:hover {
   color: #c20064;
   transform: scale(1.01);
-}
+} */
 
 /* -----------------------Footer -----------------------*/
 footer {
