@@ -19,16 +19,7 @@ small{
     text-align:center;
     max-width: 500px;
 }
-header a{
-    position: relative;
-    top: -20px;
-    object-fit: contain;
-    line-height: 1.2;
-    text-align: right;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
+
 .project-container {
     width: 90%;
     max-width: 1000px;
