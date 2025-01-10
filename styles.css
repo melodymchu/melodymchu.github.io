@@ -108,7 +108,6 @@ a:hover {
 header {
   background: linear-gradient(180deg, #ff69b4, #ffe1ec);
   z-index: 1000000;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,9 +116,8 @@ header {
 
 header .logo{
   color: #fff; /* White text color */
-
   flex: 1;
-  text-align: left;
+  text-align: center;
 }
 
 header .logo:hover {
