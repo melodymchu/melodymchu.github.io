@@ -156,12 +156,12 @@ header h1, header h2 {
 }
 
 header h1 {
-  font-size: clamp(2rem, 4vw, 4rem); /* Responsive font size for main logo text */
+  font-size: clamp(2rem, 3vw, 4rem); /* Responsive font size for main logo text */
   line-height: 1; /* Single line height */
 }
 
 header h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem); /* Responsive font size for sub logo text */
+  font-size: clamp(1.5rem, 2.5vw, 3rem); /* Responsive font size for sub logo text */
   font-variant: small-caps; /* Use small caps for styling */
 }
 

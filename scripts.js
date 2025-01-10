@@ -13,11 +13,10 @@ function filterProjects(category, element, event) {
     // Check for 'featured' category default tab activation
     if (!element && category === 'featured') {
         const featuredTab = document.querySelector('#filterContainer .filter-link[onclick*="featured"]');
-        if (featuredTab) {
+        if (featuredTab && !featuredTab.classList.contains('active')) {
             console.log("Defaulting to featured tab");
             featuredTab.classList.add('active');
-            filterProjects('featured', featuredTab, null);
-            return;
+            // Avoid recursion by not re-calling filterProjects here
         }
     }
 
@@ -27,6 +26,13 @@ function filterProjects(category, element, event) {
 
     if (!flowerRow) {
         console.warn("flowerRow element not found");
+    } else {
+        // Show flowerRow only if "Featured" tab is selected
+        flowerRow.style.display = category === 'featured' ? 'block' : 'none';
+    }
+
+    if (!items.length) {
+        console.warn("No project items found to filter");
         return;
     }
 
@@ -39,10 +45,8 @@ function filterProjects(category, element, event) {
             item.style.display = 'none'; // Hide items that don't match
         }
     });
-
-    // Show flowerRow only if "Featured" tab is selected
-    flowerRow.style.display = category === 'featured' ? 'block' : 'none';
 }
+
 
 // Load flowers function remains the same as before
 function loadFlowers() {
