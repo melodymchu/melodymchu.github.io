@@ -132,8 +132,8 @@ header .page-title{
   text-align: center;
   font-variant: small-caps; /* Use small caps for styling */
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000; /* Text shadow effect */
-
 }
+
 header nav{
   flex: 1;
   text-align: right;
@@ -156,12 +156,12 @@ header h1, header h2 {
 }
 
 header h1 {
-  font-size: clamp(3rem, 5vw, 5rem); /* Responsive font size for main logo text */
+  font-size: clamp(2rem, 4vw, 4rem); /* Responsive font size for main logo text */
   line-height: 1; /* Single line height */
 }
 
 header h2 {
-  font-size: clamp(2.5rem, 4vw, 3rem); /* Responsive font size for sub logo text */
+  font-size: clamp(1.5rem, 3vw, 2rem); /* Responsive font size for sub logo text */
   font-variant: small-caps; /* Use small caps for styling */
 }
 
