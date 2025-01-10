@@ -144,7 +144,9 @@ header nav{
   font-weight: bold; /* Bold text for links */
   transition: transform 0.2s ease, color 0.2s ease; /* Smooth hover transition */
 }
-
+header nav a{
+  color: #fff; /* White text color for links */
+}
 header nav a:hover {
   color: #c20064; /* Change color on hover */
   transform: scale(1.05); /* Slightly scale up on hover */
