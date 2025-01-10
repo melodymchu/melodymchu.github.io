@@ -194,6 +194,7 @@ function loadFlowers() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const featuredTab = document.querySelector('#filterContainer .filter-link[onclick*="featured"]');
     const backToTopButton = document.getElementById("backToTop");
 
     if (backToTopButton) {
@@ -214,7 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const featuredTab = document.querySelector('#filterContainer .filter-link[onclick*="featured"]');
     if (featuredTab) {
         filterProjects('featured', featuredTab, null);
     } else {
