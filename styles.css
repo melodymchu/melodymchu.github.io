@@ -65,11 +65,13 @@ body {
 }
 
 main{
-  padding: 1rem;
+  padding: 3rem;
+  padding-top: 5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  text-align: center;
 }
 
 h1 {
@@ -157,10 +159,6 @@ a:hover {
   transform: scale(1.1);
 }
 
-.main-body {
-  padding: 15% 5% 5%;
-}
-
 .section-title {
   padding-top: 20px;
   text-align: center;
@@ -190,6 +188,7 @@ header .logo:hover {
 }
 
 header h1, header h2 {
+  text-align: left;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000; /* Text shadow effect */
 }
 
@@ -208,19 +207,21 @@ header .page-title{
   flex: 1;
   text-align: center;
   font-variant: small-caps; /* Use small caps for styling */
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000; /* Text shadow effect */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000; /* Text shadow effect */
 }
 
 header nav{
+  font-size: 1.2rem;
   flex: 1;
   text-align: right;
-  color: #fff; /* White text color for links */
+  color: #c20064; /* White text color for links */
   text-decoration: none; /* Remove underline for links */
   font-weight: bold; /* Bold text for links */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Text shadow effect */
+
 }
 header nav a{
   padding: 0.5rem;
-
   transition: transform 1s ease, color 1s ease; /* Smooth hover transition */
   color: #fff; /* White text color for links */
 }
@@ -281,7 +282,6 @@ footer {
   align-items: center; 
   text-align: center;
   flex-direction: column;
-
 }
 
 .column-big {
@@ -301,8 +301,6 @@ footer {
 .column img{
      margin: auto;
      object-fit: fill;
-       max-height: 100%; /* Ensure the image height adjusts dynamically */
-  max-width: 100%; /* Maintain aspect ratio */
   object-fit: cover; /* Ensures the image fills the space proportionally */
   align-self: center; /* Centers the image within its column */
 }
