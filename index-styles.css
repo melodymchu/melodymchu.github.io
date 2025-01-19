@@ -20,37 +20,37 @@
 }
 
 .hero h1 {
-  font-size: 8vw;
-  margin: 0;
+  font-size: 6rem;
   margin-top: 25vh;
+  /*
   max-width: 100%;
   object-fit: contain;
   padding: 0;
-  line-height: 0.8;
+  line-height: 0.8; */
   color: #fff;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     3px 3px 0 #000;
 }
 
 .hero h2 {
-  padding: 0;
   font-size: 5.5rem;
+  /* padding: 0;
   margin: 0;
   max-width: 100%;
-  object-fit: contain;
-  font-variant: small-caps;
+  object-fit: contain; */
+  text-transform: small-caps;
   color: #fff;
   text-align: center;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     3px 3px 0 #000;
-  margin-bottom: -35px;
+  /* margin-bottom: -35px; */
 }
 
 .hero p {
-  max-width: 100%;
+  /* max-width: 100%; */
   font-size: 1.5rem;
-  overflow: visible;
-  padding: 10px;
+  /* overflow: visible;
+  padding: 10px; */
   color: #c20064;
 }
 
@@ -107,3 +107,15 @@
   /* Ensure no overflow occurs */
 }
 
+/* Responsive adjustments */
+@media screen and (max-width:600px) {
+  main,aside {
+    width: 100%
+  }
+     .hero h1 {
+          font-size: 15vw;
+     }
+     .hero h2{
+          font-size: 12vw;
+     }
+    }

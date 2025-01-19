@@ -64,12 +64,19 @@ body {
   width: 100%;
 }
 
-p {
-  line-height: 1.6;
+main{
+  padding: 1rem;
 }
 
-a {
-  text-decoration: none;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+  color: magenta;
+  color:#c31b4d;    /* in browser, it actually computes/translates this into rgba*/
+  color: rgba(217, 47, 113, 0.72);
 }
 
 h2 {
@@ -84,6 +91,15 @@ h4 {
   vertical-align: middle;
   padding-bottom: 0%;
 }
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
 
 img {
   z-index: 100;
@@ -148,9 +164,6 @@ a:hover {
   padding: 15% 5% 5%;
 }
 
-
-
-
 .section-title {
   padding-top: 20px;
   text-align: center;
@@ -165,12 +178,12 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  padding: 1rem;
 }
 
 header .logo{
   color: #fff; /* White text color */
   flex: 1;
-  text-align: center;
 }
 
 header .logo:hover {
@@ -179,7 +192,21 @@ header .logo:hover {
   transition: transform 0.2s ease, color 0.2s ease; /* Smooth hover transition */
 }
 
+header h1, header h2 {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000; /* Text shadow effect */
+}
+
+header h1 {
+  font-size: 2rem; /* Responsive font size for main logo text */
+}
+
+header h2 {
+  font-size: 1.8rem; /* Responsive font size for sub logo text */
+  font-variant: small-caps; /* Use small caps for styling */
+}
+
 header .page-title{
+  font-size: 3.6rem;
   color: #fff;
   flex: 1;
   text-align: center;
@@ -193,9 +220,11 @@ header nav{
   color: #fff; /* White text color for links */
   text-decoration: none; /* Remove underline for links */
   font-weight: bold; /* Bold text for links */
-  transition: transform 0.2s ease, color 0.2s ease; /* Smooth hover transition */
 }
 header nav a{
+  padding: 0.5rem;
+
+  transition: transform 1s ease, color 1s ease; /* Smooth hover transition */
   color: #fff; /* White text color for links */
 }
 header nav a:hover {
@@ -203,28 +232,11 @@ header nav a:hover {
   transform: scale(1.05); /* Slightly scale up on hover */
 }
 
-header h1, header h2 {
-  margin: 0; /* Remove default margin */
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000; /* Text shadow effect */
-}
-
-header h1 {
-  font-size: clamp(2rem, 3vw, 4rem); /* Responsive font size for main logo text */
-  line-height: 1; /* Single line height */
-}
-
-header h2 {
-  font-size: clamp(1.5rem, 2.5vw, 3rem); /* Responsive font size for sub logo text */
-  font-variant: small-caps; /* Use small caps for styling */
-}
-
-
 /* -----------------------Footer -----------------------*/
 footer {
   padding-top: 50px;
   background-color: #ff69b4;
   color: white;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -413,9 +425,8 @@ footer {
   grid-area: 1 / 1 / 1 / 1;
 }
 
-/* Featured Projects - Flower Row */
 /* ---------------FlowerRow ------------*/
-#featured-projects {
+/* #featured-projects {
   text-align: center;
   background-color: #ffffff;
   position: relative;
@@ -464,7 +475,6 @@ footer {
 }
 
 .pot::before {
-  /* pot rim*/
   content: "";
   position: absolute;
   top: -10px;
@@ -478,7 +488,6 @@ footer {
 }
 
 .pot::after {
-  /* pot vertical line*/
   content: "";
   position: absolute;
   width: 10px;
@@ -492,7 +501,6 @@ footer {
 }
 
 .pot .band {
-  /* pot small horizontal bands */
   width: 80px;
   height: 5px;
   background-color: #b63a20;
@@ -629,60 +637,13 @@ footer {
   border-radius: 40px;
   border: 3px solid #004600;
   margin: auto;
-}
+} */ 
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-     .hero h1 {
-          font-size: 15vw;
-     }
-     .hero h2{
-          font-size: 12vw;
-     }
-     
-  .flower-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 250px;
-    max-width: 100%;
+@media screen and (max-width:600px) {
+  main,aside {
+    width: 100%
   }
-
-  .stem,
-  .leaf,
-  .pot {
-    display: none;
-    /* Hide stems and leaves on mobile */
-  }
-}
-
-/* -------------------Text Animations -------------------*/
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ----------------- Responsive Design -------------------*/
-
-@media (max-width: 768px) {
   .row-container {
     flex-direction: row;
     /* Change to row for side-by-side layout */
@@ -731,5 +692,44 @@ footer {
   .column {
     flex: 1;
     /* This makes both columns take equal space */
+  }
+     
+  /* .flower-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 250px;
+    max-width: 100%;
+  } 
+    .stem,
+  .leaf,
+  .pot {
+    display: none;
+  }*/
+
+  
+}
+
+/* -------------------Text Animations -------------------*/
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
