@@ -30,7 +30,6 @@ p {
 /* ------------------Skills-----------------------*/
 
 #skills {
-  display: flex;
   overflow: hidden;
   max-width: 80%;
   margin: auto;
