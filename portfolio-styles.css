@@ -89,7 +89,8 @@ margin-bottom: 40px; /* Add spacing at the bottom */
 margin: 0% 25% 0% 10%;
 display: flex;
 justify-content: left;
-gap: 13px;
+gap: 1rem;
+height: 3rem;
 }
 
 .filter-link {
