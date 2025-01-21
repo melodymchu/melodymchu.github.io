@@ -1,3 +1,13 @@
+/* RESET */
+summary {
+  all: unset;
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem;
+  color: #FF69B4;
+}
+
 /* =====================About =========================*/
 
 /* ------------------Section Title -----------------------*/
@@ -15,19 +25,21 @@ p {
   margin-bottom: 1rem;
   font-size: 1em;
 }
+
 /* ------------------education-----------------------*/
 
 #about-me,
 #education {
-  overflow: hidden;
-  max-width: 80%;
+  /* overflow: hidden; */
   margin: auto;
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  padding: 5rem;
   padding-top: 30px;
   padding-bottom: 30px;
   gap: 2rem;
+  margin-top: 5rem;
 }
 
 .course-grid {
@@ -37,19 +49,17 @@ p {
 }
 
 .course-category {
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  cursor: pointer;
-  background-color: #ffe1ec;
+  border: 2px solid #FF69B4;
   padding: 5px 10px;
   border-radius: 15px;
+  background-color: #ffe1ec;
   display: inline-block;
-  border: 2px solid #FF69B4;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
 }
+
 
 .course-category h5 {
   font-weight: bold;
@@ -62,26 +72,42 @@ p {
 .course-category ul {
   /* padding-left: 20px;
   list-style-type: disc; */
+  margin: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 150%;
+  /* max-width: 500px; */
+  max-height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+padding-left: 15px;
+padding-right: 15px;
   text-align: left;
-
+  overflow-y: scroll;
 }
 
 .course-category li {
-  /* list-style-type: disc; */
   text-align: left;
   background-color: #fff;
-  font-size: .8rem;
-  padding: .5rem 1rem;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
   border-radius: 30px;
   display: inline-block;
-  /* align-items: left;
-  justify-content: left; */
   border: 2px solid #FF69B4;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   transition: transform 0.3s ease, background-color 0.3s ease;
-  margin-top: 1rem;
-  ;
+  margin-top: .8em;
+  font-size: .8em;
 }
+
 summary {
   color: #FF69B4;
   font-weight: bold;
@@ -89,24 +115,43 @@ summary {
   padding: 1rem;
 }
 
+/* .course-category ul::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+} */
+
+.course-category ul::after {
+  display: block;
+}
+
+details[open] ul {
+  display: block;
+}
+
+
 
 /* ------------------Skills-----------------------*/
 
 #skills {
   overflow: hidden;
-  max-width: 80%;
   margin: auto;
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  padding: 2rem;
 }
 
 /* Skills List using Flexbox for left-aligned layout */
 .skills-list-right,
 .skills-list-left {
   list-style-type: none;
-  padding: 10px 0 0 0;
-  margin: 0;
+  padding-top: 10px;
   display: flex;
   /* Use Flexbox for layout */
   flex-wrap: wrap;
@@ -119,7 +164,6 @@ summary {
 
 .skills-list-right {
   justify-content: left;
-
 }
 
 /* Each skill as a bubble */
@@ -127,9 +171,7 @@ summary {
 .skills-list-right li {
   background-color: #ffe1ec;
   color: #FF69B4;
-  margin-right: 5px;
   font-size: .8em;
-  padding: 5px 10px;
   border-radius: 30px;
   display: inline-block;
   align-items: left;
@@ -137,10 +179,13 @@ summary {
   border: 2px solid #FF69B4;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   min-width: 100px;
-  /* Minimum width for the bubbles */
   max-width: 250px;
   transition: transform 0.3s ease, background-color 0.3s ease;
   font-weight: bold;
+  padding: 5px 10px;
+  margin-right: 5px;
+  gap: 15px;
+
 }
 
 /* Hover effect for each bubble */
@@ -160,7 +205,6 @@ summary {
 /*----Coursework---*/
 #courses {
   margin: auto;
-  width: 80%;
   text-align: center;
   align-items: center;
 }
@@ -179,7 +223,6 @@ summary {
 
 /* Each skill as a bubble */
 .course-list li {
-
   background-color: #ffe1ec;
   color: #FF69B4;
   margin-right: 5px;
@@ -307,3 +350,5 @@ summary {
     height: 20px;
   }
 }
+
+

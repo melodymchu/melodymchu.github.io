@@ -50,6 +50,21 @@ table {
 /* =====================CUSTOM CSS =========================*/
 /* =====================General =========================*/
 
+/* Scrollbar Track */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust the width */
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  /* background: #ffe1ec;
+  border-radius: 10px;
+  border: 2px solid #ff69b4; */
+  display: none;
+}
+
+
+
 html{
   font-family: "Outfit", sans-serif;
 }
@@ -86,6 +101,7 @@ h2 {
 }
 
 h4 {
+  padding-top: 2em;
   font-size: 1.2em;
   display: inline-block;
   vertical-align: middle;
@@ -171,13 +187,14 @@ section {
   gap: 3rem;
   padding: 25px;
   /* display: flex; */
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: auto;
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 5rem;
+  width: 80%;
 }
 
 
@@ -745,3 +762,4 @@ footer {
     transform: translateY(0);
   }
 }
+

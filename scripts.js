@@ -241,3 +241,14 @@ document.addEventListener('DOMContentLoaded', () => {
     //     observer.observe(flowerRow);
     // }
 });
+document.addEventListener('click', function (event) {
+    // Get all open <details> elements
+    const openDetails = document.querySelectorAll('details[open]');
+  
+    openDetails.forEach(details => {
+      // Check if the click is outside the <details> element
+      if (!details.contains(event.target)) {
+        details.removeAttribute('open'); // Close the details
+      }
+    });
+  });
