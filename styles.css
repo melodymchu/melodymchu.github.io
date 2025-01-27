@@ -52,7 +52,8 @@ table {
 
 /* Scrollbar Track */
 ::-webkit-scrollbar {
-  width: 10px; /* Adjust the width */
+  width: 0px; /* Adjust the width */
+  color: #ffffff00
 }
 
 /* Scrollbar Thumb */
@@ -158,8 +159,13 @@ img {
 }
 
 .thumbnail:hover {
-  transform: scale(5);
+  transform: scale(1.1);
 }
+
+
+.thumbnail:active { 
+  transform: scale(3); 
+} 
 
 a:hover {
   transition: transform 0.3s ease;
