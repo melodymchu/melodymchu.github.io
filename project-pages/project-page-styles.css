@@ -1,7 +1,7 @@
 /* =====================Project-Page-Styles =========================*/
 .project-container img {
         display: block;
-        margin-bottom: 30px;
+        margin: 30px;
 }
 h2 {
     font-size: 2em;
