@@ -252,3 +252,42 @@ document.addEventListener('click', function (event) {
       }
     });
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    const galleryItems = document.querySelectorAll(".gallery img, .gallery video");
+    const modal = document.getElementById("mediaModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalVideo = document.getElementById("modalVideo");
+    const closeModal = document.querySelector(".modal .close");
+  
+    galleryItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        if (item.tagName === "IMG") {
+          modalImage.src = item.src;
+          modalImage.style.display = "block";
+          modalVideo.style.display = "none";
+        } else if (item.tagName === "VIDEO") {
+          modalVideo.src = item.src;
+          modalVideo.style.display = "block";
+          modalImage.style.display = "none";
+        }
+        modal.style.display = "flex";
+      });
+    });
+  
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+      modalImage.src = "";
+      modalVideo.pause(); // Pause the video before clearing the source
+      modalVideo.src = "";
+    });
+  
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        modalImage.src = "";
+        modalVideo.pause(); // Pause the video before clearing the source
+        modalVideo.src = "";
+      }
+    });
+  });
+  
