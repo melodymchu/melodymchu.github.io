@@ -301,14 +301,3 @@ small{
     transform: translateY(100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  
-  /* .gallery-item:hover .caption {
-    opacity: 1;
-    transform: translateY(0);
-  } */
-  
-  /* .gallery-item {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  } */
