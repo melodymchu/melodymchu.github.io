@@ -244,50 +244,87 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('click', function (event) {
     // Get all open <details> elements
     const openDetails = document.querySelectorAll('details[open]');
-  
+
     openDetails.forEach(details => {
-      // Check if the click is outside the <details> element
-      if (!details.contains(event.target)) {
-        details.removeAttribute('open'); // Close the details
-      }
-    });
-  });
-  document.addEventListener("DOMContentLoaded", function () {
-    const galleryItems = document.querySelectorAll(".gallery img, .gallery video");
-    const modal = document.getElementById("mediaModal");
-    const modalImage = document.getElementById("modalImage");
-    const modalVideo = document.getElementById("modalVideo");
-    const closeModal = document.querySelector(".modal .close");
-  
-    galleryItems.forEach((item) => {
-      item.addEventListener("click", () => {
-        if (item.tagName === "IMG") {
-          modalImage.src = item.src;
-          modalImage.style.display = "block";
-          modalVideo.style.display = "none";
-        } else if (item.tagName === "VIDEO") {
-          modalVideo.src = item.src;
-          modalVideo.style.display = "block";
-          modalImage.style.display = "none";
+        // Check if the click is outside the <details> element
+        if (!details.contains(event.target)) {
+            details.removeAttribute('open'); // Close the details
         }
-        modal.style.display = "flex";
-      });
     });
-  
-    closeModal.addEventListener("click", () => {
-      modal.style.display = "none";
-      modalImage.src = "";
-      modalVideo.pause(); // Pause the video before clearing the source
-      modalVideo.src = "";
+});
+// document.addEventListener("DOMContentLoaded", function () {
+//     const galleryItems = document.querySelectorAll(".gallery img, .gallery video");
+//     const modal = document.getElementById("mediaModal");
+//     const modalImage = document.getElementById("modalImage");
+//     const modalVideo = document.getElementById("modalVideo");
+//     const closeModal = document.querySelector(".modal .close");
+
+//     galleryItems.forEach((item) => {
+//         item.addEventListener("click", () => {
+//             if (item.tagName === "IMG") {
+//                 modalImage.src = item.src;
+//                 modalImage.style.display = "block";
+//                 modalVideo.style.display = "none";
+//             } else if (item.tagName === "VIDEO") {
+//                 modalVideo.src = item.src;
+//                 modalVideo.style.display = "block";
+//                 modalImage.style.display = "none";
+//             }
+//             modal.style.display = "flex";
+//         });
+//     });
+
+//     closeModal.addEventListener("click", () => {
+//         modal.style.display = "none";
+//         modalImage.src = "";
+//         modalVideo.pause(); // Pause the video before clearing the source
+//         modalVideo.src = "";
+//     });
+
+//     modal.addEventListener("click", (e) => {
+//         if (e.target === modal) {
+//             modal.style.display = "none";
+//             modalImage.src = "";
+//             modalVideo.pause(); // Pause the video before clearing the source
+//             modalVideo.src = "";
+//         }
+//     });
+// });
+// function expandImage(img) {
+//     const overlay = document.getElementById("overlay");
+//     const expandedImg = document.getElementById("expandedImg");
+//     expandedImg.src = img.src;
+//     overlay.classList.add("show");
+// }
+
+// function closeOverlay() {
+//     const overlay = document.getElementById("overlay");
+//     overlay.classList.remove("show");
+// }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const overlay = document.getElementById('overlay');
+    const overlayImage = document.getElementById('overlayImage');
+    const closeButton = document.getElementById('closeButton');
+
+    // Add click event to each thumbnail
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+            overlayImage.src = thumbnail.src;
+            overlay.classList.add('show');
+        });
     });
-  
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-        modalImage.src = "";
-        modalVideo.pause(); // Pause the video before clearing the source
-        modalVideo.src = "";
-      }
+
+    // Add click event to close button
+    closeButton.addEventListener('click', () => {
+        overlay.classList.remove('show');
     });
-  });
-  
+
+    // Close overlay when clicking outside the image
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.classList.remove('show');
+        }
+    });
+});
