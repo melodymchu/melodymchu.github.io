@@ -346,12 +346,13 @@ small{
   
   /* The Close Button */
   .close {
-    color: white;
+    color: #cdcdcd;
     position: absolute;
-    top: 65px;
-    right: 110px;
+    top: 110px;
+    right: 5vw;
     font-size: 35px;
     font-weight: bold;
+    z-index: 1
   }
   
   .close:hover,
