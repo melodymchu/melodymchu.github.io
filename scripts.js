@@ -245,3 +245,109 @@ document.addEventListener('click', function (event) {
 // }
 
 
+ // Function to generate a gallery and modal
+ function createGallery(containerId, images) {
+    // Get the container element
+    const container = document.getElementById(containerId);
+
+    // Create gallery and modal elements
+    const galleryElement = document.createElement("div");
+    galleryElement.className = "gallery";
+
+    const modalElement = document.createElement("div");
+    modalElement.className = "modal";
+    modalElement.innerHTML = `
+        <span class="close cursor" onclick="closeModal('${containerId}')">&times;</span>
+        <div class="modal-content" id="${containerId}-modal-content"></div>
+        <a class="prev" onclick="plusSlides(-1, '${containerId}')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, '${containerId}')">&#10095;</a>
+        <div class="caption-container">
+            <p id="${containerId}-caption"></p>
+        </div>
+    `;
+
+    // Add gallery and modal content dynamically
+    images.forEach((image, index) => {
+        // Add image to the gallery
+        const galleryColumn = document.createElement("div");
+        galleryColumn.className = "gallery-column";
+        galleryColumn.innerHTML = `
+            <img src="${image.src}" style="width:100%" 
+                onclick="openModal('${containerId}');currentSlide(${index + 1}, '${containerId}')" class="hover-shadow cursor">
+        `;
+        galleryElement.appendChild(galleryColumn);
+
+        // Add image to the modal
+        const modalSlide = document.createElement("div");
+        modalSlide.className = "mySlides";
+        modalSlide.innerHTML = `
+            <div class="numbertext">${index + 1} / ${images.length}</div>
+            <img src="${image.src}" style="width:100%">
+        `;
+        modalElement.querySelector(`#${containerId}-modal-content`).appendChild(modalSlide);
+    });
+
+    // Append the gallery and modal to the container
+    container.appendChild(galleryElement);
+    container.appendChild(modalElement);
+}
+
+// Open the modal
+function openModal(containerId) {
+    document.querySelector(`#${containerId}-container .modal`).style.display = "block";
+}
+
+// Close the modal
+function closeModal(containerId) {
+    document.querySelector(`#${containerId}-container .modal`).style.display = "none";
+}
+
+// Show the current slide
+function currentSlide(n, containerId) {
+    showSlides((slideIndex[containerId] = n), containerId);
+}
+
+// Navigate slides
+function plusSlides(n, containerId) {
+    showSlides((slideIndex[containerId] += n), containerId);
+}
+
+// Show slides
+const slideIndex = {}; // Track slide index for each gallery
+function showSlides(n, containerId) {
+    const slides = document.querySelectorAll(`#${containerId}-container .mySlides`);
+    const captionText = document.getElementById(`${containerId}-caption`);
+
+    if (!slides.length) return; // No slides available
+
+    if (n > slides.length) slideIndex[containerId] = 1;
+    if (n < 1) slideIndex[containerId] = slides.length;
+
+    slides.forEach((slide) => (slide.style.display = "none"));
+    slides[slideIndex[containerId] - 1].style.display = "block";
+    captionText.innerHTML = images[slideIndex[containerId] - 1].caption;
+}
+
+// Create two separate galleries
+const gallery1Images = [
+    {src:"https://melodymchu.github.io/images/Junk-Jenius/brainstorming.jpg",src:"https://melodymchu.github.io/images/Junk-Jenius/chalkboard-brainstorm.jpg",src: "https://melodymchu.github.io/images/Junk-Jenius/process-1.jpg", src: "https://melodymchu.github.io/images/Junk-Jenius/process-01.jpg", src: "https://melodymchu.github.io/images/Junk-Jenius/brainstorming.jpg", caption: "Brainstorming" },
+    { src: "https://melodymchu.github.io/images/Junk-Jenius/chalkboard-brainstorm.jpg", caption: "Chalkboard Brainstorm" },
+];
+
+const gallery2Images = [
+    {  src:"https://melodymchu.github.io/images/Junk-Jenius/linkage-mechanism.jpg",
+    src:"https://melodymchu.github.io/images/Junk-Jenius/linkage-cad.png"},
+];
+
+createGallery("gallery1-container", gallery1Images);
+createGallery("gallery2-container", gallery2Images);
+
+// Initialize slideIndex for each gallery
+slideIndex["gallery1-container"] = 1;
+slideIndex["gallery2-container"] = 1;
+
+// Initialize slides for each gallery
+showSlides(slideIndex["gallery1-container"], "gallery1-container");
+showSlides(slideIndex["gallery2-container"], "gallery2-container");
+
+
