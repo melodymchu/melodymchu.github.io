@@ -346,6 +346,7 @@ small{
     padding: 0;
     object-fit: contain;
     border: 2px solid #FF69B4;
+    border-radius: 8px;
   }
   
   /* The Close Button */
