@@ -463,3 +463,37 @@ document.addEventListener('click', function (event) {
     // Initialize slides for each gallery
     showSlides(slideIndex["gallery1-container"], "gallery1-container", gallery1Images);
     showSlides(slideIndex["gallery2-container"], "gallery2-container", gallery2Images);
+
+
+
+
+
+
+
+
+
+
+
+
+    
+// Get the modal
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+// Add event listeners to all images in galleries
+document.querySelectorAll('.gallery img').forEach(function(img) {
+  img.addEventListener('click', function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  });
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+};
