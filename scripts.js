@@ -225,21 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn("featuredTab not found in DOM");
     }
 
-    // const flowerRow = document.getElementById('flowerRow');
-
-    // if (flowerRow) {
-    //     const observer = new IntersectionObserver((entries, observer) => {
-    //         entries.forEach(entry => {
-    //             if (entry.isIntersecting) {
-    //                 console.log("flowerRow is in view");
-    //                 loadFlowers();
-    //                 observer.disconnect();
-    //             }
-    //         });
-    //     }, { rootMargin: "100px" });
-
-    //     observer.observe(flowerRow);
-    // }
 });
 document.addEventListener('click', function (event) {
     // Get all open <details> elements
@@ -252,52 +237,49 @@ document.addEventListener('click', function (event) {
         }
     });
 });
-// document.addEventListener("DOMContentLoaded", function () {
-//     const galleryItems = document.querySelectorAll(".gallery img, .gallery video");
-//     const modal = document.getElementById("mediaModal");
-//     const modalImage = document.getElementById("modalImage");
-//     const modalVideo = document.getElementById("modalVideo");
-//     const closeModal = document.querySelector(".modal .close");
-
-//     galleryItems.forEach((item) => {
-//         item.addEventListener("click", () => {
-//             if (item.tagName === "IMG") {
-//                 modalImage.src = item.src;
-//                 modalImage.style.display = "block";
-//                 modalVideo.style.display = "none";
-//             } else if (item.tagName === "VIDEO") {
-//                 modalVideo.src = item.src;
-//                 modalVideo.style.display = "block";
-//                 modalImage.style.display = "none";
-//             }
-//             modal.style.display = "flex";
-//         });
-//     });
-
-//     closeModal.addEventListener("click", () => {
-//         modal.style.display = "none";
-//         modalImage.src = "";
-//         modalVideo.pause(); // Pause the video before clearing the source
-//         modalVideo.src = "";
-//     });
-
-//     modal.addEventListener("click", (e) => {
-//         if (e.target === modal) {
-//             modal.style.display = "none";
-//             modalImage.src = "";
-//             modalVideo.pause(); // Pause the video before clearing the source
-//             modalVideo.src = "";
-//         }
-//     });
-// });
 // function expandImage(img) {
-//     const overlay = document.getElementById("overlay");
+//     const overlay = document.getElementById("gallery");
 //     const expandedImg = document.getElementById("expandedImg");
 //     expandedImg.src = img.src;
 //     overlay.classList.add("show");
 // }
 
-// function closeOverlay() {
-//     const overlay = document.getElementById("overlay");
-//     overlay.classList.remove("show");
-// }
+
+
+
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
