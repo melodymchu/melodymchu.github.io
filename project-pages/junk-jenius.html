@@ -219,29 +219,45 @@
                 motion. However, after I sketched and modeled it out, I noticed it took up a lot of space.</p>
             <br>
 
-<!-- First Gallery Container -->
-<div id="gallery1-container"></div>
 
-<!-- Second Gallery Container -->
-<div id="gallery2-container"></div>
-
-
-            
             <div class="gallery">
-                <img src="https://melodymchu.github.io/images/Junk-Jenius/linkage-mechanism.jpg" alt="Prototype Image 2"
-                    class="project-image">
-                <img src="https://melodymchu.github.io/images/Junk-Jenius/linkage-cad.png" alt="Prototype Image 2"
-                    class="project-image">
+                <div class="gallery-column">
+                    <img src="https://melodymchu.github.io/images/Junk-Jenius/linkage-mechanism.jpg" style="width:100%"
+                        onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="gallery-column">
+                    <img src="https://melodymchu.github.io/images/Junk-Jenius/linkage-cad.png"
+                        style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="https://melodymchu.github.io/images/Junk-Jenius/linkage-mechanism.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="https://melodymchu.github.io/images/Junk-Jenius/linkage-cad.png"
+                            style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+                </div>
             </div>
 
             <p>So, we switched to an off-the-shelf linear actuator borrowed from the school. This was much more
-                compact,
-                with an appropriate range of motion for crushing a single bottle. It would also allow the user to
-                easily
-                control its motion via a 3-way switch by reversing the direction of the current. I hooked up the
-                actuator to a makeshift breadboard 3-way switch and tested it with water bottles, an old PVC pipe,
-                and
-                very rudimentary mounting.
+                compact, with an appropriate range of motion for crushing a single bottle. It would also allow the user to easily control its motion via a 3-way switch by reversing the direction of the current. I hooked up the
+                actuator to a makeshift breadboard 3-way switch and tested it with water bottles, an old PVC pipe, and very rudimentary mounting.
             </p>
             <div class="column-container">
                 <div class="column">
