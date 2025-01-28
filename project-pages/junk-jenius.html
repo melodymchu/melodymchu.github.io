@@ -292,7 +292,7 @@
                 level of safety from the separation between the user and the internal crushing components. To
                 demonstrate and communicate my idea to the rest of my team, I created some rough sketches, quick
                 CAD,
-                and created a super lo-fi prototype.
+                and created a lo-fi prototype.
             </p>
             <div class="gallery">
                 <img src="https://melodymchu.github.io/images/Junk-Jenius/vertical-1.jpg" alt="Prototype Image 2"
@@ -328,26 +328,93 @@
                 material
                 to counteract the torsional stress caused by the position and forces the mount would experience.
             </p>
+
+
             <div class="gallery">
-                <img src="https://melodymchu.github.io/images/Junk-Jenius/pipe-cutout-closeup.jpg"
-                    alt="Prototype Image 2" class="project-image">
-
-                <img src="https://melodymchu.github.io/images/Junk-Jenius/fea-close.jpg" alt="Prototype Image 2"
-                    class="project-image">
-                <img src="https://melodymchu.github.io/images/Junk-Jenius/fea-far.jpg" alt="Prototype Image 2"
-                    class="project-image">
-
-                <img src="https://melodymchu.github.io/images/Junk-Jenius/actuator-mount-round.bmp"
-                    alt="Prototype Image 2" class="project-image">
-                <img src="https://melodymchu.github.io/images/Junk-Jenius/actuator-mount-square.jpg"
-                    alt="Prototype Image 2" class="project-image">
-                <img src="https://melodymchu.github.io/images/Junk-Jenius/square-mount-closeup.jpg"
-                    alt="Prototype Image 2" class="project-image">
-                <img src="https://melodymchu.github.io/images/Junk-Jenius/cad-progress-1.5-iso.bmp"
-                    alt="Prototype Image 2" class="project-image">
-                <img src="https://melodymchu.github.io/images/Junk-Jenius/actuator-mount-long.bmp"
-                    alt="Prototype Image 2" class="project-image">
+                <div class="gallery-column">
+                    <img src="https://melodymchu.github.io/images/Junk-Jenius/pipe-cutout-closeup.jpg" style="width:100%"
+                        onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="gallery-column">
+                    <img src="https://melodymchu.github.io/images/Junk-Jenius/fea-close.jpg"
+                        style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="gallery-column">
+                    <img src="https://melodymchu.github.io/images/Junk-Jenius/fea-far.jpg" style="width:100%"
+                        onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="gallery-column">
+                    <img src="https://melodymchu.github.io/images/Junk-Jenius/actuator-mount-round.bmp" style="width:100%"
+                        onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+                <div class="gallery-column">
+                    <img src="https://melodymchu.github.io/images/Junk-Jenius/actuator-mount-square.jpg" style="width:100%"
+                        onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                </div>
+                <div class="gallery-column">
+                    <img src="https://melodymchu.github.io/images/Junk-Jenius/square-mount-closeup.jpg" style="width:100%"
+                        onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                </div>
+                <div class="gallery-column">
+                    <img src="https://melodymchu.github.io/images/Junk-Jenius/cad-progress-1.5-iso.bmp" style="width:100%"
+                        onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                </div>
+                <div class="gallery-column">
+                    <img src="https://melodymchu.github.io/images/Junk-Jenius/actuator-mount-long.bmp" style="width:100%"
+                        onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+                </div>
             </div>
+
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 8</div>
+                        <img src="https://melodymchu.github.io/images/Junk-Jenius/brainstorming.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 8</div>
+                        <img src="https://melodymchu.github.io/images/Junk-Jenius/fea-close.jpg"
+                            style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 8</div>
+                        <img src="https://melodymchu.github.io/images/Junk-Jenius/fea-far.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 8</div>
+                        <img src="https://melodymchu.github.io/images/Junk-Jenius/actuator-mount-round.bmp" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 8</div>
+                        <img src="https://melodymchu.github.io/images/Junk-Jenius/actuator-mount-square.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 8</div>
+                        <img src="https://melodymchu.github.io/images/Junk-Jenius/square-mount-closeup.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 8</div>
+                        <img src="https://melodymchu.github.io/images/Junk-Jenius/cad-progress-1.5-iso.bmp" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">8 / 8</div>
+                        <img src="https://melodymchu.github.io/images/Junk-Jenius/actuator-mount-long.bmp" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+                </div>
+            </div>
+
             <p>
                 Finally, for the draining portion, my team went through several iterations of the blades. I
                 contributed by testing different locations in CAD and seeing what would be feasible to machine in our
