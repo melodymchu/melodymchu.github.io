@@ -304,17 +304,19 @@ small{
 
 
 
-  .row > .column {
+
+  
+.gallery-row > .gallery-column {
     padding: 0 8px;
   }
   
-  .row:after {
+  .gallery-row:after {
     content: "";
     display: table;
     clear: both;
   }
   
-  .column {
+  .gallery-column {
     float: left;
     width: 25%;
   }

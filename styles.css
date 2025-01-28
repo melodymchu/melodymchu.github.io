@@ -118,7 +118,7 @@ a {
 }
 
 
-img {
+/* img {
   z-index: 100;
   cursor: pointer;
   transition: transform 1s ease;
@@ -126,7 +126,8 @@ img {
 
 img:hover {
   transform: scale(1.1);
-}
+} */
+
 .gallery img {
   max-width: 300px;
   height: auto;
@@ -157,9 +158,9 @@ img:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-imag:active {
+/* imag:active {
   transform: scale(3);
-}
+} */
 
 .introduction img{
      max-height: 30vh;
