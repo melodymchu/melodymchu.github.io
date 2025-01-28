@@ -127,11 +127,17 @@ img {
 img:hover {
   transform: scale(1.1);
 }
-
-.thumbnail{
-  width:100px;
-  height: 100px;
+.gallery img {
+  max-width: 100px;
+  height: auto;
   object-fit: cover;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 imag:active {
