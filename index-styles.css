@@ -87,25 +87,6 @@ html * {
   }
 }
 
-/* ------------Vine Divider -----------*/
-.vine-divider {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(180deg, #ffe1ec, #fff);
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  /* Ensure no overflow occurs */
-}
-
-.vine-divider svg {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  /* Ensure no overflow occurs */
-}
 
 /* Responsive adjustments */
 @media screen and (max-width:600px) {
