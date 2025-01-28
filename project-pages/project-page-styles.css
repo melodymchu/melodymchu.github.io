@@ -327,12 +327,13 @@ small{
     position: fixed;
     z-index: 1;
     padding-top: 100px;
-    left: 0;
     top: 0;
     width: 80vw;
     height: 80vh;
     overflow: auto;
     background-color: #ffffff0c;
+    margin: auto;
+    border: 3px solid #FF69B4;
   }
   
   /* Modal Content */
@@ -346,7 +347,7 @@ small{
   
   /* The Close Button */
   .close {
-    color: #cdcdcd;
+    color: #FF69B4;
     position: absolute;
     top: 110px;
     right: 5vw;
