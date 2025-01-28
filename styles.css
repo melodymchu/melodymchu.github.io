@@ -128,7 +128,7 @@ img:hover {
   transform: scale(1.1);
 }
 .gallery img {
-  max-width: 100px;
+  max-width: 300px;
   height: auto;
   object-fit: cover;
 }
@@ -138,6 +138,23 @@ img:hover {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+}
+
+.gallery {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.gallery img.enlarged {
+  transform: scale(1.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 imag:active {

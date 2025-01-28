@@ -301,30 +301,3 @@ document.addEventListener('click', function (event) {
 //     const overlay = document.getElementById("overlay");
 //     overlay.classList.remove("show");
 // }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const thumbnails = document.querySelectorAll('.thumbnail');
-    const overlay = document.getElementById('overlay');
-    const overlayImage = document.getElementById('overlayImage');
-    const closeButton = document.getElementById('closeButton');
-
-    // Add click event to each thumbnail
-    thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', () => {
-            overlayImage.src = thumbnail.src;
-            overlay.classList.add('show');
-        });
-    });
-
-    // Add click event to close button
-    closeButton.addEventListener('click', () => {
-        overlay.classList.remove('show');
-    });
-
-    // Close overlay when clicking outside the image
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) {
-            overlay.classList.remove('show');
-        }
-    });
-});
