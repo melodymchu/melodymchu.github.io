@@ -128,11 +128,6 @@ img:hover {
   transform: scale(1.1);
 } */
 
-.gallery img {
-  max-width: 300px;
-  height: auto;
-  object-fit: cover;
-}
 
 .gallery{
   display: flex;
@@ -151,12 +146,11 @@ img:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 300px;
   border-radius: 8px;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
 }
 
-.gallery img.enlarged {
-  transform: scale(1.5);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
 
 /* imag:active {
   transform: scale(3);

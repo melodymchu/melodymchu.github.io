@@ -306,11 +306,11 @@ small{
 
 
   
-.gallery-row > .gallery-column {
+.gallery > .gallery-column {
     padding: 0 8px;
   }
   
-  .gallery-row:after {
+  .gallery:after {
     content: "";
     display: table;
     clear: both;
