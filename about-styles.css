@@ -11,6 +11,12 @@ summary {
 /* =====================About =========================*/
 
 /* ------------------Section Title -----------------------*/
+
+main{
+  padding: 0rem;
+  padding-top: 0rem;
+}
+
 h2,
 p {
   text-align: center;
