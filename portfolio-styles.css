@@ -65,6 +65,7 @@ color: #333;
      z-index:10000;
 }
 .project-item:hover, .project-item p:hover {
+  transition: ease-in-out 0.5s;
 transform: scale(1.01);
 height: auto;
 }
