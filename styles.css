@@ -713,6 +713,9 @@ footer {
     /* This makes both columns take equal space */
   }
      
+  .left-align-p {
+    text-align: left;
+  }
   /* .flower-row {
     flex-direction: column;
     align-items: center;
