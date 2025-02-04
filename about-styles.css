@@ -151,6 +151,7 @@ details[open] ul {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding: 2rem;
+  margin-top: 5rem;
 }
 
 /* Skills List using Flexbox for left-aligned layout */
@@ -162,6 +163,7 @@ details[open] ul {
   /* Use Flexbox for layout */
   flex-wrap: wrap;
   gap: 10px 0px;
+  padding: 3rem;
 }
 
 .skills-list-left {
