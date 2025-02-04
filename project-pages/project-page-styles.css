@@ -538,7 +538,7 @@ small{
     aside {
       width: 100%;
     }
-    nav > ul > li {
+    /* nav > ul > li {
       position: relative;
       width: 100%;
     }
@@ -577,6 +577,6 @@ small{
       top: 1rem;
       left: 0;
       width: 100%;
-    }
+    } */
   }
   
