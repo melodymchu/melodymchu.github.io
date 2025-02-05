@@ -188,7 +188,6 @@ small{
     height: 80vh;
     overflow: hidden;
     margin: auto;
-    background-color: #eee; /* Background color for empty spaces */
 }
 
 /* Inner Container for Carousel Items */
@@ -219,10 +218,10 @@ small{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
     z-index: 1;
 }
