@@ -71,13 +71,7 @@ small{
     border-radius: 10px;
 }
 
-.results-preview{
-    margin: auto;
-    background-color: #eee;
-    width: 90%;
-    border-block-end: solid #333 3px;
-    padding-bottom: 10%;
-}
+
 .results-preview .carousel{
     width: 90%;
 }
@@ -213,12 +207,12 @@ small{
     object-fit: contain; /* Ensure the image is fully visible */
 }
 
-/* Navigation Buttons */
 .carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     color: white;
     border: none;
     padding: 5px;
@@ -228,10 +222,13 @@ small{
 
 .prev {
     left: 10px;
+    border-radius: 8px;
+
 }
 
 .next {
     right: 10px;
+    border-radius: 8px;
 }
 
 /* Indicator Dots */
@@ -389,7 +386,7 @@ small{
     font-weight: bold;
     font-size: 20px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 8px;
     user-select: none;
     -webkit-user-select: none;
   }
@@ -397,7 +394,6 @@ small{
   /* Position the "next button" to the right */
   .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
   }
   
   /* On hover, add a black background color with a little bit see-through */
